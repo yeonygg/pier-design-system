@@ -1,0 +1,7 @@
+// Fetch a deep value in a multi-level map; Keys is an array of values ie: ('key1', 'key2', 'key3')
+@function map-fetch($map, $keys) {
+	@each $key in $keys {
+	  $map: map-get($map, $key);
+	}
+	@return $map;
+}

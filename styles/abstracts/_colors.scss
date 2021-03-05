@@ -1,0 +1,133 @@
+$colorsGrays: (
+	white: #FFFFFF,
+	light-4: #F7F8F8,
+	light-3: #F1F3F3,
+	lighter: #F1F3F3,
+	light-2: #EBEEEF,
+	light-1: #E3E7E8,
+	light: #E3E7E8,
+	gray-4: #D0D6D8,
+	gray-3: #BCC5CA,
+	light-gray: #BCC5CA,
+	gray-2: #A5B2B8,
+	gray-1: #8A9BA3,
+	gray: #8A9BA3,
+	dark-1: #6D808B,
+	dark-2: #53626D,
+	dark: #53626D,
+	dark-3:#2D3A43,
+	dark-4: #0E1E2A,
+	darker: #0E1E2A,
+	black:#050D14,
+);
+
+$colorsCyan: (
+	light-4: #DEF4FD,
+	light-3: #A8E3F9,
+	light-2: #71D1F5,
+	light-1: #46C3F1,
+	default: #25B9EF,
+	dark-1: #1BA2D5,
+	dark-2: #1481AD,
+	dark-3: #0D6185,
+	dark-4: #07405E,
+);
+
+$colorsGreen: (
+	light-4: #DAF8EE,
+	light-3: #9CEDD1,
+	light-2: #5EE1B4,
+	light-1: #2DD89C,
+	default: #08D18B,
+	dark-1: #05B67A,
+	dark-2: #039162,
+	dark-3: #026D4B,
+	dark-4: #014834,
+);
+
+$colorsBlue: (
+	light-4: #DCE9F4,
+	light-3: #A2C5E0,
+	light-2: #68A1CE,
+	light-1: #3A84BE,
+	default: #176FB3,
+	dark-1: #0F62A3,
+	dark-2: #0A4E86,
+	dark-3: #053B68,
+	dark-4: #02274B,
+);
+
+$colorsTeal: (
+	light-4: #E9FEF8,
+	light-3: #CAFCEC,
+	light-2: #B1FAE4,
+	light-1: #91FADA,
+	default: #6FF7CE,
+	dark-1: #5CD8B4,
+	dark-2: #46AD92,
+	dark-3: #31816F,
+	dark-4: #1D564D,
+);
+
+$colorsYellow: (
+	light-4: #FFFAE8,
+	light-3: #FEF2BC,
+	light-2: #FDE88B,
+	light-1: #FCE165,
+	default: #FCD93D,
+	dark-1: #D9BC33,
+	dark-2: #A99628,
+	dark-3: #79701E,
+	dark-4: #4A4914,
+);
+
+$colorsOrange: (
+	light-4: #FFF1DE,
+	light-3: #FEDBA7,
+	light-2: #FDC46F,
+	light-1: #FCB243,
+	default: #FCA522,
+	dark-1: #D98F1D,
+	dark-2: #A97217,
+	dark-3: #795511,
+	dark-4: #4A380B,
+);
+
+$colorsRed: (
+	light-4: #FBE3E4,
+	light-3: #F3B5B8,
+	light-2: #EC868B,
+	light-1: #E66168,
+	default: #E24550,
+	dark-1: #C83941,
+	dark-2: #9E2C34,
+	dark-3: #732027,
+	dark-4: #48141B,
+);
+
+$gradients: (
+	primaryBoulevard: (
+		color1: map-get($colorsGreen, default),
+		color2: map-get($colorsCyan, default),
+	),
+	deepOcean: (
+		color1: map-get($colorsBlue, default),
+		color2: map-get($colorsCyan, default),
+	),
+	neonSky: (
+		color1: map-get($colorsCyan, default),
+		color2: map-get($colorsTeal, default),
+	),
+	earlySunset: (
+		color1: map-get($colorsRed, default),
+		color2: map-get($colorsOrange, default),
+	),
+	firesideGlow: (
+		color1: map-get($colorsOrange, default),
+		color2: map-get($colorsYellow, default),
+	)
+);
+
+@function build-gradient($angle, $gradient) {
+    @return linear-gradient($angle, map-fetch($gradients, ($gradient, color1)) -7%, map-fetch($gradients, ($gradient, color2)) 107%);
+}
