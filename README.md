@@ -20,7 +20,7 @@ Package Manager: **Yarn**
 
 **3. Start Developing!**
 
-## Next.js Resources
+### Next.js Resources
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Learn Next.js](https://nextjs.org/learn)
