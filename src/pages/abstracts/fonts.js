@@ -1,7 +1,7 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
 import { Layout } from "../index";
-import components from "../../pier-design-system/components/data";
+import componentsData from "../../documentation/components/_componentsData";
 
 export default function fontsPage({ componentList }) {
 	return (
@@ -23,7 +23,7 @@ fontsPage.propTypes = {
 export async function getStaticProps() {
 	return {
 		props: {
-			componentList: components,
+			componentList: componentsData,
 		},
 	};
 }

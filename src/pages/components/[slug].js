@@ -1,7 +1,7 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
 import { Layout } from "../index";
-import components from "../../pier-design-system/components/data";
+import componentsData from "../../documentation/components/_componentsData";
 
 export default function ComponentPage({ componentList, component }) {
 	return (
@@ -24,7 +24,7 @@ ComponentPage.propTypes = {
 }
 
 export async function getStaticPaths() {
-	const paths = components.map((component) => ({
+	const paths = componentsData.map((component) => ({
 		params: { slug: component.slug }
 	}))
 
@@ -32,10 +32,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-	const result = components.filter((component) => component.slug === params.slug)
+	const result = componentsData.filter((component) => component.slug === params.slug)
 	return {
 		props: {
-			componentList: components,
+			componentList: componentsData,
 			component: result[0]
 		}
 	}
