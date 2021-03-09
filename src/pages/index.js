@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Nav from "../pier-design-system/components/navigation/Nav";
 import NavItem from "../pier-design-system/components/navigation/NavItem";
 import NavSubItem from "../pier-design-system/components/navigation/NavSubItem";
-import components from "../pier-design-system/components/data";
+import componentsData from "../documentation/components/_componentsData";
 
 export default function Home({ componentList }) {
 	return (
@@ -45,7 +45,7 @@ Layout.propTypes = {
 export async function getStaticProps() {
 	return {
 		props: {
-			componentList: components,
+			componentList: componentsData,
 		},
 	};
 }
