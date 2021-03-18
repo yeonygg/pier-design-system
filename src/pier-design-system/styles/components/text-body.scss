@@ -1,0 +1,21 @@
+.pier-body-text {
+	font-family: $font-family;
+	font-weight: $font-weight-regular;
+	font-size: map-get($body-sizes, "md");
+	color: map-get($colorsGrays, 'dark');
+	line-height: $body-line-height;
+}
+
+.pier-body-text--dark {
+	color: map-get($colorsGrays, 'lighter');
+}
+
+.pier-body-text--light-gray {
+	color: map-get($colorsGrays, 'light-gray');
+}
+
+@each $prefix, $size in $body-sizes {
+	.pier-body-text--#{$prefix} {
+		font-size: $size;
+	}
+}

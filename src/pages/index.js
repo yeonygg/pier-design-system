@@ -4,6 +4,7 @@ import Nav from "../pier-design-system/components/navigation/Nav";
 import NavItem from "../pier-design-system/components/navigation/NavItem";
 import NavSubItem from "../pier-design-system/components/navigation/NavSubItem";
 import componentsData from "../documentation/components/_componentsData";
+import Button from "../pier-design-system/components/button/Button";
 
 export default function Home({ componentList }) {
 	return (
@@ -13,6 +14,7 @@ export default function Home({ componentList }) {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Layout componentList={componentList}/>
+			<Button>Test Button</Button>
 		</div>
 	);
 }

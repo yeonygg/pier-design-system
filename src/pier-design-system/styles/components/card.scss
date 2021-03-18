@@ -1,0 +1,20 @@
+$card-radii: (
+	lg: 1rem,
+	md: .75rem,
+	sm: .5rem
+);
+
+.pier-card {
+	overflow: hidden;
+	border: .0625rem solid map-get($colorsGrays, light);
+	background-color: map-get($colorsGrays, white);
+	border-radius: map-get($card-radii, lg);
+	box-shadow: 0 0 2rem rgba(map-get($colorsGrays, gray), 0.15);
+	margin-bottom: 1rem;
+}
+
+@each $prefix, $radius in $card-radii {
+	.pier-card--#{$prefix} {
+		border-radius: $radius;
+	}
+}

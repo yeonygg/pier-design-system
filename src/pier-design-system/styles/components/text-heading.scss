@@ -1,0 +1,17 @@
+.pier-heading {
+	font-family: $font-family;
+	font-weight: $font-weight-bold;
+	font-size: map-get($heading-sizes, "md");
+	color: map-get($colorsGrays, 'darker');
+	line-height: auto;
+}
+
+.pier-heading--dark {
+	color: map-get($colorsGrays, 'white');
+}
+
+@each $prefix, $size in $heading-sizes {
+	.pier-heading--#{$prefix} {
+		font-size: $size;
+	}
+}

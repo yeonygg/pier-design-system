@@ -1,7 +1,10 @@
-import button from "./button.json";
-import navigation from "./navigation.json";
+// import button from "src/documentation/components/button/_button";
+// import navigation from "src/documentation/components/navigation/_navigation";
+import text from "src/documentation/components/text/_text";
 
 let componentsData = [];
-componentsData.push(button, navigation);
+componentsData.push(
+	text
+);
 
 export default componentsData;

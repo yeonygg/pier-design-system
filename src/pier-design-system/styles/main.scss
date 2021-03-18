@@ -7,11 +7,21 @@
 @import './abstracts/functions';
 @import './abstracts/mixins';
 @import './abstracts/colors';
-@import './abstracts/fonts';
+@import './abstracts/text';
+@import './abstracts/inputs';
+@import './abstracts/reset';
 
 //components
 @import './components/button';
 @import './components/navigation';
+@import './components/text-body';
+@import './components/text-heading';
+@import './components/text-codeblock';
+@import './components/text-label';
+@import './components/horizontal-rule';
+@import './components/section.scss';
+@import './components/card.scss';
+@import './components/well';
 
 //utilities
 @import './utilities/disabled';

@@ -1,0 +1,18 @@
+.pier-codeblock {
+	font-family: $font-family-code;
+	font-weight: $font-weight-medium;
+	font-size: map-get($body-sizes , "md");
+	color: map-get($colorsGrays, 'dark');
+	line-height: $body-line-height;
+	white-space: break-spaces;
+}
+
+.pier-codeblock--dark {
+	color: map-get($colorsGrays, 'lighter');
+}
+
+@each $prefix, $size in $body-sizes {
+	.pier-codeblock--#{$prefix} {
+		font-size: $size;
+	}
+}

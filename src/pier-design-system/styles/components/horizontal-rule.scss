@@ -1,0 +1,18 @@
+$hr-sizes: (
+	lg: 4px,
+	md: 2px,
+	sm: 1px
+);
+
+.pier-hr {
+	width: 100%;
+	height: map-get($hr-sizes, sm);
+	background: map-get($colorsGrays, light);
+	margin: 0;
+}
+
+.pier-hr--hero {
+	background: build-gradient(90deg, primaryBoulevard);
+	height: map-get($hr-sizes, lg);
+	border-radius: 2px;
+}
