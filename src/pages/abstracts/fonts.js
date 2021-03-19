@@ -9,9 +9,9 @@ export default function fontsPage({ componentList }) {
 			<Head>
 				<title>Fonts | Pier Design System</title>
 			</Head>
-			<Layout componentList={componentList}/>
-			<hr></hr>
+			<Layout componentList={componentList}>
 			<h1>fonts</h1>
+			</Layout>
 		</div>
 	);
 }

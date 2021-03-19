@@ -2,8 +2,8 @@
 	font-family: $font-family-code;
 	font-weight: $font-weight-medium;
 	font-size: map-get($body-sizes , "md");
-	color: map-get($colorsGrays, 'dark');
-	line-height: $body-line-height;
+	color: map-get($colorsGrays, dark);
+	line-height: 1;
 	white-space: break-spaces;
 }
 

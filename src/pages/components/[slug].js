@@ -10,57 +10,57 @@ import BodyText from "src/pier-design-system/components/text/BodyText";
 import CodeBlock from "src/pier-design-system/components/text/CodeBlock";
 import Section from "src/pier-design-system/components/containers/Section";
 import Card from "src/pier-design-system/components/containers/Card";
+import Well from "src/pier-design-system/components/containers/Well";
 
 export default function ComponentPage({ componentList, component }) {
 	return (
-		<div>
+		<Fragment>
 			<Head>
-				<title>Colors | Pier Design System</title>
+				<title>{component.title} | Pier Design System</title>
 			</Head>
-			<Layout componentList={componentList} />
-			<HR></HR>
-
-			<Section>
-				<div style={{display: "inline-block"}}>
-					<Heading style={{paddingRight: "4px"}}>{component.title}</Heading>
-					<HR color="hero"/>
-				</div>
-				<BodyText size='xs' color='light-gray'>
-					Last updated: {component["last-updated"]}
-				</BodyText>
-				<BodyText>{component.description}</BodyText>
-			</Section>
-			{component.components.map((item) => (
-				<Fragment key={item.name}>
-					<Section key={item.name}>
-						<Heading size='sm'>{item.name}</Heading>
-						<BodyText>{item.description}</BodyText>
-						<Card>
-							<Section>{parse(item.markup)}</Section>
-						</Card>
-						<Card>
-							<Section>
-								<CodeBlock size='xs'>{item.markup}</CodeBlock>
-							</Section>
-						</Card>
-					</Section>
-					{item.variations.map((variation) => (
-						<Section key={variation.name}>
-							<Heading size='sm'>{variation.name}</Heading>
-							<BodyText>{variation.description}</BodyText>
+			<Layout componentList={componentList}>
+				<Section>
+					<div style={{ display: "inline-block" }}>
+						<Heading style={{ paddingRight: "4px" }}>{component.title}</Heading>
+						<HR color='hero' />
+					</div>
+					<BodyText size='xs' color='light-gray'>
+						Last updated: {component["last-updated"]}
+					</BodyText>
+					<BodyText>{component.description}</BodyText>
+				</Section>
+				{component.components.map((item) => (
+					<Fragment key={item.name}>
+						<Section key={item.name}>
+							<Heading size='sm'>{item.name}</Heading>
+							<BodyText>{item.description}</BodyText>
 							<Card>
-								<Section>{parse(variation.markup)}</Section>
+								<Section>{parse(item.markup)}</Section>
 							</Card>
-							<Card>
+							<Well>
 								<Section>
-									<CodeBlock size='xs'>{variation.markup}</CodeBlock>
+									<CodeBlock size='xs'>{item.markup}</CodeBlock>
 								</Section>
-							</Card>
+							</Well>
 						</Section>
-					))}
-				</Fragment>
-			))}
-		</div>
+						{item.variations.map((variation) => (
+							<Section key={variation.name}>
+								<Heading size='sm'>{variation.name}</Heading>
+								<BodyText>{variation.description}</BodyText>
+								<Card dark={variation.dark}>
+									<Section>{parse(variation.markup)}</Section>
+								</Card>
+								<Well>
+									<Section>
+										<CodeBlock size='xs'>{variation.markup}</CodeBlock>
+									</Section>
+								</Well>
+							</Section>
+						))}
+					</Fragment>
+				))}
+			</Layout>
+		</Fragment>
 	);
 }
 

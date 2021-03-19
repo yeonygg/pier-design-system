@@ -13,6 +13,11 @@ $card-radii: (
 	margin-bottom: 1rem;
 }
 
+.pier-card--dark {
+	background-color: map-get($colorsGrays, darker);
+	border: .0625rem solid map-get($colorsGrays, gray);
+}
+
 @each $prefix, $radius in $card-radii {
 	.pier-card--#{$prefix} {
 		border-radius: $radius;

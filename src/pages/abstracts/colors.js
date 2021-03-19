@@ -9,9 +9,9 @@ export default function colorsPage({ componentList }) {
 			<Head>
 				<title>Colors | Pier Design System</title>
 			</Head>
-			<Layout componentList={componentList}/>
-			<hr></hr>
+			<Layout componentList={componentList}>
 			<h1>colors</h1>
+			</Layout>
 		</div>
 	);
 }

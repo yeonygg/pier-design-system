@@ -3,17 +3,20 @@ import Link from "next/link";
 
 export default function NavSubItem({ label, link }) {
 	return (
-		<div>
-			<Link href={link}>
-				<a>{label}</a>
-			</Link>
-		</div>
+		<Link href={link}>
+			<a>
+				<div className='pier-nav__sub-item'>
+					<div className='pier-nav__sub-item-line'></div>
+					{label}
+				</div>
+			</a>
+		</Link>
 	);
 }
 
 NavSubItem.defaultProps = {
 	label: "Sub Nav Item",
-	link: "/"
+	link: "/",
 };
 
 NavSubItem.propTypes = {

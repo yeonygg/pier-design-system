@@ -1,26 +1,28 @@
 import PropTypes from "prop-types";
 import Link from "next/link";
+import { Fragment } from "react";
 
 export default function NavItem({ children, label, link, icon }) {
 	return (
-		<div>
-			<div>
+		<Fragment>
+			<div className='pier-nav__item'>
 				<Link href={link}>
 					<a>
-						{icon && <i className={icon}></i>}
+						{icon && <i className={icon} style={{marginRight: "12px"}}></i>}
 						{label}
 					</a>
 				</Link>
-				{children && <i className='far fa-chevron-right'></i>}
+				{children && <i className='far fa-chevron-right pier-nav__item-dropdown-toggle'></i>}
 			</div>
-			{children && <div>{children}</div>}
-		</div>
+
+			{children && <div className='pier-nav__item-dropdown'>{children}</div>}
+		</Fragment>
 	);
 }
 
 NavItem.defaultProps = {
 	label: "Nav Item",
-	link: "/"
+	link: "/",
 };
 
 NavItem.propTypes = {

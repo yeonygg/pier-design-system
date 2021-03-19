@@ -9,9 +9,9 @@ export default function iconsPage({ componentList }) {
 			<Head>
 				<title>Icons | Pier Design System</title>
 			</Head>
-			<Layout componentList={componentList}/>
-			<hr></hr>
+			<Layout componentList={componentList}>
 			<h1>icons</h1>
+			</Layout>
 		</div>
 	);
 }

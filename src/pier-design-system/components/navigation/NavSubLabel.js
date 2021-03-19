@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 export default function NavSubItem({ label }) {
 	return (
-		<div>
+		<div className="pier-nav__sub-label">
 			<p>{label}</p>
 		</div>
 	);

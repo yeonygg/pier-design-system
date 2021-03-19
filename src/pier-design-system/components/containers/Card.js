@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export default function Card({ children, size, className, style }) {
+export default function Card({ children, size, dark, className, style }) {
 	let classes = 'pier-card';
 
 	switch(size) {
@@ -15,6 +15,8 @@ export default function Card({ children, size, className, style }) {
 			break
 	}
 
+	dark && (classes += ' pier-card--dark');
+
 	classes += ` ${className}`
 
 	return (
@@ -26,12 +28,14 @@ export default function Card({ children, size, className, style }) {
 
 Card.defaultProps = {
 	size: "lg",
-	className: ""
+	className: "",
+	dark: false
 }
 
 Card.propTypes = {
 	children: PropTypes.node.isRequired,
 	size: PropTypes.string,
+	dark: PropTypes.bool,
 	className: PropTypes.string,
 	style: PropTypes.object
 }

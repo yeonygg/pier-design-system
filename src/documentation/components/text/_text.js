@@ -17,17 +17,20 @@ export default {
 				{
 					"name": "Sizes",
 					"description": "These are the size modifiers.",
-					"markup": bodyTextSizes
+					"markup": bodyTextSizes,
+					"dark": false
 				},
 				{
 					"name": "Color",
 					"description": "These are the color modifiers.",
-					"markup": bodyTextColor
+					"markup": bodyTextColor,
+					"dark": false
 				},
 				{
 					"name": "Dark",
 					"description": "This is the dark modifier.",
-					"markup": bodyTextDark
+					"markup": bodyTextDark,
+					"dark": true
 				}
 			]
 		}
