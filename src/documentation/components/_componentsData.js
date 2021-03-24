@@ -1,10 +1,10 @@
-// import button from "src/documentation/components/button/_button";
-// import navigation from "src/documentation/components/navigation/_navigation";
-import text from "src/documentation/components/text/_text";
+import textBody from "src/documentation/components/text-body/_index";
+import list from "src/documentation/components/list/_index";
 
 let componentsData = [];
 componentsData.push(
-	text
+	textBody,
+	list
 );
 
 export default componentsData;

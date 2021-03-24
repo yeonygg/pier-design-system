@@ -1,0 +1,5 @@
+@mixin style-from-list($list) {
+    @each $rule, $value in $list {
+        #{$rule}: #{$value};
+    }
+}

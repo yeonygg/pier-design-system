@@ -1,0 +1,209 @@
+$default-size: lg;
+
+$line-v-margins: (
+	sm: .75rem,
+	md: .875rem,
+	lg: 1rem
+);
+
+$line-h-margins: (
+	sm: .875rem,
+	md: 1rem,
+	lg: 1.25rem
+);
+
+$list-sizes: (
+	sm: (
+		font-size: .875rem,
+		padding-left: map-get($line-h-margins, sm),
+		margin: map-get($line-v-margins, sm) 0
+	),
+	md: (
+		font-size: 1rem,
+		padding-left: map-get($line-h-margins, md),
+		margin: map-get($line-v-margins, md) 0
+	),
+	lg: (
+		font-size: 1.125rem,
+		padding-left: map-get($line-h-margins, lg),
+		margin: map-get($line-v-margins, lg) 0
+	)
+);
+
+$list-item-sizes: (
+	sm: (
+		margin-bottom: map-get($line-v-margins, sm)
+	),
+	md: (
+		margin-bottom: map-get($line-v-margins, md)
+	),
+	lg: (
+		margin-bottom: map-get($line-v-margins, lg)
+	)
+);
+
+$list-content-sizes: (
+	sm: (
+		margin-left: map-get($line-h-margins, sm),
+		margin-top: 0
+	),
+	md: (
+		margin-left: map-get($line-h-margins, md),
+		margin-top: 1px
+	),
+	lg: (
+		margin-left: map-get($line-h-margins, lg),
+		margin-top: 3px
+	)
+);
+
+$list-marker-sizes: (
+	sm: (
+		width: 4px,
+		height: 4px,
+		margin: 7px
+	),
+	md: (
+		width: 6px,
+		height: 6px,
+		margin: 9px
+	),
+	lg: (
+		width: 8px,
+		height: 8px,
+		margin: 11px
+	)
+);
+
+$list-ordered-marker-sizes: (
+	sm: (
+		font-size: 0.625rem,
+		width: 18px,
+		height: 18px
+	),
+	md: (
+		font-size: .75rem,
+		width: 24px,
+		height: 24px
+	),
+	lg: (
+		font-size: .875rem,
+		width: 30px,
+		height: 30px
+	)
+);
+
+.pier-list, .pier-list .pier-list--unordered {
+	display: block;
+	line-height: 1.55;
+	@include style-from-list(map-get($list-sizes, $default-size));
+	color: map-get($colorsGrays, dark);
+
+	.pier-list__item {
+		font-size: inherit;
+		display: flex;
+		@include style-from-list(map-get($list-item-sizes, $default-size));
+
+		&:before {
+			content: '';
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			vertical-align: middle;
+			background-color: map-get($colorsGrays, gray);
+			border: 1px solid map-get($colorsGrays, gray);
+			color: map-get($colorsGrays, gray);
+			font-weight: $font-weight-semibold;
+			border-radius: 50px;
+			@include style-from-list(map-get($list-marker-sizes, $default-size));
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.pier-list__content {
+			font-size: inherit;
+			@include style-from-list(map-get($list-content-sizes, $default-size));
+
+			.pier-list {
+				padding-left: 0;
+				margin-bottom: 0;
+			}
+		}
+
+		.pier-list__item {
+			&:before {
+				background-color: transparent;
+			}
+
+			.pier-list__item {
+				&:before {
+					background-color: map-get($colorsGrays, gray);
+					border-radius: 0;
+				}
+			}
+		}
+	}
+}
+
+.pier-list--ordered {
+	.pier-list__item {
+		counter-increment: level1;
+		
+		&:before {
+			content: counter(level1);
+			background-color: transparent;
+			border: 1px solid map-get($colorsGrays, gray);
+			@include style-from-list(map-get($list-ordered-marker-sizes, $default-size));
+			margin: 0;
+		}
+
+		.pier-list__item {
+			counter-increment: level2;
+			&:before {
+				content: counter(level2, lower-latin);	
+			}
+
+			.pier-list__item {
+				counter-increment: level3;
+				&:before {
+					content: counter(level3, lower-roman);	
+					background-color: transparent;
+					border-radius: 50px;
+				}
+			}
+		}
+	}
+}
+
+@each $prefix, $size in $list-sizes {
+	.pier-list--#{$prefix}, .pier-list--#{$prefix}.pier-list--unordered {
+		@include style-from-list(map-get($list-sizes, $prefix));
+	
+		.pier-list__item {
+			@include style-from-list(map-get($list-item-sizes, $prefix));
+	
+			&:before {
+				@include style-from-list(map-get($list-marker-sizes, $prefix));
+			}
+	
+			.pier-list__content {
+				@include style-from-list(map-get($list-content-sizes, $prefix));
+			}
+		}
+	}
+	
+	.pier-list--#{$prefix}.pier-list--ordered {
+		.pier-list__item {
+			&:before {
+				@include style-from-list(map-get($list-ordered-marker-sizes, $prefix));
+				margin: 0;
+			}
+		}
+	}
+}
+
+.pier-list--dark {
+	color: map-get($colorsGrays, 'lighter');
+}

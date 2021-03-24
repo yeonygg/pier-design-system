@@ -10,13 +10,13 @@ import Link from "next/link";
 
 export default function Home({ componentList }) {
 	return (
-		<div>
+		<Fragment>
 			<Head>
 				<title>Pier Design System</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Layout componentList={componentList}></Layout>
-		</div>
+		</Fragment>
 	);
 }
 

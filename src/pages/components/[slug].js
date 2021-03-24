@@ -29,35 +29,19 @@ export default function ComponentPage({ componentList, component }) {
 					</BodyText>
 					<BodyText>{component.description}</BodyText>
 				</Section>
-				{component.components.map((item) => (
-					<Fragment key={item.name}>
-						<Section key={item.name}>
-							<Heading size='sm'>{item.name}</Heading>
-							<BodyText>{item.description}</BodyText>
-							<Card>
-								<Section>{parse(item.markup)}</Section>
-							</Card>
-							<Well>
-								<Section>
-									<CodeBlock size='xs'>{item.markup}</CodeBlock>
-								</Section>
-							</Well>
-						</Section>
-						{item.variations.map((variation) => (
-							<Section key={variation.name}>
-								<Heading size='sm'>{variation.name}</Heading>
-								<BodyText>{variation.description}</BodyText>
-								<Card dark={variation.dark}>
-									<Section>{parse(variation.markup)}</Section>
-								</Card>
-								<Well>
-									<Section>
-										<CodeBlock size='xs'>{variation.markup}</CodeBlock>
-									</Section>
-								</Well>
+				{component.variations.map((variation) => (
+					<Section key={variation.name}>
+						<Heading size='sm'>{variation.name}</Heading>
+						<BodyText>{variation.description}</BodyText>
+						<Card dark={variation.dark}>
+							<Section>{parse(variation.markup)}</Section>
+						</Card>
+						<Well>
+							<Section>
+								<CodeBlock size='xs'>{variation.markup}</CodeBlock>
 							</Section>
-						))}
-					</Fragment>
+						</Well>
+					</Section>
 				))}
 			</Layout>
 		</Fragment>

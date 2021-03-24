@@ -1,3 +1,10 @@
+$heading-sizes: (
+	xs: 1.125rem,
+	sm: 1.5rem,
+	md: 2.25rem,
+	lg: 3rem
+);
+
 .pier-heading {
 	font-family: $font-family;
 	font-weight: $font-weight-bold;

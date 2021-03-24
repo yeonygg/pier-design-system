@@ -7,7 +7,7 @@
 @import './abstracts/functions';
 @import './abstracts/mixins';
 @import './abstracts/colors';
-@import './abstracts/text';
+@import './abstracts/fonts';
 @import './abstracts/inputs';
 @import './abstracts/reset';
 
@@ -22,6 +22,7 @@
 @import './components/section.scss';
 @import './components/card.scss';
 @import './components/well';
+@import './components/list';
 
 //utilities
 @import './utilities/disabled';
