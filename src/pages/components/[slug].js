@@ -1,7 +1,10 @@
 import Head from "next/head";
+import NextLink from "next/link";
 import PropTypes from "prop-types";
 import { Fragment } from "react";
-import parse from "html-react-parser";
+import htmlReactParse from "html-react-parser";
+import prettier from "prettier/standalone";
+import parserHtml from "prettier/esm/parser-html";
 import { Layout } from "src/pages/index";
 import componentsData from "src/documentation/components/_componentsData";
 import HR from "src/pier-design-system/components/horizonal-rule/HR";
@@ -11,6 +14,8 @@ import CodeBlock from "src/pier-design-system/components/text/CodeBlock";
 import Section from "src/pier-design-system/components/containers/Section";
 import Card from "src/pier-design-system/components/containers/Card";
 import Well from "src/pier-design-system/components/containers/Well";
+import Breadcrumbs from "src/pier-design-system/components/breadcrumbs/Breadcrumbs";
+import BreadcrumbsLink from "src/pier-design-system/components/breadcrumbs/BreadcrumbsLink";
 
 export default function ComponentPage({ componentList, component }) {
 	return (
@@ -20,6 +25,15 @@ export default function ComponentPage({ componentList, component }) {
 			</Head>
 			<Layout componentList={componentList}>
 				<Section>
+					<Breadcrumbs style={{ marginBottom: "16px" }}>
+						<BreadcrumbsLink>
+							<NextLink href='/'>
+								<a>Home</a>
+							</NextLink>
+						</BreadcrumbsLink>
+						<BreadcrumbsLink disabled>Components</BreadcrumbsLink>
+						<BreadcrumbsLink disabled>{component.title}</BreadcrumbsLink>
+					</Breadcrumbs>
 					<div style={{ display: "inline-block" }}>
 						<Heading style={{ paddingRight: "4px" }}>{component.title}</Heading>
 						<HR color='hero' />
@@ -34,11 +48,13 @@ export default function ComponentPage({ componentList, component }) {
 						<Heading size='sm'>{variation.name}</Heading>
 						<BodyText>{variation.description}</BodyText>
 						<Card dark={variation.dark}>
-							<Section>{parse(variation.markup)}</Section>
+							<Section>{htmlReactParse(variation.markup)}</Section>
 						</Card>
 						<Well>
 							<Section>
-								<CodeBlock size='xs'>{variation.markup}</CodeBlock>
+								<CodeBlock size='xs'>
+									{prettier.format(variation.markup, {parser: "html", plugins: [parserHtml], tabWidth: 4})}
+								</CodeBlock>
 							</Section>
 						</Well>
 					</Section>

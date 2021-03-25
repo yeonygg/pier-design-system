@@ -8,6 +8,7 @@
 		"start": "next start"
 	},
 	"dependencies": {
+		"angular-html-parser": "^1.7.1",
 		"babel-eslint": "^10.1.0",
 		"eslint-config-airbnb": "^18.2.1",
 		"eslint-config-prettier": "^8.1.0",
@@ -15,7 +16,9 @@
 		"eslint-plugin-import": "^2.22.1",
 		"eslint-plugin-jsx-a11y": "^6.4.1",
 		"eslint-plugin-react-hooks": "^4.2.0",
+		"html": "^1.0.0",
 		"html-react-parser": "^1.2.4",
+		"js-beautify": "^1.13.5",
 		"next": "10.0.7",
 		"prettier": "^2.2.1",
 		"react": "17.0.1",

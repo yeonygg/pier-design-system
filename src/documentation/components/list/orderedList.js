@@ -1,13 +1,13 @@
-export default
-
-`<ul class="pier-list pier-list--ordered">
-	<li class="pier-list__item">
-		<div class="pier-list__content">List Item</div>
-	</li>
-	<li class="pier-list__item">
-		<div class="pier-list__content">List Item</div>
-	</li>
-	<li class="pier-list__item">
-		<div class="pier-list__content">List Item</div>
-	</li>
-</ul>`
+export default (
+	<ul className='pier-list pier-list--ordered'>
+		<li className='pier-list__item'>
+			<div className='pier-list__content'>List Item</div>
+		</li>
+		<li className='pier-list__item'>
+			<div className='pier-list__content'>List Item</div>
+		</li>
+		<li className='pier-list__item'>
+			<div className='pier-list__content'>List Item</div>
+		</li>
+	</ul>
+);

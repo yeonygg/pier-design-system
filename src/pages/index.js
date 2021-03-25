@@ -6,7 +6,7 @@ import NavSubItem from "../pier-design-system/components/navigation/NavSubItem";
 import componentsData from "../documentation/components/_componentsData";
 import { Fragment } from "react";
 import Heading from "src/pier-design-system/components/text/Heading";
-import Link from "next/link";
+import NextLink from "next/link";
 
 export default function Home({ componentList }) {
 	return (
@@ -29,13 +29,13 @@ export function Layout({ children, componentList }) {
 		<Fragment>
 			<div style={{ position: "fixed", height: "100vh", zIndex: 99 }}>
 				<Nav>
-					<Link href='/'>
+					<NextLink href='/'>
 						<a>
-							<Heading size='sm' style={{ margin: "24px" }}>
+							<Heading size='sm' style={{ padding: "24px" }}>
 								Pier Design System
 							</Heading>
 						</a>
-					</Link>
+					</NextLink>
 					<NavItem label='Abstracts' icon='far fa-atom'>
 						<NavSubItem label='Fonts' link='/abstracts/fonts' />
 						<NavSubItem label='Icons' link='/abstracts/icons' />

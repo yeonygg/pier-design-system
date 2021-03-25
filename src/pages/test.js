@@ -1,47 +1,22 @@
 import { Fragment } from "react";
-import List from "src/pier-design-system/components/list/List";
-import ListItem from "src/pier-design-system/components/list/ListItem";
+import Breadcrumbs from "src/pier-design-system/components/breadcrumbs/Breadcrumbs";
+import BreadcrumbsLink from "src/pier-design-system/components/breadcrumbs/BreadcrumbsLink";
+import Link from "next/link";
 
 export default function TestPage() {
 	return (
 		<Fragment>
-			<List size='sm'>
-				<ListItem>
-					List Item
-					<List ordered size='sm'>
-						<ListItem>List Item</ListItem>
-						<ListItem>List Item</ListItem>
-						<ListItem>List Item</ListItem>
-					</List>
-				</ListItem>
-				<ListItem>List Item</ListItem>
-				<ListItem>List Item</ListItem>
-			</List>
-			<List ordered size='sm'>
-				<ListItem>List Item</ListItem>
-				<ListItem>List Item</ListItem>
-				<ListItem>List Item</ListItem>
-			</List>
-			<List size='md'>
-				<ListItem>List Item</ListItem>
-				<ListItem>List Item</ListItem>
-				<ListItem>List Item</ListItem>
-			</List>
-			<List ordered size='md'>
-				<ListItem>List Item</ListItem>
-				<ListItem>List Item</ListItem>
-				<ListItem>List Item</ListItem>
-			</List>
-			<List>
-				<ListItem>List Item</ListItem>
-				<ListItem>List Item</ListItem>
-				<ListItem>List Item</ListItem>
-			</List>
-			<List ordered>
-				<ListItem>List Item</ListItem>
-				<ListItem>List Item</ListItem>
-				<ListItem>List Item</ListItem>
-			</List>
+			<Breadcrumbs maxCrumbs={2}>
+				<BreadcrumbsLink>
+					<Link href="/">
+						<a>Home</a>
+					</Link>
+				</BreadcrumbsLink>
+				<BreadcrumbsLink>First Page</BreadcrumbsLink>
+				<BreadcrumbsLink disabled>Second Page</BreadcrumbsLink>
+				<BreadcrumbsLink>Third Page</BreadcrumbsLink>
+				<BreadcrumbsLink>Last Page</BreadcrumbsLink>
+			</Breadcrumbs>
 		</Fragment>
 	);
 }
