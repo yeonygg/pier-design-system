@@ -7,14 +7,14 @@ $codeblock-sizes: (
 .pier-codeblock {
 	font-family: $font-family-code;
 	font-weight: $font-weight-medium;
-	font-size: map-get($codeblock-sizes , "md");
+	font-size: map-get($codeblock-sizes , md);
 	color: map-get($colorsGrays, dark);
 	line-height: 1;
 	white-space: break-spaces;
 }
 
 .pier-codeblock--dark {
-	color: map-get($colorsGrays, 'lighter');
+	color: map-get($colorsGrays, lighter);
 }
 
 @each $prefix, $size in $codeblock-sizes {

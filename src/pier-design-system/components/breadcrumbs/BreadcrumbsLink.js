@@ -3,19 +3,17 @@ import PropTypes from "prop-types";
 export default function Breadcrumbs({ children, disabled, className, style }) {
 	let prefix = "pier-breadcrumbs",
 		crumbClasses = prefix + "__crumb",
-		linkClasses = prefix + "__link",
-		arrowClasses = prefix + "__arrow";
+		linkClasses = "pier-link -font-s-i";
 
-	disabled && (linkClasses += ` ${prefix}__link--disabled`);
+	disabled && (linkClasses += ` pier-link--disabled`);
 
 	className !== "" && (crumbClasses += ` ${className}`);
 
 	return (
 		<div className={crumbClasses} style={style}>
-			<div className={linkClasses}>
+			<span className={linkClasses}>
 				{children}
-			</div>
-			<i className={arrowClasses}></i>
+			</span>
 		</div>
 	);
 }

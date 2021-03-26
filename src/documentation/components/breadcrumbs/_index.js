@@ -1,7 +1,7 @@
 import ReactDOMServer from "react-dom/server";
-import base from "src/documentation/components/breadcrumbs/base";
-import ellipsis from "src/documentation/components/breadcrumbs/ellipsis";
-import dark from "src/documentation/components/breadcrumbs/dark";
+import base from "./base";
+import ellipsis from "./ellipsis";
+import dark from "./dark";
 
 export default {
 	title: "Breadcrumbs",

@@ -1,18 +1,19 @@
 $label-sizes: (
-	sm: .875rem,
-	md: 1rem
+	sm: .75rem,
+	md: 0.875rem
 );
 
 .pier-label {
 	font-family: $font-family;
 	font-weight: $font-weight-extrabold;
 	font-size: map-get($label-sizes , "md");
-	color: map-get($colorsGrays, 'gray');
+	color: map-get($colorsGrays, gray);
 	line-height: auto;
+	text-transform: uppercase;
 }
 
 .pier-label--dark {
-	color: map-get($colorsGrays, 'light-gray');
+	color: map-get($colorsGrays, light-gray);
 }
 
 @each $prefix, $size in $label-sizes {

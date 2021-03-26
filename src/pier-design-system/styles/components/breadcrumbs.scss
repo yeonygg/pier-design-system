@@ -10,53 +10,41 @@
 	display: inline-flex;
 	align-items: center;
 
+	&:after {
+		content: fa-content($fa-var-chevron-right);
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 400;
+		color: map-get($colorsGrays, light-gray);
+		margin: 0 1rem;
+	}
+
 	&:last-child {
-		.pier-breadcrumbs__arrow {
+		&:after {
 			display: none;
 		}
 	}
 }
 
-.pier-breadcrumbs__arrow, .pier-breadcrumbs__ellipsis {
-	color: map-get($colorsGrays, light-gray);
-
-	&:before {
-		font-family: 'Font Awesome 5 Free';
-		font-weight: 400;
-	}
-}
-
-.pier-breadcrumbs__arrow {
-	margin: 0 1rem;
-	&:before {
-		content: fa-content($fa-var-chevron-right);
-	}
-}
-
 .pier-breadcrumbs__ellipsis {
-	margin: 0;
 	&:before {
 		content: fa-content($fa-var-ellipsis-h);
+		color: map-get($colorsGrays, light-gray);
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 400;
+		margin: 0;
 	}
-}
-
-.pier-breadcrumbs__link {
-	cursor: pointer;
-	color: map-get($colorsBlue, default);
-
-	&:hover {
-		color: map-get($colorsBlue, dark-2);
-		text-decoration: underline;
-	}
-}
-
-.pier-breadcrumbs__link--disabled {
-	pointer-events: none;
-	color: map-get($colorsGrays, gray);
 }
 
 .pier-breadcrumbs--dark {
-	.pier-breadcrumbs__arrow, .pier-breadcrumbs__ellipsis {
-		color: map-get($colorsGrays, dark);
+	.pier-breadcrumbs__crumb {
+		&:after {
+			color: map-get($colorsGrays, dark);
+		}
+	}
+
+	.pier-breadcrumbs__ellipsis {
+		&:before {
+			color: map-get($colorsGrays, dark);
+		}
 	}
 }

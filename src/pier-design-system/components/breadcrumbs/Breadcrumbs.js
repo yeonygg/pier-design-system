@@ -28,8 +28,7 @@ export default function Breadcrumbs({ children, maxCrumbs, dark, className, styl
 				children :
 				<Fragment>
 					{children[0]}
-					<i className="pier-breadcrumbs__ellipsis" />
-					<i className="pier-breadcrumbs__arrow" />
+					<span className="pier-breadcrumbs__ellipsis" />
 					{getLastCrumbs()}
 				</Fragment>
 			}

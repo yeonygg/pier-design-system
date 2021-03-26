@@ -17,9 +17,9 @@ export default function Label({ children, forInput, size, dark, className, style
 	classes.push(` ${className}`)
 
 	return (
-		<label htmlFor={forInput} className={classes} style={style}>
+		<p htmlFor={forInput} className={classes} style={style}>
 			{children}
-		</label>
+		</p>
 	)
 }
 

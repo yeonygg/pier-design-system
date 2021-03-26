@@ -1,12 +1,22 @@
-import textBody from "src/documentation/components/text-body/_index";
-import list from "src/documentation/components/list/_index";
-import breadcrumbs from "src/documentation/components/breadcrumbs/_index";
+import textBody from "./text-body/_index";
+import textHeading from "./text-heading/_index";
+import textLabel from "./text-label/_index";
+import textCodeblock from "./text-codeblock/_index";
+import link from "./link/_index";
+import list from "./list/_index";
+import breadcrumbs from "./breadcrumbs/_index";
+import navigation from "./navigation/_index";
 
 let componentsData = [];
 componentsData.push(
 	textBody,
+	textHeading,
+	textLabel,
+	textCodeblock,
+	link,
 	list,
-	breadcrumbs
+	breadcrumbs,
+	navigation
 );
 
 export default componentsData;
