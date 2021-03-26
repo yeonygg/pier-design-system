@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 export default function Breadcrumbs({ children, disabled, className, style }) {
 	let prefix = "pier-breadcrumbs",
 		crumbClasses = prefix + "__crumb",
-		linkClasses = "pier-link -font-s-i";
+		linkClasses = "pier-link";
 
 	disabled && (linkClasses += ` pier-link--disabled`);
 

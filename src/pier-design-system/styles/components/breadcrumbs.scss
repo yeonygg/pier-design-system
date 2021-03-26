@@ -3,7 +3,11 @@
 	align-items: center;
 	font-family: $font-family;
 	font-weight: $font-weight-regular;
-	font-size: 1rem;
+	font-size: map-fetch($body-sizes, (sm, desktop));
+
+	@include build-media-query(mobile) {
+		font-size: map-fetch($body-sizes, (sm, mobile));
+	}
 }
 
 .pier-breadcrumbs__crumb {
@@ -14,7 +18,7 @@
 		content: fa-content($fa-var-chevron-right);
 		font-family: 'Font Awesome 5 Free';
 		font-weight: 400;
-		color: map-get($colorsGrays, light-gray);
+		color: map-fetch($colorsGrays, light-gray);
 		margin: 0 1rem;
 	}
 
@@ -28,7 +32,7 @@
 .pier-breadcrumbs__ellipsis {
 	&:before {
 		content: fa-content($fa-var-ellipsis-h);
-		color: map-get($colorsGrays, light-gray);
+		color: map-fetch($colorsGrays, light-gray);
 		font-family: 'Font Awesome 5 Free';
 		font-weight: 400;
 		margin: 0;
@@ -38,13 +42,13 @@
 .pier-breadcrumbs--dark {
 	.pier-breadcrumbs__crumb {
 		&:after {
-			color: map-get($colorsGrays, dark);
+			color: map-fetch($colorsGrays, dark);
 		}
 	}
 
 	.pier-breadcrumbs__ellipsis {
 		&:before {
-			color: map-get($colorsGrays, dark);
+			color: map-fetch($colorsGrays, dark);
 		}
 	}
 }

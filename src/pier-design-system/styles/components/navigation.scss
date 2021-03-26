@@ -7,6 +7,10 @@
 
 }
 
+.pier-nav__item-container {
+
+}
+
 .pier-nav__item {
 	display: flex;
 	align-items: center;
@@ -67,8 +71,19 @@
 
 	&:hover {
 		color: map-get($colorsGrays, "darker");
+	}
+
+	&:hover ~ .pier-nav__item {
 		background-color: map-get($colorsGrays, white);
-		box-shadow: 0 0 2rem rgba(map-get($colorsGrays, gray), 0.15);
+		color: map-get($colorsGrays, "darker");
+
+		.pier-nav__item-icon {
+			&:before {
+				color: transparent;
+				background: build-gradient(90deg, primaryBoulevard);
+				background-clip: text;
+			}
+		}
 	}
 }
 

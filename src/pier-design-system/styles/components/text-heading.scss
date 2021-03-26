@@ -1,24 +1,46 @@
+$default-size: md;
+
 $heading-sizes: (
-	xs: 1.125rem,
-	sm: 1.5rem,
-	md: 2.25rem,
-	lg: 3rem
+	xs: (
+		mobile: 1rem,
+		desktop: 1.125rem
+	),
+	sm: (
+		mobile: 1.25rem,
+		desktop: 1.5rem
+	),
+	md: (
+		mobile: 2rem,
+		desktop: 2.25rem
+	),
+	lg: (
+		mobile: 2.5rem,
+		desktop: 3rem
+	)
 );
 
 .pier-heading {
 	font-family: $font-family;
 	font-weight: $font-weight-bold;
-	font-size: map-get($heading-sizes, md);
-	color: map-get($colorsGrays, darker);
+	font-size: map-fetch($heading-sizes, ($default-size, desktop));
+	color: map-fetch($colorsGrays, darker);
 	line-height: auto;
+
+	@include build-media-query(mobile) {
+		font-size: map-fetch($heading-sizes, ($default-size, mobile));
+	}
 }
 
 .pier-heading--dark {
-	color: map-get($colorsGrays, white);
+	color: map-fetch($colorsGrays, white);
 }
 
 @each $prefix, $size in $heading-sizes {
 	.pier-heading--#{$prefix} {
-		font-size: $size;
+		font-size: map-fetch($size, desktop);
+
+		@include build-media-query(mobile) {
+			font-size: map-fetch($size, mobile);
+		}
 	}
 }
