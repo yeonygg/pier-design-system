@@ -1,0 +1,37 @@
+$link-sizes: $body-sizes;
+
+.pier-link {
+	font-family: $font-family;
+	font-weight: $font-weight-regular;
+	font-size: inherit;
+	color: map-fetch($colorsBlue, default);
+	text-decoration: none;
+	cursor: pointer;
+	line-height: inherit;
+
+	&:hover {
+		color: map-fetch($colorsBlue, dark-2);
+		text-decoration: underline;
+	}
+}
+
+.pier-link--disabled {
+	pointer-events: none;
+	color: map-fetch($colorsGrays, gray);
+}
+
+.pier-link--dark {
+	&:hover {
+		color: map-fetch($colorsBlue, light-2);
+	}
+}
+
+@each $prefix, $size in $link-sizes {
+	.pier-link--#{$prefix} {
+		font-size: map-fetch($size, desktop);
+
+		@include build-media-query(mobile) {
+			font-size: map-fetch($size, mobile);
+		}
+	}
+}

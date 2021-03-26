@@ -1,7 +1,22 @@
-import button from "./button.json";
-import navigation from "./navigation.json";
+import textBody from "./text-body/_index";
+import textHeading from "./text-heading/_index";
+import textLabel from "./text-label/_index";
+import textCodeblock from "./text-codeblock/_index";
+import link from "./link/_index";
+import list from "./list/_index";
+import breadcrumbs from "./breadcrumbs/_index";
+import navigation from "./navigation/_index";
 
 let componentsData = [];
-componentsData.push(button, navigation);
+componentsData.push(
+	textBody,
+	textHeading,
+	textLabel,
+	textCodeblock,
+	link,
+	list,
+	breadcrumbs,
+	navigation
+);
 
 export default componentsData;

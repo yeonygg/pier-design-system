@@ -2,17 +2,18 @@ import Head from "next/head";
 import PropTypes from "prop-types";
 import { Layout } from "../index";
 import componentsData from "../../documentation/components/_componentsData";
+import { Fragment } from "react";
 
 export default function fontsPage({ componentList }) {
 	return (
-		<div>
+		<Fragment>
 			<Head>
 				<title>Fonts | Pier Design System</title>
 			</Head>
-			<Layout componentList={componentList}/>
-			<hr></hr>
+			<Layout componentList={componentList}>
 			<h1>fonts</h1>
-		</div>
+			</Layout>
+		</Fragment>
 	);
 }
 

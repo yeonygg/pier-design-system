@@ -1,0 +1,46 @@
+$default-size: md;
+
+$body-sizes: (
+	xs: (
+		mobile: .75rem,
+		desktop: .875rem
+	),
+	sm: (
+		mobile: .875rem,
+		desktop: 1rem
+	),
+	md: (
+		mobile: 1rem,
+		desktop: 1.125rem
+	)
+);
+
+.pier-body-text {
+	font-family: $font-family;
+	font-weight: $font-weight-regular;
+	font-size: map-fetch($body-sizes, ($default-size, desktop));
+	color: map-fetch($colorsGrays, 'dark');
+	line-height: 1.55;
+	
+	@include build-media-query(mobile) {
+		font-size: map-fetch($body-sizes, ($default-size, mobile));
+	}
+}
+
+.pier-body-text--dark {
+	color: map-fetch($colorsGrays, 'lighter');
+}
+
+.pier-body-text--light-gray {
+	color: map-fetch($colorsGrays, 'light-gray');
+}
+
+@each $prefix, $size in $body-sizes {
+	.pier-body-text--#{$prefix} {
+		font-size: map-fetch($size, desktop);
+
+		@include build-media-query(mobile) {
+			font-size: map-fetch($size, mobile);
+		}
+	}
+}

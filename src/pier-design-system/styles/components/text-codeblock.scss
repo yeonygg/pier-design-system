@@ -1,0 +1,43 @@
+$default-size: md;
+
+$codeblock-sizes: (
+	xs: (
+		mobile: 0.625rem,
+		desktop: .75rem
+	),
+	sm: (
+		mobile: .75rem,
+		desktop: .875rem
+	),
+	md: (
+		mobile: .875rem,
+		desktop: 1rem
+	)
+);
+
+.pier-codeblock {
+	font-family: $font-family-code;
+	font-weight: $font-weight-medium;
+	font-size: map-fetch($codeblock-sizes, ($default-size, desktop));
+	color: map-get($colorsGrays, dark);
+	line-height: 1;
+	white-space: break-spaces;
+
+	@include build-media-query(mobile) {
+		font-size: map-fetch($codeblock-sizes, ($default-size, mobile));
+	}
+}
+
+.pier-codeblock--dark {
+	color: map-get($colorsGrays, lighter);
+}
+
+@each $prefix, $size in $codeblock-sizes {
+	.pier-codeblock--#{$prefix} {
+		font-size: map-fetch($size, desktop);
+
+		@include build-media-query(mobile) {
+			font-size: map-fetch($size, mobile);
+		}
+	}
+}

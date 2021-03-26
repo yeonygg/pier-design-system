@@ -1,0 +1,18 @@
+$section-paddings: (
+	xl: 3rem,
+	lg: 2rem,
+	md: 1.5rem,
+	sm: 1rem,
+	xs: .75rem
+);
+
+.pier-section {
+	display: block;
+	padding: map-get($section-paddings, "md");
+}
+
+@each $prefix, $padding in $section-paddings {
+	.pier-section--#{$prefix} {
+		padding: $padding;
+	}
+}

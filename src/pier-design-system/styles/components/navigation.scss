@@ -1,0 +1,146 @@
+.pier-nav {
+	background-color: map-get($colorsGrays, "light-4");
+	height: 100%;
+	width: 240px;
+	border-right: 1px solid map-get($colorsGrays, "light");
+	box-shadow: 0 0 2rem rgba(map-get($colorsGrays, gray), 0.15);
+
+}
+
+.pier-nav__item-container {
+
+}
+
+.pier-nav__item {
+	display: flex;
+	align-items: center;
+	padding-left: 24px;
+	padding-right: 12px;
+	width: 100%;
+	height: 48px;
+	color: map-get($colorsGrays, "dark-1");
+	font-weight: $font-weight-regular;
+	font-size: 16px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: map-get($colorsGrays, white);
+		color: map-get($colorsGrays, "darker");
+
+		.pier-nav__item-icon {
+			&:before {
+				color: transparent;
+				background: build-gradient(90deg, primaryBoulevard);
+				background-clip: text;
+			}
+		}
+	}
+}
+
+.pier-nav__item-icon {
+	margin-right: 16px;
+
+	&:before {
+		background: map-get($colorsGrays, "gray-3");
+		background-clip: text;
+	}
+}
+
+.pier-nav__item-dropdown-toggle {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	right: 16px;
+	top: 12px;
+	color: map-get($colorsGrays, "gray-4");
+	font-size: 16px;
+	width: 24px;
+	height: 24px;
+	line-height: 1;
+	cursor: pointer;
+	z-index: 99;
+	border-radius: 4px;
+
+	&:before {
+		content: fa-content($fa-var-chevron-right);
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 400;
+		transition: transform .2s ease-in-out;
+	}
+
+	&:hover {
+		color: map-get($colorsGrays, "darker");
+	}
+
+	&:hover ~ .pier-nav__item {
+		background-color: map-get($colorsGrays, white);
+		color: map-get($colorsGrays, "darker");
+
+		.pier-nav__item-icon {
+			&:before {
+				color: transparent;
+				background: build-gradient(90deg, primaryBoulevard);
+				background-clip: text;
+			}
+		}
+	}
+}
+
+.pier-nav__item-dropdown-toggle--toggled {
+	&:before {
+		transform: rotate(90deg);
+	}
+}
+
+.pier-nav__item-dropdown {
+	width: 100%;
+	max-height: 0;
+	transform: scaleY(0);
+	transform-origin: center top;
+	overflow: hidden;
+	transition: all .2s ease-in-out;
+}
+
+.pier-nav__item-dropdown-toggle--toggled ~ .pier-nav__item-dropdown {
+	transform: scaleY(1);
+	max-height: 2000px;
+}
+
+.pier-nav__sub-label {
+	display: flex;
+	align-items: center;
+	color: map-get($colorsGrays, "gray-4");
+	font-size: 12px;
+	padding-left: 24px;
+	height: 36px;
+	text-transform: uppercase;
+	font-weight: $font-weight-extrabold;
+}
+
+.pier-nav__sub-item {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	font-weight: $font-weight-regular;
+	font-size: 14px;
+	height: 36px;
+	padding-left: 31px;
+	color: map-get($colorsGrays, "dark-1");
+
+	&:hover {
+		background-color: map-get($colorsGrays, white);
+		color: map-get($colorsGrays, "darker");
+
+		.pier-nav__sub-item-line {
+			background: build-gradient(0deg, primaryBoulevard);
+		}
+	}
+}
+
+.pier-nav__sub-item-line {
+	height: 100%;
+	width: 2px;
+	margin-right: 16px;
+	background: map-get($colorsGrays, "gray-4");
+}

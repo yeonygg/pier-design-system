@@ -1,0 +1,20 @@
+$well-radii: (
+	lg: 1rem,
+	md: .75rem,
+	sm: .5rem
+);
+
+.pier-well {
+	overflow: hidden;
+	border: .0625rem solid map-get($colorsGrays, light);
+	background-color: map-get($colorsGrays, lighter);
+	border-radius: map-get($well-radii, lg);
+	box-shadow: inset 0 0 2rem rgba(map-get($colorsGrays, gray), 0.15);
+	margin-bottom: 1rem;
+}
+
+@each $prefix, $radius in $well-radii {
+	.pier-well--#{$prefix} {
+		border-radius: $radius;
+	}
+}

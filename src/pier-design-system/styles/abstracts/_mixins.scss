@@ -1,0 +1,17 @@
+@mixin style-from-list($list) {
+    @each $rule, $value in $list {
+        #{$rule}: #{$value};
+    }
+}
+
+@mixin build-media-query($breakpoint) {
+	@if $breakpoint == mobile {
+		@media screen and (max-width: 768px) {
+			@content
+		}
+	} @else if $breakpoint == tablet {
+		@media screen and (max-width: 1004px) {
+			@content
+		}
+	}
+}

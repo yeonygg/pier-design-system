@@ -1,0 +1,39 @@
+$default-size: md;
+
+$label-sizes: (
+	sm: (
+		mobile: 0.625rem,
+		desktop: .75rem
+	),
+	md: (
+		mobile: .75rem,
+		desktop: 0.875rem
+	)
+);
+
+.pier-label {
+	font-family: $font-family;
+	font-weight: $font-weight-extrabold;
+	font-size: map-fetch($label-sizes, ($default-size, desktop));
+	color: map-fetch($colorsGrays, gray);
+	line-height: auto;
+	text-transform: uppercase;
+
+	@include build-media-query(mobile) {
+		font-size: map-fetch($label-sizes, ($default-size, mobile));
+	}
+}
+
+.pier-label--dark {
+	color: map-fetch($colorsGrays, light-gray);
+}
+
+@each $prefix, $size in $label-sizes {
+	.pier-label--#{$prefix} {
+		font-size: map-fetch($size, desktop);
+
+		@include build-media-query(mobile) {
+			font-size: map-fetch($size, mobile);
+		}
+	}
+}

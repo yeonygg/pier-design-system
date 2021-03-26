@@ -20,4 +20,13 @@ module.exports = {
 		"react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
 		"react/display-name": 1,
 	},
+	settings: {
+		"import/resolver": {
+			"import/resolver": {
+				"node": {
+					"paths": ["."]
+				}
+			}
+		}
+	}
 };

@@ -131,3 +131,11 @@ $gradients: (
 @function build-gradient($angle, $gradient) {
     @return linear-gradient($angle, map-fetch($gradients, ($gradient, color1)) -7%, map-fetch($gradients, ($gradient, color2)) 107%);
 }
+
+@function build-gradient-moz($angle, $gradient) {
+    @return -moz-linear-gradient($angle, map-fetch($gradients, ($gradient, color1)) -7%, map-fetch($gradients, ($gradient, color2)) 107%);
+}
+
+@function build-gradient-webkit($angle, $gradient) {
+    @return -webkit-linear-gradient($angle, map-fetch($gradients, ($gradient, color1)) -7%, map-fetch($gradients, ($gradient, color2)) 107%);
+}
