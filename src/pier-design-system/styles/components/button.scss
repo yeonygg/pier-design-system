@@ -1,36 +1,88 @@
 .pier-button__bg {
-   
-	background: build-gradient(90deg, primaryBoulevard);
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	border: none;
-	z-index: -1;
-	border-radius: map-get($input-border-radii, md);
-	
-  }
-  
-  .pier-button {
-	 
-	display: inline-block;
-	position: relative;
-	height: map-get($input-heights, md);
-	z-index: 2;
-	border-radius: map-get($input-border-radii, md);
-	border: none;
-	text-decoration: none;
-	padding: 9px 25px;
-	font-family: $font-family;
-	font-size: map-get($input-text-sizes, md);
-	cursor: pointer;
-	
-  }
-  
-  .pier_button__content {
-	 color: map-get($colorsGrays, white);
-  
-  }
+  background: build-gradient(90deg, primaryBoulevard);
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  z-index: -1;
+  border-radius: map-get($input-border-radii, md);
 
+  &:hover {
+    &:after {
+      content: "";
+      position: absolute;
+      left: 1px;
+      right: 1px;
+      top: 1px;
+      bottom: 1px;
+      z-index: -3;
+      border-radius: map-get($input-border-radii, md);
+      background: map-get($colorsGrays, white);
+    }
+  }
+  &:active {
+	
+	&:after {
+		content: "";
+		position: absolute;
+		left: 1px;
+		right: 1px;
+		top: 1px;
+		bottom: 1px;
+		z-index: -3;
+		border-radius: map-get($input-border-radii, md);
+		background: map-get($colorsGreen, light-4);
+  }
+}
+
+&:focus {
+	background: build-gradient(90deg, primaryBoulevard);
+	opacity: .3;
+
+}
+}
+
+.pier-button {
+  display: inline-block;
+  position: relative;
+  height: map-get($input-heights, md);
+  z-index: 2;
+  border-radius: map-get($input-border-radii, md);
+  border: none;
+  padding: 9px 24px;
+  font-family: $font-family;
+  font-size: map-get($input-text-sizes, md);
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 2px 2px 6px rgba(0, 191, 232, 0.4);
+  }
+}
+
+.pier_button__content {
+  color: map-get($colorsGrays, white);
+
+  &:hover {
+   
+
+    &::before {
+	  
+      display: flex;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      left: 12px;
+      right: 12px;
+      top: 8px;
+      bottom: 8px;
+      z-index: -1;
+      border-radius: map-get($input-border-radii, md);
+      background: build-gradient(90deg, primaryBoulevard);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
