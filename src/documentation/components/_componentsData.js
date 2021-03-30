@@ -6,6 +6,7 @@ import link from "./link/_index";
 import list from "./list/_index";
 import breadcrumbs from "./breadcrumbs/_index";
 import navigation from "./navigation/_index";
+import button from "./button/_index";
 
 let componentsData = [];
 componentsData.push(
@@ -16,7 +17,8 @@ componentsData.push(
 	link,
 	list,
 	breadcrumbs,
-	navigation
+	navigation,
+	button
 );
 
 export default componentsData;
