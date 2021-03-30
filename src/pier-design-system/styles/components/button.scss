@@ -9,7 +9,7 @@
 	bottom: 0;
 	border: none;
 	z-index: -1;
-	border-radius: 8px;
+	border-radius: map-get($input-border-radii, md);
 	
   }
   
@@ -17,10 +17,10 @@
 	 
 	display: inline-block;
 	position: relative;
-	height: 2.75rem;
-	border: #000;
+	height: map-get($input-heights, md);
 	z-index: 2;
-	border-radius: 8px;
+	border-radius: map-get($input-border-radii, md);
+	border: none;
 	text-decoration: none;
 	padding: 9px 25px;
 	font-family: $font-family;
@@ -30,7 +30,7 @@
   }
   
   .pier_button__content {
-	 color: #fff;
+	 color: map-get($colorsGrays, white);
   
   }
 
