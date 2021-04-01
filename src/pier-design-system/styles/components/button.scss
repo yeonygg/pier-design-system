@@ -24,28 +24,25 @@
     }
   }
   &:active {
-	
-	&:after {
-		content: "";
-		position: absolute;
-		left: 1px;
-		right: 1px;
-		top: 1px;
-		bottom: 1px;
-		z-index: -3;
-		border-radius: map-get($input-border-radii, md);
-		background: map-get($colorsGreen, light-4);
+    &:after {
+      content: "";
+      position: absolute;
+      left: 1px;
+      right: 1px;
+      top: 1px;
+      bottom: 1px;
+      z-index: -3;
+      border-radius: map-get($input-border-radii, md);
+      background: map-get($colorsGreen, light-4);
+    }
+  }
+
+  &:focus {
+    background: build-gradient(90deg, primaryBoulevard);
   }
 }
 
-&:focus {
-	background: build-gradient(90deg, primaryBoulevard);
-	opacity: .3;
-
-}
-}
-
-.pier-button {
+button {
   display: inline-block;
   position: relative;
   height: map-get($input-heights, md);
@@ -59,30 +56,31 @@
 
   &:hover {
     box-shadow: 2px 2px 6px rgba(0, 191, 232, 0.4);
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 1px;
+      right: 1px;
+      top: 1px;
+      bottom: 1px;
+      z-index: -3;
+      border-radius: map-get($input-border-radii, md);
+      background: map-get($colorsGrays, white);
+    }
   }
 }
 
-.pier_button__content {
-  color: map-get($colorsGrays, white);
+
+span {
+  
+color: map-get($colorsGrays, white);
+
+
 
   &:hover {
-   
-
-    &::before {
-	  
-      display: flex;
-      position: absolute;
-      align-items: center;
-      justify-content: center;
-      left: 12px;
-      right: 12px;
-      top: 8px;
-      bottom: 8px;
-      z-index: -1;
-      border-radius: map-get($input-border-radii, md);
-      background: build-gradient(90deg, primaryBoulevard);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+    background: build-gradient(90deg, primaryBoulevard);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
