@@ -1,5 +1,6 @@
 import ReactDOMServer from "react-dom/server";
 import base from "./base";
+import sizes from "./sizes";
 
 export default {
 	title: "Button",
@@ -11,7 +12,13 @@ export default {
 			description: "",
 			markup: ReactDOMServer.renderToStaticMarkup(base),
 			dark: false,
-		}
+		},
+		{
+			name: "Sizes",
+			description: "",
+			markup: ReactDOMServer.renderToStaticMarkup(sizes),
+			dark: false,
+		},
 
 	],
 };
