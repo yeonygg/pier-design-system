@@ -5,9 +5,9 @@ export default (
 
 
 
-<button className="pier-button--sm">Button Text</button>
-<button className="pier-button--md">Button Text</button>
-<button className="pier-button--lg">Button Text</button>
+<button className="pier-button-standard pier-button-standard--sm">Button Text</button>
+<button className="pier-button-standard pier-button-standard--md">Button Text</button>
+<button className="pier-button-standard pier-button-standard--lg">Button Text</button>
 
 
 

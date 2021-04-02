@@ -1,0 +1,107 @@
+
+
+// .pier-button {
+//   base styles
+    //  hover, active, focus
+
+    // nested inside of the hover, would be the .pier-button__bg classes
+
+
+
+    // &:hover {
+      
+    //   .pier-button__bg { <- this is nested inside the parent class
+
+    //   }
+
+        // .pier-button__content {
+
+              // .pier_button__icon {
+
+    // }
+
+
+    // }
+    // }
+
+// }
+.pier-button__bg {
+  background: build-gradient(90deg, primaryBoulevard);
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  z-index: -1;
+  border-radius: map-get($input-border-radii, md);
+
+  &:hover {
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 1px;
+      right: 1px;
+      top: 1px;
+      bottom: 1px;
+      z-index: -3;
+      border-radius: map-get($input-border-radii, md);
+      background: map-get($colorsGrays, white);
+
+    }
+  }
+  &:active {
+    &:after {
+      content: "";
+      position: absolute;
+      left: 1px;
+      right: 1px;
+      top: 1px;
+      bottom: 1px;
+      z-index: -3;
+      border-radius: map-get($input-border-radii, md);
+      background: map-get($colorsGreen, light-4);
+    }
+  }
+
+  &:focus {
+    background: build-gradient(90deg, primaryBoulevard);
+  }
+}
+
+.pier-button {
+  display: inline-block;
+  position: relative;
+  height: map-get($input-heights, md);
+  z-index: 2;
+  border-radius: map-get($input-border-radii, md);
+  border: none;
+  padding: 9px 24px;
+  font-family: $font-family;
+  font-size: map-get($input-text-sizes, md);
+  margin: 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 2px 2px 6px rgba(0, 191, 232, 0.4);
+
+}
+}
+
+
+.pier-button__content {
+  
+color: map-get($colorsGrays, white);
+
+
+
+  &:hover {
+    background: build-gradient(90deg, primaryBoulevard);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+
