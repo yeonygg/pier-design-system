@@ -1,43 +1,57 @@
+$default-size: md;
+
+$input-text-sizes: (
+  sm: 2.125rem,
+  md: 2.75rem,
+  lg: 3.75rem
+  );
+ 
+
+
 .pier-input-text {
-    position: relative;
-    box-sizing: border-box;
-    border: 1px solid map-get($colorsGrays, gray-3);
-    //background: build-gradient(90deg, primaryBoulevard);
-    border-radius: 8px;
-    height: 44px;
-    width: 100%;
-    padding: 4px 16px;
-    font-family: mulish, sans-serif;
-    font-size: 16px;
-    color: map-get($colorsGrays, dark-1);
-    transition: transform .1s ease-in-out;
-  
-    &::placeholder {
-      color: map-get($colorsGrays, gray-3);
-    }
-  
-    &:hover {
-      border: 1px solid map-get($colorsGrays, dark-1);
-    }
-  
-    &:focus {
-      box-shadow: 0px 1px 7px 0px rgba(map-get($colorsBlue, dark-1), .2);
-      outline: none;
-      border-color: map-get($colorsBlue, dark-1);
-    }
-  
-    &:active {
-      transform: scale(.99);
-    }
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid map-get($colorsGrays, gray-3);
+  border-radius: 8px;
+  width: 100%;
+  height: map-fetch($input-text-sizes, ($default-size));
+  padding: 4px 16px;
+  margin: 12px 0px;
+  font-family: mulish, sans-serif;
+  font-size: 16px;
+  color: map-get($colorsGrays, dark-1);
+  transition: .1s ease-in-out;
+
+  &::placeholder {
+    color: map-get($colorsGrays, gray-3);
   }
-  
-  .pier-input-text--error {
+
+  &:hover {
+    border: 1px solid map-get($colorsGrays, dark-1);
+  }
+
+  &:focus {
+    box-shadow: 0px 1px 7px 0px rgba(map-get($colorsBlue, dark-1), .2);
+    outline: none;
+    border-color: map-get($colorsBlue, dark-1);
+  }
+
+}
+
+.pier-input-text--sm {
+  height: map-get($input-text-sizes, sm);
+}
+.pier-input-text--md {
+  height: map-get($input-text-sizes, md);
+}
+.pier-input-text--lg {
+  height: map-get($input-text-sizes, lg);
+}
+
+.pier-input-text--errors {
+  border: 1px solid red !important;
+
+  &:hover {
     border: 1px solid red;
-  
-    &:hover {
-      border: 1px solid red;
-    }
-  
-    &:focus {}
   }
-  
+}
