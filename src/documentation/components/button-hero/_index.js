@@ -3,10 +3,11 @@ import base from "./base";
 import sizes from "./sizes";
 import disabled from "./disabled";
 import pill from "./pill";
+import secondary from "./secondary";
 
 export default {
-	title: "Button",
-	slug: "button",
+	title: "Button-hero",
+	slug: "button-hero",
 	description: "This is a description for buttons.",
 	"last-updated": "3/30/21",
 	variations: [{
@@ -31,6 +32,12 @@ export default {
 			name: "Pill",
 			description: "",
 			markup: ReactDOMServer.renderToStaticMarkup(pill),
+			dark: false,
+		},
+		{
+			name: "Secondary",
+			description: "",
+			markup: ReactDOMServer.renderToStaticMarkup(secondary),
 			dark: false,
 		},
 

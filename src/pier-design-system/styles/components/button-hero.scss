@@ -1,111 +1,177 @@
+$default-size: md;
 
-
-.pier-button {
-
+.pier-button-hero {
   display: inline-block;
   position: relative;
-  height: map-get($input-heights, md);
-  z-index: 2;
-  border-radius: map-get($input-border-radii, md);
+  border-radius: map-get($input-border-radii, $default-size);
+  overflow: hidden;
   border: none;
-  padding: 9px 24px;
   font-family: $font-family;
-  font-size: map-get($input-text-sizes, md);
+  font-size: map-get($input-text-sizes, $default-size);
   margin: 0.5rem;
+  background: build-gradient(90deg, primaryBoulevard);
+  padding: 0 map-get($button-padding, $default-size);
+  height: map-get($input-heights, $default-size);
   cursor: pointer;
 
-    //  hover, active, focus
-
-    // nested inside of the hover, would be the .pier-button__bg classes
 
 
-
-&:hover {
-
-  box-shadow: 2px 2px 6px rgba(0, 191, 232, 0.4);
-      
-    //   .pier-button__bg { <- this is nested inside the parent class
-
-}
-
-&:active {
-
-  &:after {
-    content: "";
-    position: absolute;
-    left: 1px;
-    right: 1px;
-    top: 1px;
-    bottom: 1px;
-    z-index: -3;
-    border-radius: map-get($input-border-radii, md);
-    background: map-get($colorsGreen, light-4);
-  }
-
-}
-
-&:focus {
-
-}
-
-        // .pier-button__content {
-
-              // .pier_button__icon {
-
-    // }
-
-
-    // }
-    // }
-
-}
-.pier-button__bg {
-  background: build-gradient(90deg, primaryBoulevard);
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: none;
-  z-index: -1;
-  border-radius: map-get($input-border-radii, md);
-
-  &:hover {
-
-    &:after {
-      content: "";
-      position: absolute;
-      left: 1px;
-      right: 1px;
-      top: 1px;
-      bottom: 1px;
-      z-index: -3;
-      border-radius: map-get($input-border-radii, md);
-      background: map-get($colorsGrays, white);
+  &:active {
+    .pier-button-hero__bg {
+      background: map-get($colorsGreen, light-4);
 
     }
   }
 
+  &:hover {
+    .pier-button-hero__bg {
+      opacity: 1;
 
-  &:focus {
+    }
+    
+
+    .pier-button-hero__content {
+
     background: build-gradient(90deg, primaryBoulevard);
+    background-clip: text;
+    z-index: 99;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+  
+
+    }
+
+    .pier-button-hero__icon {
+      background: build-gradient(90deg, primaryBoulevard);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 }
 
+.pier-button-hero__bg {
+  position: absolute;
+  border-radius: map-get($input-border-radii, $default-size);
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  z-index: 0;
+  background: map-get($colorsGrays, white);
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
 
+.pier-button-hero__content {
 
-.pier-button__content {
-  
-color: map-get($colorsGrays, white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  color: map-get($colorsGrays, white);
+  height: 100%;
+}
 
+.pier-button-hero__icon {
+  margin-right: calc(#{map-get($input-text-sizes, $default-size)} / 2);
 
+}
+
+@each $prefix, $size in $input-heights {
+  .pier-button-hero--#{$prefix} {
+    height: $size;
+    border-radius: map-get($input-border-radii, $prefix);
+    padding: 0 map-get($button-padding, $prefix);
+    font-size: map-get($input-text-sizes, $prefix);
+  }
+}
+
+.pier-button-hero--disabled {
+  opacity: 0.4;
+  color: map-get($colorsGrays, white);
+  pointer-events: none;
+}
+
+.pier-button-hero--pill {
+  border-radius: 100px;
 
   &:hover {
-    background: build-gradient(90deg, primaryBoulevard);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    border-radius: 100px;
   }
 }
 
+.pier-button-hero__bg--pill {
+  position: absolute;
+  border-radius: 100px;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  z-index: 0;
+  background: map-get($colorsGrays, white);
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.pier-button-hero--secondary {
+
+  &:hover {
+    .pier-button-hero__bg--secondary {
+      opacity: 0;
+      
+    }
+
+    .pier-button-hero__content--secondary {
+      
+      background: map-get($colorsGrays, white);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .pier-button-hero__icon--secondary {
+      
+      background: map-get($colorsGrays, white);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.pier-button-hero__bg--secondary {
+  position: absolute;
+  border-radius: map-get($input-border-radii, md);
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  z-index: 0;
+  background: map-get($colorsGrays, white);
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out;
+
+}
+
+.pier-button-hero__content--secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  background: build-gradient(90deg, primaryBoulevard);
+  background-clip: text;
+  z-index: 99;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: 100%;
+
+}
+
+.pier-button-hero__icon--secondary {
+  margin-right: calc(#{map-get($input-text-sizes, $default-size)} / 2);
+  background: build-gradient(90deg, primaryBoulevard);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 

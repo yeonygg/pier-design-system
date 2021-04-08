@@ -6,7 +6,9 @@ import link from "./link/_index";
 import list from "./list/_index";
 import breadcrumbs from "./breadcrumbs/_index";
 import navigation from "./navigation/_index";
-import button from "./button/_index";
+import buttonHero from "./button-hero/_index";
+import buttonStandard from "./button-standard/_index";
+import buttonIcon from "./button-icon/_index";
 
 let componentsData = [];
 componentsData.push(
@@ -18,7 +20,10 @@ componentsData.push(
 	list,
 	breadcrumbs,
 	navigation,
-	button
+	buttonHero,
+	buttonStandard,
+	buttonIcon
+
 );
 
 export default componentsData;
