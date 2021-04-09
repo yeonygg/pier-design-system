@@ -88,6 +88,14 @@ $default-size: md;
   }
 }
 
+@each $prefix, $size in $input-heights {
+  .pier-button-hero__bg--#{$prefix} {
+
+    border-radius: map-get($input-border-radii, $prefix);
+
+  }
+}
+
 .pier-button-hero--disabled {
   opacity: 0.4;
   color: map-get($colorsGrays, white);
@@ -115,72 +123,46 @@ $default-size: md;
   transition: opacity 0.1s ease-in-out;
 }
 
-.pier-button-hero--secondary {
+
+.pier-button-hero01 {
+
+  display: inline-block;
+  position: relative;
+  border-radius: map-get($input-border-radii, $default-size);
+  overflow: hidden;
+  border: none;
+  font-family: $font-family;
+  font-size: map-get($input-text-sizes, $default-size);
+  background-size: 200% auto;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  width: fit-content;
+  text-align: center;
+  box-shadow: 0 0px 0px, 0 0px 0px;
+  color: map-get($colorsGrays, white);
+  margin: 0.5rem;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  padding: 0 map-get($button-padding, $default-size);
+  height: map-get($input-heights, $default-size);
+
+  cursor: pointer;
 
   &:hover {
-    .pier-button-hero__bg--secondary {
-      opacity: 0;
-      
-    }
+    background-position: right center;
+    opacity: 0.8;
 
-    .pier-button-hero__content--secondary {
-      
-      background: map-get($colorsGrays, white);
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+    margin: 0.5rem 0.5rem 0.5rem;
+}
 
-    .pier-button-hero__icon--secondary {
-      
-      background: map-get($colorsGrays, white);
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
   }
 
-  &:active {
+  .pier-button-hero--hover {
+    background-image: linear-gradient(to right, #00d58d 0%, #00bfe8 51%, #00d58d 100%);
 
-    .pier-button-hero__bg--secondary {
-      background: map-get($colorsCyan, dark-1);
-      
+    &:hover {
+      background-position: right center;
     }
 
   }
-}
 
-.pier-button-hero__bg--secondary {
-  position: absolute;
-  border-radius: map-get($input-border-radii, md);
-  left: 1px;
-  right: 1px;
-  top: 1px;
-  bottom: 1px;
-  z-index: 0;
-  background: map-get($colorsGrays, white);
-  opacity: 1;
-  transition: opacity 0.1s ease-in-out;
 
-}
-
-.pier-button-hero__content--secondary {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 2;
-  background: build-gradient(90deg, primaryBoulevard);
-  background-clip: text;
-  z-index: 99;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  height: 100%;
-
-}
-
-.pier-button-hero__icon--secondary {
-  margin-right: calc(#{map-get($input-text-sizes, $default-size)} / 2);
-  background: build-gradient(90deg, primaryBoulevard);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 

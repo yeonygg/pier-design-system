@@ -34,7 +34,7 @@
     -webkit-transition-duration: 0.2s, 0.2s;
     -webkit-transition-timing-function: linear, ease-in;
   }
-  
+
 }
 
 @each $prefix, $size in $input-heights {
@@ -51,9 +51,18 @@
   pointer-events: none;
 }
 
-.pier-button-standard--pill {
+.pier-button-standard--pill{
   border-radius: 100px;
 }
+
+.pier-button-standard--groupright {
+
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+
+}
+
+
 
 .pier-button-standard--secondary {
   background: map-get($colorsGrays, white);
@@ -69,4 +78,8 @@
   &:focus {
     border: 1px solid map-fetch($colorsCyan, light-3);
   }
+}
+
+.pier-button-standard--dark {
+  background: map-get($colorsGrays, dark-4);
 }

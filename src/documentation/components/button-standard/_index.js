@@ -4,6 +4,7 @@ import sizes from "./sizes";
 import disabled from "./disabled";
 import pill from "./pill";
 import secondary from "./secondary";
+import dark from "./dark";
 
 export default {
 	title: "Button-standard",
@@ -40,6 +41,11 @@ export default {
 			markup: ReactDOMServer.renderToStaticMarkup(secondary),
 			dark: false,
 		},
-
+		{
+			name: "Dark",
+			description: "",
+			markup: ReactDOMServer.renderToStaticMarkup(dark),
+			dark: true,
+		},
 	],
 };
