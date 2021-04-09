@@ -137,6 +137,15 @@ $default-size: md;
       -webkit-text-fill-color: transparent;
     }
   }
+
+  &:active {
+
+    .pier-button-hero__bg--secondary {
+      background: map-get($colorsCyan, dark-1);
+      
+    }
+
+  }
 }
 
 .pier-button-hero__bg--secondary {

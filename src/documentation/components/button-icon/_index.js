@@ -3,7 +3,8 @@ import base from "./base";
 import sizes from "./sizes";
 import disabled from "./disabled";
 import pill from "./pill";
-import secondary from "./secondary";
+import test_hovers from "./test_hovers";
+
 
 export default {
 	title: "Button-icon",
@@ -35,9 +36,9 @@ export default {
 			dark: false,
 		},
 		{
-			name: "Secondary",
+			name: "Test Hovers",
 			description: "",
-			markup: ReactDOMServer.renderToStaticMarkup(secondary),
+			markup: ReactDOMServer.renderToStaticMarkup(test_hovers),
 			dark: false,
 		},
 
