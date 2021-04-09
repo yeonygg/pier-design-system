@@ -1,6 +1,6 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
-import componentsData from "../documentation/components/_componentsData";
+import API from "src/documentation/API";
 import { Fragment } from "react";
 import Heading from "src/pier-design-system/components/text/Heading";
 import NextLink from "next/link";
@@ -11,23 +11,23 @@ import NavItemDropdown from "src/pier-design-system/components/navigation/NavIte
 import NavSubItem from "src/pier-design-system/components/navigation/NavSubItem";
 import NavSubLabel from "src/pier-design-system/components/navigation/NavSubLabel";
 
-export default function Home({ componentList }) {
+export default function Home({ appData }) {
 	return (
 		<Fragment>
 			<Head>
 				<title>Pier Design System</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<Layout componentList={componentList}></Layout>
+			<Layout appData={appData}></Layout>
 		</Fragment>
 	);
 }
 
 Home.propTypes = {
-	componentList: PropTypes.array,
+	appData: PropTypes.object,
 };
 
-export function Layout({ children, componentList }) {
+export function Layout({ children, appData }) {
 	return (
 		<Fragment>
 			<div style={{ position: "fixed", height: "100vh", zIndex: 99 }}>
@@ -57,16 +57,35 @@ export function Layout({ children, componentList }) {
 									<NavSubItem>Colors</NavSubItem>
 								</a>
 							</NextLink>
+							<NextLink href='/abstracts/colors'>
+								<a>
+									<NavSubItem>Colors</NavSubItem>
+								</a>
+							</NextLink>
 						</NavItemDropdown>
 					</NavItemContainer>
 					<NavItemContainer startToggled>
 						<NavItem icon="fas fa-cubes">Components</NavItem>
 						<NavItemDropdown>
-							{componentList.map((component) => {
+							{appData.components.map((component) => {
 								return (
 									<NextLink key={component.slug} href={"/components/" + component.slug}>
 										<a>
 											<NavSubItem>{component.title}</NavSubItem>
+										</a>
+									</NextLink>
+								);
+							})}
+						</NavItemDropdown>
+					</NavItemContainer>
+					<NavItemContainer>
+						<NavItem icon="fas fa-cubes">Utilities</NavItem>
+						<NavItemDropdown>
+							{appData.utilities.map((utility) => {
+								return (
+									<NextLink key={utility.slug} href={"/utilities/" + utility.slug}>
+										<a>
+											<NavSubItem>{utility.title}</NavSubItem>
 										</a>
 									</NextLink>
 								);
@@ -82,13 +101,13 @@ export function Layout({ children, componentList }) {
 
 Layout.propTypes = {
 	children: PropTypes.node.isRequired,
-	componentList: PropTypes.array,
+	appData: PropTypes.object,
 };
 
 export async function getStaticProps() {
 	return {
 		props: {
-			componentList: componentsData,
+			appData: API
 		},
 	};
 }

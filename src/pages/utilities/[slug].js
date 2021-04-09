@@ -17,11 +17,11 @@ import Well from "src/pier-design-system/components/containers/Well";
 import Breadcrumbs from "src/pier-design-system/components/breadcrumbs/Breadcrumbs";
 import BreadcrumbsLink from "src/pier-design-system/components/breadcrumbs/BreadcrumbsLink";
 
-export default function ComponentPage({ appData, component }) {
+export default function ComponentPage({ appData, utility }) {
 	return (
 		<Fragment>
 			<Head>
-				<title>{component.title} | Pier Design System</title>
+				<title>{utility.title} | Pier Design System</title>
 			</Head>
 			<Layout appData={appData}>
 				<Section>
@@ -31,34 +31,18 @@ export default function ComponentPage({ appData, component }) {
 								<a>Home</a>
 							</NextLink>
 						</BreadcrumbsLink>
-						<BreadcrumbsLink disabled>Components</BreadcrumbsLink>
-						<BreadcrumbsLink disabled>{component.title}</BreadcrumbsLink>
+						<BreadcrumbsLink disabled>Utilities</BreadcrumbsLink>
+						<BreadcrumbsLink disabled>{utility.title}</BreadcrumbsLink>
 					</Breadcrumbs>
 					<div style={{ display: "inline-block" }}>
-						<Heading style={{ paddingRight: "4px" }}>{component.title}</Heading>
+						<Heading style={{ paddingRight: "4px" }}>{utility.title}</Heading>
 						<HR color='hero' />
 					</div>
 					<BodyText size='xs' color='light-gray'>
-						Last updated: {component["last-updated"]}
+						Last updated: {utility["last-updated"]}
 					</BodyText>
-					<BodyText>{component.description}</BodyText>
+					<BodyText>{utility.description}</BodyText>
 				</Section>
-				{component.variations.map((variation) => (
-					<Section key={variation.name}>
-						<Heading size='sm'>{variation.name}</Heading>
-						<BodyText>{variation.description}</BodyText>
-						<Card dark={variation.dark}>
-							<Section>{htmlReactParse(variation.markup)}</Section>
-						</Card>
-						<Well>
-							<Section>
-								<CodeBlock size='xs'>
-									{prettier.format(variation.markup, {parser: "html", plugins: [parserHtml], tabWidth: 4})}
-								</CodeBlock>
-							</Section>
-						</Well>
-					</Section>
-				))}
 			</Layout>
 		</Fragment>
 	);
@@ -66,23 +50,23 @@ export default function ComponentPage({ appData, component }) {
 
 ComponentPage.propTypes = {
 	appData: PropTypes.object,
-	component: PropTypes.object,
+	utility: PropTypes.object,
 };
 
 export async function getStaticPaths() {
-	const paths = API.components.map((component) => ({
-		params: { slug: component.slug },
+	const paths = API.utilities.map((utility) => ({
+		params: { slug: utility.slug },
 	}));
 
 	return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
-	const result = API.components.filter((component) => component.slug === params.slug);
+	const result = API.utilities.filter((utility) => utility.slug === params.slug);
 	return {
 		props: {
 			appData: API,
-			component: result[0],
+			utility: result[0],
 		},
 	};
 }

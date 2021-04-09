@@ -4,7 +4,7 @@
 	width: 240px;
 	border-right: 1px solid map-get($colorsGrays, "light");
 	box-shadow: 0 0 2rem rgba(map-get($colorsGrays, gray), 0.15);
-
+	overflow: scroll;
 }
 
 .pier-nav__item-container {
