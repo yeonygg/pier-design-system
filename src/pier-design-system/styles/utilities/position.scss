@@ -1,0 +1,95 @@
+.-pos-relative {
+    position: relative !important;
+}
+
+.-pos-fixed {
+    position: fixed !important;
+}
+
+.-pos-static {
+    position: static !important;
+}
+
+.-pos-absolute {
+    position: absolute !important;
+}
+
+.-pos-absolute-t {
+    position: absolute !important;
+	top: 0;
+}
+
+.-pos-absolute-r {
+    position: absolute !important;
+	right: 0;
+}
+
+.-pos-absolute-b {
+    position: absolute !important;
+	bottom: 0;
+}
+
+.-pos-absolute-l {
+    position: absolute !important;
+	left: 0
+}
+
+.-pos-absolute-tl {
+    position: absolute !important;
+	top: 0;
+	left: 0;
+}
+
+.-pos-absolute-tr {
+    position: absolute !important;
+	top: 0;
+	right: 0;
+}
+
+.-pos-absolute-bl {
+    position: absolute !important;
+	bottom: 0;
+	left: 0;
+}
+
+.-pos-absolute-br {
+    position: absolute !important;
+	bottom: 0;
+	right: 0;
+}
+
+.-pos-absolute-tc {
+    position: absolute !important;
+	left: 0;
+	top: 0;
+	right: 0;
+}
+
+.-pos-absolute-rc {
+    position: absolute !important;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.-pos-absolute-bc {
+    position: absolute !important;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.-pos-absolute-lc {
+    position: absolute !important;
+	bottom: 0;
+	left: 0;
+	top: 0;
+}
+
+.-pos-absolute-c {
+    position: absolute !important;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}

@@ -1,31 +1,16 @@
 import ReactDOMServer from "react-dom/server";
-import base from "./base";
-import ellipsis from "./ellipsis";
-import dark from "./dark";
 
 export default {
-	title: "Breadcrumbs",
-	slug: "breadcrumbs",
-	description: "This is a description for breadcrumbs.",
-	"last-updated": "3/24/21",
+	title: "Layout",
+	slug: "layout",
+	description: "This is a description for layout.",
+	"last-updated": "4/8/21",
 	variations: [
 		{
 			name: "Base",
 			description: "",
-			markup: ReactDOMServer.renderToStaticMarkup(base),
+			markup: ReactDOMServer.renderToStaticMarkup(),
 			dark: false,
 		},
-		{
-			name: "With Ellipsis",
-			description: "",
-			markup: ReactDOMServer.renderToStaticMarkup(ellipsis),
-			dark: false,
-		},
-		{
-			name: "Dark",
-			description: "This is the dark modifier.",
-			markup: ReactDOMServer.renderToStaticMarkup(dark),
-			dark: true,
-		},
-	],
+	]
 };

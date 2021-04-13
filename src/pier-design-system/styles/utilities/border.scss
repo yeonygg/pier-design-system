@@ -1,0 +1,15 @@
+.-border-darker {
+	border: 1px solid map-fetch($colorsGrays, darker);
+}
+
+.-border-dark {
+	border: 1px solid map-fetch($colorsGrays, dark);
+}
+
+.-border-gray {
+	border: 1px solid map-fetch($colorsGrays, gray);
+}
+
+.-border-light-gray {
+	border: 1px solid map-fetch($colorsGrays, light-gray);
+}

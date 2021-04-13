@@ -1,0 +1,24 @@
+$depths: (
+	"neg-5": -50,
+	"neg-4": -40,
+	"neg-3": -30,
+	"neg-2": -20,
+    "neg": -10,
+    0: 0,
+    1: 10,
+    2: 20,
+    3: 30,
+    4: 40,
+    5: 50,
+    6: 60,
+    7: 70,
+    8: 80,
+    9: 90,
+    10: 100
+);
+
+@each $prefix, $depth in $depths {
+    .-z-#{$prefix} {
+        z-index: $depth !important;
+    }
+}

@@ -1,0 +1,173 @@
+//Extended from Bootstrap's Grid System
+//https: //getbootstrap.com/docs/4.0/layout/grid/
+
+//Bootstrap Grid Imports
+@import "./bootstrap/functions";
+@import "./bootstrap/variables";
+@import "./bootstrap/mixins/breakpoints";
+@import "./bootstrap/mixins/grid-framework";
+@import "./bootstrap/mixins/grid";
+
+//START PIER CHANGEABLE VARIABLES
+//
+//
+
+// Grid breakpoints
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+) !default;
+
+// Grid containers
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px
+) !default;
+
+// Grid columns
+// Set the number of columns and specify the width of the gutters.
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+//
+//
+//END CHANGABLE VARIABLES
+
+
+
+
+
+//START GENERATION
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+// Framework grid generation
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `$grid-columns`.
+@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+
+	// Common properties for all breakpoints
+	%grid-column {
+		position: relative;
+		width: 100%;
+		min-height: 1px; // Prevent columns from collapsing when empty
+		padding-right: ($gutter / 2);
+		padding-left: ($gutter / 2);
+	}
+
+	.pier-column {
+		flex-basis: 0;
+  		flex-grow: 1;
+  		max-width: 100%;
+	}
+
+	@each $breakpoint in map-keys($breakpoints) {
+		$infix: breakpoint-infix($breakpoint, $breakpoints);
+
+		// Allow columns to stretch full width below their breakpoints
+		@for $i from 1 through $columns {
+			.pier-column-#{$infix}-#{$i} {
+				@extend %grid-column;
+			}
+		}
+
+		.pier-column-#{$infix},
+		.pier-column-#{$infix}-auto {
+			@extend %grid-column;
+		}
+
+		@include media-breakpoint-up($breakpoint, $breakpoints) {
+
+			// Provide basic `.pier-column-{bp}` classes for equal-width flexbox columns
+			.pier-column-#{$infix} {
+				flex-basis: 0;
+				flex-grow: 1;
+				max-width: 100%;
+			}
+
+			.pier-column-#{$infix}-auto {
+				flex: 0 0 auto;
+				width: auto;
+				max-width: none; // Reset earlier grid tiers
+			}
+
+			@for $i from 1 through $columns {
+				.pier-column-#{$infix}-#{$i} {
+					@include make-col($i, $columns);
+				}
+			}
+
+			.pier-column--order#{$infix}-first {
+				order: -1;
+			}
+
+			.pier-column--order#{$infix}-last {
+				order: $columns + 1;
+			}
+
+			@for $i from 0 through $columns {
+				.pier-column--order#{$infix}-#{$i} {
+					order: $i;
+				}
+			}
+
+			// `$columns - 1` because offsetting by the width of an entire row isn't possible
+			@for $i from 0 through ($columns - 1) {
+				@if not ($infix==""and $i==0) {
+
+					// Avoid emitting useless .offset-0
+					.pier-column--offset#{$infix}-#{$i} {
+						@include make-col-offset($i, $columns);
+					}
+				}
+			}
+		}
+	}
+}
+
+// Container widths
+// Set the container width, and override it for fixed navbars in media queries.
+.pier-container {
+	@include make-container();
+	@include make-container-max-widths();
+}
+
+// Fluid container
+// Utilizes the mixin meant for fixed width containers, but with 100% width for
+// fluid, full width layouts.
+.pier-container--fluid {
+	@include make-container();
+}
+
+// Row
+// Rows contain and clear the floats of your columns.
+.pier-row {
+	@include make-row();
+}
+
+// Remove the negative margin from default .row, then the horizontal padding
+// from all immediate children columns (to prevent runaway style inheritance).
+.pier-row--no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+
+	>.pier-column,
+	>[class*="pier-column-"] {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+// Columns
+// Common styles for small and large grid columns
+@include make-grid-columns();

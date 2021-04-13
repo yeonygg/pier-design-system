@@ -42,24 +42,9 @@ export function Layout({ children, appData }) {
 					<NavItemContainer startToggled>
 						<NavItem icon="far fa-atom">Abstracts</NavItem>
 						<NavItemDropdown>
-							<NextLink href='/abstracts/fonts'>
+							<NextLink href='/abstracts/layout'>
 								<a>
-									<NavSubItem>Fonts</NavSubItem>
-								</a>
-							</NextLink>
-							<NextLink href='/abstracts/icons'>
-								<a>
-									<NavSubItem>Icons</NavSubItem>
-								</a>
-							</NextLink>
-							<NextLink href='/abstracts/colors'>
-								<a>
-									<NavSubItem>Colors</NavSubItem>
-								</a>
-							</NextLink>
-							<NextLink href='/abstracts/colors'>
-								<a>
-									<NavSubItem>Colors</NavSubItem>
+									<NavSubItem>Layout</NavSubItem>
 								</a>
 							</NextLink>
 						</NavItemDropdown>
