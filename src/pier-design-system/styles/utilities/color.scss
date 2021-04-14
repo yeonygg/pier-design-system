@@ -1,0 +1,28 @@
+@each $prefix, $color in $colorsGrays {
+	.-bgc-#{"" + $prefix} 	{background-color: $color;}
+	.-bdc-#{"" + $prefix} 	{border-color: $color;}
+	.-c-#{"" + $prefix} 	{color: $color;}
+}
+
+@each $color-prefix, $color-group in ("cyan": $colorsCyan, "green": $colorsGreen, "blue": $colorsBlue, "teal": $colorsTeal, "yellow": $colorsYellow, "orange": $colorsOrange, "red": $colorsRed) {
+	@each $shade-prefix, $color in $color-group {
+		.-bgc-#{$color-prefix}-#{"" + $shade-prefix} 	{background-color: $color;}
+		.-bdc-#{$color-prefix}-#{"" + $shade-prefix} 	{border-color: $color;}
+		.-c-#{$color-prefix}-#{"" + $shade-prefix} 	{color: $color;}
+
+		@if $shade-prefix == default {
+			.-bgc-#{$color-prefix}			{background-color: $color;}
+			.-bdc-#{$color-prefix}			{border-color: $color;}
+			.-c-#{$color-prefix}			{color: $color;}
+		}
+	}
+}
+
+@each $gradient, $values in $gradients {
+	@each $angle in (0, 90, 180, 270) {
+		.-bgc-#{$gradient}-#{$angle}		{background-color: build-gradient(($angle + "deg"), $gradient);}
+		@if $angle == 90 {
+			.-bgc-#{$gradient}			{background-color: build-gradient(($angle + "deg"), $gradient);}
+		}
+	}
+}

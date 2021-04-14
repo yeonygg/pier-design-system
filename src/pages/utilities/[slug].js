@@ -5,7 +5,7 @@ import { Fragment } from "react";
 import htmlReactParse from "html-react-parser";
 import prettier from "prettier/standalone";
 import parserHtml from "prettier/esm/parser-html";
-import { Layout } from "src/pages/index";
+import Layout from "src/pages-components/Layout";
 import API from "src/documentation/API";
 import HR from "src/pier-design-system/components/horizonal-rule/HR";
 import Heading from "src/pier-design-system/components/text/Heading";
@@ -16,33 +16,22 @@ import Card from "src/pier-design-system/components/containers/Card";
 import Well from "src/pier-design-system/components/containers/Well";
 import Breadcrumbs from "src/pier-design-system/components/breadcrumbs/Breadcrumbs";
 import BreadcrumbsLink from "src/pier-design-system/components/breadcrumbs/BreadcrumbsLink";
+import PageHeading from "src/pages-components/PageHeading";
 
 export default function ComponentPage({ appData, utility }) {
+	const breadcrumbs = [
+		{ label: "Home", link: "/", disabled: false },
+		{ label: "Utilities", link: "", disabled: true },
+		{ label: utility.title, link: "", disabled: true }
+	];
+
 	return (
 		<Fragment>
 			<Head>
 				<title>{utility.title} | Pier Design System</title>
 			</Head>
 			<Layout appData={appData}>
-				<Section>
-					<Breadcrumbs style={{ marginBottom: "16px" }}>
-						<BreadcrumbsLink>
-							<NextLink href='/'>
-								<a>Home</a>
-							</NextLink>
-						</BreadcrumbsLink>
-						<BreadcrumbsLink disabled>Utilities</BreadcrumbsLink>
-						<BreadcrumbsLink disabled>{utility.title}</BreadcrumbsLink>
-					</Breadcrumbs>
-					<div style={{ display: "inline-block" }}>
-						<Heading style={{ paddingRight: "4px" }}>{utility.title}</Heading>
-						<HR color='hero' />
-					</div>
-					<BodyText size='xs' color='light-gray'>
-						Last updated: {utility["last-updated"]}
-					</BodyText>
-					<BodyText>{utility.description}</BodyText>
-				</Section>
+				<PageHeading pageData={utility} breadcrumbs={breadcrumbs}></PageHeading>
 			</Layout>
 		</Fragment>
 	);

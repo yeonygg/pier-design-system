@@ -1,6 +1,6 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
-import { Layout } from "../index";
+import Layout from "src/pages-components/Layout";
 import componentsData from "../../documentation/components/_componentsData";
 import { Fragment } from "react";
 

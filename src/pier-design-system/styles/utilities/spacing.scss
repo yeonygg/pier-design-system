@@ -12,7 +12,7 @@ $spacers: (
 	10: 3rem,
 	11: 3.75rem,
 	12: 4.5rem
-  );
+);
 
 @each $breakpoint in map-keys($grid-breakpoints) {
 	@include media-breakpoint-up($breakpoint) {

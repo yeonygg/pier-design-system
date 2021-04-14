@@ -1,6 +1,6 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
-import { Layout } from "../index";
+import Layout from "src/pages-components/Layout";
 import { Fragment } from "react";
 import NextLink from "next/link";
 import API from "src/documentation/API";
@@ -51,13 +51,13 @@ export default function LayoutPage({ appData }) {
 						<Section>
 							<div className='pier-container'>
 								<div className='pier-row'>
-									<div className='pier-column -border-gray'>1 of 2</div>
-									<div className='pier-column -border-gray'>2 of 2</div>
+									<div className='pier-column -p-a-2 -bd-1-gray -bd-r-0 -bd-b-0'>1 of 2</div>
+									<div className='pier-column -p-a-2 -bd-1-gray -bd-b-0'>2 of 2</div>
 								</div>
 								<div className='pier-row'>
-									<div className='pier-column -border-gray'>1 of 3</div>
-									<div className='pier-column -border-gray'>2 of 3</div>
-									<div className='pier-column -border-gray'>3 of 3</div>
+									<div className='pier-column -p-a-2 -bd-1-gray -bd-r-0'>1 of 3</div>
+									<div className='pier-column -p-a-2 -bd-1-gray -bd-r-0'>2 of 3</div>
+									<div className='pier-column -p-a-2 -bd-1-gray'>3 of 3</div>
 								</div>
 							</div>
 						</Section>
@@ -90,15 +90,15 @@ export default function LayoutPage({ appData }) {
 					<Card>
 						<Section>
 							<div className='pier-container'>
-								<div className='pier-row'>
-									<div className='pier-column -border-gray'>1 of 3</div>
-									<div className='pier-column pier-column--6 -border-gray'>2 of 3 (wider)</div>
-									<div className='pier-column -border-gray'>3 of 3</div>
+								<div className='pier-row -p-a-2'>
+									<div className='pier-column -p-a-2 -bd-1-gray'>1 of 3</div>
+									<div className='pier-column pier-column--6 -p-a-2 -bd-1-gray'>2 of 3 (wider)</div>
+									<div className='pier-column -p-a-2 -bd-1-gray'>3 of 3</div>
 								</div>
-								<div className='pier-row'>
-									<div className='pier-column -border-gray'>1 of 3</div>
-									<div className='pier-column pier-column--5 -border-gray'>2 of 3 (wider)</div>
-									<div className='pier-column -border-gray'>3 of 3</div>
+								<div className='pier-row -p-a-2'>
+									<div className='pier-column -p-a-2 -bd-1-gray'>1 of 3</div>
+									<div className='pier-column pier-column--5 -p-a-2 -bd-1-gray'>2 of 3 (wider)</div>
+									<div className='pier-column -p-a-2 -bd-1-gray'>3 of 3</div>
 								</div>
 							</div>
 						</Section>
@@ -108,14 +108,14 @@ export default function LayoutPage({ appData }) {
 							<CodeBlock size='xs'>
 								{`<div class='pier-container'>
 	<div class='pier-row'>
-		<div class='pier-column -border-gray'>1 of 3</div>
-		<div class='pier-column pier-column--6 -border-gray'>2 of 3 (wider)</div>
-		<div class='pier-column -border-gray'>3 of 3</div>
+		<div class='pier-column -bd-1-gray'>1 of 3</div>
+		<div class='pier-column pier-column--6 -bd-1-gray'>2 of 3 (wider)</div>
+		<div class='pier-column -bd-1-gray'>3 of 3</div>
 	</div>
 	<div class='pier-row'>
-		<div class='pier-column -border-gray'>1 of 3</div>
-		<div class='pier-column pier-column--5 -border-gray'>2 of 3 (wider)</div>
-		<div class='pier-column -border-gray'>3 of 3</div>
+		<div class='pier-column -bd-1-gray'>1 of 3</div>
+		<div class='pier-column pier-column--5 -bd-1-gray'>2 of 3 (wider)</div>
+		<div class='pier-column -bd-1-gray'>3 of 3</div>
 	</div
 </div>`}
 							</CodeBlock>
@@ -131,14 +131,14 @@ export default function LayoutPage({ appData }) {
 						<Section>
 							<div className='pier-container'>
 								<div className='pier-row'>
-									<div className='pier-column pier-column--lg-2 -border-gray'>1 of 3</div>
-									<div className='pier-column pier-column--md-auto -border-gray'>Variable width content</div>
-									<div className='pier-column pier-column--lg-2 -border-gray'>3 of 3</div>
+									<div className='pier-column pier-column--lg-2 -bd-1-gray'>1 of 3</div>
+									<div className='pier-column pier-column--md-auto -bd-1-gray'>Variable width content</div>
+									<div className='pier-column pier-column--lg-2 -bd-1-gray'>3 of 3</div>
 								</div>
 								<div className='pier-row'>
-									<div className='pier-column -border-gray'>1 of 3</div>
-									<div className='pier-column pier-column--md-auto -border-gray'>Variable width content</div>
-									<div className='pier-column pier-column--lg-2 -border-gray'>3 of 3</div>
+									<div className='pier-column -bd-1-gray'>1 of 3</div>
+									<div className='pier-column pier-column--md-auto -bd-1-gray'>Variable width content</div>
+									<div className='pier-column pier-column--lg-2 -bd-1-gray'>3 of 3</div>
 								</div>
 							</div>
 						</Section>
@@ -171,11 +171,11 @@ export default function LayoutPage({ appData }) {
 					<Card>
 						<Section>
 							<div className='pier-row'>
-								<div className='pier-column -border-gray'>col</div>
-								<div className='pier-column -border-gray'>col</div>
+								<div className='pier-column -bd-1-gray'>col</div>
+								<div className='pier-column -bd-1-gray'>col</div>
 								<div className='-w-100'></div>
-								<div className='pier-column -border-gray'>col</div>
-								<div className='pier-column -border-gray'>col</div>
+								<div className='pier-column -bd-1-gray'>col</div>
+								<div className='pier-column -bd-1-gray'>col</div>
 							</div>
 						</Section>
 					</Card>

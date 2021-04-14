@@ -10,6 +10,7 @@ import float from "./float";
 import overflow from "./overflow";
 import pointerEvents from "./pointer-events";
 import position from "./position";
+import shadows from "./shadows";
 import sizing from "./sizing";
 import spacing from "./spacing";
 import text from "./text";
@@ -32,6 +33,7 @@ utilitiesData.push(
 	overflow,
 	pointerEvents,
 	position,
+	shadows,
 	sizing,
 	spacing,
 	text,
