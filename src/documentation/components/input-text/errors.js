@@ -1,3 +1,7 @@
+import { Fragment } from "react";
+
 export default (
-	<input className="pier-input-text pier-input-text--errors" type="text" placeholder="Error" />
+	<Fragment>
+	<div class="pier-input-container"><input className="pier-input-text--errors" type="text" placeholder="Error" /></div>
+	</Fragment>
 );

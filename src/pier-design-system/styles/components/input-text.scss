@@ -48,10 +48,52 @@ $input-text-sizes: (
   height: map-get($input-text-sizes, lg);
 }
 
-.pier-input-text--errors {
-  border: 1px solid red !important;
+.pier-input-container {
+
+  border: 1px solid map-fetch($colorsRed, default);
+  background: map-fetch($colorsRed, light-4);
+  height: map-get($input-heights, md);
+  margin: 12px 0px;
+  border-radius: map-fetch($input-border-radii, md);
+  width: 100%;
+  position: relative;
+
+  .pier-input-text--errors {
+    font-family: $font-family;
+    font-size: 16px;  
+    padding: 10px 16px;
+    vertical-align: center;
+    background: transparent;
+    border: none;
+    width: 100%;
+    
+    &::placeholder {
+      color: map-fetch($colorsRed, default);
+    }
+  
+  }
+  
+  &::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    font-size: map-get($input-icon-sizes, md);
+    content: "\f06a";
+    color: map-fetch($colorsRed, default);
+    position: absolute;
+    padding: 9px 16px;
+    right: 0;
+  }
 
   &:hover {
-    border: 1px solid red;
+    border: 1px solid map-fetch($colorsRed, default);
+  }
+
+  &:focus {
+    border: 1px solid map-fetch($colorsRed, default);
+    box-shadow: 0px 1px 7px 0px rgba(map-get($colorsRed, default), .5);
+    outline: none;
+    
   }
 }
+
+
