@@ -1,3 +1,14 @@
+import { Fragment } from "react";
+
 export default (
-	<button className="pier-button-hero pier-button-hero--md pier-button-hero--disabled" disabled>Button Text</button>
+<Fragment>
+
+    <button class="pier-button-hero pier-button-hero--md pier-button-hero--disabled">
+      <span class="pier-button-hero__content">
+        <i class="pier-button-hero__icon fas fa-check"></i>Button Text
+      </span>
+    </button>
+
+	</Fragment>
+
 );

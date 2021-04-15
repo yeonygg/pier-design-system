@@ -3,7 +3,8 @@ import base from "./base";
 import sizes from "./sizes";
 import disabled from "./disabled";
 import pill from "./pill";
-import test_hovers from "./test_hovers";
+import dark from "./dark";
+
 
 
 export default {
@@ -36,10 +37,10 @@ export default {
 			dark: false,
 		},
 		{
-			name: "Test Hovers",
+			name: "Dark",
 			description: "",
-			markup: ReactDOMServer.renderToStaticMarkup(test_hovers),
-			dark: false,
+			markup: ReactDOMServer.renderToStaticMarkup(dark),
+			dark: true,
 		},
 
 	],

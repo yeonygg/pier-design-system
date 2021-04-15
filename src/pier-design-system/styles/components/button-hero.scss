@@ -22,13 +22,11 @@ $default-size: md;
     right: 1px;
     bottom: 1px;
     left: 1px;
-    border-radius: map-get($input-border-radii, $default-size);
     opacity: 0;
     transition: all 0.1s ease-in-out;
   }
 
   &:hover {
-
     &::before {
       opacity: 1;
     }
@@ -67,8 +65,18 @@ $default-size: md;
   margin-right: calc(#{map-get($input-text-sizes, $default-size)} / 2);
 }
 
+@each $prefix, $size in $input-heights {
+  .pier-button-hero--#{$prefix} {
+    height: $size;
+    border-radius: map-get($input-border-radii, $prefix);
+    padding: 0 map-get($button-padding, $prefix);
+    font-size: map-get($input-text-sizes, $prefix);
 
-
+    &::before {
+      border-radius: map-get($input-border-radii, $prefix);
+    }
+  }
+}
 
 .pier-button-hero--disabled {
   opacity: 0.4;
@@ -81,29 +89,15 @@ $default-size: md;
 
   &:hover {
     border-radius: 100px;
+
+    &::before {
+      border-radius: 100px;
+    }
   }
 }
 
-.pier-button-hero__bg--pill {
-  position: absolute;
-  border-radius: 100px;
-  left: 1px;
-  right: 1px;
-  top: 1px;
-  bottom: 1px;
-  z-index: 0;
-  background: map-get($colorsGrays, white);
-  opacity: 0;
-  transition: opacity 0.1s ease-in-out;
-}
-
-@each $prefix, $size in $input-heights {
-  .pier-button-hero--#{$prefix} {
-    height: $size;
-    border-radius: map-get($input-border-radii, $prefix);
-    padding: 0 map-get($button-padding, $prefix);
-    font-size: map-get($input-text-sizes, $prefix);
+.pier-button-hero--dark {
+  &::before {
+    background: map-get($colorsGrays, dark-4);
   }
 }
-
-

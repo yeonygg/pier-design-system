@@ -28,7 +28,6 @@
     -webkit-transition-duration: 0.2s, 0.2s;
     -webkit-transition-timing-function: linear, ease-in;
   }
-
 }
 
 @each $prefix, $size in $input-heights {
@@ -45,18 +44,14 @@
   pointer-events: none;
 }
 
-.pier-button-standard--pill{
+.pier-button-standard--pill {
   border-radius: 100px;
 }
 
 .pier-button-standard--groupright {
-
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
-
 }
-
-
 
 .pier-button-standard--secondary {
   background: map-get($colorsGrays, white);
@@ -73,7 +68,7 @@
   }
 
   &:active {
-    background: map-get($colorsCyan, light-3);
+    background: map-get($colorsGrays, white);
   }
 }
 
@@ -96,7 +91,7 @@
   }
 }
 
-.pier-button-standard--primarydark {
+.pier-button-standard--primary-dark {
   background: map-get($colorsCyan, default);
 
   &:hover {
@@ -113,4 +108,42 @@
     -webkit-transition-duration: 0.2s, 0.2s;
     -webkit-transition-timing-function: linear, ease-in;
   }
+
+  &:active {
+    background: map-fetch($colorsCyan, dark-2);
+  }
+}
+
+.pier-button-standard--error {
+  background: map-fetch($colorsRed, default);
+
+  &:hover {
+    background: map-fetch($colorsRed, light-1);
+  }
+
+  &:focus {
+    -webkit-box-shadow: inset 0px 0px 0px 2px map-get($colorsRed, light-3);
+    -moz-box-shadow: inset 0px 0px 0px 2px map-get($colorsRed, light-3);
+    box-shadow: inset 0px 0px 0px 2px map-get($colorsRed, light-3);
+    -webkit-transition-duration: 0.2s, 0.2s;
+    -webkit-transition-timing-function: linear, ease-in;
+  }
+
+  &:active {
+    background: map-fetch($colorsRed, dark-1);
+  }
+}
+
+.pier-button-standard--cap-right {
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.pier-button-standard--cap {
+  border-radius: 0px;
+}
+
+.pier-button-standard--cap-left {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
 }

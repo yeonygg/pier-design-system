@@ -6,6 +6,8 @@ import pill from "./pill";
 import secondary from "./secondary";
 import secondarydark from "./secondarydark";
 import primarydark from "./primarydark";
+import error from "./error";
+import group from "./group";
 
 export default {
 	title: "Button-standard",
@@ -53,6 +55,18 @@ export default {
 			description: "",
 			markup: ReactDOMServer.renderToStaticMarkup(primarydark),
 			dark: true,
+		},
+		{
+			name: "Error",
+			description: "",
+			markup: ReactDOMServer.renderToStaticMarkup(error),
+			dark: false,
+		},
+		{
+			name: "Group",
+			description: "",
+			markup: ReactDOMServer.renderToStaticMarkup(group),
+			dark: false,
 		},
 	],
 };

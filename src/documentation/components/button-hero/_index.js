@@ -3,7 +3,8 @@ import base from "./base";
 import sizes from "./sizes";
 import disabled from "./disabled";
 import pill from "./pill";
-import test from "./test";
+import dark from "./dark";
+
 
 export default {
 	title: "Button-hero",
@@ -35,11 +36,12 @@ export default {
 			dark: false,
 		},
 		{
-			name: "Test",
+			name: "Dark",
 			description: "",
-			markup: ReactDOMServer.renderToStaticMarkup(test),
-			dark: false,
+			markup: ReactDOMServer.renderToStaticMarkup(dark),
+			dark: true,
 		},
+
 
 	],
 };
