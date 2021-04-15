@@ -9,11 +9,16 @@
     margin: 0.5rem;
     color: map-get($colorsGrays, gray-2);
     background: transparent;
+    transition: all .2s ease-in-out;
     cursor: pointer;
     
     
 
     &:hover {
+
+
+        background: map-get($colorsGrays, light-2);
+        transform: scale(1.1);
 
         .pier-button-icon__icon {
 
@@ -30,7 +35,7 @@
     }
 
     &:active {
-        background: map-get($colorsGrays, light-1);
+        background: map-get($colorsGrays, gray-4);
         
     }
 

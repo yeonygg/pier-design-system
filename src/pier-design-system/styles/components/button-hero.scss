@@ -1,45 +1,43 @@
 $default-size: md;
 
 .pier-button-hero {
-  display: inline-block;
-  position: relative;
-  border-radius: map-get($input-border-radii, $default-size);
-  overflow: hidden;
-  border: none;
-  font-family: $font-family;
-  font-size: map-get($input-text-sizes, $default-size);
   margin: 0.5rem;
+  border: none;
+  outline: none;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: $font-family;
   background: build-gradient(90deg, primaryBoulevard);
-  padding: 0 map-get($button-padding, $default-size);
-  height: map-get($input-heights, $default-size);
+  color: map-fetch($colorsGrays, white);
   cursor: pointer;
 
-
-
-  &:active {
-    .pier-button-hero__bg {
-      background: map-get($colorsGreen, light-4);
-
-    }
+  &::before {
+    content: "";
+    background: map-get($colorsGrays, white);
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    border-radius: map-get($input-border-radii, $default-size);
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
   }
 
   &:hover {
-    .pier-button-hero__bg {
-      opacity: 1;
 
+    &::before {
+      opacity: 1;
     }
-    
 
     .pier-button-hero__content {
-
-    background: build-gradient(90deg, primaryBoulevard);
-    background-clip: text;
-    z-index: 99;
-    -webkit-background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-  
-
+      background: build-gradient(90deg, primaryBoulevard);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
     }
 
     .pier-button-hero__icon {
@@ -48,53 +46,29 @@ $default-size: md;
       -webkit-text-fill-color: transparent;
     }
   }
-}
 
-.pier-button-hero__bg {
-  position: absolute;
-  border-radius: map-get($input-border-radii, $default-size);
-  left: 1px;
-  right: 1px;
-  top: 1px;
-  bottom: 1px;
-  z-index: 0;
-  background: map-get($colorsGrays, white);
-  opacity: 0;
-  transition: opacity 0.1s ease-in-out;
+  &:active {
+    transform: scale(0.99);
+
+    &::before {
+      opacity: 0.75;
+    }
+  }
 }
 
 .pier-button-hero__content {
-
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   z-index: 2;
-  color: map-get($colorsGrays, white);
-  height: 100%;
 }
 
 .pier-button-hero__icon {
   margin-right: calc(#{map-get($input-text-sizes, $default-size)} / 2);
-
 }
 
-@each $prefix, $size in $input-heights {
-  .pier-button-hero--#{$prefix} {
-    height: $size;
-    border-radius: map-get($input-border-radii, $prefix);
-    padding: 0 map-get($button-padding, $prefix);
-    font-size: map-get($input-text-sizes, $prefix);
-  }
-}
 
-@each $prefix, $size in $input-heights {
-  .pier-button-hero__bg--#{$prefix} {
 
-    border-radius: map-get($input-border-radii, $prefix);
-
-  }
-}
 
 .pier-button-hero--disabled {
   opacity: 0.4;
@@ -123,46 +97,13 @@ $default-size: md;
   transition: opacity 0.1s ease-in-out;
 }
 
-
-.pier-button-hero01 {
-
-  display: inline-block;
-  position: relative;
-  border-radius: map-get($input-border-radii, $default-size);
-  overflow: hidden;
-  border: none;
-  font-family: $font-family;
-  font-size: map-get($input-text-sizes, $default-size);
-  background-size: 200% auto;
-  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-  width: fit-content;
-  text-align: center;
-  box-shadow: 0 0px 0px, 0 0px 0px;
-  color: map-get($colorsGrays, white);
-  margin: 0.5rem;
-  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-  padding: 0 map-get($button-padding, $default-size);
-  height: map-get($input-heights, $default-size);
-
-  cursor: pointer;
-
-  &:hover {
-    background-position: right center;
-    opacity: 0.8;
-
-    margin: 0.5rem 0.5rem 0.5rem;
+@each $prefix, $size in $input-heights {
+  .pier-button-hero--#{$prefix} {
+    height: $size;
+    border-radius: map-get($input-border-radii, $prefix);
+    padding: 0 map-get($button-padding, $prefix);
+    font-size: map-get($input-text-sizes, $prefix);
+  }
 }
-
-  }
-
-  .pier-button-hero--hover {
-    background-image: linear-gradient(to right, #00d58d 0%, #00bfe8 51%, #00d58d 100%);
-
-    &:hover {
-      background-position: right center;
-    }
-
-  }
-
 
 

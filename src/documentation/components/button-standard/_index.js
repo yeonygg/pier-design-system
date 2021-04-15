@@ -4,7 +4,8 @@ import sizes from "./sizes";
 import disabled from "./disabled";
 import pill from "./pill";
 import secondary from "./secondary";
-import dark from "./dark";
+import secondarydark from "./secondarydark";
+import primarydark from "./primarydark";
 
 export default {
 	title: "Button-standard",
@@ -42,9 +43,15 @@ export default {
 			dark: false,
 		},
 		{
-			name: "Dark",
+			name: "Secondary Dark",
 			description: "",
-			markup: ReactDOMServer.renderToStaticMarkup(dark),
+			markup: ReactDOMServer.renderToStaticMarkup(secondarydark),
+			dark: true,
+		},
+		{
+			name: "Primary Dark",
+			description: "",
+			markup: ReactDOMServer.renderToStaticMarkup(primarydark),
 			dark: true,
 		},
 	],

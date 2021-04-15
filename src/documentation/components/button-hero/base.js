@@ -3,13 +3,15 @@ import { Fragment } from "react";
 export default (
   <Fragment>
 
-    <span className="pier-button-hero pier-button-hero--md">
-      <div className="pier-button-hero__bg"></div>
-      <div className="pier-button-hero__content">
-        <i className="fas fa-exclamation-circle pier-button-hero__icon"></i>
-        Button Text
-      </div>
-    </span>
+  <body>
+
+    <button class="pier-button-hero">
+      <span class="pier-button-hero__content">
+        <i class="pier-button-hero__icon fas fa-check"></i>Button Text
+      </span>
+    </button>
+
+    </body>
 
     </Fragment>
 
