@@ -2,6 +2,7 @@ import ReactDOMServer from "react-dom/server";
 import base from "./base";
 import sizes from "./sizes";
 import errors from "./errors";
+import group from "./group";
 
 export default {
 	title: "Input - Text",
@@ -25,6 +26,12 @@ export default {
 			name: "Errors",
 			description: "",
 			markup: ReactDOMServer.renderToStaticMarkup(errors),
+			dark: false,
+		},
+		{
+			name: "Group",
+			description: "",
+			markup: ReactDOMServer.renderToStaticMarkup(group),
 			dark: false,
 		},
 	],
