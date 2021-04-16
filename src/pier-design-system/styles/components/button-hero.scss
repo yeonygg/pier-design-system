@@ -1,0 +1,103 @@
+$default-size: md;
+
+.pier-button-hero {
+  margin: 0.5rem;
+  border: none;
+  outline: none;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: $font-family;
+  background: build-gradient(90deg, primaryBoulevard);
+  color: map-fetch($colorsGrays, white);
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    background: map-get($colorsGrays, white);
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+
+    .pier-button-hero__content {
+      background: build-gradient(90deg, primaryBoulevard);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .pier-button-hero__icon {
+      background: build-gradient(90deg, primaryBoulevard);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &:active {
+    transform: scale(0.99);
+
+    &::before {
+      opacity: 0.75;
+    }
+  }
+}
+
+.pier-button-hero__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.pier-button-hero__icon {
+  margin-right: calc(#{map-get($input-text-sizes, $default-size)} / 2);
+}
+
+@each $prefix, $size in $input-heights {
+  .pier-button-hero--#{$prefix} {
+    height: $size;
+    border-radius: map-get($input-border-radii, $prefix);
+    padding: 0 map-get($button-padding, $prefix);
+    font-size: map-get($input-text-sizes, $prefix);
+
+    &::before {
+      border-radius: map-get($input-border-radii, $prefix);
+    }
+  }
+}
+
+.pier-button-hero--disabled {
+  opacity: 0.4;
+  color: map-get($colorsGrays, white);
+  pointer-events: none;
+}
+
+.pier-button-hero--pill {
+  border-radius: 100px;
+
+  &:hover {
+    border-radius: 100px;
+
+    &::before {
+      border-radius: 100px;
+    }
+  }
+}
+
+.pier-button-hero--dark {
+  &::before {
+    background: map-get($colorsGrays, dark-4);
+  }
+}

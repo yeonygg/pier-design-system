@@ -1,0 +1,69 @@
+.pier-button-icon {
+  display: inline-flex;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: none;
+  margin: 0.5rem;
+  color: map-get($colorsGrays, gray-2);
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: map-get($colorsGrays, light-2);
+    transform: scale(1.1);
+
+    .pier-button-icon__icon {
+      background: build-gradient(90deg, primaryBoulevard);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &:focus {
+    background: map-get($colorsGrays, light-3);
+  }
+
+  &:active {
+    background: map-get($colorsGrays, gray-4);
+  }
+}
+
+@each $prefix, $size in $input-heights {
+  .pier-button-icon--#{$prefix} {
+    height: $size;
+    border-radius: map-get($input-border-radii, $prefix);
+    padding: 0 map-get($button-icon-padding, $prefix);
+    font-size: map-get($input-icon-sizes, $prefix);
+  }
+}
+
+.pier-button-icon__icon {
+}
+
+.pier-button-icon--pill {
+  border-radius: 100px;
+}
+
+.pier-button-icon--disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.pier-button-icon--dark {
+  color: map-get($colorsGrays, gray-3);
+
+  &:hover {
+    background: map-get($colorsGrays, dark-3);
+  }
+
+  &:focus {
+    background: map-get($colorsGrays, dark);
+  }
+
+  &:active {
+    background: map-get($colorsGrays, dark-4);
+  }
+}

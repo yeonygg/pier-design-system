@@ -1,0 +1,149 @@
+.pier-button-standard {
+  display: inline-flex;
+  font-family: $font-family;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: none;
+  background: map-get($colorsCyan, default);
+  color: map-get($colorsGrays, white);
+  margin: 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background: map-get($colorsCyan, light-1);
+    -webkit-transition-duration: 0.2s, 0.2s;
+    -webkit-transition-timing-function: linear, ease-in;
+  }
+
+  &:active {
+    background: map-get($colorsCyan, dark-1);
+  }
+
+  &:focus {
+    box-shadow: 1px 1px 5px rgba(0, 191, 232, 0.4);
+    -webkit-box-shadow: inset 0px 0px 0px 2px map-get($colorsCyan, light-3);
+    -moz-box-shadow: inset 0px 0px 0px 2px map-get($colorsCyan, light-3);
+    box-shadow: inset 0px 0px 0px 2px map-get($colorsCyan, light-3);
+    -webkit-transition-duration: 0.2s, 0.2s;
+    -webkit-transition-timing-function: linear, ease-in;
+  }
+}
+
+@each $prefix, $size in $input-heights {
+  .pier-button-standard--#{$prefix} {
+    height: $size;
+    border-radius: map-get($input-border-radii, $prefix);
+    padding: map-get($button-padding, $prefix);
+    font-size: map-get($input-text-sizes, $prefix);
+  }
+}
+
+.pier-button-standard--disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.pier-button-standard--pill {
+  border-radius: 100px;
+}
+
+.pier-button-standard--groupright {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.pier-button-standard--secondary {
+  background: map-get($colorsGrays, white);
+  border: 1px solid map-fetch($colorsCyan, default);
+  color: map-fetch($colorsCyan, default);
+
+  &:hover {
+    background: map-get($colorsCyan, light-4);
+    border: 1px solid map-fetch($colorsCyan, default);
+  }
+
+  &:focus {
+    border: 1px solid map-fetch($colorsCyan, light-3);
+  }
+
+  &:active {
+    background: map-get($colorsGrays, white);
+  }
+}
+
+.pier-button-standard--dark {
+  background: map-get($colorsGrays, dark-4);
+
+  &:hover {
+    background: map-fetch($colorsCyan, dark-4);
+    border: 1px solid map-fetch($colorsCyan, default);
+    color: map-fetch($colorsCyan, default);
+  }
+
+  &:focus {
+    border: 1px solid map-fetch($colorsCyan, default);
+    -webkit-box-shadow: inset 0px 0px 0px 2px map-get($colorsCyan, default);
+    -moz-box-shadow: inset 0px 0px 0px 2px map-get($colorsCyan, default);
+    box-shadow: inset 0px 0px 0px 2px map-get($colorsCyan, default);
+    -webkit-transition-duration: 0.2s, 0.2s;
+    -webkit-transition-timing-function: linear, ease-in;
+  }
+}
+
+.pier-button-standard--primary-dark {
+  background: map-get($colorsCyan, default);
+
+  &:hover {
+    background: map-fetch($colorsCyan, dark-3);
+    border: 1px solid map-fetch($colorsCyan, default);
+    color: map-fetch($colorsCyan, light-2);
+  }
+
+  &:focus {
+    border: 1px solid map-fetch($colorsCyan, light-3);
+    -webkit-box-shadow: inset 0px 0px 0px 2px map-get($colorsCyan, light-3);
+    -moz-box-shadow: inset 0px 0px 0px 2px map-get($colorsCyan, light-3);
+    box-shadow: inset 0px 0px 0px 2px map-get($colorsCyan, light-3);
+    -webkit-transition-duration: 0.2s, 0.2s;
+    -webkit-transition-timing-function: linear, ease-in;
+  }
+
+  &:active {
+    background: map-fetch($colorsCyan, dark-2);
+  }
+}
+
+.pier-button-standard--error {
+  background: map-fetch($colorsRed, default);
+
+  &:hover {
+    background: map-fetch($colorsRed, light-1);
+  }
+
+  &:focus {
+    -webkit-box-shadow: inset 0px 0px 0px 2px map-get($colorsRed, light-3);
+    -moz-box-shadow: inset 0px 0px 0px 2px map-get($colorsRed, light-3);
+    box-shadow: inset 0px 0px 0px 2px map-get($colorsRed, light-3);
+    -webkit-transition-duration: 0.2s, 0.2s;
+    -webkit-transition-timing-function: linear, ease-in;
+  }
+
+  &:active {
+    background: map-fetch($colorsRed, dark-1);
+  }
+}
+
+.pier-button-standard--cap-right {
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.pier-button-standard--cap {
+  border-radius: 0px;
+}
+
+.pier-button-standard--cap-left {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
