@@ -1,22 +1,48 @@
 $input-text-sizes: (
-	sm: .875rem,
-		// go down 2px sizes for mobile!
-	md: 1.125rem,
-	lg: 1.5rem
+	sm: ( 
+		desktop: .875rem,
+		mobile: .75rem
+	),
+	md: (
+		desktop: 1.125rem,
+		mobile: 1rem
+	),
+	lg: (
+		desktop: 1.5rem,
+		mobile: 1.375rem
+	)
 );
 
 $input-text-line-height: 1;
 
 $input-icon-sizes: (
-	sm: 1.125rem,
-	md: 1.5rem,
-	lg: 2rem
+	sm: (
+		desktop: 1.125rem,
+		mobile: 1rem
+	),
+	md: (
+		desktop: 1.5rem,
+		mobile: 1.375rem
+	),
+	lg: (
+		desktop: 2rem,
+		mobile: 1.875rem
+	)
 );
 
 $input-heights: (
-	sm: 2.125rem,
-	md: 2.75rem,
-	lg: 3.75rem
+	sm: (
+		desktop: 2.125rem,
+		mobile: 2
+	),
+	md: (
+		desktop: 2.75rem,
+		mobile: 2.625rem
+	),
+	lg: (
+		desktop: 3.75rem,
+		mobile: 3.625rem
+	)
 );
 
 $input-border-radii: (
@@ -25,16 +51,51 @@ $input-border-radii: (
 	lg: .625rem
 );
 
+$input-padding: (
+	sm: (
+		desktop: 0.75rem,
+		mobile: 0.625rem
+	),
+	md: (
+		desktop: 0.875rem,
+		mobile: 0.75rem
+	),
+	lg: (
+		desktop: 1rem,
+		mobile: 0.875rem
+	)
+);
+
 $button-padding: (
-	sm: 1.25rem,
-	md: 1.563rem,
-	lg: 1.938rem
+	sm: (
+		desktop: 1.25rem,
+		mobile: 1.125rem
+	),
+	md: (
+		desktop: 1.563rem,
+		mobile: 1.438rem
+	),
+	lg: (
+		desktop: 1.938rem,
+		mobile: 1.813rem
+	)
 );
 
 $button-icon-padding: (
-	sm: 0.5rem,
-	md: 0.625rem,
-	lg: 1rem
+	sm: (
+		desktop: 0.5rem,
+		mobile: 0.438rem
+	),
+	md: (
+		desktop: 0.625rem,
+		mobile: 0.563rem
+	),
+	lg: (
+		desktop: 1rem,
+		mobile: 0.875rem
+	)
 );
+
+		// go down 2px sizes for mobile!
 
 

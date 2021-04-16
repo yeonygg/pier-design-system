@@ -62,20 +62,27 @@ $default-size: md;
 }
 
 .pier-button-hero__icon {
-  margin-right: calc(#{map-get($input-text-sizes, $default-size)} / 2);
+  margin-right: calc(#{map-fetch($input-text-sizes, ($default-size, desktop))} / 2);
 }
+
 
 @each $prefix, $size in $input-heights {
   .pier-button-hero--#{$prefix} {
-    height: $size;
-    border-radius: map-get($input-border-radii, $prefix);
-    padding: 0 map-get($button-padding, $prefix);
-    font-size: map-get($input-text-sizes, $prefix);
+    height: map-fetch($input-heights, ($prefix, desktop));
+    border-radius: map-fetch($input-border-radii, $prefix);
+    padding: 0 map-fetch($button-padding, ($prefix, desktop));
+    font-size: map-fetch($input-text-sizes, ($prefix, desktop));
+
+    @include build-media-query(mobile) {
+      height: map-fetch($input-heights, ($prefix, mobile));
+      padding: 0 map-fetch($button-padding, ($prefix, mobile));
+      font-size: map-fetch($input-text-sizes, ($prefix, mobile));
+    }
 
     &::before {
       border-radius: map-get($input-border-radii, $prefix);
-    }
   }
+}
 }
 
 .pier-button-hero--disabled {
