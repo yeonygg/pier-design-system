@@ -46,6 +46,7 @@ export default {
 			markup: ReactDOMServer.renderToStaticMarkup(disabled),
 			dark: false,
 		},
+<<<<<<< HEAD
 		{
 			name: "Cap-left",
 			description: "",
@@ -70,5 +71,7 @@ export default {
 			markup: ReactDOMServer.renderToStaticMarkup(errorDark),
 			dark: true,
 		}
+=======
+>>>>>>> e3ecc85... buttons and inputs updated
 	],
 };
