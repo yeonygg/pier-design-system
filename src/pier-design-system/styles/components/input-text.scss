@@ -1,0 +1,121 @@
+$default-size: md;
+
+$input-text-sizes: (
+  sm: 2.125rem,
+  md: 2.75rem,
+  lg: 3.75rem,
+);
+
+.pier-input-text {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid map-get($colorsGrays, gray-3);
+  border-radius: 8px;
+  width: 100%;
+  height: map-fetch($input-text-sizes, ($default-size));
+  padding: 4px 16px;
+  margin: 12px 0px;
+  font-family: mulish, sans-serif;
+  font-size: 16px;
+  color: map-get($colorsGrays, dark-1);
+  transition: 0.1s ease-in-out;
+
+  &::placeholder {
+    color: map-get($colorsGrays, gray-3);
+  }
+
+  &:hover {
+    border: 1px solid map-get($colorsGrays, dark-1);
+  }
+
+  &:focus {
+    box-shadow: 0px 1px 7px 0px rgba(map-get($colorsBlue, dark-1), 0.2);
+    outline: none;
+    border-color: map-get($colorsBlue, dark-1);
+  }
+}
+
+.pier-input-text--sm {
+  height: map-get($input-text-sizes, sm);
+}
+.pier-input-text--md {
+  height: map-get($input-text-sizes, md);
+}
+.pier-input-text--lg {
+  height: map-get($input-text-sizes, lg);
+}
+
+.pier-input-container--error {
+  border: 1px solid map-fetch($colorsRed, default);
+  background: map-fetch($colorsRed, light-4);
+  height: map-get($input-heights, md);
+  margin: 12px 0px;
+  border-radius: map-fetch($input-border-radii, md);
+  width: 100%;
+  position: relative;
+
+  .pier-input-text--errors {
+    font-family: $font-family;
+    font-size: 16px;
+    padding: 10px 16px;
+    vertical-align: center;
+    background: transparent;
+    border: none;
+    width: 100%;
+
+    &::placeholder {
+      color: map-fetch($colorsRed, default);
+    }
+  }
+
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: map-get($input-icon-sizes, md);
+    content: "\f06a";
+    color: map-fetch($colorsRed, default);
+    position: absolute;
+    padding: 9px 16px;
+    right: 0;
+  }
+
+  &:hover {
+    border: 1px solid map-fetch($colorsRed, dark-1);
+  }
+
+  &:focus {
+    border: 1px solid map-fetch($colorsRed, dark-1);
+    box-shadow: 0px 1px 7px 0px rgba(map-get($colorsRed, default), 0.5);
+  }
+
+  &:active {
+    border: 1px solid map-fetch($colorsRed, dark-1);
+    box-shadow: 0px 1px 7px 0px rgba(map-get($colorsRed, default), 0.5);
+  }
+}
+
+.pier-input-container {
+  border: 1px solid map-get($colorsGrays, gray-3);
+  background: map-fetch($colorsGrays, white);
+  height: map-get($input-heights, md);
+  margin: 12px 0px;
+  border-radius: map-fetch($input-border-radii, md);
+  width: 100%;
+  position: relative;
+
+  .pier-input-text--group {
+    font-family: $font-family;
+    font-size: 16px;
+    padding: 10px 16px;
+    vertical-align: center;
+    background: transparent;
+    border: none;
+    width: 100%;
+
+    &::placeholder {
+      color: map-get($colorsGrays, gray-3);
+    }
+}
+}
+
+

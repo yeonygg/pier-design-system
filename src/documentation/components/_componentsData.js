@@ -9,6 +9,7 @@ import navigation from "./navigation/_index";
 import buttonHero from "./button-hero/_index";
 import buttonStandard from "./button-standard/_index";
 import buttonIcon from "./button-icon/_index";
+import inputText from "./input-text/_index";
 
 let componentsData = [];
 componentsData.push(
@@ -22,8 +23,8 @@ componentsData.push(
 	navigation,
 	buttonHero,
 	buttonStandard,
-	buttonIcon
-
+	buttonIcon,
+	inputText,
 );
 
 export default componentsData;
