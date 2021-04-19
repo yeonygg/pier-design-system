@@ -11,6 +11,7 @@ import buttonStandard from "./button-standard/_index";
 import buttonIcon from "./button-icon/_index";
 import inputText from "./input-text/_index";
 import inputGroup from "./input-group/_index";
+import inputTextarea from "./input-textarea/_index";
 
 let componentsData = [];
 componentsData.push(
@@ -27,6 +28,7 @@ componentsData.push(
 	buttonIcon,
 	inputText,
 	inputGroup,
+	inputTextarea,
 );
 
 export default componentsData;

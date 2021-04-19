@@ -1,15 +1,24 @@
 $default-size: md;
 
-.pier-input-text {
-  position: relative;
-  box-sizing: border-box;
-  border: 1px solid map-get($colorsGrays, gray-3);
-  width: 100%;
+.pier-input-textarea {
   margin: 0.5rem;
   font-family: $font-family;
   color: map-get($colorsGrays, dark-1);
-  transition: 0.1s ease-in-out;
-  overflow: hidden;
+  text-align: left;
+  display: block;
+  width: 100%;
+  text-rendering: geometricPrecision;
+  touch-action: manipulation;
+  appearance: none;
+  background-repeat: no-repeat;
+  user-select: none;
+  border: 1px solid map-get($colorsGrays, gray-3);
+  resize: vertical;
+  cursor: text;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  line-height: 1.55rem;
+
 
   &::placeholder {
     color: map-get($colorsGrays, gray-3);
@@ -25,21 +34,33 @@ $default-size: md;
 }
 
 @each $prefix, $size in $input-heights {
-  .pier-input-text--#{$prefix} {
+  .pier-input-textarea--#{$prefix} {
     height: map-fetch($input-heights, ($prefix, desktop));
     border-radius: map-fetch($input-border-radii, $prefix);
-    padding: 0 map-fetch($input-padding, ($prefix, desktop));
+    padding: map-fetch($input-textarea-padding, ($prefix, desktop));
     font-size: map-fetch($input-text-sizes, ($prefix, desktop));
 
     @include build-media-query(mobile) {
-      height: map-fetch($input-heights, ($prefix, mobile));
-      padding: 0 map-fetch($input-padding, ($prefix, mobile));
+      height: map-fetch($input-heights, ($prefix, desktop));
+      padding: map-fetch($input-textarea-padding, ($prefix, mobile));
       font-size: map-fetch($input-text-sizes, ($prefix, mobile));
     }
   }
 }
 
-.pier-input-text--error {
+.pier-input-textarea--auto {
+  resize: auto;
+}
+
+.pier-input-textarea--h {
+  resize: horizontal;
+}
+
+.pier-input-textarea--d {
+  resize: none;
+}
+
+.pier-input-textarea--error {
   background: map-fetch($colorsRed, light-4);
   border: 1px solid map-get($colorsRed, default);
 
@@ -56,31 +77,7 @@ $default-size: md;
   }
 }
 
-.pier-input-text--pill {
-  border-radius: 100px;
-}
-
-.pier-input-text--cap-left {
-  border-right: none;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-
-  &:hover {
-    border-right: none;
-  }
-}
-
-.pier-input-text--cap-right {
-  border-left: none;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-
-  &:hover {
-    border-left: none;
-  }
-}
-
-.pier-input-text--dark {
+.pier-input-textarea--dark {
   color: map-get($colorsGrays, gray-2);
   background: map-get($colorsGrays, dark-4);
   border: 1px solid map-get($colorsGrays, dark-2);
@@ -95,20 +92,4 @@ $default-size: md;
   }
 }
 
-.pier-input-text--error.pier-input-text--dark {
 
-  background: map-get($colorsGrays, dark-4);
-  border: 1px solid map-get($colorsRed, dark-2);
-
-  &::placeholder {
-    color: map-get($colorsRed, dark-2);
-  }
-
-  &:hover {
-    border: 1px solid map-get($colorsRed, dark-2);
-  }
-
-  &:focus {
-    @include build-input-focus-state(map-get($colorsRed, default));
-  }
-}

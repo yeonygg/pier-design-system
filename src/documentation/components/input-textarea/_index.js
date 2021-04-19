@@ -1,18 +1,17 @@
 import ReactDOMServer from "react-dom/server";
 import base from "./base";
 import sizes from "./sizes";
+import auto from "./auto";
+import horizontal from "./horizontal";
+import disabled from "./disabled";
 import error from "./error";
-import pill from "./pill";
-import capleft from "./cap-left";
-import capright from "./cap-right";
 import dark from "./dark";
-import errorDark from "./error-dark";
 
 
 export default {
-	title: "Input - Text",
-	slug: "input-text",
-	description: "This is a description for input-text.",
+	title: "Input - Textarea",
+	slug: "input-textarea",
+	description: "This is a description for input-textarea.",
 	"last-updated": "4/6/21",
 	variations: [
 		{
@@ -28,27 +27,27 @@ export default {
 			dark: false,
 		},
 		{
+			name: "Automatic",
+			description: "",
+			markup: ReactDOMServer.renderToStaticMarkup(auto),
+			dark: false,
+		},
+		{
+			name: "Horizontal",
+			description: "",
+			markup: ReactDOMServer.renderToStaticMarkup(horizontal),
+			dark: false,
+		},
+		{
+			name: "Disabled",
+			description: "",
+			markup: ReactDOMServer.renderToStaticMarkup(disabled),
+			dark: false,
+		},
+		{
 			name: "Error",
 			description: "",
 			markup: ReactDOMServer.renderToStaticMarkup(error),
-			dark: false,
-		},
-		{
-			name: "Pill",
-			description: "",
-			markup: ReactDOMServer.renderToStaticMarkup(pill),
-			dark: false,
-		},
-		{
-			name: "Cap-left",
-			description: "",
-			markup: ReactDOMServer.renderToStaticMarkup(capleft),
-			dark: false,
-		},
-		{
-			name: "Cap-right",
-			description: "",
-			markup: ReactDOMServer.renderToStaticMarkup(capright),
 			dark: false,
 		},
 		{
@@ -57,11 +56,6 @@ export default {
 			markup: ReactDOMServer.renderToStaticMarkup(dark),
 			dark: true,
 		},
-		{
-			name: "Error Dark",
-			description: "",
-			markup: ReactDOMServer.renderToStaticMarkup(errorDark),
-			dark: true,
-		}
+
 	],
 };

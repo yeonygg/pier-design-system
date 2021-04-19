@@ -6,8 +6,8 @@ import errors from "./errors";
 
 export default {
 	title: "Input - Group",
-	slug: "input-text",
-	description: "This is a description for input-text.",
+	slug: "input-group",
+	description: "This is a description for input-group.",
 	"last-updated": "4/6/21",
 	variations: [
 		{
