@@ -16,22 +16,22 @@ export default function Layout({ children, appData }) {
 				<Nav>
 					<NextLink href='/'>
 						<a>
-							<Heading size='sm' style={{ padding: "24px" }}>
+							<Heading size='sm' className="-m-b-0 -p-a-7">
 								Pier Design System
 							</Heading>
 						</a>
 					</NextLink>
-					<NavItemContainer startToggled>
-						<NavItem icon="far fa-atom">Abstracts</NavItem>
+					<NavItemContainer>
+						<NavItem icon="fas fa-atom">Abstracts</NavItem>
 						<NavItemDropdown>
-							<NextLink href='/abstracts/layout'>
+							<NextLink href='/abstracts/grid'>
 								<a>
-									<NavSubItem>Layout</NavSubItem>
+									<NavSubItem>Grid</NavSubItem>
 								</a>
 							</NextLink>
 						</NavItemDropdown>
 					</NavItemContainer>
-					<NavItemContainer startToggled>
+					<NavItemContainer>
 						<NavItem icon="fas fa-cubes">Components</NavItem>
 						<NavItemDropdown>
 							{appData.components.map((component) => {
@@ -46,7 +46,7 @@ export default function Layout({ children, appData }) {
 						</NavItemDropdown>
 					</NavItemContainer>
 					<NavItemContainer>
-						<NavItem icon="fas fa-cubes">Utilities</NavItem>
+						<NavItem icon="fas fa-tools">Utilities</NavItem>
 						<NavItemDropdown>
 							{appData.utilities.map((utility) => {
 								return (

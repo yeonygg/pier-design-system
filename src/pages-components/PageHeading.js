@@ -7,9 +7,9 @@ import Breadcrumbs from "src/pier-design-system/components/breadcrumbs/Breadcrum
 import BreadcrumbsLink from "src/pier-design-system/components/breadcrumbs/BreadcrumbsLink";
 import HR from "src/pier-design-system/components/horizonal-rule/HR";
 
-export default function PageHeading({ pageData, breadcrumbs }) {
+export default function PageHeading({breadcrumbs, title, lastUpdated, description }) {
 	return (
-		<Section>
+		<Section className="-p-b-0">
 			<Breadcrumbs style={{ marginBottom: "16px" }}>
 				{breadcrumbs.map((item, i) => (
 					<BreadcrumbsLink key={i} disabled={item.disabled}>
@@ -24,18 +24,20 @@ export default function PageHeading({ pageData, breadcrumbs }) {
 				))}
 			</Breadcrumbs>
 			<div style={{ display: "inline-block" }}>
-				<Heading style={{ paddingRight: "4px" }}>{pageData.title}</Heading>
+				<Heading style={{ paddingRight: "4px" }} className="-m-b-1">{title}</Heading>
 				<HR color='hero' />
 			</div>
 			<BodyText size='xs' color='light-gray'>
-				Last updated: {pageData["last-updated"]}
+				Last updated: {lastUpdated}
 			</BodyText>
-			<BodyText>{pageData.description}</BodyText>
+			<BodyText>{description}</BodyText>
 		</Section>
 	);
 }
 
 PageHeading.propTypes = {
-	pageData: PropTypes.object.isRequired,
 	breadcrumbs: PropTypes.array.isRequired,
+	title: PropTypes.string,
+	lastUpdated: PropTypes.string,
+	description: PropTypes.string
 };

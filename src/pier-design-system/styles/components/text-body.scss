@@ -34,12 +34,14 @@ $code-sizes: (
 	font-family: $font-family;
 	font-weight: $font-weight-regular;
 	font-size: map-fetch($body-sizes, ($default-size, desktop));
+	margin-bottom: map-fetch($body-sizes, ($default-size, desktop));
 	color: map-fetch($colorsGrays, 'dark');
 	line-height: 1.55;
 	
 	
 	@include build-media-query(mobile) {
 		font-size: map-fetch($body-sizes, ($default-size, mobile));
+		margin-bottom: map-fetch($body-sizes, ($default-size, mobile));
 	}
 }
 
@@ -50,8 +52,7 @@ $code-sizes: (
 	border-radius: map-fetch($code-sizes, ($default-size, desktop)) / 4;
 	background-color: map-fetch($colorsGrays, lighter);
 	user-select: all;
-	word-break: break-word;
-	white-space: pre;
+	word-wrap: break-word;
 
 	@include build-media-query(mobile) {
 		font-size: map-fetch($code-sizes, ($default-size, mobile));
@@ -71,9 +72,11 @@ $code-sizes: (
 @each $prefix, $size in $body-sizes {
 	.pier-body-text--#{$prefix} {
 		font-size: map-fetch($size, desktop);
+		margin-bottom: map-fetch($size, desktop);
 
 		@include build-media-query(mobile) {
 			font-size: map-fetch($size, mobile);
+			margin-bottom: map-fetch($size, mobile);
 		}
 	}
 

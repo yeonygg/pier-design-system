@@ -31,7 +31,21 @@ export default function ComponentPage({ appData, utility }) {
 				<title>{utility.title} | Pier Design System</title>
 			</Head>
 			<Layout appData={appData}>
-				<PageHeading pageData={utility} breadcrumbs={breadcrumbs}></PageHeading>
+				<PageHeading breadcrumbs={breadcrumbs} title={utility.title} lastUpdated={utility["last-updated"]} description={utility.description}></PageHeading>
+				<Section>
+					{utility.variations.map((item, i) => {
+						return (
+							<Card key={i}>
+								<Section>
+									<BodyText className={item.description == "" ? "-m-b-0" : ""}>
+										<span className="pier-body-text__inline-code">{item.class}</span>
+									</BodyText>
+									<BodyText className="-m-b-0">{item.description}</BodyText>
+								</Section>
+							</Card>
+						)
+					})}
+				</Section>
 			</Layout>
 		</Fragment>
 	);

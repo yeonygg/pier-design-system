@@ -31,15 +31,15 @@ export default function ComponentPage({ appData, component }) {
 				<title>{component.title} | Pier Design System</title>
 			</Head>
 			<Layout appData={appData}>
-				<PageHeading pageData={component} breadcrumbs={breadcrumbs}></PageHeading>
+			<PageHeading breadcrumbs={breadcrumbs} title={component.title} lastUpdated={component["last-updated"]} description={component.description}></PageHeading>
 				{component.variations.map((variation) => (
 					<Section key={variation.name}>
 						<Heading size='sm'>{variation.name}</Heading>
 						<BodyText>{variation.description}</BodyText>
-						<Card dark={variation.dark}>
+						<Card dark={variation.dark} className="-m-b-0 -br-b-0">
 							<Section>{htmlReactParse(variation.markup)}</Section>
 						</Card>
-						<Well>
+						<Well className="-m-b-0 -br-t-0">
 							<Section>
 								<CodeBlock size='xs'>
 									{prettier.format(variation.markup, {parser: "html", plugins: [parserHtml], tabWidth: 4})}

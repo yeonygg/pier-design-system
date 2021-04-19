@@ -1,7 +1,43 @@
-.-br-none {
+.-br-0, .-br-none  {
 	border-radius: 0;
 }
 
 .-br-pill {
 	border-radius: 9999px;
+}
+
+.-br-tl-0, .-br-tl-none {
+	border-top-left-radius: 0;
+}
+
+.-br-tr-0, .-br-tr-0-none {
+	border-top-right-radius: 0;
+}
+
+.-br-bl-0, .-br-bl-none {
+	border-bottom-left-radius: 0;
+}
+
+.-br-br-0, .-br-br-none {
+	border-bottom-right-radius: 0;
+}
+
+.-br-t-0, .-br-t-none {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.-br-r-0, .-br-r-none {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.-br-b-0, .-br-b-none {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.-br-l-0, .-br-l-none {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
 }
