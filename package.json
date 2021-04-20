@@ -1,6 +1,6 @@
 {
-	"name": "gumgum-marketing-design-system",
-	"version": "0.1.0",
+	"name": "pier-design-system",
+	"version": "0.3.0",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
