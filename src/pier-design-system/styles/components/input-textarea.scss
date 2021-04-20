@@ -92,4 +92,22 @@ $default-size: md;
   }
 }
 
+.pier-input-textarea--error.pier-input-textarea--dark {
+  background: map-get($colorsGrays, dark-4);
+  border: 1px solid map-get($colorsRed, dark-2);
+
+  &::placeholder {
+    color: map-get($colorsRed, dark-2);
+  }
+
+  &:hover {
+    border: 1px solid map-get($colorsRed, default);
+  }
+
+  &:focus {
+    @include build-input-focus-state(map-get($colorsRed, default));
+  }
+
+
+}
 
