@@ -12,6 +12,7 @@ import darkError from "./dark-error";
 import disabled from "./disabled";
 import error from "./error";
 import dark from "./dark";
+import darkError from "./dark-error";
 
 
 export default {
@@ -66,6 +67,12 @@ export default {
 			name: "Dark",
 			description: "",
 			markup: ReactDOMServer.renderToStaticMarkup(dark),
+			dark: true,
+		},
+		{
+			name: "Dark Error",
+			description: "",
+			markup: ReactDOMServer.renderToStaticMarkup(darkError),
 			dark: true,
 		},
 
