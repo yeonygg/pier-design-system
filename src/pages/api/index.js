@@ -1,5 +1,5 @@
-import components from "../../documentation/components/_componentsData";
+import API from "src/documentation/API";
 
 export default async (req, res) => {
-	res.status(200).json(components);
+	res.status(200).json(API);
 }

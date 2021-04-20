@@ -65,6 +65,10 @@ hr {
     border: none;
 }
 
+code {
+	font-family: $font-family-code;
+}
+
 a,
 a:hover {
     color:inherit;
@@ -125,6 +129,7 @@ button {
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
+		user-select: none;
 }
 
 *::selection {

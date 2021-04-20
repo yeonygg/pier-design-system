@@ -5,8 +5,8 @@ import { Fragment } from "react";
 import htmlReactParse from "html-react-parser";
 import prettier from "prettier/standalone";
 import parserHtml from "prettier/esm/parser-html";
-import { Layout } from "src/pages/index";
-import componentsData from "src/documentation/components/_componentsData";
+import Layout from "src/pages-components/Layout";
+import API from "src/documentation/API";
 import HR from "src/pier-design-system/components/horizonal-rule/HR";
 import Heading from "src/pier-design-system/components/text/Heading";
 import BodyText from "src/pier-design-system/components/text/BodyText";
@@ -16,41 +16,30 @@ import Card from "src/pier-design-system/components/containers/Card";
 import Well from "src/pier-design-system/components/containers/Well";
 import Breadcrumbs from "src/pier-design-system/components/breadcrumbs/Breadcrumbs";
 import BreadcrumbsLink from "src/pier-design-system/components/breadcrumbs/BreadcrumbsLink";
+import PageHeading from "src/pages-components/PageHeading";
 
-export default function ComponentPage({ componentList, component }) {
+export default function ComponentPage({ appData, component }) {
+	const breadcrumbs = [
+		{ label: "Home", link: "/", disabled: false },
+		{ label: "Components", link: "", disabled: true },
+		{ label: component.title, link: "", disabled: true }
+	];
+
 	return (
 		<Fragment>
 			<Head>
 				<title>{component.title} | Pier Design System</title>
 			</Head>
-			<Layout componentList={componentList}>
-				<Section>
-					<Breadcrumbs style={{ marginBottom: "16px" }}>
-						<BreadcrumbsLink>
-							<NextLink href='/'>
-								<a>Home</a>
-							</NextLink>
-						</BreadcrumbsLink>
-						<BreadcrumbsLink disabled>Components</BreadcrumbsLink>
-						<BreadcrumbsLink disabled>{component.title}</BreadcrumbsLink>
-					</Breadcrumbs>
-					<div style={{ display: "inline-block" }}>
-						<Heading style={{ paddingRight: "4px" }}>{component.title}</Heading>
-						<HR color='hero' />
-					</div>
-					<BodyText size='xs' color='light-gray'>
-						Last updated: {component["last-updated"]}
-					</BodyText>
-					<BodyText>{component.description}</BodyText>
-				</Section>
+			<Layout appData={appData}>
+			<PageHeading breadcrumbs={breadcrumbs} title={component.title} lastUpdated={component["last-updated"]} description={component.description}></PageHeading>
 				{component.variations.map((variation) => (
 					<Section key={variation.name}>
 						<Heading size='sm'>{variation.name}</Heading>
 						<BodyText>{variation.description}</BodyText>
-						<Card dark={variation.dark}>
+						<Card dark={variation.dark} className="-m-b-0 -br-b-0">
 							<Section>{htmlReactParse(variation.markup)}</Section>
 						</Card>
-						<Well>
+						<Well className="-m-b-0 -br-t-0">
 							<Section>
 								<CodeBlock size='xs'>
 									{prettier.format(variation.markup, {parser: "html", plugins: [parserHtml], tabWidth: 4})}
@@ -65,12 +54,12 @@ export default function ComponentPage({ componentList, component }) {
 }
 
 ComponentPage.propTypes = {
-	componentList: PropTypes.array,
+	appData: PropTypes.object,
 	component: PropTypes.object,
 };
 
 export async function getStaticPaths() {
-	const paths = componentsData.map((component) => ({
+	const paths = API.components.map((component) => ({
 		params: { slug: component.slug },
 	}));
 
@@ -78,10 +67,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-	const result = componentsData.filter((component) => component.slug === params.slug);
+	const result = API.components.filter((component) => component.slug === params.slug);
 	return {
 		props: {
-			componentList: componentsData,
+			appData: API,
 			component: result[0],
 		},
 	};

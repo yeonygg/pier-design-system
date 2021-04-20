@@ -1,0 +1,56 @@
+$border-sizes: (
+	0: 0,
+	1: 1px,
+	2: 2px,
+	3: 4px,
+	4: 6px,
+	5: 8px
+);
+
+@each $color-prefix, $color in $colorsGrays {
+	@each $size-prefix, $size in $border-sizes {
+		.-bd-#{$size-prefix}-#{"" + $color-prefix} {border: $size solid $color;}
+	}
+}
+
+@each $color-prefix, $color-group in ("cyan": $colorsCyan, "green": $colorsGreen, "blue": $colorsBlue, "teal": $colorsTeal, "yellow": $colorsYellow, "orange": $colorsOrange, "red": $colorsRed) {
+	@each $shade-prefix, $color in $color-group {
+		@each $size-prefix, $size in $border-sizes {
+			.-bd-#{$size-prefix}-#{"" + $color-prefix}-#{$shade-prefix} {border: $size solid $color;}
+
+			@if $shade-prefix == default {
+				.-bd-#{$size-prefix}-#{"" + $color-prefix} {border: $size solid $color;}
+			}
+		}
+	}
+}
+
+.-bd-none, .-bd-0, .bd-a-none, .-bd-a-0 {
+	border: none;
+}
+
+.-bd-t-none, .-bd-t-0 {
+	border-top: none;
+}
+
+.-bd-l-none, .-bd-l-0 {
+	border-left: none;
+}
+
+.-bd-b-none, .-bd-b-0 {
+	border-bottom: none;
+}
+
+.-bd-r-none, .-bd-r-0 {
+	border-right: none;
+}
+
+.-bd-v-none, .-bd-v-0 {
+	border-top: none;
+	border-bottom: none;
+}
+
+.-bd-h-none, .-bd-h-0 {
+	border-left: none;
+	border-right: none;
+}

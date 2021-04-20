@@ -10,6 +10,7 @@
 @import './abstracts/fonts';
 @import './abstracts/inputs';
 @import './abstracts/reset';
+@import './abstracts/grid';
 
 //components
 @import './components/text-body';
@@ -30,6 +31,24 @@
 @import './components/input-text';
 
 //utilities
+@import './utilities/border-radius';
+@import './utilities/border';
+@import './utilities/color';
+@import './utilities/cursor';
 @import './utilities/disabled';
+@import './utilities/display';
+@import './utilities/ellipsis';
+@import './utilities/flex';
+@import './utilities/float';
+@import './utilities/overflow';
+@import './utilities/pointer-events';
+@import './utilities/position';
+@import './utilities/sizing';
+@import './utilities/shadow';
 @import './utilities/spacing';
-@import './utilities/font';
+@import './utilities/text';
+@import './utilities/transform';
+@import './utilities/transition';
+@import './utilities/user-select';
+@import './utilities/vertical-align';
+@import './utilities/z-index';

@@ -58,4 +58,8 @@ Import the `_index.js` file from the component folder into `_componentsData.js` 
 
 ### 📁 Utilities
 
+### 📄 API.js
+
+Imports all of the documenation data for the apps API.
+
 *WIP*

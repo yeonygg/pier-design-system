@@ -25,9 +25,11 @@ $heading-sizes: (
 	font-size: map-fetch($heading-sizes, ($default-size, desktop));
 	color: map-fetch($colorsGrays, darker);
 	line-height: auto;
+	margin-bottom: map-fetch($heading-sizes, ($default-size, desktop)) - .25rem;
 
 	@include build-media-query(mobile) {
 		font-size: map-fetch($heading-sizes, ($default-size, mobile));
+		margin-bottom: map-fetch($heading-sizes, ($default-size, mobile)) - .25rem;
 	}
 }
 
@@ -38,9 +40,11 @@ $heading-sizes: (
 @each $prefix, $size in $heading-sizes {
 	.pier-heading--#{$prefix} {
 		font-size: map-fetch($size, desktop);
+		margin-bottom: map-fetch($size, desktop) - .25rem;
 
 		@include build-media-query(mobile) {
 			font-size: map-fetch($size, mobile);
+			margin-bottom: map-fetch($size, mobile) - .25rem;
 		}
 	}
 }

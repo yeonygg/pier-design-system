@@ -1,0 +1,45 @@
+//ROTATION
+.-t-rotate-0 {
+	transform: rotate(0deg);
+}
+
+.-t-rotate-90 {
+	transform: rotate(90deg);
+}
+
+.-t-rotate-180 {
+	transform: rotate(180deg);
+}
+
+.-t-rotate-270 {
+	transform: rotate(270deg);
+}
+
+.-t-rotate-360 {
+	transform: rotate(360deg);
+}
+
+//SCALE
+.-t-scale-0 {
+	transform: scale(0)
+}
+
+.-t-scale-100 {
+	transform: scale(1)
+}
+
+.-t-scale-x-0 {
+	transform: scaleX(0);
+}
+
+.-t-scale-x-100 {
+	transform: scaleX(1);
+}
+
+.-t-scale-y-0 {
+	transform: scaleY(0);
+}
+
+.-t-scale-y-100 {
+	transform: scaleY(1);
+}

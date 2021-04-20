@@ -15,15 +15,49 @@ $body-sizes: (
 	)
 );
 
+$code-sizes: (
+	xs: (
+		mobile: .625rem,
+		desktop: .75rem
+	),
+	sm: (
+		mobile: .75rem,
+		desktop: .875rem
+	),
+	md: (
+		mobile: .875rem,
+		desktop: 1rem
+	)
+);
+
 .pier-body-text {
 	font-family: $font-family;
 	font-weight: $font-weight-regular;
 	font-size: map-fetch($body-sizes, ($default-size, desktop));
+	margin-bottom: map-fetch($body-sizes, ($default-size, desktop));
 	color: map-fetch($colorsGrays, 'dark');
 	line-height: 1.55;
 	
+	
 	@include build-media-query(mobile) {
 		font-size: map-fetch($body-sizes, ($default-size, mobile));
+		margin-bottom: map-fetch($body-sizes, ($default-size, mobile));
+	}
+}
+
+.pier-body-text__inline-code {
+	font-family: $font-family-code;
+	font-size: map-fetch($code-sizes, ($default-size, desktop));
+	padding: 0 map-fetch($code-sizes, ($default-size, desktop)) / 2;
+	border-radius: map-fetch($code-sizes, ($default-size, desktop)) / 4;
+	background-color: map-fetch($colorsGrays, lighter);
+	user-select: all;
+	word-wrap: break-word;
+
+	@include build-media-query(mobile) {
+		font-size: map-fetch($code-sizes, ($default-size, mobile));
+		padding: 0 map-fetch($code-sizes, ($default-size, mobile)) / 2;
+		border-radius: map-fetch($code-sizes, ($default-size, mobile)) / 4;
 	}
 }
 
@@ -38,9 +72,24 @@ $body-sizes: (
 @each $prefix, $size in $body-sizes {
 	.pier-body-text--#{$prefix} {
 		font-size: map-fetch($size, desktop);
+		margin-bottom: map-fetch($size, desktop);
 
 		@include build-media-query(mobile) {
 			font-size: map-fetch($size, mobile);
+			margin-bottom: map-fetch($size, mobile);
+		}
+	}
+
+	.pier-body-text__inline-code--#{$prefix} {
+		font-size: map-fetch($code-sizes, ($prefix, desktop));
+		padding: 0 map-fetch($code-sizes, ($prefix, desktop)) / 2;
+		border-radius: map-fetch($code-sizes, ($prefix, desktop)) / 4;
+	
+		@include build-media-query(mobile) {
+			font-size: map-fetch($code-sizes, ($prefix, mobile));
+			padding: 0 map-fetch($code-sizes, ($prefix, mobile)) / 2;
+			border-radius: map-fetch($code-sizes, ($prefix, mobile)) / 4;
 		}
 	}
 }
+
