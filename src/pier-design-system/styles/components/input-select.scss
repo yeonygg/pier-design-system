@@ -35,8 +35,11 @@ $default-size: md;
 
   &:focus {
     @include build-input-focus-state(map-get($colorsBlue, dark-1));
+
   }
 }
+
+option:selected { color: red; }
 
 @each $prefix, $size in $input-heights {
   .pier-input-select--#{$prefix} {
