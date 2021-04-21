@@ -2,8 +2,34 @@ import { Fragment } from "react";
 
 export default ( 
 	<Fragment>
-		<input className = "pier-input-text pier-input-text--sm" type = "text" placeholder = "Enter Text" />
-		<input className = "pier-input-text pier-input-text--md" type = "text" placeholder = "Enter Text" />
-		<input className = "pier-input-text pier-input-text--lg" type = "text" placeholder = "Enter Text" />
+	<select class="pier-input-select pier-input-select--sm" required>
+	<option value="" disabled="" selected="" hidden="">Select your option</option>
+	<option value="1">Option 1</option>
+	<option value="2">Option 2</option>
+	<option value="3">Option 3</option>
+	<option value="4">Option 4</option>
+	<option value="5">Option 5</option>
+	<option value="6">Option 6</option>
+	</select>
+
+	<select class="pier-input-select pier-input-select--md" required>
+	<option value="" disabled="" selected="" hidden="">Select your option</option>
+	<option value="1">Option 1</option>
+	<option value="2">Option 2</option>
+	<option value="3">Option 3</option>
+	<option value="4">Option 4</option>
+	<option value="5">Option 5</option>
+	<option value="6">Option 6</option>
+	</select>
+
+	<select class="pier-input-select pier-input-select--lg" required>
+	<option value="" disabled="" selected="" hidden="">Select your option</option>
+	<option value="1">Option 1</option>
+	<option value="2">Option 2</option>
+	<option value="3">Option 3</option>
+	<option value="4">Option 4</option>
+	<option value="5">Option 5</option>
+	<option value="6">Option 6</option>
+	</select>
 	</Fragment>
 );

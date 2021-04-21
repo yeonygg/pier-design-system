@@ -12,9 +12,21 @@ $default-size: md;
   overflow: hidden;
   padding: 0 1.9rem 0 0.875rem;
   cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23BCC5CA' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+
+  &::-ms-expand {
+    display: none;
+  }
 
   &:hover {
     border: 1px solid map-get($colorsGrays, dark-1);
+    background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%230F62A3' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
+    fill: map-get($colorsBlue, dark-1);
   }
 
   &:focus {
@@ -36,6 +48,7 @@ $default-size: md;
     }
   }
 }
+
 
 // .pier-input-text--error {
 //   background: map-fetch($colorsRed, light-4);
