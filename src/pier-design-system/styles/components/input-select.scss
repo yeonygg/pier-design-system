@@ -39,8 +39,6 @@ $default-size: md;
   }
 }
 
-option:selected { color: red; }
-
 @each $prefix, $size in $input-heights {
   .pier-input-select--#{$prefix} {
     height: map-fetch($input-heights, ($prefix, desktop));
