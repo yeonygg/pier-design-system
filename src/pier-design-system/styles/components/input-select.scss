@@ -1,0 +1,112 @@
+$default-size: md;
+
+.pier-input-select {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid map-get($colorsGrays, gray-3);
+  width: 100%;
+  margin: 0.5rem;
+  font-family: $font-family;
+  color: map-get($colorsGrays, gray-3);
+  transition: 0.1s ease-in-out;
+  overflow: hidden;
+  padding: 0 1.9rem 0 0.875rem;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid map-get($colorsGrays, dark-1);
+  }
+
+  &:focus {
+    @include build-input-focus-state(map-get($colorsBlue, dark-1));
+  }
+}
+
+@each $prefix, $size in $input-heights {
+  .pier-input-select--#{$prefix} {
+    height: map-fetch($input-heights, ($prefix, desktop));
+    border-radius: map-fetch($input-border-radii, $prefix);
+
+    font-size: map-fetch($input-text-sizes, ($prefix, desktop));
+
+    @include build-media-query(mobile) {
+      height: map-fetch($input-heights, ($prefix, mobile));
+
+      font-size: map-fetch($input-text-sizes, ($prefix, mobile));
+    }
+  }
+}
+
+// .pier-input-text--error {
+//   background: map-fetch($colorsRed, light-4);
+//   border: 1px solid map-get($colorsRed, default);
+
+//   &::placeholder {
+//     color: map-get($colorsRed, default);
+//   }
+
+//   &:hover {
+//     border: 1px solid map-get($colorsRed, dark-1);
+//   }
+
+//   &:focus {
+//     @include build-input-focus-state(map-get($colorsRed, dark-1));
+//   }
+// }
+
+// .pier-input-text--pill {
+//   border-radius: 100px;
+// }
+
+// .pier-input-text--cap-left {
+//   border-right: none;
+//   border-bottom-right-radius: 0;
+//   border-top-right-radius: 0;
+
+//   &:hover {
+//     border-right: none;
+//   }
+// }
+
+// .pier-input-text--cap-right {
+//   border-left: none;
+//   border-bottom-left-radius: 0;
+//   border-top-left-radius: 0;
+
+//   &:hover {
+//     border-left: none;
+//   }
+// }
+
+// .pier-input-text--dark {
+//   color: map-get($colorsGrays, gray-2);
+//   background: map-get($colorsGrays, dark-4);
+//   border: 1px solid map-get($colorsGrays, dark-2);
+
+//   &::placeholder {
+//     color: map-get($colorsGrays, dark-2);
+//   }
+
+//   &:focus {
+//     @include build-input-focus-state(map-get($colorsGrays, gray-1));
+//     border: 1px solid map-get($colorsCyan, dark-2);
+//   }
+// }
+
+// .pier-input-text--error.pier-input-text--dark {
+
+//   background: map-get($colorsGrays, dark-4);
+//   border: 1px solid map-get($colorsRed, dark-2);
+
+//   &::placeholder {
+//     color: map-get($colorsRed, dark-2);
+//   }
+
+//   &:hover {
+//     border: 1px solid map-get($colorsRed, dark-2);
+//   }
+
+//   &:focus {
+//     @include build-input-focus-state(map-get($colorsRed, default));
+//   }
+// }

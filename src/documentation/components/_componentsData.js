@@ -12,6 +12,7 @@ import buttonIcon from "./button-icon/_index";
 import inputText from "./input-text/_index";
 import inputGroup from "./input-group/_index";
 import inputTextarea from "./input-textarea/_index";
+import inputSelect from "./input-select/_index";
 
 let componentsData = [];
 componentsData.push(
@@ -29,6 +30,7 @@ componentsData.push(
 	inputText,
 	inputGroup,
 	inputTextarea,
+	inputSelect,
 );
 
 export default componentsData;
