@@ -13,6 +13,7 @@ import inputText from "./input-text/_index";
 import inputGroup from "./input-group/_index";
 import inputTextarea from "./input-textarea/_index";
 import inputSelect from "./input-select/_index";
+import inputCheckbox from "./input-checkbox/_index";
 
 let componentsData = [];
 componentsData.push(
@@ -31,6 +32,7 @@ componentsData.push(
 	inputGroup,
 	inputTextarea,
 	inputSelect,
+	inputCheckbox,
 );
 
 export default componentsData;
