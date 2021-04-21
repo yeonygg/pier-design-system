@@ -35,7 +35,6 @@ $default-size: md;
 
   &:focus {
     @include build-input-focus-state(map-get($colorsBlue, dark-1));
-
   }
 }
 
