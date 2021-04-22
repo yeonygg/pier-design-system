@@ -2,7 +2,7 @@ import { Fragment } from "react";
 
 export default ( 
 	<Fragment>
-	<select class="pier-input-select pier-input-select--sm" required>
+	<select className="pier-input-select pier-input-select--sm" required>
 	<option value="" disabled="" selected="" hidden="">Select your option</option>
 	<option value="1">Option 1</option>
 	<option value="2">Option 2</option>
@@ -12,7 +12,7 @@ export default (
 	<option value="6">Option 6</option>
 	</select>
 
-	<select class="pier-input-select pier-input-select--md" required>
+	<select className="pier-input-select pier-input-select--md" required>
 	<option value="" disabled="" selected="" hidden="">Select your option</option>
 	<option value="1">Option 1</option>
 	<option value="2">Option 2</option>
@@ -22,7 +22,7 @@ export default (
 	<option value="6">Option 6</option>
 	</select>
 
-	<select class="pier-input-select pier-input-select--lg" required>
+	<select className="pier-input-select pier-input-select--lg" required>
 	<option value="" disabled="" selected="" hidden="">Select your option</option>
 	<option value="1">Option 1</option>
 	<option value="2">Option 2</option>
