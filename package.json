@@ -1,6 +1,6 @@
 {
 	"name": "pier-design-system",
-	"version": "0.3.5",
+	"version": "0.3.6",
 	"description": "A presentational design system and react component library",
 	"keywords": [
 		"pier design system",
@@ -22,6 +22,9 @@
 	"author": "",
 	"license": "",
 	"main": "dist/index.js",
+	"files": [
+		"*"
+	],
 	"scripts": {
 		"dev": "next dev",
 		"prebuild": "rimraf dist",
