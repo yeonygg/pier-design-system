@@ -60,6 +60,11 @@ $default-size: md;
   border-radius: 100px;
 }
 
+.pier-input-text--disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 .pier-input-text--cap-left {
   border-right: none;
   border-bottom-right-radius: 0;

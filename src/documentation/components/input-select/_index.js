@@ -3,6 +3,7 @@ import base from "./base";
 import sizes from "./sizes";
 import error from "./error";
 import pill from "./pill";
+import disabled from "./disabled";
 import capleft from "./cap-left";
 import capright from "./cap-right";
 import dark from "./dark";
@@ -37,6 +38,12 @@ export default {
 			name: "Pill",
 			description: "",
 			markup: ReactDOMServer.renderToStaticMarkup(pill),
+			dark: false,
+		},
+		{
+			name: "Disabled",
+			description: "",
+			markup: ReactDOMServer.renderToStaticMarkup(disabled),
 			dark: false,
 		},
 		{

@@ -60,6 +60,12 @@ $default-size: md;
   resize: none;
 }
 
+.pier-input-textarea--disabled {
+  opacity: 0.4;
+  pointer-events: none;
+  resize: none;
+}
+
 .pier-input-textarea--error {
   background: map-fetch($colorsRed, light-4);
   border: 1px solid map-get($colorsRed, default);

@@ -3,6 +3,7 @@ import base from "./base";
 import sizes from "./sizes";
 import auto from "./auto";
 import horizontal from "./horizontal";
+import textDisabled from "./text-disabled";
 import disabled from "./disabled";
 import error from "./error";
 import dark from "./dark";
@@ -37,6 +38,12 @@ export default {
 			name: "Horizontal",
 			description: "",
 			markup: ReactDOMServer.renderToStaticMarkup(horizontal),
+			dark: false,
+		},
+		{
+			name: "Text Disabled",
+			description: "",
+			markup: ReactDOMServer.renderToStaticMarkup(textDisabled),
 			dark: false,
 		},
 		{
