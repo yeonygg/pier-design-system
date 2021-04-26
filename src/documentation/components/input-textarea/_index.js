@@ -51,7 +51,6 @@ export default {
 			dark: false,
 		},
 		{
-
 			name: "Disabled",
 			description: "",
 			markup: ReactDOMServer.renderToStaticMarkup(disabled),

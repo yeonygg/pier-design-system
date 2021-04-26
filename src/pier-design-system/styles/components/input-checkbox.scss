@@ -110,6 +110,8 @@
   opacity: 0.4;
   pointer-events: none;
 
+.pier-input-checkbox__input:focus + .pier-input-checkbox__indicator {
+  box-shadow: 0px 0px 5px 0px rgba(map-fetch($colorsCyan, light-1), 0.5);
 }
 
 @each $prefix, $size in $input-heights {
