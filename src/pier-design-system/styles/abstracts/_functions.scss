@@ -5,3 +5,8 @@
 	}
 	@return $map;
 }
+
+@function strip-hash($color) {
+    $c: inspect($color);
+    @return str-slice($c,2);
+}

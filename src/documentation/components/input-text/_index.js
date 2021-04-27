@@ -1,8 +1,13 @@
 import ReactDOMServer from 'react-dom/server';
 import base from './base';
 import sizes from './sizes';
-import errors from './errors';
-import group from './group';
+import error from './error';
+import pill from './pill';
+import disabled from './disabled';
+import capleft from './cap-left';
+import capright from './cap-right';
+import dark from './dark';
+import errorDark from './error-dark';
 
 export default {
     title: 'Input - Text',
@@ -23,16 +28,47 @@ export default {
             dark: false,
         },
         {
-            name: 'Errors',
+            name: 'Error',
             description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(errors),
+            markup: ReactDOMServer.renderToStaticMarkup(error),
             dark: false,
         },
         {
-            name: 'Group',
+            name: 'Pill',
             description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(group),
+            markup: ReactDOMServer.renderToStaticMarkup(pill),
             dark: false,
+        },
+        {
+            name: 'Disabled',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(disabled),
+            dark: false,
+        },
+
+        {
+            name: 'Cap-left',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(capleft),
+            dark: false,
+        },
+        {
+            name: 'Cap-right',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(capright),
+            dark: false,
+        },
+        {
+            name: 'Dark',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(dark),
+            dark: true,
+        },
+        {
+            name: 'Error Dark',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(errorDark),
+            dark: true,
         },
     ],
 };

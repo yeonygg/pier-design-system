@@ -33,12 +33,21 @@
 
 @each $prefix, $size in $input-heights {
   .pier-button-icon--#{$prefix} {
-    height: $size;
+    height: map-fetch($input-heights, ($prefix, desktop));
     border-radius: map-get($input-border-radii, $prefix);
-    padding: 0 map-get($button-icon-padding, $prefix);
-    font-size: map-get($input-icon-sizes, $prefix);
+    padding: 0 map-fetch($button-icon-padding, ($prefix, desktop));
+    font-size: map-fetch($input-icon-sizes, ($prefix, desktop));
+
+    @include build-media-query(mobile) {
+      height: map-fetch($input-heights, ($prefix, mobile));
+      padding: 0 map-fetch($button-icon-padding, ($prefix, mobile));
+      font-size: map-fetch($input-icon-sizes, ($prefix, mobile));
+
+    }
+
   }
 }
+
 
 .pier-button-icon__icon {
 }
