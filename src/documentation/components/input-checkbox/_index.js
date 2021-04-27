@@ -3,6 +3,7 @@ import base from "./base";
 import partial from "./partial";
 import sizes from "./sizes";
 import error from "./error";
+import disabled from "./disabled";
 import dark from "./dark";
 import errorDark from "./error-dark";
 import partialDark from "./partial-dark";
@@ -36,6 +37,12 @@ export default {
 			name: "Error",
 			description: "",
 			markup: ReactDOMServer.renderToStaticMarkup(error),
+			dark: false,
+		},
+		{
+			name: "Disabled",
+			description: "",
+			markup: ReactDOMServer.renderToStaticMarkup(disabled),
 			dark: false,
 		},
 		{

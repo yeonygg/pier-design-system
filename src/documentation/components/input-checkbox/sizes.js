@@ -23,7 +23,7 @@ export default (
 	  value=""
 	/>
 
-	<div className="pier-input-checkbox__indicator"></div>
+	<div className="pier-input-checkbox__indicator pier-input-checkbox__indicator--lg"></div>
 	<span className="pier-input-checkbox__label">Label</span>
   </label>
 
