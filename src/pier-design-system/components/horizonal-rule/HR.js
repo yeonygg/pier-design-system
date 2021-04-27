@@ -1,52 +1,50 @@
-import PropTypes from "prop-types";
+import react from 'react';
+import PropTypes from 'prop-types';
 
 export default function HR({ size, color, className, style }) {
-	let classes = 'pier-hr';
+    let classes = 'pier-hr';
 
-	switch(size) {
-		case 'lg':
-			classes += ' pier-hr--lg'
-			break
-		case 'md':
-			classes += ' pier-hr--md'
-			break
-		case 'sm':
-			classes += ''
-			break
-	}
+    switch (size) {
+        case 'lg':
+            classes += ' pier-hr--lg';
+            break;
+        case 'md':
+            classes += ' pier-hr--md';
+            break;
+        case 'sm':
+            classes += '';
+            break;
+    }
 
-	switch(color) {
-		case 'hero':
-			classes += ' pier-hr--hero'
-			break
-		case 'light':
-			classes += ''
-			break
-		case 'dark':
-			classes += ' pier-hr--dark'
-			break
-		case 'gray':
-			classes += ' pier-hr--gray'
-			break
-	}
+    switch (color) {
+        case 'hero':
+            classes += ' pier-hr--hero';
+            break;
+        case 'light':
+            classes += '';
+            break;
+        case 'dark':
+            classes += ' pier-hr--dark';
+            break;
+        case 'gray':
+            classes += ' pier-hr--gray';
+            break;
+    }
 
-	classes += ` ${className}`
+    classes += ` ${className}`;
 
-	return (
-		<hr className={classes} style={style} />
-	)
+    return <hr className={classes} style={style} />;
 }
 
 HR.defaultProps = {
-	size: "sm",
-	color: "light",
-	className: ""
-}
+    size: 'sm',
+    color: 'light',
+    className: '',
+};
 
 HR.propTypes = {
-	size: PropTypes.string,
-	color: PropTypes.string,
-	className: PropTypes.string,
-	style: PropTypes.object
-}
-
+    size: PropTypes.string,
+    color: PropTypes.string,
+    className: PropTypes.string,
+    style: PropTypes.object,
+};

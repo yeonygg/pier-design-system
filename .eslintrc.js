@@ -4,17 +4,20 @@ module.exports = {
 		es2021: true,
 		node: true,
 	},
-	extends: ["eslint:recommended", "plugin:react/recommended"],
+	parser: "babel-eslint",
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true,
+			modules: true
 		},
 		ecmaVersion: 12,
 		sourceType: "module",
 	},
 	plugins: [
 		"react",
+		"prettier"
 	],
+	extends: ["prettier", "eslint:recommended", "plugin:react/recommended"],
 	rules: {
 		"react/react-in-jsx-scope": "off",
 		"react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
