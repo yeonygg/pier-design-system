@@ -13,6 +13,21 @@ $input-text-sizes: (
 	)
 );
 
+$input-label-sizes: (
+	sm: ( 
+		desktop: .875rem,
+		mobile: .75rem
+	),
+	md: (
+		desktop: 1rem,
+		mobile: 0.875rem
+	),
+	lg: (
+		desktop: 1.25rem,
+		mobile: 1.125rem
+	)
+);
+
 $input-text-line-height: 1;
 
 $input-icon-sizes: (
