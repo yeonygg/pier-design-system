@@ -1,12 +1,11 @@
 import ReactDOMServer from "react-dom/server";
 import base from "./base";
-import partial from "./partial";
 import sizes from "./sizes";
 import error from "./error";
 import disabled from "./disabled";
 import dark from "./dark";
 import errorDark from "./error-dark";
-import partialDark from "./partial-dark";
+
 
 
 export default {
@@ -19,12 +18,6 @@ export default {
 			name: "Base",
 			description: "",
 			markup: ReactDOMServer.renderToStaticMarkup(base),
-			dark: false,
-		},
-		{
-			name: "Partial",
-			description: "",
-			markup: ReactDOMServer.renderToStaticMarkup(partial),
 			dark: false,
 		},
 		{
@@ -49,12 +42,6 @@ export default {
 			name: "Dark",
 			description: "",
 			markup: ReactDOMServer.renderToStaticMarkup(dark),
-			dark: true,
-		},
-		{
-			name: "Partial Dark",
-			description: "",
-			markup: ReactDOMServer.renderToStaticMarkup(partialDark),
 			dark: true,
 		},
 		{
