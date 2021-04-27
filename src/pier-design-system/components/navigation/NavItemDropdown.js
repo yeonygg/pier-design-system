@@ -1,9 +1,10 @@
-import PropTypes from "prop-types";
+import react from 'react';
+import PropTypes from 'prop-types';
 
 export default function NavItemDropdown({ children }) {
-	return <div className='pier-nav__item-dropdown'>{children}</div>;
+    return <div className="pier-nav__item-dropdown">{children}</div>;
 }
 
 NavItemDropdown.propTypes = {
-	children: PropTypes.node,
+    children: PropTypes.node,
 };

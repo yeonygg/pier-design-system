@@ -1,5 +1,5 @@
-import API from "src/documentation/API";
+import API from 'src/documentation/API';
 
 export default async (req, res) => {
-	res.status(200).json(API.utilities);
-}
+    res.status(200).json(API.utilities);
+};

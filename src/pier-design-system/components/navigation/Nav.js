@@ -1,17 +1,12 @@
-import PropTypes from "prop-types";
+import react from 'react';
+import PropTypes from 'prop-types';
 
 export default function Nav({ children }) {
-	return (
-		<div className="pier-nav">
-			{children}
-		</div>
-	)
+    return <div className="pier-nav">{children}</div>;
 }
 
-Nav.defaultProps = {
-
-}
+Nav.defaultProps = {};
 
 Nav.propTypes = {
-	children: PropTypes.node.isRequired
-}
+    children: PropTypes.node.isRequired,
+};
