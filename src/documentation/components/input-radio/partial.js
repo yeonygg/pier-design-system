@@ -2,9 +2,9 @@ import { Fragment } from "react";
 
 export default (
   <Fragment>
-    <label className="pier-input-checkbox pier-input-checkbox--md pier-input-checkbox--partial">
+    <label className="pier-input-checkbox pier-input-checkbox--md">
       <input
-        className="pier-input-checkbox__input"
+        className="pier-input-checkbox__input pier-input-checkbox__input--partial"
         type="checkbox"
         name="example-1"
         value=""

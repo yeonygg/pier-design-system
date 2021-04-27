@@ -2,16 +2,16 @@ import { Fragment } from "react";
 
 export default (
 <Fragment>
-<label className="pier-input-checkbox pier-input-checkbox--md">
+<label className="pier-input-checkbox pier-input-checkbox--md pier-input-checkbox--error pier-input-checkbox--dark">
 <input
-  className="pier-input-checkbox__input pier-input-checkbox__input--error"
+  className="pier-input-checkbox__input pier-input-checkbox__input"
   type="checkbox"
   name="example-1"
   value=""
 />
 
-<div className="pier-input-checkbox__indicator--error"></div>
-<span className="pier-input-checkbox__label pier-input-checkbox__label--dark">Label</span>
+<div className="pier-input-checkbox__indicator"></div>
+<span className="pier-input-checkbox__label">Label</span>
 </label>
 </Fragment>
 );
