@@ -1,6 +1,6 @@
 {
 	"name": "pier-design-system",
-	"version": "0.3.8",
+	"version": "0.3.9",
 	"description": "A presentational design system and react component library",
 	"keywords": [
 		"pier design system",
@@ -18,10 +18,10 @@
 	"bugs": {
 		"url": "https://github.com/gg-jarrod/pier-design-system.git/issues"
 	},
-	"homepage": "https://github.com/gg-jarrod/pier-design-system.git#readme",
+	"homepage": "https://pier-design-system-develop.netlify.app/abstracts/grid",
 	"author": "",
 	"license": "",
-	"main": "dist/components/index.js",
+	"main": "dist/index.js",
 	"files": [
 		"dist"
 	],
