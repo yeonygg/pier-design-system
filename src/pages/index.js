@@ -11,7 +11,9 @@ export default function Home({ appData }) {
                 <title>Pier Design System</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Layout appData={appData}></Layout>
+            <Layout appData={appData}>
+                <Fragment></Fragment>
+            </Layout>
         </Fragment>
     );
 }

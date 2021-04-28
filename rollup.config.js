@@ -12,6 +12,7 @@ export default {
             format: 'cjs',
         },
     ],
+    external: ['react', 'react-dom', 'prop-types'],
     plugins: [
         peerDepsExternal(),
         nodeResolve(),

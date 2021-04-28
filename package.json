@@ -19,8 +19,6 @@
 		"url": "https://github.com/gg-jarrod/pier-design-system.git/issues"
 	},
 	"homepage": "https://pier-design-system-develop.netlify.app/abstracts/grid",
-	"author": "",
-	"license": "",
 	"main": "dist/index.js",
 	"files": [
 		"dist"
@@ -45,8 +43,8 @@
 	},
 	"dependencies": {
 		"prop-types": "^15.7.2",
-		"react": "17.0.1",
-		"react-dom": "17.0.1"
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1"
 	},
 	"peerDependencies": {},
 	"devDependencies": {

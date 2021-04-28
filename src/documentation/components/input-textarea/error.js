@@ -1,14 +1,11 @@
-import { Fragment } from "react";
+import { Fragment } from 'react';
 
 export default (
-	<Fragment>
+    <Fragment>
+        <textarea className="pier-input-textarea pier-input-textarea--md pier-input-textarea--error" placeholder="Error"></textarea>
 
+        <textarea className="pier-input-textarea pier-input-textarea--md pier-input-textarea--error" placeholder="Enter Text"></textarea>
 
-	<textarea className="pier-input-textarea pier-input-textarea--md pier-input-textarea--error" placeholder="Error"></textarea>
-
-	<textarea className="pier-input-textarea pier-input-textarea--md pier-input-textarea--error" placeholder="Enter Text"></textarea>
-
-	<textarea className="pier-input-textarea pier-input-textarea--md pier-input-textarea--error" placeholder="Error"></textarea>
-
-	</Fragment>
+        <textarea className="pier-input-textarea pier-input-textarea--md pier-input-textarea--error" placeholder="Error"></textarea>
+    </Fragment>
 );
