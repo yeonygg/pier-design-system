@@ -2,14 +2,18 @@
 export { default as Breadcrumbs } from './breadcrumbs/Breadcrumbs';
 export { default as BreadcrumbsLink } from './breadcrumbs/BreadcrumbsLink';
 //button
-export { default as Button } from './button/Button';
-export { default as IconButton } from './button/IconButton';
+export { default as Button } from './buttons/Button';
+export { default as IconButton } from './buttons/IconButton';
 //containers
 export { default as Card } from './containers/Card';
 export { default as Section } from './containers/Section';
 export { default as Well } from './containers/Well';
 //horizontal-rule
 export { default as HR } from './horizonal-rule/HR';
+//inputs
+export { default as InputSelect } from './inputs/InputSelect';
+export { default as InputText } from './inputs/InputText';
+export { default as InputTextArea } from './inputs/InputTextArea';
 //link
 export { default as Link } from './link/Link';
 //list
