@@ -1,9 +1,18 @@
+$default-size: md;
+
 .pier-input-radio {
   margin: 1rem;
   display: inline-flex;
   align-items: center;
   position: relative;
   box-sizing: border-box;
+  height: map-fetch($input-heights, ($default-size, desktop));
+  font-size: map-fetch($input-label-sizes, ($default-size, desktop));
+
+  @include build-media-query(mobile) {
+    height: map-fetch($input-heights, ($default-size, mobile));
+    font-size: map-fetch($input-label-sizes, ($default-size, mobile));
+  }
 }
 
 .pier-input-radio__input {

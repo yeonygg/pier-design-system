@@ -1,151 +1,152 @@
 $default-size: md;
 
 .pier-input-select {
-  position: relative;
-  box-sizing: border-box;
-  border: 1px solid map-get($colorsGrays, gray-3);
-  width: 100%;
-  margin: 0.5rem;
-  font-family: $font-family;
-  color: map-get($colorsGrays, light-1);
-  transition: 0.1s ease-in-out;
-  overflow: hidden;
-  padding: 0 1.9rem 0 0.875rem;
-  cursor: pointer;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23#{strip-hash(map-get($colorsGrays, gray-3))}' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-position: right .7em top 50%, 0 0;
-  background-size: .65em auto, 100%;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid map-get($colorsGrays, gray-3);
+    width: 100%;
+    margin: 0.5rem;
+    font-family: $font-family;
+    color: map-get($colorsGrays, light-1);
+    transition: 0.1s ease-in-out;
+    overflow: hidden;
+    padding: 0 1.9rem 0 0.875rem;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23#{strip-hash(map-get($colorsGrays, gray-3))}' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 0.65em auto, 100%;
+    height: map-fetch($input-heights, ($default-size, desktop));
+    border-radius: map-fetch($input-border-radii, $default-size);
+    font-size: map-fetch($input-text-sizes, ($default-size, desktop));
 
-  &::-ms-expand {
-    display: none;
-  }
+    @include build-media-query(mobile) {
+        height: map-fetch($input-heights, ($default-size, mobile));
+        font-size: map-fetch($input-text-sizes, ($default-size, mobile));
+    }
 
-  &:valid {
-    color: map-get($colorsGrays, dark-1);
-  }
+    &::-ms-expand {
+        display: none;
+    }
 
-  &:hover {
-    border: 1px solid map-get($colorsGrays, dark-1);
-    background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23#{strip-hash(map-get($colorsBlue, dark-1))}' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
-    fill: map-get($colorsBlue, dark-1);
-  }
+    &:valid {
+        color: map-get($colorsGrays, dark-1);
+    }
 
-  &:focus {
-    @include build-input-focus-state(map-get($colorsBlue, dark-1));
+    &:hover {
+        border: 1px solid map-get($colorsGrays, dark-1);
+        background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23#{strip-hash(map-get($colorsBlue, dark-1))}' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
+        fill: map-get($colorsBlue, dark-1);
+    }
 
-  }
+    &:focus {
+        @include build-input-focus-state(map-get($colorsBlue, dark-1));
+    }
 }
 
 @each $prefix, $size in $input-heights {
-  .pier-input-select--#{$prefix} {
-    height: map-fetch($input-heights, ($prefix, desktop));
-    border-radius: map-fetch($input-border-radii, $prefix);
+    .pier-input-select--#{$prefix} {
+        height: map-fetch($input-heights, ($prefix, desktop));
+        border-radius: map-fetch($input-border-radii, $prefix);
+        font-size: map-fetch($input-text-sizes, ($prefix, desktop));
 
-    font-size: map-fetch($input-text-sizes, ($prefix, desktop));
-
-    @include build-media-query(mobile) {
-      height: map-fetch($input-heights, ($prefix, mobile));
-
-      font-size: map-fetch($input-text-sizes, ($prefix, mobile));
+        @include build-media-query(mobile) {
+            height: map-fetch($input-heights, ($prefix, mobile));
+            font-size: map-fetch($input-text-sizes, ($prefix, mobile));
+        }
     }
-  }
 }
 
-
 .pier-input-select--error {
+    border: 1px solid map-get($colorsRed, default);
+    color: map-get($colorsRed, default);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23E24550' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-color: map-fetch($colorsRed, light-4);
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 0.65em auto, 100%;
 
-  border: 1px solid map-get($colorsRed, default);
-  color: map-get($colorsRed, default);
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23E24550' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-color: map-fetch($colorsRed, light-4);
-  background-position: right .7em top 50%, 0 0;
-  background-size: .65em auto, 100%;
+    &:hover {
+        border: 1px solid map-get($colorsRed, dark-1);
+        background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23BCC5CA' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
+    }
 
-  &:hover {
-    border: 1px solid map-get($colorsRed, dark-1);
-    background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23BCC5CA' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
-  }
-
-  &:focus {
-    @include build-input-focus-state(map-get($colorsRed, dark-1));
-  }
+    &:focus {
+        @include build-input-focus-state(map-get($colorsRed, dark-1));
+    }
 }
 
 .pier-input-select--pill {
-  border-radius: 100px;
+    border-radius: 100px;
 }
 
 .pier-input-select--disabled {
-  opacity: 0.4;
-  pointer-events: none;
+    opacity: 0.4;
+    pointer-events: none;
 }
 
 .pier-input-select--cap-left {
-  border-right: none;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-
-  &:hover {
     border-right: none;
-  }
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+
+    &:hover {
+        border-right: none;
+    }
 }
 
 .pier-input-select--cap-right {
-  border-left: none;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-
-  &:hover {
     border-left: none;
-  }
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+
+    &:hover {
+        border-left: none;
+    }
 }
 
 .pier-input-select--dark {
-  color: map-get($colorsGrays, dark-2);
-  border: 1px solid map-get($colorsGrays, dark-2);
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%2353626D' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-color: map-fetch($colorsGrays, dark-4);
-  background-position: right .7em top 50%, 0 0;
-  background-size: .65em auto, 100%;
+    color: map-get($colorsGrays, dark-2);
+    border: 1px solid map-get($colorsGrays, dark-2);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%2353626D' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-color: map-fetch($colorsGrays, dark-4);
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 0.65em auto, 100%;
 
-  &:valid {
+    &:valid {
+        color: map-get($colorsGrays, gray-2);
+    }
 
-    color: map-get($colorsGrays, gray-2);
-  }
-
-  &:focus {
-    @include build-input-focus-state(map-get($colorsGrays, gray-1));
-    border: 1px solid map-get($colorsCyan, dark-2);
-  }
+    &:focus {
+        @include build-input-focus-state(map-get($colorsGrays, gray-1));
+        border: 1px solid map-get($colorsCyan, dark-2);
+    }
 }
 
 .pier-input-select--error.pier-input-select--dark {
-  color: map-get($colorsRed, dark-2);
-  border: 1px solid map-get($colorsRed, dark-2);
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23E24550' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-color: map-get($colorsGrays, dark-4);
-  background-position: right .7em top 50%, 0 0;
-  background-size: .65em auto, 100%;
-  
-
-  &:valid {
-    color: map-get($colorsGrays, gray-2);
-  }
-
-  &:hover {
+    color: map-get($colorsRed, dark-2);
     border: 1px solid map-get($colorsRed, dark-2);
-  }
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23E24550' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-color: map-get($colorsGrays, dark-4);
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 0.65em auto, 100%;
 
-  &:focus {
-    @include build-input-focus-state(map-get($colorsRed, default));
-  }
+    &:valid {
+        color: map-get($colorsGrays, gray-2);
+    }
+
+    &:hover {
+        border: 1px solid map-get($colorsRed, dark-2);
+    }
+
+    &:focus {
+        @include build-input-focus-state(map-get($colorsRed, default));
+    }
 }

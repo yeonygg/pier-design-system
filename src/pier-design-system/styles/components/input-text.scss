@@ -10,6 +10,16 @@ $default-size: md;
   color: map-get($colorsGrays, dark-1);
   transition: 0.1s ease-in-out;
   overflow: hidden;
+  height: map-fetch($input-heights, ($default-size, desktop));
+  border-radius: map-fetch($input-border-radii, $default-size);
+  padding: 0 map-fetch($input-padding, ($default-size, desktop));
+  font-size: map-fetch($input-text-sizes, ($default-size, desktop));
+
+  @include build-media-query(mobile) {
+    height: map-fetch($input-heights, ($default-size, mobile));
+    padding: 0 map-fetch($input-padding, ($default-size, mobile));
+    font-size: map-fetch($input-text-sizes, ($default-size, mobile));
+  }
 
   &::placeholder {
     color: map-get($colorsGrays, gray-3);

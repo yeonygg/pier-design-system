@@ -1,5 +1,5 @@
 export default (
-    <select className="pier-input-select pier-input-select--md pier-input-select--error pier-input-select--dark" required>
+    <select className="pier-input-select pier-input-select--error pier-input-select--dark" required>
         <option value="" disabled="" selected="" hidden="">
             Error
         </option>

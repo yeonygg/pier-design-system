@@ -1,3 +1,5 @@
+$default-size: md;
+
 .pier-button-icon {
   display: inline-flex;
   background: transparent;
@@ -10,6 +12,16 @@
   background: transparent;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+  height: map-fetch($input-heights, ($default-size, desktop));
+  border-radius: map-get($input-border-radii, $default-size);
+  padding: 0 map-fetch($button-icon-padding, ($default-size, desktop));
+  font-size: map-fetch($input-icon-sizes, ($default-size, desktop));
+
+  @include build-media-query(mobile) {
+    height: map-fetch($input-heights, ($default-size, mobile));
+    padding: 0 map-fetch($button-icon-padding, ($default-size, mobile));
+    font-size: map-fetch($input-icon-sizes, ($default-size, mobile));
+  }
 
   &:hover {
     background: map-get($colorsGrays, light-2);

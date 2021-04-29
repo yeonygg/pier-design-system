@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 
 export default (
     <Fragment>
-        <select className="pier-input-select pier-input-select--md" required>
+        <select className="pier-input-select" required>
             <option value="" disabled="" selected="" hidden="">
                 Select your option
             </option>

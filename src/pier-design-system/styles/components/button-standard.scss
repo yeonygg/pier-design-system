@@ -1,3 +1,5 @@
+$default-size: md;
+
 .pier-button-standard {
   display: inline-flex;
   font-family: $font-family;
@@ -9,6 +11,16 @@
   color: map-fetch($colorsGrays, white);
   margin: 0.5rem;
   cursor: pointer;
+  height: map-fetch($input-heights, ($default-size, desktop));
+  border-radius: map-fetch($input-border-radii, $default-size);
+  padding: 0 map-fetch($button-padding, ($default-size, desktop));
+  font-size: map-fetch($input-text-sizes, ($default-size, desktop));
+
+  @include build-media-query(mobile) {
+    height: map-fetch($input-heights, ($default-size, mobile));
+    padding: 0 map-fetch($button-padding, ($default-size, mobile));
+    font-size: map-fetch($input-text-sizes, ($default-size, mobile));
+  }
 
   &:hover {
     background: map-fetch($colorsCyan, light-1);

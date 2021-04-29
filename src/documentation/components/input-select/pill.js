@@ -1,5 +1,5 @@
 export default (
-    <select className="pier-input-select pier-input-select--md pier-input-select--pill" required>
+    <select className="pier-input-select pier-input-select--pill" required>
         <option value="" disabled="" selected="" hidden="">
             Select your option
         </option>

@@ -69,12 +69,5 @@ export default {
             markup: ReactDOMServer.renderToStaticMarkup(darkError),
             dark: true,
         },
-
-        {
-            name: 'Dark Error',
-            description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(darkError),
-            dark: true,
-        },
     ],
 };

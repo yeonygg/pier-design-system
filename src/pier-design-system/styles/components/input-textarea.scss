@@ -18,6 +18,16 @@ $default-size: md;
   white-space: pre-wrap;
   overflow-wrap: break-word;
   line-height: 1.55rem;
+  height: map-fetch($input-heights, ($default-size, desktop));
+  border-radius: map-fetch($input-border-radii, $default-size);
+  padding: map-fetch($input-textarea-padding, ($default-size, desktop));
+  font-size: map-fetch($input-text-sizes, ($default-size, desktop));
+
+  @include build-media-query(mobile) {
+    height: map-fetch($input-heights, ($default-size, desktop));
+    padding: map-fetch($input-textarea-padding, ($default-size, mobile));
+    font-size: map-fetch($input-text-sizes, ($default-size, mobile));
+  }
 
 
   &::placeholder {
