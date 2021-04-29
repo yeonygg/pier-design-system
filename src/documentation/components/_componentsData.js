@@ -15,6 +15,7 @@ import inputTextarea from './input-textarea/_index';
 import inputSelect from './input-select/_index';
 import inputCheckbox from './input-checkbox/_index';
 import inputRadio from './input-radio/_index';
+import inputToggle from './input-toggle/_index';
 let componentsData = [];
 componentsData.push(
     textBody,
@@ -33,7 +34,8 @@ componentsData.push(
     inputTextarea,
     inputSelect,
     inputCheckbox,
-    inputRadio
+    inputRadio,
+    inputToggle
 );
 
 export default componentsData;
