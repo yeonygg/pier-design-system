@@ -51,6 +51,10 @@ $default-size: md;
     &:hover {
         border: 1px solid map-get($colorsGrays, dark-1);
     }
+
+    &:active {
+        background-image: build-gradient(90deg, primaryBoulevard);
+    }
 }
 
 .pier-input-checkbox__indicator--lg {
@@ -77,6 +81,12 @@ $default-size: md;
 }
 
 .pier-input-checkbox--partial {
+    .pier-input-checkbox__indicator {
+    &:active {
+        background-image: none;
+        background-color: map-get($colorsGrays, dark-1);
+}
+    }
     .pier-input-checkbox__input:checked ~ .pier-input-checkbox__indicator {
         border-color: map-get($colorsGrays, dark-1);
         background-image: url('data:image/svg+xml,%3Csvg aria-hidden=%22true%22 focusable=%22false%22 data-prefix=%22far%22 data-icon=%22minus%22 class=%22svg-inline--fa fa-minus fa-w-12%22 role=%22img%22 xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 384 512%22%3E%3Cpath fill=%22%23FFFFFF%22 d=%22M368 224H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h352c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z%22%3E%3C/path%3E%3C/svg%3E');
@@ -95,6 +105,10 @@ $default-size: md;
         &:hover {
             border-color: map-get($colorsRed, dark-1);
         }
+        &:active {
+            background-image: none;
+            background-color: map-get($colorsRed, default);
+    }
     }
 
     .pier-input-checkbox__input:checked ~ .pier-input-checkbox__indicator {
@@ -132,8 +146,10 @@ $default-size: md;
             border-color: map-get($colorsGrays, light-gray);
         }
     }
-
-
+    
+    .pier-input-checkbox__input:checked ~ .pier-input-checkbox__indicator{
+        border-color: transparent;
+      }
 
     .pier-input-checkbox__input:checked ~ .pier-input-checkbox__label {
         color: map-fetch($colorsGrays, light-gray);

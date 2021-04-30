@@ -20,16 +20,13 @@ $default-size: md;
         .pier-input-toggle__indicator {
             border: 1px solid map-get($colorsGrays, dark-1);
 
-            &::before {
-                opacity: 1;
-            }
-
             &::after {
                 background-color: none;
                 background-image: build-gradient(90deg, primaryBoulevard);
             }
         }
     }
+
 }
 
 .pier-input-toggle__indicator {
@@ -47,7 +44,7 @@ $default-size: md;
     background-repeat: no-repeat;
     background-position: center center;
     transition-property: all;
-    transition-duration: 150ms;
+    transition-duration: 0ms;
     transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
     &::after {
@@ -59,9 +56,29 @@ $default-size: md;
         height: calc(100% - 4px);
         background-color: map-get($colorsGrays, light-gray);
         border-radius: 100rem;
+        -webkit-transition: all 0.45s ease-in-out;
         transition-property: all;
         transition-duration: 150ms;
         transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+    }
+
+    &:hover {
+        border: 1px solid map-get($colorsGrays, dark-1);
+
+            &::after {
+                background-color: transparent;
+                background-image: build-gradient(90deg, primaryBoulevard);
+            }
+    }
+
+    &:active {
+        background-image: build-gradient(90deg, primaryBoulevard);
+
+        &:after {
+            background-color: map-get($colorsGrays, white);
+            background-image: none;
+        }
     }
 }
 
@@ -101,7 +118,11 @@ $default-size: md;
 .pier-input-toggle__input:checked ~ .pier-input-toggle__indicator:after {
     background-color: map-get($colorsGrays, white);
     background-image: none;
-    left: 53%;
+    left: calc(50% + 2px);
+
+    &:active {
+
+    }
 }
 
 .pier-input-toggle__input:checked ~ .pier-input-toggle__label {
@@ -176,6 +197,10 @@ $default-size: md;
             border-color: map-get($colorsGrays, light-gray);
         }
     }
+
+    .pier-input-toggle__input:checked ~ .pier-input-toggle__indicator{
+        border-color: transparent;
+      }
 
     .pier-input-toggle__input:checked ~ .pier-input-toggle__label {
         color: map-fetch($colorsGrays, light-gray);
