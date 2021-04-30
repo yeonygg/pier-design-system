@@ -164,9 +164,20 @@ $default-size: md;
 
             background-image: none;
             border-color: map-get($colorsRed, dark-1);
+            
             &:after {
                 background-image: none;
                 background-color: map-get($colorsRed, dark-1);
+            }
+        }
+    }
+
+    &:active {
+        .pier-input-toggle__indicator {
+            background-image: none;
+            background-color: map-get($colorsRed, default);
+            &:after {
+                background-color: map-get($colorsGrays, white);
             }
         }
     }
@@ -225,6 +236,17 @@ $default-size: md;
         &:after {
             background-color: map-get($colorsRed, default);
         }
+    }
+
+    &:active {
+       
+            background-image: none;
+            background-color: map-get($colorsRed, default);
+            
+            &:after {
+                background-color: map-get($colorsGrays, white);
+            }
+        
     }
     }
 
