@@ -14,6 +14,8 @@ export { default as HR } from './horizonal-rule/HR';
 export { default as InputSelect } from './inputs/InputSelect';
 export { default as InputText } from './inputs/InputText';
 export { default as InputTextArea } from './inputs/InputTextArea';
+export { default as InputCheckbox } from './inputs/InputCheckbox';
+export { default as InputRadio } from './inputs/InputRadio';
 //link
 export { default as Link } from './link/Link';
 //list
