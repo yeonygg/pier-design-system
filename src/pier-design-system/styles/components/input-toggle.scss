@@ -16,16 +16,6 @@ $default-size: md;
         font-size: map-fetch($input-label-sizes, ($default-size, mobile));
     }
 
-    &:hover {
-        .pier-input-toggle__indicator {
-            border: 1px solid map-get($colorsGrays, dark-1);
-
-            &::after {
-                background-color: none;
-                background-image: build-gradient(90deg, primaryBoulevard);
-            }
-        }
-    }
 
 }
 
@@ -67,7 +57,7 @@ $default-size: md;
         border: 1px solid map-get($colorsGrays, dark-1);
 
             &::after {
-                background-color: transparent;
+                background-color: none;
                 background-image: build-gradient(90deg, primaryBoulevard);
             }
     }
@@ -98,8 +88,15 @@ $default-size: md;
 }
 
 .pier-input-toggle__indicator--lg {
-    width: 2.5rem;
-    height: 1.25rem;
+    width: 3.125rem;
+    height: 1.563rem;
+    margin-right: 0.41667rem;
+    border-radius: 100rem;
+}
+
+.pier-input-toggle__indicator--sm {
+    width: 2rem;
+    height: 1rem;
     margin-right: 0.41667rem;
     border-radius: 100rem;
 }
