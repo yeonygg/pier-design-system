@@ -1,7 +1,9 @@
 import ReactDOMServer from 'react-dom/server';
-import base from './base';
-import sizes from './sizes';
-import errors from './errors';
+import inputTextGroup from './input-text-group';
+import inputSelectGroup from './input-select-group';
+import inputTextareaGroup from './input-textarea-group';
+import inputRadioGroup from './input-radio-group';
+import inputComboGroup from './input-combo-group';
 
 export default {
     title: 'Input - Group',
@@ -10,21 +12,33 @@ export default {
     'last-updated': '4/6/21',
     variations: [
         {
-            name: 'Base',
+            name: 'Input Text',
             description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(base),
+            markup: ReactDOMServer.renderToStaticMarkup(inputTextGroup),
             dark: false,
         },
         {
-            name: 'Sizes',
+            name: 'Input Select',
             description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(sizes),
+            markup: ReactDOMServer.renderToStaticMarkup(inputSelectGroup),
             dark: false,
         },
         {
-            name: 'Errors',
+            name: 'Input Textarea',
             description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(errors),
+            markup: ReactDOMServer.renderToStaticMarkup(inputTextareaGroup),
+            dark: false,
+        },
+        {
+            name: 'Input Radio Group',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(inputRadioGroup),
+            dark: false,
+        },
+        {
+            name: 'Input Combo Group',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(inputComboGroup),
             dark: false,
         },
     ],

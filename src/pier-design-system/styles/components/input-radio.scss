@@ -45,12 +45,17 @@ $default-size: md;
   vertical-align: middle;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 0% 0%;
-  transform: scale(1);
-  transition-property: background-color, background-size, border-width,
+  transition-property: background-image, background-color, background-size, border-width,
     box-shadow;
   transition-duration: 150ms;
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+  &:hover {
+    border: 1px solid map-get($colorsGrays, dark-1);
+  }
+  &:active {
+    background-image: build-gradient(90deg, primaryBoulevard);
+}
 }
 
 .pier-input-radio__indicator--lg {
@@ -79,6 +84,14 @@ $default-size: md;
 .pier-input-radio--error {
   .pier-input-radio__indicator {
     border-color: map-get($colorsRed, default);
+
+    &:hover {
+      border-color: map-get($colorsRed, dark-1);
+    }
+    &:active {
+      background-image: none;
+      background-color: map-get($colorsRed, default);
+}
   }
 
   .pier-input-radio__input:checked ~ .pier-input-radio__indicator {
@@ -97,8 +110,16 @@ $default-size: md;
 
   .pier-input-radio__indicator {
     border-color: map-get($colorsGrays, gray);
+
+    &:hover {
+      border-color: map-get($colorsGrays, light-gray);
+    }
   }
 
+  .pier-input-radio__input:checked ~ .pier-input-radio__indicator{
+    border-color: transparent;
+  }
+  
   .pier-input-radio__input:checked ~ .pier-input-radio__label {
     color: map-fetch($colorsGrays, light-gray);
   }

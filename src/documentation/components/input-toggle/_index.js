@@ -1,16 +1,16 @@
 import ReactDOMServer from 'react-dom/server';
 import base from './base';
 import sizes from './sizes';
+import error from './error';
 import disabled from './disabled';
-import pill from './pill';
 import dark from './dark';
-import group from './group';
+import errorDark from './error-dark';
 
 export default {
-    title: 'Button-hero',
-    slug: 'button-hero',
-    description: 'This is a description for buttons.',
-    'last-updated': '3/30/21',
+    title: 'Input - Toggle',
+    slug: 'input-toggle',
+    description: 'This is a description for input-toggle.',
+    'last-updated': '4/6/21',
     variations: [
         {
             name: 'Base',
@@ -25,15 +25,15 @@ export default {
             dark: false,
         },
         {
-            name: 'Disabled',
+            name: 'Error',
             description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(disabled),
+            markup: ReactDOMServer.renderToStaticMarkup(error),
             dark: false,
         },
         {
-            name: 'Pill',
+            name: 'Disabled',
             description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(pill),
+            markup: ReactDOMServer.renderToStaticMarkup(disabled),
             dark: false,
         },
         {
@@ -43,10 +43,10 @@ export default {
             dark: true,
         },
         {
-            name: 'Group',
+            name: 'Error Dark',
             description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(group),
-            dark: false,
+            markup: ReactDOMServer.renderToStaticMarkup(errorDark),
+            dark: true,
         },
     ],
 };

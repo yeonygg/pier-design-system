@@ -1,0 +1,16 @@
+
+.pier-input-group__validation {
+    font-family: $font-family;
+    font-size: .75rem;
+    color: map-get($colorsGrays, gray-4);
+}
+
+.pier-input-combo {
+    display: flex;
+    width: 100%;
+}
+
+.pier-input-group {
+    display: block;
+    width: 100%;
+}

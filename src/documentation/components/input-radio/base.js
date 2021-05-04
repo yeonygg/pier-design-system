@@ -9,7 +9,7 @@ export default (
         </label>
 
         <label className="pier-input-radio">
-            <input className="pier-input-radio__input" type="radio" name="example-1" value="" defaultChecked />
+            <input className="pier-input-radio__input" defaultChecked type="radio" name="example-1" value="" onChange="" />
             <div className="pier-input-radio__indicator"></div>
             <span className="pier-input-radio__label">Label</span>
         </label>

@@ -1,0 +1,265 @@
+$default-size: md;
+
+
+
+.pier-input-toggle {
+    margin: 1rem;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    height: map-fetch($input-heights, ($default-size, desktop));
+    font-size: map-fetch($input-label-sizes, ($default-size, desktop));
+
+    @include build-media-query(mobile) {
+        height: map-fetch($input-heights, ($default-size, mobile));
+        font-size: map-fetch($input-label-sizes, ($default-size, mobile));
+    }
+
+
+}
+
+.pier-input-toggle__indicator {
+    cursor: pointer;
+    width: 2.5rem;
+    height: 1.25rem;
+    margin-right: 0.41667rem;
+    opacity: 1;
+    border-width: 1px;
+    border-style: solid;
+    border-color: map-get($colorsGrays, light-gray);
+    border-radius: 100rem;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition-property: all;
+    transition-duration: 0ms;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: calc(0% + 2px);
+        top: 2px;
+        width: calc(50% - 4px);
+        height: calc(100% - 4px);
+        background-color: map-get($colorsGrays, light-gray);
+        border-radius: 100rem;
+        -webkit-transition: all 0.45s ease-in-out;
+        transition-property: all;
+        transition-duration: 150ms;
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+    }
+
+    &:hover {
+        border: 1px solid map-get($colorsGrays, dark-1);
+
+            &::after {
+                background-color: none;
+                background-image: build-gradient(90deg, primaryBoulevard);
+            }
+    }
+
+    &:active {
+        background-image: build-gradient(90deg, primaryBoulevard);
+
+        &:after {
+            background-color: map-get($colorsGrays, white);
+            background-image: none;
+        }
+    }
+}
+
+.pier-input-toggle__input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    font-family: $font-family;
+    color: map-fetch($colorsGrays, light-gray);
+}
+
+.pier-input-toggle__label {
+    color: map-fetch($colorsGrays, gray);
+}
+
+.pier-input-toggle__indicator--lg {
+    width: 3.125rem;
+    height: 1.563rem;
+    margin-right: 0.41667rem;
+    border-radius: 100rem;
+}
+
+.pier-input-toggle__indicator--sm {
+    width: 2rem;
+    height: 1rem;
+    margin-right: 0.41667rem;
+    border-radius: 100rem;
+}
+
+.pier-input-toggle__input:checked ~ .pier-input-toggle__indicator {
+    border-color: transparent;
+    background-position: center center;
+    background-size: 110% 110%;
+    background-image: build-gradient(90deg, primaryBoulevard);
+
+    &::before {
+        opacity: 0;
+    }
+}
+
+.pier-input-toggle__input:checked ~ .pier-input-toggle__indicator:after {
+    background-color: map-get($colorsGrays, white);
+    background-image: none;
+    left: calc(50% + 2px);
+
+    &:active {
+
+    }
+}
+
+.pier-input-toggle__input:checked ~ .pier-input-toggle__label {
+    color: map-fetch($colorsGrays, dark-2);
+}
+
+.pier-input-toggle__input:focus ~ .pier-input-toggle__indicator {
+    box-shadow: 0px 0px 5px 0px rgba(map-fetch($colorsCyan, light-1), 0.5);
+}
+
+.pier-input-toggle--disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.pier-input-toggle__input:focus + .pier-input-toggle__indicator {
+    box-shadow: 0px 0px 5px 0px rgba(map-fetch($colorsCyan, light-1), 0.5);
+}
+
+.pier-input-toggle__input:focus ~ .pier-input-toggle__indicator {
+    box-shadow: 0px 0px 5px 0px rgba(map-fetch($colorsCyan, light-1), 0.5);
+}
+
+.pier-input-toggle--error {
+
+    .pier-input-toggle__indicator {
+        border-color: map-get($colorsRed, default);
+
+        &:after {
+            background-color: map-get($colorsRed, default);
+        }
+    }
+
+    &:hover {
+        border-width: 1px;
+        border-color: map-get($colorsRed, default);
+
+        .pier-input-toggle__indicator {
+
+            background-image: none;
+            border-color: map-get($colorsRed, dark-1);
+            
+            &:after {
+                background-image: none;
+                background-color: map-get($colorsRed, dark-1);
+            }
+        }
+    }
+
+    &:active {
+        .pier-input-toggle__indicator {
+            background-image: none;
+            background-color: map-get($colorsRed, default);
+            &:after {
+                background-color: map-get($colorsGrays, white);
+            }
+        }
+    }
+
+    .pier-input-toggle__input:checked ~ .pier-input-toggle__indicator {
+        border-width: 1px;
+        border-color: map-get($colorsRed, default);
+        background-image: none;
+        background-color: map-get($colorsRed, default);
+    }
+
+    .pier-input-toggle__input:checked ~ .pier-input-toggle__indicator:after {
+        background-color: map-get($colorsGrays, white);
+    }
+
+    .pier-input-toggle__input:focus ~ .pier-input-toggle__indicator {
+        box-shadow: 0px 0px 5px 0px rgba(map-fetch($colorsRed, default), 0.5);
+    }
+}
+
+.pier-input-toggle--dark {
+    color: map-fetch($colorsGrays, gray);
+
+    .pier-input-toggle__indicator {
+        border-color: map-get($colorsGrays, gray);
+
+        &:hover {
+            border-color: map-get($colorsGrays, light-gray);
+        }
+    }
+
+    .pier-input-toggle__input:checked ~ .pier-input-toggle__indicator{
+        border-color: transparent;
+      }
+
+    .pier-input-toggle__input:checked ~ .pier-input-toggle__label {
+        color: map-fetch($colorsGrays, light-gray);
+    }
+}
+
+.pier-input-toggle__label--dark {
+    border-color: map-fetch($colorsGrays, light-gray);
+}
+
+.pier-input-toggle--dark.pier-input-toggle--error {
+    .pier-input-toggle__indicator {
+    border-color: map-get($colorsRed, dark-1);
+
+    &:after {
+        background-color: map-get($colorsRed, dark-1);
+    }
+
+    &:hover {
+        border-color: map-get($colorsRed, default);
+
+        &:after {
+            background-color: map-get($colorsRed, default);
+        }
+    }
+
+    &:active {
+       
+            background-image: none;
+            background-color: map-get($colorsRed, default);
+            
+            &:after {
+                background-color: map-get($colorsGrays, white);
+            }
+        
+    }
+    }
+
+    .pier-input-toggle__input:checked ~ .pier-input-toggle__indicator:after {
+        background-color: map-get($colorsGrays, white);
+    }
+}
+
+@each $prefix, $size in $input-heights {
+    .pier-input-toggle--#{$prefix} {
+        height: map-fetch($input-heights, ($prefix, desktop));
+        font-size: map-fetch($input-label-sizes, ($prefix, desktop));
+
+        @include build-media-query(mobile) {
+            height: map-fetch($input-heights, ($prefix, mobile));
+            font-size: map-fetch($input-label-sizes, ($prefix, mobile));
+        }
+    }
+}
