@@ -4,6 +4,7 @@ import sizes from './sizes';
 import disabled from './disabled';
 import pill from './pill';
 import dark from './dark';
+import group from './group';
 
 export default {
     title: 'Button-hero',
@@ -40,6 +41,12 @@ export default {
             description: '',
             markup: ReactDOMServer.renderToStaticMarkup(dark),
             dark: true,
+        },
+        {
+            name: 'Group',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(group),
+            dark: false,
         },
     ],
 };
