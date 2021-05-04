@@ -49,7 +49,7 @@ InputText.propTypes = {
     name: PropTypes.string,
     placeholder: PropTypes.string,
     value: PropTypes.string,
-    onChange: PropTypes.function,
+    onChange: PropTypes.func,
     size: PropTypes.string,
     disabled: PropTypes.bool,
     cap: PropTypes.string,

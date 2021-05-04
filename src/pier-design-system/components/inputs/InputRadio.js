@@ -25,9 +25,9 @@ export default function InputRadio({ children, name, checked, value, onChange, s
 
     return (
         <label className={classes} style={style}>
-            <input type="radio" className="pier-input-radio__input" name={name} value={value} checked={checked} onChange={onChange} />
-            <div className="pier-input-radio__indicator"></div>
-            <span className="pier-input-radio__label">{children}</span>
+            <input type="radio" className={prefix + '__input'} name={name} value={value} checked={checked} onChange={onChange} />
+            <div className={prefix + '__indicator'}></div>
+            <span className={prefix + '__label'}>{children}</span>
         </label>
     );
 }
@@ -42,7 +42,7 @@ InputRadio.propTypes = {
     name: PropTypes.string,
     checked: PropTypes.bool,
     value: PropTypes.string,
-    onChange: PropTypes.function,
+    onChange: PropTypes.func,
     size: PropTypes.string,
     disabled: PropTypes.bool,
     error: PropTypes.bool,

@@ -1,8 +1,8 @@
 import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function InputCheckbox({ children, name, checked, indeterminate, value, onChange, size, disabled, error, dark, className, style }) {
-    let prefix = `pier-input-checkbox`,
+export default function InputToggle({ children, name, checked, indeterminate, value, onChange, size, disabled, error, dark, className, style }) {
+    let prefix = `pier-input-toggle`,
         classes = prefix;
 
     switch (size) {
@@ -40,12 +40,12 @@ export default function InputCheckbox({ children, name, checked, indeterminate, 
     );
 }
 
-InputCheckbox.defaultProps = {
+InputToggle.defaultProps = {
     size: 'md',
     className: '',
 };
 
-InputCheckbox.propTypes = {
+InputToggle.propTypes = {
     children: PropTypes.node,
     name: PropTypes.string,
     checked: PropTypes.bool,

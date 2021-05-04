@@ -1,24 +1,25 @@
 import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function Label({ children, forInput, size, dark, className, style }) {
-    let classes = 'pier-label';
+export default function Label({ children, htmlFor, size, dark, className, style }) {
+    let prefix = 'pier-label',
+        classes = prefix;
 
     switch (size) {
         case 'md':
-            classes.push('');
+            classes += ``;
             break;
         case 'sm':
-            classes.push(' pier-label--sm');
+            classes += ` ${prefix}--sm`;
             break;
     }
 
-    dark && classes.push(' pier-label--dark');
+    dark && (classes += ` ${prefix}--dark`);
 
-    classes.push(` ${className}`);
+    classes += ` ${className}`;
 
     return (
-        <p htmlFor={forInput} className={classes} style={style}>
+        <p htmlFor={htmlFor} className={classes} style={style}>
             {children}
         </p>
     );

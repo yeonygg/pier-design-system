@@ -1,7 +1,7 @@
 import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function IconButton({ children, icon, size, disabled, cap, pill, error, dark, className, style }) {
+export default function IconButton({ children, type, value, icon, size, disabled, cap, pill, error, dark, className, style }) {
     let prefix = `pier-button-icon`,
         classes = prefix;
 
@@ -37,7 +37,7 @@ export default function IconButton({ children, icon, size, disabled, cap, pill, 
     classes += ` ${className}`;
 
     return (
-        <button className={classes} style={style}>
+        <button className={classes} style={style} type={type} value={value}>
             {icon && <i className={`pier-button-icon__icon ${icon}`}></i>}
             {children}
         </button>
@@ -56,6 +56,8 @@ IconButton.defaultProps = {
 
 IconButton.propTypes = {
     children: PropTypes.node.isRequired,
+    type: PropTypes.string,
+    value: PropTypes.string,
     icon: PropTypes.string,
     size: PropTypes.string,
     disabled: PropTypes.bool,

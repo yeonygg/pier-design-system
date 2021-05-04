@@ -1,11 +1,11 @@
 import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function Button({ children, type, icon, size, disabled, cap, pill, error, dark, className, style }) {
+export default function Button({ children, block, type, value, icon, size, disabled, cap, pill, error, dark, className, style }) {
     let prefix = `pier-button-standard`,
         classes = prefix;
 
-    switch (type) {
+    switch (block) {
         case 'default':
             prefix = 'pier-button-hero';
             classes = prefix;
@@ -58,7 +58,7 @@ export default function Button({ children, type, icon, size, disabled, cap, pill
     function renderButton() {
         if (prefix == 'pier-button-hero') {
             return (
-                <button className={classes} style={style}>
+                <button className={classes} style={style} type={type} value={value}>
                     <span className="pier-button-hero__content">
                         {icon && <i className={`pier-button-hero__icon ${icon}`}></i>}
                         {children}
@@ -67,7 +67,7 @@ export default function Button({ children, type, icon, size, disabled, cap, pill
             );
         } else if (prefix == 'pier-button-standard') {
             return (
-                <button className={classes} style={style}>
+                <button className={classes} style={style} type={type} value={value}>
                     {icon && <i className={`pier-button-standard__icon ${icon}`}></i>}
                     {children}
                 </button>
@@ -91,7 +91,9 @@ Button.defaultProps = {
 
 Button.propTypes = {
     children: PropTypes.node.isRequired,
+    block: PropTypes.string,
     type: PropTypes.string,
+    value: PropTypes.string,
     icon: PropTypes.string,
     size: PropTypes.string,
     disabled: PropTypes.bool,
