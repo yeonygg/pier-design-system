@@ -9,7 +9,6 @@ $default-size: md;
   border: none;
   background: map-fetch($colorsCyan, default);
   color: map-fetch($colorsGrays, white);
-  margin: 0.5rem;
   cursor: pointer;
   height: map-fetch($input-heights, ($default-size, desktop));
   border-radius: map-fetch($input-border-radii, $default-size);
