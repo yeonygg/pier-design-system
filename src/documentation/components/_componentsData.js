@@ -17,6 +17,7 @@ import inputCheckbox from './input-checkbox/_index';
 import inputRadio from './input-radio/_index';
 import inputToggle from './input-toggle/_index';
 import table from './table/_index';
+import inputForm from './input-form/_index';
 
 let componentsData = [];
 componentsData.push(
@@ -39,6 +40,7 @@ componentsData.push(
     inputRadio,
     inputToggle,
     table
+    inputForm
 );
 
 export default componentsData;
