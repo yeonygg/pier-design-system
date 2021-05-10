@@ -4,6 +4,7 @@ import inputSelectGroup from './input-select-group';
 import inputTextareaGroup from './input-textarea-group';
 import inputRadioGroup from './input-radio-group';
 import inputComboGroup from './input-combo-group';
+import inputSelectComboGroup from './input-select-combo-group';
 
 export default {
     title: 'Input - Group',
@@ -39,6 +40,12 @@ export default {
             name: 'Input Combo Group',
             description: '',
             markup: ReactDOMServer.renderToStaticMarkup(inputComboGroup),
+            dark: false,
+        },
+        {
+            name: 'Input Select Combo Group',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(inputSelectComboGroup),
             dark: false,
         },
     ],

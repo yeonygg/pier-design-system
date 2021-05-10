@@ -9,7 +9,7 @@ export default (
             <span className="pier-input-radio__label">Label</span>
         </label>
 
-        <label className="pier-input-radio pier-input-radio--lg">
+        <label className="pier-input-radio pier-input-radio--lg -m-l-4">
             <input className="pier-input-radio__input" type="radio" name="example-2" value="" defaultChecked />
 
             <div className="pier-input-radio__indicator pier-input-radio__indicator--lg"></div>
