@@ -29,7 +29,7 @@ export default (
 <option value="6">Option 6</option>
 </select>
 
-<select className="pier-input-select pier-input-select--cap-left" required>
+<select className="pier-input-select pier-input-select--cap" required>
 <option value="" disabled="" selected="" hidden="">
     Select your option
 </option>

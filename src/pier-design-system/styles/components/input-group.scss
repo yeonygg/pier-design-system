@@ -5,6 +5,14 @@
     color: map-get($colorsGrays, gray-4);
 }
 
+.pier-input-group__validation--sm  {
+    font-size: 0.625rem;
+}
+
+.pier-input-group__validation--error {
+    color: map-get($colorsRed, default);
+}
+
 .pier-input-combo {
     display: flex;
     width: 100%;

@@ -88,7 +88,7 @@ $default-size: md;
 }
 
 .pier-input-select--cap-right {
-    margin: 0;
+
     border-right: none;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
@@ -98,8 +98,18 @@ $default-size: md;
     }
 }
 
+.pier-input-select--cap {
+
+    border-right: none;
+    border-radius: 0;
+
+    &:hover {
+        border-right: none;
+    }
+}
+
 .pier-input-select--cap-left {
-    margin: 0;
+
     border-left: none;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
