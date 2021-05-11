@@ -33,7 +33,7 @@ $default-size: md;
     left: 1px;
     opacity: 0;
     transition: all 0.1s ease-in-out;
-    border-radius: map-fetch($input-border-radii, $default-size);
+    border-radius: map-fetch($button-inner-radii, $default-size);
   }
 
   &:hover {
@@ -97,7 +97,7 @@ $default-size: md;
     }
 
     &::before {
-      border-radius: map-get($input-border-radii, $prefix);
+      border-radius: map-get($button-inner-radii, $prefix);
   }
 }
 }

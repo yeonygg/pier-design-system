@@ -3,6 +3,7 @@ import textHeading from './text-heading/_index';
 import textLabel from './text-label/_index';
 import textCodeblock from './text-codeblock/_index';
 import link from './link/_index';
+import horizontalRule from './horizontal-rule/_index';
 import list from './list/_index';
 import breadcrumbs from './breadcrumbs/_index';
 import navigation from './navigation/_index';
@@ -25,6 +26,7 @@ componentsData.push(
     textHeading,
     textLabel,
     textCodeblock,
+    horizontalRule,
     link,
     list,
     breadcrumbs,
