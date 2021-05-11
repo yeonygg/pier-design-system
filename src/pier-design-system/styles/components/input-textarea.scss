@@ -123,7 +123,9 @@ $default-size: md;
   &:focus {
     @include build-input-focus-state(map-get($colorsRed, default));
   }
+}
 
-
+.pier-input-textarea--form {
+  height: 150px;
 }
 
