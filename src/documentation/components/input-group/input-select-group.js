@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 
 export default (
     <Fragment>
-    <h4 className="pier-label pier-label--sm -m-b-3">Text Input Label</h4>
+    <h4 className="pier-label pier-label--md -m-b-3">Text Input Label</h4>
     <select className="pier-input-select" required>
     <option value="" disabled="" selected="" hidden="">
         Select your option

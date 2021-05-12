@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 export default (
     <Fragment>
    
-    <h4 className="pier-label pier-label--sm -m-b-4">Select Input Label</h4>
+    <h4 className="pier-label pier-label--md -m-b-4">Select Input Label</h4>
     <div className="pier-input-combo">
     <select className="pier-input-select pier-input-select--cap-right" required>
     <option value="" disabled="" selected="" hidden="">

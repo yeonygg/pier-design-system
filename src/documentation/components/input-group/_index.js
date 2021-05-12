@@ -3,8 +3,6 @@ import inputTextGroup from './input-text-group';
 import inputSelectGroup from './input-select-group';
 import inputTextareaGroup from './input-textarea-group';
 import inputRadioGroup from './input-radio-group';
-import inputComboGroup from './input-combo-group';
-import inputSelectComboGroup from './input-select-combo-group';
 import inputCheckboxGroup from './input-checkbox-group';
 import inputToggleGroup from './input-toggle-group';
 import inputTextGroupSizes from './input-text-group-sizes';
@@ -38,18 +36,6 @@ export default {
             name: 'Input Radio Group',
             description: '',
             markup: ReactDOMServer.renderToStaticMarkup(inputRadioGroup),
-            dark: false,
-        },
-        {
-            name: 'Input Combo Group',
-            description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(inputComboGroup),
-            dark: false,
-        },
-        {
-            name: 'Input Select Combo Group',
-            description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(inputSelectComboGroup),
             dark: false,
         },
         {

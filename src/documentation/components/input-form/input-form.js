@@ -2,11 +2,12 @@ import { Fragment } from "react";
 
 export default (
 <Fragment>
+<form className="pier-form">
 <h4 className="pier-label pier-label--sm -m-b-3">Name</h4>
 <input className="pier-input-text -m-b-7" type="text" placeholder="Enter Text" />
 
 <h4 className="pier-label pier-label--sm -m-b-3">Select</h4>
-<select className="pier-input-select -m-b-7" required>
+<select className="pier-input-select" required>
 <option value="" disabled="" selected="" hidden="">
     Select your option
 </option>
@@ -17,6 +18,9 @@ export default (
 <option value="5">Option 5</option>
 <option value="6">Option 6</option>
 </select>
+<p className="pier-input-group__validation -m-t-2  -m-b-7">*required</p>
+
+
 
 <h4 className="pier-label pier-label--sm -m-b-3">Text Input Label</h4>
 <textarea className="pier-input-textarea pier-input-textarea--form" placeholder="Enter Text"></textarea>
@@ -67,6 +71,7 @@ export default (
 <span className="pier-button-hero__content">Submit</span>
 </button>
 </div>
+</form>
 
 </Fragment>
 );

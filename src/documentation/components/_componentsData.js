@@ -7,11 +7,13 @@ import horizontalRule from './horizontal-rule/_index';
 import list from './list/_index';
 import breadcrumbs from './breadcrumbs/_index';
 import navigation from './navigation/_index';
+import tags from './tags/_index';
 import buttonHero from './button-hero/_index';
 import buttonStandard from './button-standard/_index';
 import buttonIcon from './button-icon/_index';
 import inputText from './input-text/_index';
 import inputGroup from './input-group/_index';
+import inputCombo from './input-combo/_index';
 import inputTextarea from './input-textarea/_index';
 import inputSelect from './input-select/_index';
 import inputCheckbox from './input-checkbox/_index';
@@ -27,6 +29,7 @@ componentsData.push(
     textLabel,
     textCodeblock,
     horizontalRule,
+    tags,
     link,
     list,
     breadcrumbs,
@@ -41,8 +44,9 @@ componentsData.push(
     inputCheckbox,
     inputRadio,
     inputToggle,
-    table
-    inputForm
+    table,
+    inputForm,
+    inputCombo
 );
 
 export default componentsData;

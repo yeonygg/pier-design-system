@@ -3,7 +3,7 @@ import { Fragment } from "react";
 export default (
 <Fragment>
 <div className="pier-input-group">
-<h4 className="pier-label pier-label--sm -m-b-2">Radio Input Label</h4>
+<h4 className="pier-label pier-label--md -m-b-2">Radio Input Label</h4>
 <label className="pier-input-radio">
 <input className="pier-input-radio__input" type="radio" name="example-1" value="" onChange=""/>
 <div className="pier-input-radio__indicator"></div>
