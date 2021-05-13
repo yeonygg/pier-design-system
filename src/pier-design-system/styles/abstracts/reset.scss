@@ -89,10 +89,6 @@ li {
     list-style: none;
 }
 
-th {
-    font-weight: normal;
-}
-
 a:hover {
     color: inherit;
 }
@@ -135,4 +131,8 @@ button {
 *::selection {
     background-color: map-get($colorsCyan, 'default');
     color: white;
+}
+
+table {
+	border-spacing: 0;
 }

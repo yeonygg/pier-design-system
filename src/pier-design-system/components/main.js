@@ -31,6 +31,8 @@ export { default as NavItemContainer } from './navigation/NavItemContainer';
 export { default as NavItemDropdown } from './navigation/NavItemDropdown';
 export { default as NavSubItem } from './navigation/NavSubItem';
 export { default as NavSubLabel } from './navigation/NavSubLabel';
+//table
+export { default as Table } from './table/Table';
 //text
 export { default as BodyText } from './text/BodyText';
 export { default as CodeBlock } from './text/CodeBlock';
