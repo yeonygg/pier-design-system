@@ -158,3 +158,28 @@ $default-size: md;
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
 }
+
+.pier-button-standard--block {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .pier-button-standard--block-sm,
+  .pier-button-standard--block-md,
+  .pier-button-standard--block-lg {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1004px) {
+  
+  .pier-button-standard--block-md,
+  .pier-button-standard--block-lg {
+    display: block;
+    width: 100%;
+  }
+}
+
+
