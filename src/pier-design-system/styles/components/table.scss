@@ -1,0 +1,137 @@
+$default-size: md;
+
+$table-sizes: (
+	sm: (
+		mobile: .875rem,
+		desktop: 1rem
+	),
+	md: (
+		mobile: 1rem,
+		desktop: 1.125rem
+	),
+	lg: (
+		mobile: 1.125rem,
+		desktop: 1.25rem
+	),
+);
+
+$cell-padding: (
+	sm: (
+		mobile: .5rem .625rem,
+		desktop: .625rem .75rem
+	),
+	md: (
+		mobile: .625rem .75rem,
+		desktop: .75rem 1rem
+	),
+	lg: (
+		mobile: .75rem .875rem,
+		desktop: .875rem 1.125rem
+	)
+);
+
+.pier-table {
+	display: table;
+	overflow: hidden;
+	width: 100%;
+	font-family: $font-family;
+	font-weight: $font-weight-regular;
+	font-size: map-fetch($table-sizes, ($default-size, desktop));
+	text-align: left;
+	color: map-fetch($colorsGrays, dark);
+
+	@include build-media-query(mobile) {
+		font-size: map-fetch($table-sizes, ($default-size, mobile));
+	}
+}
+
+.pier-table__row {
+	
+}
+
+.pier-table__cell {
+	padding: map-fetch($cell-padding, ($default-size, desktop));
+
+	@include build-media-query(mobile) {
+		padding: map-fetch($cell-padding, ($default-size, mobile));
+	}
+}
+
+.pier-table__header {
+	background-color: map-fetch($colorsGrays, light);
+	font-weight: $font-weight-bold;
+	color: map-fetch($colorsGrays, darker);
+	padding: map-fetch($cell-padding, ($default-size, desktop));
+
+	@include build-media-query(mobile) {
+		padding: map-fetch($cell-padding, ($default-size, mobile));
+	}
+}
+
+@each $prefix, $size in $table-sizes {
+	.pier-table--#{$prefix} {
+		font-size: map-fetch($size, (desktop));
+
+		@include build-media-query(mobile) {
+			font-size: map-fetch($size, (mobile));
+		}
+
+		.pier-table__cell {
+			padding: map-fetch($cell-padding, ($prefix, desktop));
+
+			@include build-media-query(mobile) {
+				padding: map-fetch($cell-padding, ($prefix, mobile));
+			}
+		}
+
+		.pier-table__header {
+			padding: map-fetch($cell-padding, ($prefix, desktop));
+
+			@include build-media-query(mobile) {
+				padding: map-fetch($cell-padding, ($prefix, mobile));
+			}
+		}
+	}
+}
+
+.pier-table--dark {
+	color: map-fetch($colorsGrays, lighter);
+
+	.pier-table__header {
+		background-color: map-fetch($colorsGrays, dark);
+		color: map-fetch($colorsGrays, white);
+	}
+}
+
+.pier-table--striped {
+	tbody .pier-table__row {
+		&:nth-child(odd) {
+			background-color: map-fetch($colorsGrays, lighter);
+		}
+	}
+}
+
+.pier-table--dark.pier-table--striped {
+	tbody .pier-table__row {
+		&:nth-child(odd) {
+			background-color: map-fetch($colorsGrays, dark-3);
+		}
+	}
+}
+
+.pier-table--interactive {
+	.pier-table__header {
+		&:hover {
+			background-color: map-fetch($colorsGrays, gray-4);
+	
+		}
+	}
+}
+
+.pier-table--dark.pier-table--interactive {
+	.pier-table__header {
+		&:hover {
+			background-color: map-fetch($colorsGrays, dark-1);
+		}
+	}
+}
