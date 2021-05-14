@@ -55,7 +55,7 @@ IconButton.defaultProps = {
 };
 
 IconButton.propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node,
     type: PropTypes.string,
     value: PropTypes.string,
     icon: PropTypes.string,

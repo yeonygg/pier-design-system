@@ -7,19 +7,18 @@ $default-size: md;
   align-items: center;
   text-align: center;
   border: none;
-  margin: 0.5rem;
   color: map-get($colorsGrays, gray-2);
   background: transparent;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   height: map-fetch($input-heights, ($default-size, desktop));
+  width: map-fetch($input-heights, ($default-size, desktop));
   border-radius: map-get($input-border-radii, $default-size);
-  padding: 0 map-fetch($button-icon-padding, ($default-size, desktop));
   font-size: map-fetch($input-icon-sizes, ($default-size, desktop));
 
   @include build-media-query(mobile) {
     height: map-fetch($input-heights, ($default-size, mobile));
-    padding: 0 map-fetch($button-icon-padding, ($default-size, mobile));
+	width: map-fetch($input-heights, ($default-size, mobile));
     font-size: map-fetch($input-icon-sizes, ($default-size, mobile));
   }
 
@@ -46,13 +45,13 @@ $default-size: md;
 @each $prefix, $size in $input-heights {
   .pier-button-icon--#{$prefix} {
     height: map-fetch($input-heights, ($prefix, desktop));
+	width: map-fetch($input-heights, ($prefix, desktop));
     border-radius: map-get($input-border-radii, $prefix);
-    padding: 0 map-fetch($button-icon-padding, ($prefix, desktop));
     font-size: map-fetch($input-icon-sizes, ($prefix, desktop));
 
     @include build-media-query(mobile) {
       height: map-fetch($input-heights, ($prefix, mobile));
-      padding: 0 map-fetch($button-icon-padding, ($prefix, mobile));
+	  width: map-fetch($input-heights, ($prefix, mobile));
       font-size: map-fetch($input-icon-sizes, ($prefix, mobile));
 
     }

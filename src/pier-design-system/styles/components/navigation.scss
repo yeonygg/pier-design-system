@@ -5,10 +5,26 @@
 	border-right: 1px solid map-get($colorsGrays, "light");
 	box-shadow: 0 0 2rem rgba(map-get($colorsGrays, gray), 0.15);
 	overflow: scroll;
+	pointer-events: auto;
+}
+
+.pier-nav--mobile {
+	height: 72px;
+	width: 100%;
+	border-right: none;
+	border-bottom: 1px solid map-get($colorsGrays, "light");
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+.pier-nav__item-group {
+	display: block;
 }
 
 .pier-nav__item-container {
-
+	display: block;
 }
 
 .pier-nav__item {

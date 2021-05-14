@@ -8,6 +8,7 @@ export { default as IconButton } from './buttons/IconButton';
 export { default as Card } from './containers/Card';
 export { default as Section } from './containers/Section';
 export { default as Well } from './containers/Well';
+export { default as Screen } from './containers/Screen';
 //horizontal-rule
 export { default as HR } from './horizonal-rule/HR';
 //inputs
@@ -26,6 +27,7 @@ export { default as List } from './list/List';
 export { default as ListItem } from './list/ListItem';
 //navigation
 export { default as Nav } from './navigation/Nav';
+export { default as NavItemGroup } from './navigation/NavItemGroup';
 export { default as NavItem } from './navigation/NavItem';
 export { default as NavItemContainer } from './navigation/NavItemContainer';
 export { default as NavItemDropdown } from './navigation/NavItemDropdown';
