@@ -10,17 +10,17 @@ export default (
             <div className="pier-bubble-menu">
                 <ul className="pier-bubble-menu--list">
                     <li>
-                        <div class="pier-bubble-menu--list-link">Alert 1</div>
+                        <div className="pier-bubble-menu--list-link">Alert 1</div>
                     </li>
                     <li>
-                        <div class="pier-bubble-menu--list-link">Alert 2</div>
+                        <div className="pier-bubble-menu--list-link">Alert 2</div>
                     </li>
                     <li>
-                        <div class="pier-bubble-menu--list-link">Alert 3</div>
+                        <div className="pier-bubble-menu--list-link">Alert 3</div>
                     </li>
-                    <li class="pier-bubble-menu--list-divider"></li>
+                    <li className="pier-bubble-menu--list-divider"></li>
                     <li>
-                        <div class="pier-bubble-menu--list-link">Clear Alerts</div>
+                        <div className="pier-bubble-menu--list-link">Clear Alerts</div>
                     </li>
                 </ul>
             </div>
