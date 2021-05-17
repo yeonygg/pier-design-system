@@ -1,10 +1,14 @@
+$default-size: md;
+
 .pier-bubble-menu {
     position: absolute;
-    top: 5rem;
+    bottom: 0;
     left: 0;
     min-width: 12rem;
     z-index: 900;
     text-align: left;
+    transform: translateY(100%);
+    transform-origin: 50% -10px;
 }
 
 .pier-bubble-menu--list {
@@ -12,7 +16,7 @@
     border: 1px solid map-get($colorsGrays, light-1);
     font-family: $font-family;
     font-size: 18px;
-    color: map-get($colorsCyan, default);
+    color: map-get($colorsGrays, dark-1);
     overflow: hidden;
     box-shadow: 0px 1px 5px 0px rgba(map-get($colorsBlue, dark-1), 0.2);
     border-radius: 8px;
@@ -30,3 +34,13 @@
     height: 1px;
     background-color: map-get($colorsGrays, light-1);
 }
+.pier-bubble-menu--top-right {
+    
+}
+
+.pier-bubble-menu--list-link {
+
+}
+
+
+
