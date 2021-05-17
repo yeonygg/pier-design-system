@@ -2,10 +2,14 @@ $default-size: md;
 
 $label-sizes: (
 	sm: (
+		mobile: 0.5rem,
+		desktop: 0.625rem
+	),
+	md: (
 		mobile: 0.625rem,
 		desktop: .75rem
 	),
-	md: (
+	lg: (
 		mobile: .75rem,
 		desktop: 0.875rem
 	)
@@ -35,5 +39,17 @@ $label-sizes: (
 		@include build-media-query(mobile) {
 			font-size: map-fetch($size, mobile);
 		}
+	}
+}
+
+.pier-label--error-icon {
+
+	&::after {
+		
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		content: "";
+		color: map-fetch($colorsRed, default);
+		margin-left: 4px;
 	}
 }

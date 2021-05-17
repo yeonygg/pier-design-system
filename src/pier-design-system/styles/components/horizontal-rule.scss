@@ -11,8 +11,26 @@ $hr-sizes: (
 	margin: 0;
 }
 
+.pier-hr--primary {
+	background: map-get($colorsCyan, default);
+}
+
+.pier-hr--dark {
+	background: map-get($colorsGrays, dark-1);
+}
+
 .pier-hr--hero {
 	background: build-gradient(90deg, primaryBoulevard);
+	height: map-get($hr-sizes, lg);
+	border-radius: 2px;
+}
+
+.pier-hr--hero-thin {
+	background: build-gradient(90deg, primaryBoulevard);
+}
+
+.pier-hr--deepOcean {
+	background: build-gradient(90deg, deepOcean);
 	height: map-get($hr-sizes, lg);
 	border-radius: 2px;
 }

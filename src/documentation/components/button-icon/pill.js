@@ -5,10 +5,10 @@ export default (
         <button className="pier-button-icon pier-button-icon--sm pier-button-icon--pill">
             <i className="fas fa-pen pier-button-icon__icon"></i>
         </button>
-        <button className="pier-button-icon pier-button-icon--md pier-button-icon--pill">
+        <button className="pier-button-icon pier-button-icon--md pier-button-icon--pill -m-l-4">
             <i className="fas fa-pen pier-button-icon__icon"></i>
         </button>
-        <button className="pier-button-icon pier-button-icon--lg pier-button-icon--pill">
+        <button className="pier-button-icon pier-button-icon--lg pier-button-icon--pill -m-l-4">
             <i className="fas fa-pen pier-button-icon__icon"></i>
         </button>
     </Fragment>

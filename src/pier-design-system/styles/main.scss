@@ -12,6 +12,7 @@
 @import './abstracts/reset';
 @import './abstracts/grid';
 
+
 //components
 @import './components/text-body';
 @import './components/text-heading';
@@ -37,6 +38,8 @@
 @import './components/input-group';
 @import './components/table';
 @import './components/screen';
+@import './components/tag';
+@import './components/bubble-menu';
 
 //utilities
 @import './utilities/border-radius';

@@ -14,7 +14,7 @@ export default (
             <option value="6">Option 6</option>
         </select>
 
-        <select className="pier-input-select pier-input-select--md" required>
+        <select className="pier-input-select pier-input-select--md -m-t-4" required>
             <option value="" disabled="" selected="" hidden="">
                 Select your option
             </option>
@@ -26,7 +26,7 @@ export default (
             <option value="6">Option 6</option>
         </select>
 
-        <select className="pier-input-select pier-input-select--lg" required>
+        <select className="pier-input-select pier-input-select--lg -m-t-4" required>
             <option value="" disabled="" selected="" hidden="">
                 Select your option
             </option>
