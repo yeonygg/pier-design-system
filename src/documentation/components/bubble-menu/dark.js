@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 
 export default (
     <Fragment>
-    <div className="-justify-content-center -align-items-center -d-flex" style={{height: "500px"}}>
+    <div className="-justify-content-center -align-items-center" style={{height: "270px"}}>
         <div className="pier-nav-container">
             <button className="pier-button-icon pier-button-icon--dark">
                 <i className="far fa-bell pier-button-icon__icon"></i>

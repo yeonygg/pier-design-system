@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 
 export default (
     <Fragment>
-    <div className="-justify-content-center -align-items-center -d-flex" style={{height: "500px"}}>
+    <div className="-justify-content-left -align-items-top" style={{height: "260px"}}>
         <div className="pier-nav-container">
             <button className="pier-button-icon pier-button-icon--sm">
                 <i className="far fa-bell pier-button-icon__icon"></i>
@@ -27,7 +27,7 @@ export default (
         </div>
         </div>
 
-        <div className="-justify-content-center -align-items-center -d-flex" style={{height: "500px"}}>
+        <div className="-justify-content-left -align-items-top" style={{height: "280px"}}>
         <div className="pier-nav-container">
             <button className="pier-button-icon">
                 <i className="far fa-bell pier-button-icon__icon"></i>
@@ -52,7 +52,7 @@ export default (
         </div>
         </div>
 
-        <div className="-justify-content-center -align-items-center -d-flex" style={{height: "600px"}}>
+        <div className="-justify-content-center -align-items-center" style={{height: "330px"}}>
         <div className="pier-nav-container">
             <button className="pier-button-icon pier-button-icon--lg">
                 <i className="far fa-bell pier-button-icon__icon"></i>
