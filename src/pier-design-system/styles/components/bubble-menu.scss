@@ -39,8 +39,48 @@ $default-size: md;
 }
 
 .pier-bubble-menu--list-link {
+    cursor: pointer;
 
+    &:hover {
+        color: map-get($colorsGrays, "darker");
+        background-color: map-get($colorsGrays, light-4);
+    }
 }
+
+.pier-bubble-menu--list-dark {
+    color: map-get($colorsGrays, gray);
+    background-color: map-get($colorsGrays,dark-4);
+    border: 1px solid map-get($colorsGrays, dark-3);
+    box-shadow: 0px 1px 5px 0px rgba(map-get($colorsGrays, gray-1), 0.2);
+}
+
+.pier-bubble-menu--list-divider-dark {
+    background-color: map-get($colorsGrays, dark-3);
+}
+
+.pier-bubble-menu--list-link-dark {
+    &:hover {
+        background-color: map-get($colorsGrays, dark-3);
+        color: map-get($colorsGrays, light-1);
+    }
+}
+
+.pier-bubble-menu--sm {
+    min-width: 10rem;
+}
+
+.pier-bubble-menu--list-link-sm {
+    font-size: 14px;
+}
+
+.pier-bubble-menu--list-link-lg {
+    font-size: 20px;
+}
+
+.pier-bubble-menu--lg {
+    min-width: 14rem;
+}
+
 
 
 
