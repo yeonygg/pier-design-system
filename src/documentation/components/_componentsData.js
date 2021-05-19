@@ -23,6 +23,7 @@ import inputToggle from './input-toggle/_index';
 import table from './table/_index';
 import inputForm from './input-form/_index';
 import accordion from './accordion/_index';
+import loadingSpinner from './loading-spinner/_index';
 
 let componentsData = [];
 componentsData.push(
@@ -50,7 +51,8 @@ componentsData.push(
     table,
     inputForm,
     inputCombo,
-    accordion
+    accordion,
+    loadingSpinner
 );
 
 export default componentsData;
