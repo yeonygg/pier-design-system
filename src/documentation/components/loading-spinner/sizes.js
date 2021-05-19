@@ -12,5 +12,6 @@ export default (
     <span></span>
 </div>
     </div>
+    <div className="pier-loading-spinner2"></div>
     </Fragment>
 );
