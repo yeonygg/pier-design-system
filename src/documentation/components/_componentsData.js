@@ -23,10 +23,7 @@ import inputRadio from './input-radio/_index';
 import inputToggle from './input-toggle/_index';
 import table from './table/_index';
 import inputForm from './input-form/_index';
-<<<<<<< HEAD
 import accordion from './accordion/_index';
-=======
->>>>>>> 561e108... loading spinner updated
 import loadingSpinner from './loading-spinner/_index';
 
 let componentsData = [];
