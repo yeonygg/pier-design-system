@@ -91,7 +91,7 @@
 
 .pier-loading-spinner2 {
     animation: rotate 1s linear infinite;
-    background: build-gradient(90deg, neonSky);
+    background: build-gradient(90deg, primaryBoulevard);
     border-radius: 50%;
     height: 50px;
     width: 50px;
@@ -111,6 +111,7 @@
         bottom: -1px;
         left: -1px;
         right: -1px;
+        //add some easing to animation
     }
 
     &::after {
@@ -126,7 +127,7 @@
 }
 
 .pier-loading-spinner2--dark {
-	background: build-gradient(90deg, neonSky);
+	background: build-gradient(90deg, primaryBoulevard);
     &::before {
 		content: '';
         position: absolute;
@@ -186,7 +187,7 @@
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background: build-gradient(90deg, neonSky);
+	background: build-gradient(90deg, primaryBoulevard);
 	animation: animate 0.9s linear infinite;
   }
 
@@ -200,7 +201,7 @@
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	background: build-gradient(90deg, neonSky);
+	background: build-gradient(90deg, primaryBoulevard);
 }
 .pier-loader span:nth-child(1){
 	filter: blur(1px);

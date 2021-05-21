@@ -10,17 +10,17 @@ export default (
             <div className="pier-bubble-menu pier-bubble-menu--sm">
                 <ul className="pier-bubble-menu--list">
                     <li>
-                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-sm">Alert 1</div>
+                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-sm" tabIndex="0">Alert 1</div>
                     </li>
                     <li>
-                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-sm">Alert 2</div>
+                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-sm" tabIndex="0">Alert 2</div>
                     </li>
                     <li>
-                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-sm">Alert 3</div>
+                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-sm" tabIndex="0">Alert 3</div>
                     </li>
                     <li className="pier-bubble-menu--list-divider"></li>
                     <li>
-                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-sm">Clear Alerts</div>
+                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-sm" tabIndex="0">Clear Alerts</div>
                     </li>
                 </ul>
             </div>
@@ -35,17 +35,17 @@ export default (
             <div className="pier-bubble-menu">
                 <ul className="pier-bubble-menu--list">
                     <li>
-                        <div className="pier-bubble-menu--list-link">Alert 1</div>
+                        <div className="pier-bubble-menu--list-link" tabIndex="0">Alert 1</div>
                     </li>
                     <li>
-                        <div className="pier-bubble-menu--list-link">Alert 2</div>
+                        <div className="pier-bubble-menu--list-link" tabIndex="0">Alert 2</div>
                     </li>
                     <li>
-                        <div className="pier-bubble-menu--list-link">Alert 3</div>
+                        <div className="pier-bubble-menu--list-link" tabIndex="0">Alert 3</div>
                     </li>
                     <li className="pier-bubble-menu--list-divider"></li>
                     <li>
-                        <div className="pier-bubble-menu--list-link">Clear Alerts</div>
+                        <div className="pier-bubble-menu--list-link" tabIndex="0">Clear Alerts</div>
                     </li>
                 </ul>
             </div>
@@ -60,17 +60,17 @@ export default (
             <div className="pier-bubble-menu pier-bubble-menu--lg">
                 <ul className="pier-bubble-menu--list pier-bubble-menu--list-lg">
                     <li>
-                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-lg">Alert 1</div>
+                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-lg" tabIndex="0">Alert 1</div>
                     </li>
                     <li>
-                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-lg">Alert 2</div>
+                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-lg" tabIndex="0">Alert 2</div>
                     </li>
                     <li>
-                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-lg">Alert 3</div>
+                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-lg" tabIndex="0">Alert 3</div>
                     </li>
                     <li className="pier-bubble-menu--list-divider"></li>
                     <li>
-                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-lg">Clear Alerts</div>
+                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-lg" tabIndex="0">Clear Alerts</div>
                     </li>
                 </ul>
             </div>

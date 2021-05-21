@@ -45,6 +45,13 @@ $default-size: md;
         color: map-get($colorsGrays, "darker");
         background-color: map-get($colorsGrays, light-4);
     }
+
+    &:focus {
+        color: map-get($colorsGrays, dark-4);
+        background-color: map-get($colorsGrays, light-4);
+    }
+
+
 }
 
 .pier-bubble-menu--list-dark {
@@ -62,6 +69,10 @@ $default-size: md;
     &:hover {
         background-color: map-get($colorsGrays, dark-3);
         color: map-get($colorsGrays, light-1);
+    }
+    &:focus {
+        color: map-get($colorsGrays, light-1);
+        background-color: map-get($colorsGrays, dark-3);
     }
 }
 
