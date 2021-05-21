@@ -1,52 +1,30 @@
 $default-size: md;
 
-$tag-text-sizes: (
-	sm: ( 
-		desktop: .75rem,
-		mobile: 0.625rem
-	),
-	md: (
-		desktop: 1rem,
-		mobile: 0.875rem
-	),
-	lg: (
-		desktop: 1.25rem,
-		mobile: 1.125rem
-	)
-);
+$tag-text-sizes: (sm: (desktop: .75rem,
+		mobile: 0.625rem),
+	md: (desktop: 1rem,
+		mobile: 0.875rem),
+	lg: (desktop: 1.25rem,
+		mobile: 1.125rem));
 
-$tag-heights: (
-	sm: (
-		desktop: 1.375rem,
-		mobile: 0.875rem
-	),
-	md: (
-		desktop: 1.75rem,
-		mobile: 1.625rem
-	),
-	lg: (
-		desktop: 2.25rem,
-		mobile: 3.625rem
-	)
-);
+$tag-heights: (sm: (desktop: 1.375rem,
+		mobile: 0.875rem),
+	md: (desktop: 1.75rem,
+		mobile: 1.625rem),
+	lg: (desktop: 2.25rem,
+		mobile: 3.625rem));
 
-$tag-border-radii: (
-	sm: .375rem,
+$tag-border-radii: (sm: .375rem,
 	md: .5rem,
-	lg: .625rem
-);
+	lg: .625rem);
 
-$tag-padding: (
-	sm: .375rem,
+$tag-padding: (sm: .375rem,
 	md: .5rem,
-	lg: .625rem
-);
+	lg: .625rem);
 
-$tag-pill-padding: (
-	sm: 0.625rem,
+$tag-pill-padding: (sm: 0.625rem,
 	md: 0.875rem,
-	lg: 1.125rem
-);
+	lg: 1.125rem);
 
 .pier-tag {
 	display: inline-flex;
@@ -66,31 +44,33 @@ $tag-pill-padding: (
 		background-color: map-get($colorsGrays, light-1);
 		color: map-get($colorsGrays, dark-2);
 	}
+
 	&:focus {
 		box-shadow: 0px 1px 5px 0px rgba(map-fetch($colorsBlue, dark-1), 0.2);
 	}
 
 	&:active {
 		opacity: 0.8;
-	
+
 	}
 }
 
-@each $prefix, $size in $tag-heights {
+@each $prefix,
+$size in $tag-heights {
 	.pier-tag--#{$prefix} {
-	  height: map-fetch($tag-heights, ($prefix, desktop));
-	  border-radius: map-fetch($tag-border-radii, $prefix);
-	  padding: 0 map-fetch($tag-padding, $prefix);
-	  font-size: map-fetch($tag-text-sizes, ($prefix, desktop));
-  
-	  @include build-media-query(mobile) {
-		height: map-fetch($tag-heights, ($prefix, mobile));
-		font-size: map-fetch($tag-text-sizes, ($prefix, mobile));
-	  }
-	}
-  }
+		height: map-fetch($tag-heights, ($prefix, desktop));
+		border-radius: map-fetch($tag-border-radii, $prefix);
+		padding: 0 map-fetch($tag-padding, $prefix);
+		font-size: map-fetch($tag-text-sizes, ($prefix, desktop));
 
-  .pier-tag--hero {
+		@include build-media-query(mobile) {
+			height: map-fetch($tag-heights, ($prefix, mobile));
+			font-size: map-fetch($tag-text-sizes, ($prefix, mobile));
+		}
+	}
+}
+
+.pier-tag--hero {
 	background: build-gradient(90deg, primaryBoulevard);
 	color: map-get($colorsGrays, white);
 	box-shadow: none;
@@ -99,9 +79,11 @@ $tag-pill-padding: (
 		opacity: 0.8;
 		color: map-get($colorsGrays, white);
 	}
+
 	&:focus {
 		box-shadow: 0px 1px 7px 0px rgba(map-fetch($colorsCyan, default), 0.5);
 	}
+
 	&:active {
 		opacity: 0.6;
 	}
@@ -114,6 +96,7 @@ $tag-pill-padding: (
 	&:hover {
 		background-color: map-get($colorsBlue, light-4);
 	}
+
 	&:active {
 		background-color: map-get($colorsBlue, light-2);
 	}
@@ -127,42 +110,46 @@ $tag-pill-padding: (
 .pier-tag--disabled {
 	opacity: 0.4;
 	pointer-events: none;
-  }
+}
 
-  .pier-tag--pill {
-border-radius: 999rem;
-  }
+.pier-tag--pill {
+	border-radius: 999rem;
+	padding: 0 map-fetch($tag-pill-padding, $default-size);
+}
 
-  @each $prefix, $size in $tag-pill-padding {
+@each $prefix,
+$size in $tag-pill-padding {
 	.pier-tag--#{$prefix}.pier-tag--pill {
-	  padding: 0 map-fetch($tag-pill-padding, $prefix);
+		padding: 0 map-fetch($tag-pill-padding, $prefix);
 
 	}
-  }
+}
 
-  .pier-tag--dark {
+.pier-tag--dark {
 	background-color: map-get($colorsGrays, dark-2);
 	color: map-get($colorsGrays, white);
 
 	&:hover {
 		background-color: map-get($colorsGrays, dark-3);
-		color: map-get($colorsGrays,light-3);
+		color: map-get($colorsGrays, light-3);
 	}
+
 	&:focus {
 		box-shadow: 0px 1px 5px 0px rgba(map-fetch($colorsGrays, gray-1), 0.3);
 	}
 
-  }
+}
 
-  .pier-tag--dark.pier-tag--hero {
+.pier-tag--dark.pier-tag--hero {
 	&:focus {
 		box-shadow: 0px 1px 7px 0px rgba(map-fetch($colorsCyan, default), 0.5);
 	}
+
 	&:active {
 		opacity: 0.6;
 	}
-  }
+}
 
-  .pier-tag--static {
-	  pointer-events: none;
-  }
+.pier-tag--static {
+	pointer-events: none;
+}

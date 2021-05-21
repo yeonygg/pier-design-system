@@ -3,6 +3,10 @@ export { default as Accordion } from './accordion/Accordion';
 //breadcrumbs
 export { default as Breadcrumbs } from './breadcrumbs/Breadcrumbs';
 export { default as BreadcrumbsLink } from './breadcrumbs/BreadcrumbsLink';
+//bubble-menu
+export { default as BubbleMenu } from './bubble-menu/BubbleMenu';
+export { default as BubbleMenuItem } from './bubble-menu/BubbleMenuItem.js';
+export { default as BubbleMenuLabel } from './bubble-menu/BubbleMenuItem.js';
 //button
 export { default as Button } from './buttons/Button';
 export { default as IconButton } from './buttons/IconButton';
@@ -27,6 +31,8 @@ export { default as Link } from './link/Link';
 //list
 export { default as List } from './list/List';
 export { default as ListItem } from './list/ListItem';
+//loading-spinner
+export { default as LoadingSpinner } from './loading-spinner/LoadingSpinner';
 //navigation
 export { default as Nav } from './navigation/Nav';
 export { default as NavItemGroup } from './navigation/NavItemGroup';
@@ -37,6 +43,8 @@ export { default as NavSubItem } from './navigation/NavSubItem';
 export { default as NavSubLabel } from './navigation/NavSubLabel';
 //table
 export { default as Table } from './table/Table';
+//tag
+export { default as Tag } from './tag/Tag';
 //text
 export { default as BodyText } from './text/BodyText';
 export { default as CodeBlock } from './text/CodeBlock';

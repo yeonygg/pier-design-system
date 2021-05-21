@@ -10,6 +10,7 @@ import Form from 'src/pier-design-system/components/inputs/Form';
 import Button from 'src/pier-design-system/components/buttons/Button';
 import Table from 'src/pier-design-system/components/table/Table';
 import Accordion from 'src/pier-design-system/components/accordion/Accordion';
+import Tag from 'src/pier-design-system/components/tag/Tag';
 
 export default function TestPage() {
     return (
@@ -52,6 +53,7 @@ export default function TestPage() {
                     striped
                 ></Table>
             </Accordion>
+            <Tag pill>Test Tag</Tag>
         </Fragment>
     );
 }
