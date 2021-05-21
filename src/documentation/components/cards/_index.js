@@ -1,6 +1,6 @@
 import ReactDOMServer from 'react-dom/server';
 import base from './base';
-import sizes from './sizes';
+import link from './link';
 import color from './color';
 import dark from './dark';
 
@@ -17,9 +17,9 @@ export default {
             dark: false,
         },
         {
-            name: 'Sizes',
-            description: 'These are the size modifiers.',
-            markup: ReactDOMServer.renderToStaticMarkup(sizes),
+            name: 'Link',
+            description: 'These are the link modifiers.',
+            markup: ReactDOMServer.renderToStaticMarkup(link),
             dark: false,
         },
         {
