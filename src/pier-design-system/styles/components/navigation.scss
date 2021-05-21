@@ -80,8 +80,8 @@
 
 	&:before {
 		content: fa-content($fa-var-chevron-right);
-		font-family: 'Font Awesome 5 Free';
-		font-weight: 400;
+		font-family: $font-family-icons;
+		font-weight: $font-weight-regular;
 		transition: transform .2s ease-in-out;
 	}
 

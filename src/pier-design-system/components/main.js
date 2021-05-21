@@ -1,4 +1,6 @@
 //breadcrumbs
+export { default as Accordion } from './breadcrumbs/Accordion';
+//breadcrumbs
 export { default as Breadcrumbs } from './breadcrumbs/Breadcrumbs';
 export { default as BreadcrumbsLink } from './breadcrumbs/BreadcrumbsLink';
 //button

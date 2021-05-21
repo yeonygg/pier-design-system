@@ -9,6 +9,7 @@ import InputGroup from 'src/pier-design-system/components/inputs/InputGroup';
 import Form from 'src/pier-design-system/components/inputs/Form';
 import Button from 'src/pier-design-system/components/buttons/Button';
 import Table from 'src/pier-design-system/components/table/Table';
+import Accordion from 'src/pier-design-system/components/accordion/Accordion';
 
 export default function TestPage() {
     return (
@@ -40,15 +41,17 @@ export default function TestPage() {
                 <InputToggle>Test Toggle</InputToggle>
                 <Button type="submit">Submit</Button>
             </Form>
-            <Table
-                columns={['column1', 'column2', 'column3']}
-                data={[
-                    { column1: 'item1', column2: 'item2', column3: 'item3' },
-                    { column1: 'item4', column2: 'item5', column3: 'item6' },
-                    { column1: 'item7', column2: 20, column3: 'item9' },
-                ]}
-                striped
-            ></Table>
+            <Accordion title="Table" size="sm" inCard>
+                <Table
+                    columns={['column1', 'column2', 'column3']}
+                    data={[
+                        { column1: 'item1', column2: 'item2', column3: 'item3' },
+                        { column1: 'item4', column2: 'item5', column3: 'item6' },
+                        { column1: 'item7', column2: 20, column3: 'item9' },
+                    ]}
+                    striped
+                ></Table>
+            </Accordion>
         </Fragment>
     );
 }
