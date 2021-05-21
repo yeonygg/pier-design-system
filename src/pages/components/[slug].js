@@ -17,6 +17,7 @@ import Well from 'src/pier-design-system/components/containers/Well';
 import Breadcrumbs from 'src/pier-design-system/components/breadcrumbs/Breadcrumbs';
 import BreadcrumbsLink from 'src/pier-design-system/components/breadcrumbs/BreadcrumbsLink';
 import PageHeading from 'src/pages-components/PageHeading';
+import Accordion from 'src/pier-design-system/components/accordion/Accordion';
 
 export default function ComponentPage({ appData, component }) {
     const breadcrumbs = [
@@ -44,16 +45,18 @@ export default function ComponentPage({ appData, component }) {
                         <Card dark={variation.dark} className="-m-b-0 -br-b-0">
                             <Section>{htmlReactParse(variation.markup)}</Section>
                         </Card>
-                        <Well className="-m-b-0 -br-t-0">
-                            <Section>
-                                <CodeBlock size="xs">
-                                    {prettier.format(variation.markup, {
-                                        parser: 'html',
-                                        plugins: [parserHtml],
-                                        tabWidth: 4,
-                                    })}
-                                </CodeBlock>
-                            </Section>
+                        <Well className="-m-b-0 -br-t-0" style={{ marginTop: '-1px' }}>
+                            <Accordion title="HTML markup" icon="far fa-code" inCard size="xs" className="-m-b-0">
+                                <Section>
+                                    <CodeBlock size="xs">
+                                        {prettier.format(variation.markup, {
+                                            parser: 'html',
+                                            plugins: [parserHtml],
+                                            tabWidth: 4,
+                                        })}
+                                    </CodeBlock>
+                                </Section>
+                            </Accordion>
                         </Well>
                     </Section>
                 ))}

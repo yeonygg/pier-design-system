@@ -11,6 +11,7 @@ import Well from 'src/pier-design-system/components/containers/Well';
 import PageHeading from 'src/pages-components/PageHeading';
 import prettier from 'prettier/standalone';
 import parserHtml from 'prettier/esm/parser-html';
+import Accordion from 'src/pier-design-system/components/accordion/Accordion';
 
 export default function LayoutPage({ appData }) {
     const breadcrumbs = [
@@ -89,11 +90,12 @@ export default function LayoutPage({ appData }) {
                             </div>
                         </Section>
                     </Card>
-                    <Well className="-m-b-0 -br-t-0">
-                        <Section>
-                            <CodeBlock size="xs">
-                                {prettierHTMLFormat(
-                                    `<div class='pier-container'>
+                    <Well className="-m-b-0 -br-t-0" style={{ marginTop: '-1px' }}>
+                        <Accordion title="HTML markup" icon="far fa-code" inCard size="xs" className="-m-b-0">
+                            <Section>
+                                <CodeBlock size="xs">
+                                    {prettierHTMLFormat(
+                                        `<div class='pier-container'>
 	<div class='pier-row'>
 		<div class='pier-column'>1 of 2</div>
 		<div class='pier-column'>2 of 2</div>
@@ -137,9 +139,10 @@ export default function LayoutPage({ appData }) {
 		<div class='pier-column'></div>
 	</div>
 </div>`
-                                )}
-                            </CodeBlock>
-                        </Section>
+                                    )}
+                                </CodeBlock>
+                            </Section>
+                        </Accordion>
                     </Well>
                 </Section>
                 <Section>
@@ -158,23 +161,25 @@ export default function LayoutPage({ appData }) {
                             </div>
                         </Section>
                     </Card>
-                    <Well className="-m-b-0 -br-t-0">
-                        <Section>
-                            <CodeBlock size="xs">
-                                {prettierHTMLFormat(
-                                    `<div class='pier-container'>
-	<div class='pier-row'>
-		<div class='pier-column pier-column--md-8'>--md-8</div>
-		<div class='pier-column pier-column--md-4'>--md-4</div>
-	</div>
-	<div class='pier-row'>
-		<div class='pier-column pier-column--12 pier-column--md-6'>--12 & --md-6</div>
-		<div class='pier-column pier-column--12 pier-column--md-6'>--12 & --md-6</div>
-	</div>
+                    <Well className="-m-b-0 -br-t-0" style={{ marginTop: '-1px' }}>
+                        <Accordion title="HTML markup" icon="far fa-code" inCard size="xs" className="-m-b-0">
+                            <Section>
+                                <CodeBlock size="xs">
+                                    {prettierHTMLFormat(
+                                        `<div class='pier-container'>
+<div class='pier-row'>
+<div class='pier-column pier-column--md-8'>--md-8</div>
+<div class='pier-column pier-column--md-4'>--md-4</div>
+</div>
+<div class='pier-row'>
+<div class='pier-column pier-column--12 pier-column--md-6'>--12 & --md-6</div>
+<div class='pier-column pier-column--12 pier-column--md-6'>--12 & --md-6</div>
+</div>
 </div>`
-                                )}
-                            </CodeBlock>
-                        </Section>
+                                    )}
+                                </CodeBlock>
+                            </Section>
+                        </Accordion>
                     </Well>
                 </Section>
                 <Section>
@@ -201,27 +206,29 @@ export default function LayoutPage({ appData }) {
                             </div>
                         </Section>
                     </Card>
-                    <Well className="-m-b-0 -br-t-0">
-                        <Section>
-                            <CodeBlock size="xs">
-                                {prettierHTMLFormat(
-                                    `<div class='pier-container'>
-	<div class='pier-row'>
-		<div class='pier-column pier-column--3'>--3</div>
-		<div class='pier-column pier-column--4 pier-column--offset-4'>--4 & --offset-3</div>
-	</div>
-	<div class='pier-row'>
-		<div class='pier-column pier-column--3 pier-column--offset-2'>--1 & --offset-2</div>
-		<div class='pier-column pier-column--6 pier-column--offset-1'>--3 & --offset-1</div>
-	</div>
-	<div class='pier-row'>
-		<div class='pier-column pier-column--12 pier-column--md-4 pier-column--offset-md-1'>--12, --md-4, & --offset-md-1</div>
-		<div class='pier-column pier-column--12 pier-column--md-5 pier-column--offset-md-2'>--12, --md-3, & --offset-md-2</div>
-	</div>
+                    <Well className="-m-b-0 -br-t-0" style={{ marginTop: '-1px' }}>
+                        <Accordion title="HTML markup" icon="far fa-code" inCard size="xs" className="-m-b-0">
+                            <Section>
+                                <CodeBlock size="xs">
+                                    {prettierHTMLFormat(
+                                        `<div class='pier-container'>
+<div class='pier-row'>
+<div class='pier-column pier-column--3'>--3</div>
+<div class='pier-column pier-column--4 pier-column--offset-4'>--4 & --offset-3</div>
+</div>
+<div class='pier-row'>
+<div class='pier-column pier-column--3 pier-column--offset-2'>--1 & --offset-2</div>
+<div class='pier-column pier-column--6 pier-column--offset-1'>--3 & --offset-1</div>
+</div>
+<div class='pier-row'>
+<div class='pier-column pier-column--12 pier-column--md-4 pier-column--offset-md-1'>--12, --md-4, & --offset-md-1</div>
+<div class='pier-column pier-column--12 pier-column--md-5 pier-column--offset-md-2'>--12, --md-3, & --offset-md-2</div>
+</div>
 </div>`
-                                )}
-                            </CodeBlock>
-                        </Section>
+                                    )}
+                                </CodeBlock>
+                            </Section>
+                        </Accordion>
                     </Well>
                 </Section>
             </Layout>
