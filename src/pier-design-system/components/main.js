@@ -1,5 +1,5 @@
 //breadcrumbs
-export { default as Accordion } from './breadcrumbs/Accordion';
+export { default as Accordion } from './accordion/Accordion';
 //breadcrumbs
 export { default as Breadcrumbs } from './breadcrumbs/Breadcrumbs';
 export { default as BreadcrumbsLink } from './breadcrumbs/BreadcrumbsLink';
