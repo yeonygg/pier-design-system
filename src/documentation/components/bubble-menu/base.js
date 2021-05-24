@@ -25,5 +25,6 @@ export default (
                 </ul>
             </div>
         </div>
+        </div>
     </Fragment>
 );
