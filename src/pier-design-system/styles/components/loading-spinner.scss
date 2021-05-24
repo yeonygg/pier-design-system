@@ -1,0 +1,227 @@
+.pier-loading-spinner {
+    color: map-get($colorsGreen, default);
+    font-size: 35px;
+    text-indent: -9999em;
+    overflow: visible;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+    animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+}
+
+@-webkit-keyframes load6 {
+    0% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+}
+@keyframes load6 {
+    0% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+}
+@-webkit-keyframes round {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes round {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.pier-loading-spinner2 {
+    animation: rotate 1s linear infinite;
+    background: build-gradient(90deg, primaryBoulevard);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        background: linear-gradient(0deg, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 100%, 0.9) 100%) 0% 0%,
+            linear-gradient(90deg, hsla(0, 0%, 100%, 0.9) 0%, hsla(0, 0%, 100%, 0.6) 100%) 100% 0%,
+            linear-gradient(180deg, hsla(0, 0%, 100%, 0.6) 0%, hsla(0, 0%, 100%, 0.3) 100%) 100% 100%,
+            linear-gradient(360deg, hsla(0, 0%, 100%, 0.3) 0%, hsla(0, 0%, 100%, 0) 100%) 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 50% 50%;
+        top: -1px;
+        bottom: -1px;
+        left: -1px;
+        right: -1px;
+        //add some easing to animation
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        background: map-get($colorsGrays, white);
+        border-radius: 50%;
+        top: 8%;
+        bottom: 8%;
+        left: 8%;
+        right: 8%;
+    }
+}
+
+.pier-loading-spinner2--dark {
+	background: build-gradient(90deg, primaryBoulevard);
+    &::before {
+		content: '';
+        position: absolute;
+        border-radius: 50%;
+		background: 
+		linear-gradient(0deg, hsla(206, 50%, 11%, 1) 50%, hsla(206, 50%, 11%, 0.9) 100%) 0% 0%,
+		linear-gradient(90deg, hsla(206, 50%, 11%, 0.9) 0%, hsla(206, 50%, 11%, 0.6) 100%) 100% 0%,
+		linear-gradient(180deg, hsla(206, 50%, 11%, 0.6) 0%, hsla(206, 50%, 11%, 0.3) 100%) 100% 100%,
+		linear-gradient(360deg, hsla(206, 50%, 11%, 0.3) 0%, hsla(206, 50%, 11%, 0) 100%) 0% 100%;	
+		background-repeat: no-repeat;
+        background-size: 50% 50%;
+        top: -1px;
+        bottom: -1px;
+        left: -1px;
+        right: -1px;		
+    }
+    &::after {
+        background: map-get($colorsGrays, dark-4);
+    }
+}
+
+.pier-loading-spinner3 {
+	animation: spinningColor 1.5s ease-in-out infinite;
+	margin: 0;
+	border: 5px solid map-get($colorsGrays, light-1);
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+
+@keyframes spinningColor {
+	0% {
+	  transform: rotate(360deg);
+	  border-top:5px solid map-get($colorsGreen, default);
+	  border-bottom:5px solid map-get($colorsCyan, default);
+	}
+	25% {
+	  border-top:5px solid map-get($colorsGreen, default);
+	  border-bottom:5px solid map-get($colorsCyan, default);
+	}
+	50% {
+	  border-top:5px solid map-get($colorsGreen, default);
+	  border-bottom:5px solid map-get($colorsCyan, default);
+	}
+	75% {
+	  border-top:5px solid map-get($colorsGreen, default);
+	  border-bottom:5px solid map-get($colorsCyan, default);
+	}
+	100% {
+	  border-top:5px solid map-get($colorsGreen, default);
+	  border-bottom:5px solid map-get($colorsCyan, default);
+	}
+  }
+
+  .pier-loader {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: build-gradient(90deg, primaryBoulevard);
+	animation: animate 0.9s linear infinite;
+  }
+
+  @keyframes animate {
+	0%{transform: rotate(0deg);} 
+	100%{transform: rotate(360deg);} 
+}
+
+.pier-loader span{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background: build-gradient(90deg, primaryBoulevard);
+}
+.pier-loader span:nth-child(1){
+	filter: blur(1px);
+}
+.pier-loader span:nth-child(2){
+	filter: blur(2px);
+}
+.pier-loader span:nth-child(3){
+	filter: blur(4px);
+}
+.pier-loader span:nth-child(4){
+	filter: blur(8px);
+}
+.pier-loader::after{
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	background: map-get($colorsGrays, white);
+	border-radius: 50%;
+}

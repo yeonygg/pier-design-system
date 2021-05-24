@@ -8,6 +8,7 @@ import list from './list/_index';
 import breadcrumbs from './breadcrumbs/_index';
 import navigation from './navigation/_index';
 import tags from './tags/_index';
+import cards from './cards/_index';
 import bubbleMenu from './bubble-menu/_index';
 import buttonHero from './button-hero/_index';
 import buttonStandard from './button-standard/_index';
@@ -23,6 +24,7 @@ import inputToggle from './input-toggle/_index';
 import table from './table/_index';
 import inputForm from './input-form/_index';
 import accordion from './accordion/_index';
+import loadingSpinner from './loading-spinner/_index';
 
 let componentsData = [];
 componentsData.push(
@@ -32,6 +34,7 @@ componentsData.push(
     textCodeblock,
     horizontalRule,
     tags,
+    cards,
     link,
     list,
     breadcrumbs,
@@ -50,7 +53,8 @@ componentsData.push(
     table,
     inputForm,
     inputCombo,
-    accordion
+    accordion,
+    loadingSpinner
 );
 
 export default componentsData;
