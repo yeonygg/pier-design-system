@@ -12,13 +12,14 @@ export default function Nav({ children, mobile, className, style }) {
 
     return (
         <div className={classes} style={style}>
-            <IconButton icon="" size="sm" style={{ position: 'absolute', top: 0, right: 0, zIndex: 99 }}></IconButton>
             {children}
         </div>
     );
 }
 
-Nav.defaultProps = {};
+Nav.defaultProps = {
+    className: '',
+};
 
 Nav.propTypes = {
     children: PropTypes.node.isRequired,

@@ -13,7 +13,9 @@ export default function BubbleMenuLabel({ children, className, style }) {
     );
 }
 
-BubbleMenuItem.defaultProps = {};
+BubbleMenuItem.defaultProps = {
+    className: '',
+};
 
 BubbleMenuItem.propTypes = {
     children: PropTypes.node.isRequired,

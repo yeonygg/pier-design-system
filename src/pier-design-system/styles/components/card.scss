@@ -1,10 +1,11 @@
+$default-size: md;
+
 $card-radii: (
 	lg: 1rem,
 	md: .75rem,
 	sm: .5rem
 );
 
-$default-size: md;
 .pier-card {
 	overflow: hidden;
 	border: .0625rem solid map-get($colorsGrays, light);

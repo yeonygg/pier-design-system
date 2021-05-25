@@ -1,7 +1,7 @@
 import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function Button({ children, theme, type, value, icon, size, disabled, cap, pill, error, dark, block, className, style }) {
+export default function Button({ children, theme, type, value, icon, size, disabled, cap, pill, error, dark, block, onClick, className, style }) {
     let prefix = `pier-button-standard`,
         classes = prefix;
 
@@ -59,7 +59,7 @@ export default function Button({ children, theme, type, value, icon, size, disab
     function renderButton() {
         if (prefix == 'pier-button-hero') {
             return (
-                <button className={classes} style={style} type={type} value={value}>
+                <button className={classes} style={style} type={type} value={value} onClick={onClick}>
                     <span className="pier-button-hero__content">
                         {icon && <i className={`pier-button-hero__icon ${icon}`}></i>}
                         {children}
@@ -68,7 +68,7 @@ export default function Button({ children, theme, type, value, icon, size, disab
             );
         } else if (prefix == 'pier-button-standard') {
             return (
-                <button className={classes} style={style} type={type} value={value}>
+                <button className={classes} style={style} type={type} value={value} onClick={onClick}>
                     {icon && <i className={`pier-button-standard__icon ${icon}`}></i>}
                     {children}
                 </button>
@@ -103,6 +103,7 @@ Button.propTypes = {
     error: PropTypes.bool,
     dark: PropTypes.bool,
     block: PropTypes.bool,
+    onClick: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
 };

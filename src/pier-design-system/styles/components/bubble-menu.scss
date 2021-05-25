@@ -1,97 +1,214 @@
 $default-size: md;
 
+$bubble-paddings: (
+	sm: 0.75rem 0.875rem,
+	md: 0.875rem 1rem,
+	lg: 1rem 1.25rem
+);
+
+$bubble-widths: (
+	sm: 10rem,
+	md: 12rem,
+	lg: 16rem,
+);
+
+$bubble-radii: (
+	sm: .5rem,
+	md: .75rem,
+	lg: 1rem
+);
+
+$bubble-item-sizes: (
+	sm: (
+		mobile: .75rem,
+		desktop: .875rem
+	),
+	md: (
+		mobile: .875rem,
+		desktop: 1rem
+	),
+	lg: (
+		mobile: 1rem,
+		desktop: 1.125rem
+	)
+);
+
+$bubble-label-sizes: (
+	sm: (
+		mobile: 0.5rem,
+		desktop: 0.625rem
+	),
+	md: (
+		mobile: 0.625rem,
+		desktop: .75rem
+	),
+	lg: (
+		mobile: .75rem,
+		desktop: 0.875rem
+	)
+);
+
+$bubble-space: 0.5rem;
+
 .pier-bubble-menu {
-    position: absolute;
+	position: absolute;
     bottom: 0;
+    right: 0;
+	top: auto;
+	left: auto;
+    transform: scaleY(0) translateY(calc(100% + #{$bubble-space}));
+    transform-origin: center bottom;
+	z-index: 99;
+	overflow: hidden;
+	font-family: $font-family;
+	max-height: 0;
+	transition: all 0.2s ease-in-out;
+	min-width: map-fetch($bubble-widths, $default-size);
+	border-radius: map-fetch($bubble-radii, $default-size);
+	color: map-get($colorsGrays, dark);
+	box-shadow: 0 0 2rem rgba(map-get($colorsGrays, gray), 0.15);
+	border: 1px solid map-get($colorsGrays, light-1);
+	background-color: map-get($colorsGrays, white);
+}
+
+.pier-bubble-menu__item {
+	cursor: pointer;
+	width: 100%;
+	padding: map-fetch($bubble-paddings, $default-size);
+	font-size: map-fetch($bubble-item-sizes, ($default-size, desktop));
+
+	@include build-media-query(mobile) {
+		font-size: map-fetch($bubble-item-sizes, ($default-size, mobile));
+	}
+
+	&:hover {
+        color: map-get($colorsGrays, darker);
+        background-color: map-get($colorsGrays, light-4);
+    }
+
+    &:active {
+		color: map-get($colorsGrays, dark);
+        background-color: map-get($colorsGrays, light-4);
+    }
+}
+
+.pier-bubble-menu__item--divider {
+	border-top: 1px solid map-get($colorsGrays, light-1);
+}
+
+.pier-bubble-menu__label {
+	width: 100%;
+	text-transform: uppercase;
+	font-weight: $font-weight-bold;
+	padding: map-fetch($bubble-paddings, $default-size);
+	font-size: map-fetch($bubble-label-sizes, ($default-size, desktop));
+	color: map-get($colorsGrays, gray);
+
+	@include build-media-query(mobile) {
+		font-size: map-fetch($bubble-label-sizes, ($default-size, mobile));
+	}
+}
+
+@each $prefix, $size in $bubble-item-sizes {
+	.pier-bubble-menu--#{$prefix} {
+		min-width: map-fetch($bubble-widths, $prefix);
+		border-radius: map-fetch($bubble-radii, $prefix);
+
+		.pier-bubble-menu__item {
+			padding: map-fetch($bubble-paddings, $prefix);
+			font-size: map-fetch($bubble-item-sizes, ($prefix, desktop));
+		
+			@include build-media-query(mobile) {
+				font-size: map-fetch($bubble-item-sizes, ($prefix, mobile));
+			}
+		}
+
+		.pier-bubble-menu__label {
+			padding: map-fetch($bubble-paddings, $prefix);
+			font-size: map-fetch($bubble-label-sizes, ($prefix, desktop));
+
+			@include build-media-query(mobile) {
+				font-size: map-fetch($bubble-label-sizes, ($prefix, mobile));
+			}
+		}
+	}
+}
+
+.pier-bubble-menu--dark {
+	color: map-get($colorsGrays, lighter);
+    background-color: map-get($colorsGrays, darker);
+    border: 1px solid map-get($colorsGrays, gray);
+
+	.pier-bubble-menu__item {
+		&:hover {
+			color: map-get($colorsGrays, white);
+			background-color: map-get($colorsGrays, dark-3);
+		}
+		&:active {
+			color: map-get($colorsGrays, lighter);
+			background-color: map-get($colorsGrays, dark-3);
+		}
+
+	}
+
+	.pier-bubble-menu__item--divider {
+		border-color: map-get($colorsGrays, gray);
+	}
+}
+
+.pier-bubble-menu--open {
+	transform: scaleY(1) translateY(calc(100% + #{$bubble-space}));
+	max-height: 2000px;
+}
+
+.pier-bubble-menu--bottom-left {
+	bottom: 0;
+    right: 0;
+	top: auto;
+	left: auto;
+    transform: scaleY(0) translateY(calc(100% + #{$bubble-space}));
+    transform-origin: center bottom;
+}
+
+.pier-bubble-menu--open.pier-bubble-menu--bottom-left {
+	transform: scaleY(1) translateY(calc(100% + #{$bubble-space}));
+}
+
+.pier-bubble-menu--bottom-right {
+	bottom: 0;
     left: 0;
-    min-width: 12rem;
-    z-index: 900;
-    text-align: left;
-    transform: translateY(100%);
-    transform-origin: 50% -10px;
+	top: auto;
+	right: auto;
+    transform: scaleY(0) translateY(calc(100% + #{$bubble-space}));
+    transform-origin: center bottom;
 }
 
-.pier-bubble-menu--list {
-    background-color: map-get($colorsGrays, white);
-    border: 1px solid map-get($colorsGrays, light-1);
-    font-family: $font-family;
-    font-size: 18px;
-    color: map-get($colorsGrays, dark-1);
-    overflow: hidden;
-    box-shadow: 0px 1px 5px 0px rgba(map-get($colorsBlue, dark-1), 0.2);
-    border-radius: 8px;
-    line-height: 1.8;
-    white-space: nowrap;
-    box-sizing: border-box;
+.pier-bubble-menu--open.pier-bubble-menu--bottom-right {
+	transform: scaleY(1) translateY(calc(100% + #{$bubble-space}));
 }
 
-.pier-bubble-menu--list-link {
-    padding: 0.8rem 1rem;
+.pier-bubble-menu--top-left {
+	bottom: auto;
+    right: 0;
+	top: 0;
+	left: auto;
+    transform: scaleY(0) translateY(calc(-100% - #{$bubble-space}));
+    transform-origin: center top;
 }
 
-.pier-bubble-menu--list-divider {
-    width: 100%;
-    height: 1px;
-    background-color: map-get($colorsGrays, light-1);
+.pier-bubble-menu--open.pier-bubble-menu--top-left {
+	transform: scaleY(1) translateY(calc(-100% - #{$bubble-space}));
 }
+
 .pier-bubble-menu--top-right {
-    
+	bottom: auto;
+    left: 0;
+	top: 0;
+	right: auto;
+    transform: scaleY(0) translateY(calc(-100% - #{$bubble-space}));
+    transform-origin: center top;
 }
 
-.pier-bubble-menu--list-link {
-    cursor: pointer;
-
-    &:hover {
-        color: map-get($colorsGrays, "darker");
-        background-color: map-get($colorsGrays, light-4);
-    }
-
-    &:focus {
-        color: map-get($colorsGrays, dark-4);
-        background-color: map-get($colorsGrays, light-4);
-    }
-
-
+.pier-bubble-menu--open.pier-bubble-menu--top-right {
+	transform: scaleY(1) translateY(calc(-100% - #{$bubble-space}));
 }
-
-.pier-bubble-menu--list-dark {
-    color: map-get($colorsGrays, gray);
-    background-color: map-get($colorsGrays,dark-4);
-    border: 1px solid map-get($colorsGrays, dark-3);
-    box-shadow: 0px 1px 5px 0px rgba(map-get($colorsGrays, gray-1), 0.2);
-}
-
-.pier-bubble-menu--list-divider-dark {
-    background-color: map-get($colorsGrays, dark-3);
-}
-
-.pier-bubble-menu--list-link-dark {
-    &:hover {
-        background-color: map-get($colorsGrays, dark-3);
-        color: map-get($colorsGrays, light-1);
-    }
-    &:focus {
-        color: map-get($colorsGrays, light-1);
-        background-color: map-get($colorsGrays, dark-3);
-    }
-}
-
-.pier-bubble-menu--sm {
-    min-width: 10rem;
-}
-
-.pier-bubble-menu--list-link-sm {
-    font-size: 14px;
-}
-
-.pier-bubble-menu--list-link-lg {
-    font-size: 20px;
-}
-
-.pier-bubble-menu--lg {
-    min-width: 14rem;
-}
-
-
-
-

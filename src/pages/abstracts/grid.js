@@ -31,7 +31,7 @@ export default function LayoutPage({ appData }) {
     return (
         <Fragment>
             <Head>
-                <title>Layout | Pier Design System</title>
+                <title>Grid | Pier Design System</title>
             </Head>
             <Layout appData={appData}>
                 <PageHeading

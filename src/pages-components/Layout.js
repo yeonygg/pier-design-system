@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import useMediaQuery from 'src/pages-hooks/useMediaQuery';
 import Heading from 'src/pier-design-system/components/text/Heading';
 import NextLink from 'next/link';
@@ -11,9 +11,13 @@ import NavSubItem from 'src/pier-design-system/components/navigation/NavSubItem'
 import NavItemGroup from 'src/pier-design-system/components/navigation/NavItemGroup';
 import Screen from 'src/pier-design-system/components/containers/Screen';
 import IconButton from 'src/pier-design-system/components/buttons/IconButton';
+import BubbleMenu from 'src/pier-design-system/components/bubble-menu/BubbleMenu';
+import BubbleMenuItem from 'src/pier-design-system/components/bubble-menu/BubbleMenuItem';
 
 export default function Layout({ children, appData }) {
+    const [mobileNav, setMobileNav] = useState(false);
     let isDesktop = useMediaQuery('(min-width: 768px)');
+
     return (
         <Fragment>
             <Screen>
@@ -28,7 +32,11 @@ export default function Layout({ children, appData }) {
                         </NextLink>
                         <NavItemGroup>
                             <NavItemContainer>
-                                <NavItem icon="fas fa-atom">Abstracts</NavItem>
+                                <NextLink href="/abstracts">
+                                    <a>
+                                        <NavItem icon="fas fa-atom">Abstracts</NavItem>
+                                    </a>
+                                </NextLink>
                                 <NavItemDropdown>
                                     <NextLink href="/abstracts/grid">
                                         <a>
@@ -38,7 +46,11 @@ export default function Layout({ children, appData }) {
                                 </NavItemDropdown>
                             </NavItemContainer>
                             <NavItemContainer>
-                                <NavItem icon="fas fa-cubes">Components</NavItem>
+                                <NextLink href="/components">
+                                    <a>
+                                        <NavItem icon="fas fa-cubes">Components</NavItem>
+                                    </a>
+                                </NextLink>
                                 <NavItemDropdown>
                                     {appData.components.map((component) => {
                                         return (
@@ -52,7 +64,11 @@ export default function Layout({ children, appData }) {
                                 </NavItemDropdown>
                             </NavItemContainer>
                             <NavItemContainer>
-                                <NavItem icon="fas fa-tools">Utilities</NavItem>
+                                <NextLink href="/utilities">
+                                    <a>
+                                        <NavItem icon="fas fa-tools">Utilities</NavItem>
+                                    </a>
+                                </NextLink>
                                 <NavItemDropdown>
                                     {appData.utilities.map((utility) => {
                                         return (
@@ -76,7 +92,32 @@ export default function Layout({ children, appData }) {
                                 </Heading>
                             </a>
                         </NextLink>
-                        <IconButton icon="far fa-bars" className="-m-a-4"></IconButton>
+                        <div>
+                            <IconButton
+                                icon="far fa-bars"
+                                className="-m-a-4"
+                                onClick={() => {
+                                    setMobileNav(!mobileNav);
+                                }}
+                            ></IconButton>
+                            <BubbleMenu open={mobileNav} className="-m-r-2">
+                                <NextLink href="/abstracts">
+                                    <a>
+                                        <BubbleMenuItem>Abstracts</BubbleMenuItem>
+                                    </a>
+                                </NextLink>
+                                <NextLink href="/components">
+                                    <a>
+                                        <BubbleMenuItem>Components</BubbleMenuItem>
+                                    </a>
+                                </NextLink>
+                                <NextLink href="/utilities">
+                                    <a>
+                                        <BubbleMenuItem>Utilities</BubbleMenuItem>
+                                    </a>
+                                </NextLink>
+                            </BubbleMenu>
+                        </div>
                     </Nav>
                 )}
             </Screen>
