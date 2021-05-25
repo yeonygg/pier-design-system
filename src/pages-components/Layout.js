@@ -21,7 +21,43 @@ export default function Layout({ children, appData }) {
     return (
         <Fragment>
             <Screen>
-                {isDesktop ? (
+                {!isDesktop ? (
+                    <Nav mobile>
+                        <NextLink href="/">
+                            <a>
+                                <Heading size="sm" className="-m-a-4">
+                                    Pier Design System
+                                </Heading>
+                            </a>
+                        </NextLink>
+                        <div>
+                            <IconButton
+                                icon="far fa-bars"
+                                className="-m-a-4"
+                                onClick={() => {
+                                    setMobileNav(!mobileNav);
+                                }}
+                            ></IconButton>
+                            <BubbleMenu open={mobileNav} className="-m-r-2">
+                                <NextLink href="/abstracts">
+                                    <a>
+                                        <BubbleMenuItem>Abstracts</BubbleMenuItem>
+                                    </a>
+                                </NextLink>
+                                <NextLink href="/components">
+                                    <a>
+                                        <BubbleMenuItem>Components</BubbleMenuItem>
+                                    </a>
+                                </NextLink>
+                                <NextLink href="/utilities">
+                                    <a>
+                                        <BubbleMenuItem>Utilities</BubbleMenuItem>
+                                    </a>
+                                </NextLink>
+                            </BubbleMenu>
+                        </div>
+                    </Nav>
+                ) : (
                     <Nav>
                         <NextLink href="/">
                             <a>
@@ -82,42 +118,6 @@ export default function Layout({ children, appData }) {
                                 </NavItemDropdown>
                             </NavItemContainer>
                         </NavItemGroup>
-                    </Nav>
-                ) : (
-                    <Nav mobile>
-                        <NextLink href="/">
-                            <a>
-                                <Heading size="sm" className="-m-a-4">
-                                    Pier Design System
-                                </Heading>
-                            </a>
-                        </NextLink>
-                        <div>
-                            <IconButton
-                                icon="far fa-bars"
-                                className="-m-a-4"
-                                onClick={() => {
-                                    setMobileNav(!mobileNav);
-                                }}
-                            ></IconButton>
-                            <BubbleMenu open={mobileNav} className="-m-r-2">
-                                <NextLink href="/abstracts">
-                                    <a>
-                                        <BubbleMenuItem>Abstracts</BubbleMenuItem>
-                                    </a>
-                                </NextLink>
-                                <NextLink href="/components">
-                                    <a>
-                                        <BubbleMenuItem>Components</BubbleMenuItem>
-                                    </a>
-                                </NextLink>
-                                <NextLink href="/utilities">
-                                    <a>
-                                        <BubbleMenuItem>Utilities</BubbleMenuItem>
-                                    </a>
-                                </NextLink>
-                            </BubbleMenu>
-                        </div>
                     </Nav>
                 )}
             </Screen>
