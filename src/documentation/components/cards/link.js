@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 
 export default (
     <Fragment>
-    <div className="pier-card pier-card--link">
+    <div className="pier-card pier-card--link" tabIndex="0">
     <div className="pier-section">
     <h1 className="pier-heading pier-heading--sm">Card Header</h1>
     <p className="pier-body-text">
@@ -11,7 +11,7 @@ export default (
 </p>
 <button className="pier-button-hero">
 <span className="pier-button-hero__content">
-    <i className="pier-button-hero__icon fas fa-check"></i>Button Text
+    <i className="pier-button-hero__icon fas fa-check"></i>Button
 </span>
 </button>
     </div>

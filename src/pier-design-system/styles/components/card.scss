@@ -1,28 +1,85 @@
 $default-size: md;
 
 $card-radii: (
-	lg: 1rem,
-	md: .75rem,
-	sm: .5rem
+    lg: 1rem,
+    md: 0.75rem,
+    sm: 0.5rem,
 );
 
 .pier-card {
-	overflow: hidden;
-	border: .0625rem solid map-get($colorsGrays, light);
-	background-color: map-get($colorsGrays, white);
-	border-radius: map-get($card-radii, lg);
-	box-shadow: 0 0 2rem rgba(map-get($colorsGrays, gray), 0.15);
-	margin-bottom: 1rem;
+    overflow: hidden;
+    border: 0.0625rem solid map-get($colorsGrays, light);
+    background: map-get($colorsGrays, white);
+    border-radius: map-get($card-radii, lg);
+    box-shadow: 0 0 2rem rgba(map-get($colorsGrays, gray), 0.15);
+    margin-bottom: 1rem;
 }
 
 .pier-card--dark {
-	background-color: map-get($colorsGrays, darker);
-	border: .0625rem solid map-get($colorsGrays, gray);
+    background-color: map-get($colorsGrays, darker);
+    border: 0.0625rem solid map-get($colorsGrays, gray);
+}
+
+.pier-card--primary {
+	background-color: map-get($colorsCyan, light-4);
+	border: 0.0625rem solid map-get($colorsCyan, default);
 }
 
 @each $prefix, $radius in $card-radii {
-	.pier-card--#{$prefix} {
-		border-radius: $radius;
-	}
+    .pier-card--#{$prefix} {
+        border-radius: $radius;
+    }
 }
+
+.pier-card--link {
+	background: map-get($colorsGrays, white);
+
+	&::before {
+		content: "";
+		background: map-get($colorsGrays, white);
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		opacity: 0;
+		cursor: pointer;
+		border-radius: map-fetch($button-inner-radii, $default-size);
+	  }
+	&:hover {
+		background: build-gradient(90deg, primaryBoulevard);
+		-webkit-border-image: build-gradient(90deg, primaryBoulevard);
+
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	&:focus {
+		background: build-gradient(90deg, primaryBoulevard);
+		-webkit-border-image: build-gradient(90deg, primaryBoulevard);
+		box-shadow: 0px 1px 7px 0px rgba(map-fetch($colorsCyan, light-1), 0.5);
+
+		&::before {
+			opacity: 1;
+		}
+	}
+
+}
+
+.pier-card--error {
+	background-color: map-get($colorsRed, light-4);
+	border: 0.0625rem solid map-get($colorsRed, default);
+}
+
+.pier-card--green {
+	background-color: map-get($colorsGreen, light-4);
+	border: 0.0625rem solid map-get($colorsGreen, default);
+}
+
+.pier-card--blue {
+	background-color: map-get($colorsBlue, light-4);
+	border: 0.0625rem solid map-get($colorsBlue, default);
+}
+
 
