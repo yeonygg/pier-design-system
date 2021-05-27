@@ -18,3 +18,58 @@ $well-radii: (
 		border-radius: $radius;
 	}
 }
+
+.pier-well--primary {
+	background-color: map-get($colorsCyan, light-4);
+	box-shadow: inset 0 0 2rem rgba(map-get($colorsCyan, dark-2), 0.15);
+	border: .0625rem solid map-get($colorsCyan, light-3);
+}
+
+.pier-well--error {
+	background-color: map-get($colorsRed, light-4);
+	box-shadow: inset 0 0 2rem rgba(map-get($colorsRed, dark-2), 0.15);
+	border: .0625rem solid map-get($colorsRed, light-3);
+}
+
+.pier-well--green {
+	background-color: map-get($colorsGreen, light-4);
+	box-shadow: inset 0 0 2rem rgba(map-get($colorsGreen, dark-2), 0.15);
+	border: .0625rem solid map-get($colorsGreen, light-3);
+}
+
+.pier-well--blue {
+	background-color: map-get($colorsBlue, light-4);
+	box-shadow: inset 0 0 2rem rgba(map-get($colorsBlue, dark-2), 0.15);
+	border: .0625rem solid map-get($colorsBlue, light-3);
+}
+
+.pier-well--dark {
+	background-color: map-get($colorsGrays, dark-4);
+	border: .0625rem solid map-get($colorsGrays, dark-2);
+	box-shadow: inset 0 0 2rem rgba(map-get($colorsGrays, dark-4), 0.15);
+}
+
+.pier-well--dark.pier-well--primary {
+	background-color: map-get($colorsCyan, dark-4);
+	box-shadow: inset 0 0 2rem rgba(map-get($colorsCyan, dark-4), 0.15);
+	border: .0625rem solid map-get($colorsCyan, dark-3);
+}
+
+.pier-well--dark.pier-well--error {
+	background-color: map-get($colorsRed, dark-4);
+	box-shadow: inset 0 0 2rem rgba(map-get($colorsRed, dark-4), 0.15);
+	border: .0625rem solid map-get($colorsRed, dark-3);
+}
+
+.pier-well--dark.pier-well--green {
+	background-color: map-get($colorsGreen, dark-4);
+	box-shadow: inset 0 0 2rem rgba(map-get($colorsGreen, dark-4), 0.15);
+	border: .0625rem solid map-get($colorsGreen, dark-3);
+}
+
+.pier-well--dark.pier-well--blue {
+	background-color: map-get($colorsBlue, dark-4);
+	box-shadow: inset 0 0 2rem rgba(map-get($colorsBlue, dark-4), 0.15);
+	border: .0625rem solid map-get($colorsBlue, dark-3);
+}
+

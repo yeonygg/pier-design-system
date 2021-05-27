@@ -1,95 +1,125 @@
 $default-size: md;
 
 $body-sizes: (
-	xs: (
-		mobile: .75rem,
-		desktop: .875rem
-	),
-	sm: (
-		mobile: .875rem,
-		desktop: 1rem
-	),
-	md: (
-		mobile: 1rem,
-		desktop: 1.125rem
-	)
+    xs: (
+        mobile: 0.75rem,
+        desktop: 0.875rem,
+    ),
+    sm: (
+        mobile: 0.875rem,
+        desktop: 1rem,
+    ),
+    md: (
+        mobile: 1rem,
+        desktop: 1.125rem,
+    ),
 );
 
 $code-sizes: (
-	xs: (
-		mobile: .625rem,
-		desktop: .75rem
-	),
-	sm: (
-		mobile: .75rem,
-		desktop: .875rem
-	),
-	md: (
-		mobile: .875rem,
-		desktop: 1rem
-	)
+    xs: (
+        mobile: 0.625rem,
+        desktop: 0.75rem,
+    ),
+    sm: (
+        mobile: 0.75rem,
+        desktop: 0.875rem,
+    ),
+    md: (
+        mobile: 0.875rem,
+        desktop: 1rem,
+    ),
 );
 
 .pier-body-text {
-	font-family: $font-family;
-	font-weight: $font-weight-regular;
-	font-size: map-fetch($body-sizes, ($default-size, desktop));
-	margin-bottom: map-fetch($body-sizes, ($default-size, desktop));
-	color: map-fetch($colorsGrays, 'dark');
-	line-height: 1.55;
-	
-	
-	@include build-media-query(mobile) {
-		font-size: map-fetch($body-sizes, ($default-size, mobile));
-		margin-bottom: map-fetch($body-sizes, ($default-size, mobile));
-	}
+    font-family: $font-family;
+    font-weight: $font-weight-regular;
+    font-size: map-fetch($body-sizes, ($default-size, desktop));
+    margin-bottom: map-fetch($body-sizes, ($default-size, desktop));
+    color: map-fetch($colorsGrays, 'dark');
+    line-height: 1.55;
+
+    @include build-media-query(mobile) {
+        font-size: map-fetch($body-sizes, ($default-size, mobile));
+        margin-bottom: map-fetch($body-sizes, ($default-size, mobile));
+    }
 }
 
 .pier-body-text__inline-code {
-	font-family: $font-family-code;
-	font-size: map-fetch($code-sizes, ($default-size, desktop));
-	padding: 0 map-fetch($code-sizes, ($default-size, desktop)) / 2;
-	border-radius: map-fetch($code-sizes, ($default-size, desktop)) / 4;
-	background-color: map-fetch($colorsGrays, lighter);
-	user-select: all;
-	word-wrap: break-word;
+    font-family: $font-family-code;
+    font-size: map-fetch($code-sizes, ($default-size, desktop));
+    padding: 0 map-fetch($code-sizes, ($default-size, desktop)) / 2;
+    border-radius: map-fetch($code-sizes, ($default-size, desktop)) / 4;
+    background-color: map-fetch($colorsGrays, lighter);
+    user-select: all;
+    word-wrap: break-word;
 
-	@include build-media-query(mobile) {
-		font-size: map-fetch($code-sizes, ($default-size, mobile));
-		padding: 0 map-fetch($code-sizes, ($default-size, mobile)) / 2;
-		border-radius: map-fetch($code-sizes, ($default-size, mobile)) / 4;
-	}
+    @include build-media-query(mobile) {
+        font-size: map-fetch($code-sizes, ($default-size, mobile));
+        padding: 0 map-fetch($code-sizes, ($default-size, mobile)) / 2;
+        border-radius: map-fetch($code-sizes, ($default-size, mobile)) / 4;
+    }
 }
 
 .pier-body-text--dark {
-	color: map-fetch($colorsGrays, 'lighter');
+    color: map-fetch($colorsGrays, 'lighter');
 }
 
 .pier-body-text--light-gray {
-	color: map-fetch($colorsGrays, 'light-gray');
+    color: map-fetch($colorsGrays, 'light-gray');
 }
 
 @each $prefix, $size in $body-sizes {
-	.pier-body-text--#{$prefix} {
-		font-size: map-fetch($size, desktop);
-		margin-bottom: map-fetch($size, desktop);
+    .pier-body-text--#{$prefix} {
+        font-size: map-fetch($size, desktop);
+        margin-bottom: map-fetch($size, desktop);
 
-		@include build-media-query(mobile) {
-			font-size: map-fetch($size, mobile);
-			margin-bottom: map-fetch($size, mobile);
-		}
-	}
+        @include build-media-query(mobile) {
+            font-size: map-fetch($size, mobile);
+            margin-bottom: map-fetch($size, mobile);
+        }
+    }
 
-	.pier-body-text__inline-code--#{$prefix} {
-		font-size: map-fetch($code-sizes, ($prefix, desktop));
-		padding: 0 map-fetch($code-sizes, ($prefix, desktop)) / 2;
-		border-radius: map-fetch($code-sizes, ($prefix, desktop)) / 4;
-	
-		@include build-media-query(mobile) {
-			font-size: map-fetch($code-sizes, ($prefix, mobile));
-			padding: 0 map-fetch($code-sizes, ($prefix, mobile)) / 2;
-			border-radius: map-fetch($code-sizes, ($prefix, mobile)) / 4;
-		}
-	}
+    .pier-body-text__inline-code--#{$prefix} {
+        font-size: map-fetch($code-sizes, ($prefix, desktop));
+        padding: 0 map-fetch($code-sizes, ($prefix, desktop)) / 2;
+        border-radius: map-fetch($code-sizes, ($prefix, desktop)) / 4;
+
+        @include build-media-query(mobile) {
+            font-size: map-fetch($code-sizes, ($prefix, mobile));
+            padding: 0 map-fetch($code-sizes, ($prefix, mobile)) / 2;
+            border-radius: map-fetch($code-sizes, ($prefix, mobile)) / 4;
+        }
+    }
 }
 
+.pier-body-text--primary {
+    color: map-get($colorsCyan, dark-1);
+}
+
+.pier-body-text--error {
+    color: map-get($colorsRed, default);
+}
+
+.pier-body-text--green {
+    color: map-get($colorsGreen, dark-1);
+}
+
+.pier-body-text--blue {
+    color: map-get($colorsBlue, default);
+}
+
+.pier-body-text--dark.pier-body-text--primary {
+	color: map-get($colorsCyan, light-2);
+}
+
+.pier-body-text--dark.pier-body-text--error {
+	color: map-get($colorsRed, light-1);
+}
+
+.pier-body-text--dark.pier-body-text--green {
+	color: map-get($colorsGreen, light-2);
+}
+
+.pier-body-text--dark.pier-body-text--blue {
+	color: map-get($colorsBlue, light-2);
+}
