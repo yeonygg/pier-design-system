@@ -34,7 +34,7 @@ export default function Tag({ children, size, theme, dark, disabled, pill, isSta
     pill && (classes += ` ${prefix}--pill`);
     isStatic && (classes += ` ${prefix}--static`);
 
-    className !== '' && (classes += ` ${className}`);
+    classes += ` ${className}`;
 
     return (
         <Fragment>

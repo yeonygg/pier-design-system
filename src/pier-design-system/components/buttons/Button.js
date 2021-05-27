@@ -82,11 +82,7 @@ export default function Button({ children, theme, type, value, icon, size, disab
 Button.defaultProps = {
     type: 'hero',
     size: 'md',
-    disabled: false,
     cap: '',
-    pill: false,
-    error: false,
-    dark: false,
     className: '',
 };
 
