@@ -9,7 +9,7 @@ import breadcrumbs from './breadcrumbs/_index';
 import navigation from './navigation/_index';
 import tags from './tags/_index';
 import cards from './cards/_index';
-import wells from './cards copy/_index';
+import wells from './wells/_index';
 import bubbleMenu from './bubble-menu/_index';
 import buttonHero from './button-hero/_index';
 import buttonStandard from './button-standard/_index';
