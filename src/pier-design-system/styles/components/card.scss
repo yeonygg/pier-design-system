@@ -17,12 +17,7 @@ $card-radii: (
 
 .pier-card--dark {
     background-color: map-get($colorsGrays, darker);
-    border: 0.0625rem solid map-get($colorsGrays, gray);
-}
-
-.pier-card--primary {
-	background-color: map-get($colorsCyan, light-4);
-	border: 0.0625rem solid map-get($colorsCyan, default);
+    border: 0.0625rem solid map-get($colorsGrays, dark-2);
 }
 
 @each $prefix, $radius in $card-radii {
@@ -67,19 +62,45 @@ $card-radii: (
 
 }
 
+.pier-card--primary {
+	background-color: map-get($colorsCyan, light-4);
+	border: 0.0625rem solid map-get($colorsCyan, light-3);
+}
+
 .pier-card--error {
 	background-color: map-get($colorsRed, light-4);
-	border: 0.0625rem solid map-get($colorsRed, default);
+	border: 0.0625rem solid map-get($colorsRed, light-3);
 }
 
 .pier-card--green {
 	background-color: map-get($colorsGreen, light-4);
-	border: 0.0625rem solid map-get($colorsGreen, default);
+	border: 0.0625rem solid map-get($colorsGreen, light-3);
 }
 
 .pier-card--blue {
 	background-color: map-get($colorsBlue, light-4);
-	border: 0.0625rem solid map-get($colorsBlue, default);
+	border: 0.0625rem solid map-get($colorsBlue, light-3);
 }
+
+.pier-card--dark.pier-card--primary {
+	background-color: map-get($colorsCyan, dark-4);
+	border: 0.0625rem solid map-get($colorsCyan, dark-3);
+}
+
+.pier-card--dark.pier-card--error {
+	background-color: map-get($colorsRed, dark-4);
+	border: 0.0625rem solid map-get($colorsRed, dark-3);
+}
+
+.pier-card--dark.pier-card--green {
+	background-color: map-get($colorsGreen, dark-4);
+	border: 0.0625rem solid map-get($colorsGreen, dark-3);
+}
+
+.pier-card--dark.pier-card--blue {
+	background-color: map-get($colorsBlue, dark-4);
+	border: 0.0625rem solid map-get($colorsBlue, dark-3);
+}
+
 
 

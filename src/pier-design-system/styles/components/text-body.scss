@@ -107,3 +107,19 @@ $code-sizes: (
 .pier-body-text--blue {
     color: map-get($colorsBlue, default);
 }
+
+.pier-body-text--dark.pier-body-text--primary {
+	color: map-get($colorsCyan, light-2);
+}
+
+.pier-body-text--dark.pier-body-text--error {
+	color: map-get($colorsRed, light-1);
+}
+
+.pier-body-text--dark.pier-body-text--green {
+	color: map-get($colorsGreen, light-2);
+}
+
+.pier-body-text--dark.pier-body-text--blue {
+	color: map-get($colorsBlue, light-2);
+}
