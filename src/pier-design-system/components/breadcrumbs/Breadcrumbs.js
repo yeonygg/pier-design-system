@@ -1,8 +1,7 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 import { Fragment } from 'react';
 
-export default function Breadcrumbs({ children, maxCrumbs, dark, className, style }) {
+function Breadcrumbs({ children, maxCrumbs, dark, className, style }) {
     let prefix = 'pier-breadcrumbs',
         classes = prefix;
 
@@ -10,7 +9,7 @@ export default function Breadcrumbs({ children, maxCrumbs, dark, className, styl
 
     dark && (classes += ` ${prefix}--dark`);
 
-    className !== '' && (classes += ` ${className}`);
+    className && (classes += ` ${className}`);
 
     const getLastCrumbs = () => {
         let lastCrumbs = [];
@@ -37,10 +36,7 @@ export default function Breadcrumbs({ children, maxCrumbs, dark, className, styl
     );
 }
 
-Breadcrumbs.defaultProps = {
-    className: '',
-    dark: false,
-};
+Breadcrumbs.defaultProps = {};
 
 Breadcrumbs.propTypes = {
     children: PropTypes.node.isRequired,
@@ -49,3 +45,5 @@ Breadcrumbs.propTypes = {
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default Breadcrumbs;

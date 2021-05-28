@@ -25,9 +25,8 @@ export { default as InputCheckbox } from './inputs/InputCheckbox';
 export { default as InputRadio } from './inputs/InputRadio';
 export { default as InputToggle } from './inputs/InputToggle';
 export { default as InputGroup } from './inputs/InputGroup';
+export { default as InputCombo } from './inputs/InputCombo';
 export { default as Form } from './inputs/Form';
-//link
-export { default as Link } from './link/Link';
 //list
 export { default as List } from './list/List';
 export { default as ListItem } from './list/ListItem';
@@ -50,3 +49,4 @@ export { default as BodyText } from './text/BodyText';
 export { default as CodeBlock } from './text/CodeBlock';
 export { default as Heading } from './text/Heading';
 export { default as Label } from './text/Label';
+export { default as Link } from './text/Link';

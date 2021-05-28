@@ -8,7 +8,7 @@ import group from './group';
 import block from './block';
 
 export default {
-    title: 'Button-hero',
+    title: 'Button - Hero',
     slug: 'button-hero',
     description: 'This is a description for buttons.',
     'last-updated': '3/30/21',

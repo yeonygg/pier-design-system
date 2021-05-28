@@ -2,3 +2,11 @@
 	opacity: 0.4;
 	pointer-events: none;
 }
+
+.-show {
+	opacity: 1;
+}
+
+.-hide {
+	opacity: 0;
+}

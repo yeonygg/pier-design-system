@@ -1,13 +1,12 @@
-import react from 'react';
 import PropTypes from 'prop-types';
-import { BodyText } from 'dist';
+import BodyText from '../text/BodyText';
 import Label from '../text/Label';
 
-export default function InputGroup({ children, htmlFor, label, size, error, errorMessage, dark, className, style }) {
+function InputGroup({ children, htmlFor, label, size, error, errorMessage, dark, className, style }) {
     let prefix = `pier-input-group`,
         classes = prefix;
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     return (
         <div className={classes} style={style}>
@@ -22,17 +21,16 @@ export default function InputGroup({ children, htmlFor, label, size, error, erro
     );
 }
 
-InputGroup.defaultProps = {
-    className: '',
-    errorMessage: '',
-};
+InputGroup.defaultProps = {};
 
 InputGroup.propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
     htmlFor: PropTypes.string,
-    size: PropTypes.string,
+    size: PropTypes.oneOf(['sm', 'md', 'lg']),
     error: PropTypes.bool,
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default InputGroup;

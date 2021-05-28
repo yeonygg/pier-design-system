@@ -51,6 +51,16 @@
 			}
 		}
 	}
+
+	&:active {
+		color: map-get($colorsGrays, "dark-1");
+
+		.pier-nav__item-icon {
+			&:before {
+				opacity: .8;
+			}
+		}
+	}
 }
 
 .pier-nav__item-icon {
@@ -89,7 +99,7 @@
 		color: map-get($colorsGrays, "darker");
 	}
 
-	&:hover ~ .pier-nav__item {
+	&:hover~.pier-nav__item {
 		background-color: map-get($colorsGrays, white);
 		color: map-get($colorsGrays, "darker");
 
@@ -100,6 +110,10 @@
 				background-clip: text;
 			}
 		}
+	}
+
+	&:active {
+		color: map-get($colorsGrays, "dark-1");
 	}
 }
 
@@ -118,7 +132,7 @@
 	transition: all .2s ease-in-out;
 }
 
-.pier-nav__item-dropdown-toggle--toggled ~ .pier-nav__item-dropdown {
+.pier-nav__item-dropdown-toggle--toggled~.pier-nav__item-dropdown {
 	transform: scaleY(1);
 	max-height: 2000px;
 }
@@ -144,25 +158,36 @@
 	padding-left: 31px;
 	color: map-get($colorsGrays, "dark-1");
 
+	&:before {
+		content: "";
+		height: 100%;
+		width: 2px;
+		margin-right: 16px;
+		background: map-get($colorsGrays, "gray-4");
+	}
+
 	&:hover {
 		background-color: map-get($colorsGrays, white);
 		color: map-get($colorsGrays, "darker");
 
-		.pier-nav__sub-item-line {
+		&:before {
 			background: build-gradient(0deg, primaryBoulevard);
 		}
 	}
-}
 
-.pier-nav__sub-item-line {
-	height: 100%;
-	width: 2px;
-	margin-right: 16px;
-	background: map-get($colorsGrays, "gray-4");
+	&:active {
+		color: map-get($colorsGrays, "dark-1");
+
+		&:before {
+			background: build-gradient(0deg, primaryBoulevard);
+			opacity: .8;
+		}
+	}
+
 }
 
 .pier-nav-container {
 	display: block;
 	position: relative;
-	
+
 }

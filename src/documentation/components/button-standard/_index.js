@@ -10,7 +10,7 @@ import group from './group';
 import block from './block';
 
 export default {
-    title: 'Button-standard',
+    title: 'Button - Standard',
     slug: 'button-standard',
     description: 'This is a description for buttons.',
     'last-updated': '3/30/21',

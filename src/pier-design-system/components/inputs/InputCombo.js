@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
-function NavItemGroup({ children, className, style }) {
-    var prefix = 'pier-nav__item-group',
+function InputCombo({ children, className, style }) {
+    let prefix = `pier-input-combo`,
         classes = prefix;
 
     className && (classes += ` ${className}`);
@@ -13,12 +13,12 @@ function NavItemGroup({ children, className, style }) {
     );
 }
 
-NavItemGroup.defaultProps = {};
+InputCombo.defaultProps = {};
 
-NavItemGroup.propTypes = {
+InputCombo.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
     style: PropTypes.object,
 };
 
-export default NavItemGroup;
+export default InputCombo;

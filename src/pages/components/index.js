@@ -9,7 +9,7 @@ import Section from 'src/pier-design-system/components/containers/Section';
 import Card from 'src/pier-design-system/components/containers/Card';
 import Heading from 'src/pier-design-system/components/text/Heading';
 import BodyText from 'src/pier-design-system/components/text/BodyText';
-import Link from 'src/pier-design-system/components/link/Link';
+import Link from 'src/pier-design-system/components/text/Link';
 
 export default function ComponentsIndex({ appData }) {
     const components = appData.components;
@@ -35,21 +35,21 @@ export default function ComponentsIndex({ appData }) {
                 <Section>
                     {components.map((item, index) => {
                         return (
-                            <Card>
-                                <Section>
-                                    <NextLink href={`/components/${item.slug}`}>
-                                        <a>
+                            <NextLink href={`/components/${item.slug}`}>
+                                <a>
+                                    <Card isLink>
+                                        <Section>
                                             <Heading size="sm" className="-m-b-2">
                                                 <Link>{item.title}</Link>
                                             </Heading>
-                                        </a>
-                                    </NextLink>
-                                    <BodyText size="xs" color="light-gray">
-                                        {item['last-updated']}
-                                    </BodyText>
-                                    <BodyText className="-m-b-0">{item.description}</BodyText>
-                                </Section>
-                            </Card>
+                                            <BodyText size="xs" color="light-gray">
+                                                {item['last-updated']}
+                                            </BodyText>
+                                            <BodyText className="-m-b-0">{item.description}</BodyText>
+                                        </Section>
+                                    </Card>
+                                </a>
+                            </NextLink>
                         );
                     })}
                 </Section>

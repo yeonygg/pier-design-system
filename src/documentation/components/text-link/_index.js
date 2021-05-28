@@ -1,17 +1,14 @@
 import ReactDOMServer from 'react-dom/server';
 import base from './base';
 import sizes from './sizes';
-import styles from './styles';
 import disabled from './disabled';
-import pill from './pill';
 import dark from './dark';
-import staticTag from './static';
 
 export default {
-    title: 'Tags',
-    slug: 'tags',
-    description: 'This is a description for tags.',
-    'last-updated': '3/30/21',
+    title: 'Text - Link',
+    slug: 'text-link',
+    description: 'This is a description for link.',
+    'last-updated': '3/25/21',
     variations: [
         {
             name: 'Base',
@@ -26,34 +23,16 @@ export default {
             dark: false,
         },
         {
-            name: 'Styles',
-            description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(styles),
-            dark: false,
-        },
-        {
             name: 'Disabled',
             description: '',
             markup: ReactDOMServer.renderToStaticMarkup(disabled),
             dark: false,
         },
         {
-            name: 'Pill',
-            description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(pill),
-            dark: false,
-        },
-        {
             name: 'Dark',
-            description: '',
+            description: 'This is the dark modifier.',
             markup: ReactDOMServer.renderToStaticMarkup(dark),
             dark: true,
-        },
-        {
-            name: 'Static',
-            description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(staticTag),
-            dark: false,
         },
     ],
 };

@@ -5,6 +5,7 @@ import BodyText from 'src/pier-design-system/components/text/BodyText';
 import Section from 'src/pier-design-system/components/containers/Section';
 import Breadcrumbs from 'src/pier-design-system/components/breadcrumbs/Breadcrumbs';
 import BreadcrumbsLink from 'src/pier-design-system/components/breadcrumbs/BreadcrumbsLink';
+import Link from 'src/pier-design-system/components/text/Link';
 import HR from 'src/pier-design-system/components/horizonal-rule/HR';
 
 export default function PageHeading({ breadcrumbs, title, lastUpdated, description }) {
@@ -12,13 +13,15 @@ export default function PageHeading({ breadcrumbs, title, lastUpdated, descripti
         <Section className="-p-b-0">
             <Breadcrumbs style={{ marginBottom: '16px' }}>
                 {breadcrumbs.map((item, i) => (
-                    <BreadcrumbsLink key={i} disabled={item.disabled}>
+                    <BreadcrumbsLink key={i}>
                         {!item.disabled ? (
                             <NextLink href={item.link}>
-                                <a>{item.label}</a>
+                                <a>
+                                    <Link>{item.label}</Link>
+                                </a>
                             </NextLink>
                         ) : (
-                            <a>{item.label}</a>
+                            <Link disabled>{item.label}</Link>
                         )}
                     </BreadcrumbsLink>
                 ))}
@@ -27,7 +30,7 @@ export default function PageHeading({ breadcrumbs, title, lastUpdated, descripti
                 <Heading style={{ paddingRight: '4px' }} className="-m-b-1">
                     {title}
                 </Heading>
-                <HR color="hero" />
+                <HR theme="hero" />
             </div>
             <BodyText size="xs" color="light-gray">
                 Last updated: {lastUpdated}

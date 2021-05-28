@@ -1,20 +1,26 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function NavItem({ children, icon }) {
+function NavItem({ children, icon, className, style }) {
+    var prefix = 'pier-nav__item',
+        classes = prefix;
+
+    className && (classes += ` ${className}`);
+
     return (
-        <div className="pier-nav__item">
-            {icon !== '' && <span className={'pier-nav__item-icon ' + icon}></span>}
+        <div className={classes} style={style}>
+            {icon && <span className={'pier-nav__item-icon ' + icon}></span>}
             {children}
         </div>
     );
 }
 
-NavItem.defaultProps = {
-    icon: '',
-};
+NavItem.defaultProps = {};
 
 NavItem.propTypes = {
     children: PropTypes.node.isRequired,
     icon: PropTypes.string,
+    className: PropTypes.string,
+    style: PropTypes.object,
 };
+
+export default NavItem;

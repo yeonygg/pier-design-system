@@ -1,47 +1,45 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function BodyText({ children, size, dark, disabled, className, style }) {
+function Link({ children, size, dark, disabled, onClick, className, style }) {
     let prefix = 'pier-link',
         classes = prefix;
 
     switch (size) {
-        case 'md':
-            classes += ``;
+        case 'xs':
+            classes += ` ${prefix}--xs`;
             break;
         case 'sm':
             classes += ` ${prefix}--sm`;
             break;
-        case 'xs':
-            classes += ` ${prefix}--xs`;
+        case 'md':
+            classes += ``;
             break;
     }
 
     dark && (classes += ` ${prefix}--dark`);
-
     disabled && (classes += ` ${prefix}--disabled`);
 
-    className !== '' && (classes += ` ${className}`);
+    className && (classes += ` ${className}`);
 
     return (
-        <span className={classes} style={style}>
+        <span className={classes} style={style} onClick={onClick}>
             {children}
         </span>
     );
 }
 
-BodyText.defaultProps = {
+Link.defaultProps = {
     size: 'md',
-    dark: false,
-    disabled: false,
-    className: '',
 };
 
-BodyText.propTypes = {
+Link.propTypes = {
     children: PropTypes.node.isRequired,
-    size: PropTypes.string,
+    size: PropTypes.oneOf(['xs, sm, md']),
     dark: PropTypes.bool,
     disabled: PropTypes.bool,
+    onClick: PropTypes.func,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default Link;

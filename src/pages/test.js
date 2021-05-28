@@ -40,9 +40,18 @@ export default function TestPage() {
                     <InputRadio name="radio">Test 3</InputRadio>
                 </InputGroup>
                 <InputToggle>Test Toggle</InputToggle>
-                <Button type="submit">Submit</Button>
+                <Button type="submit" cap="cap">
+                    Submit
+                </Button>
             </Form>
-            <Accordion title="Table" size="sm" inCard>
+            <Accordion
+                title="Table"
+                size="sm"
+                inCard
+                onClick={() => {
+                    console.log('test');
+                }}
+            >
                 <Table
                     columns={['column1', 'column2', 'column3']}
                     data={[

@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-export default function Tag({ children, size, theme, dark, disabled, pill, isStatic, className, style }) {
+function Tag({ children, size, theme, dark, disabled, pill, isStatic, onClick, className, style }) {
     let prefix = 'pier-tag',
         classes = prefix;
 
@@ -19,7 +19,7 @@ export default function Tag({ children, size, theme, dark, disabled, pill, isSta
 
     switch (theme) {
         case 'default':
-            classes += ` `;
+            classes += ``;
             break;
         case 'hero':
             classes += ` ${prefix}--hero`;
@@ -34,7 +34,7 @@ export default function Tag({ children, size, theme, dark, disabled, pill, isSta
     pill && (classes += ` ${prefix}--pill`);
     isStatic && (classes += ` ${prefix}--static`);
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     return (
         <Fragment>
@@ -43,7 +43,7 @@ export default function Tag({ children, size, theme, dark, disabled, pill, isSta
                     {children}
                 </span>
             ) : (
-                <span className={classes} style={style} tabIndex="0">
+                <span className={classes} style={style} onClick={onClick} tabIndex="0">
                     {children}
                 </span>
             )}
@@ -53,14 +53,18 @@ export default function Tag({ children, size, theme, dark, disabled, pill, isSta
 
 Tag.defaultProps = {
     size: 'md',
-    className: '',
+    theme: 'default',
 };
 
 Tag.propTypes = {
     children: PropTypes.node.isRequired,
-    size: PropTypes.string,
+    size: PropTypes.oneOf(['sm', 'md', 'lg']),
+    theme: PropTypes.oneOf(['default', 'hero', 'primary']),
     dark: PropTypes.bool,
     disabled: PropTypes.bool,
+    onClick: PropTypes.func,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default Tag;

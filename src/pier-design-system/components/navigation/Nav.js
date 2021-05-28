@@ -1,14 +1,12 @@
-import react from 'react';
 import PropTypes from 'prop-types';
-import IconButton from '../buttons/IconButton';
 
-export default function Nav({ children, mobile, className, style }) {
+function Nav({ children, mobile, className, style }) {
     var prefix = 'pier-nav',
         classes = prefix;
 
     mobile && (classes += ` ${prefix}--mobile`);
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     return (
         <div className={classes} style={style}>
@@ -17,9 +15,7 @@ export default function Nav({ children, mobile, className, style }) {
     );
 }
 
-Nav.defaultProps = {
-    className: '',
-};
+Nav.defaultProps = {};
 
 Nav.propTypes = {
     children: PropTypes.node.isRequired,
@@ -27,3 +23,5 @@ Nav.propTypes = {
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default Nav;

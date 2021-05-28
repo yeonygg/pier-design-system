@@ -1,7 +1,6 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function InputText({ type, name, placeholder, value, onChange, size, disabled, cap, pill, error, dark, className, style }) {
+function InputText({ type, name, placeholder, value, onChange, onFocus, onBlur, size, disabled, cap, pill, error, dark, className, style }) {
     let prefix = `pier-input-text`,
         classes = prefix;
 
@@ -18,6 +17,9 @@ export default function InputText({ type, name, placeholder, value, onChange, si
     }
 
     switch (cap) {
+        case 'cap':
+            classes += ``;
+            break;
         case 'right':
             classes += ` ${prefix}--cap-right`;
             break;
@@ -34,14 +36,26 @@ export default function InputText({ type, name, placeholder, value, onChange, si
     dark && (classes += ` ${prefix}--dark`);
     disabled && (classes += ` ${prefix}--disabled`);
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
-    return <input name={name} type={type || 'text'} className={classes} style={style} placeholder={placeholder} value={value} onChange={onChange}></input>;
+    return (
+        <input
+            name={name}
+            type={type || 'text'}
+            className={classes}
+            style={style}
+            placeholder={placeholder}
+            value={value}
+            onChange={onChange}
+            onFocus={onFocus}
+            onBlur={onBlur}
+        ></input>
+    );
 }
 
 InputText.defaultProps = {
     size: 'md',
-    className: '',
+    cap: 'cap',
 };
 
 InputText.propTypes = {
@@ -50,12 +64,16 @@ InputText.propTypes = {
     placeholder: PropTypes.string,
     value: PropTypes.string,
     onChange: PropTypes.func,
-    size: PropTypes.string,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
+    size: PropTypes.oneOf(['sm', 'md', 'lg']),
     disabled: PropTypes.bool,
-    cap: PropTypes.string,
+    cap: PropTypes.oneOf(['cap', 'none', 'right', 'left']),
     pill: PropTypes.bool,
     error: PropTypes.bool,
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default InputText;

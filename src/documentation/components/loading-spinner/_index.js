@@ -5,7 +5,7 @@ import dark from './dark';
 
 export default {
     title: 'Loading Spinner',
-    slug: 'loading spinner',
+    slug: 'loading-spinner',
     description: 'This is a description for Text - Heading.',
     'last-updated': '3/25/21',
     variations: [
