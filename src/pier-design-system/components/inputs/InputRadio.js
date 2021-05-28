@@ -1,7 +1,6 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function InputRadio({ children, name, checked, value, onChange, size, disabled, error, dark, className, style }) {
+function InputRadio({ children, name, checked, value, onChange, size, disabled, error, dark, className, style }) {
     let prefix = `pier-input-radio`,
         classes = prefix;
 
@@ -21,7 +20,7 @@ export default function InputRadio({ children, name, checked, value, onChange, s
     dark && (classes += ` ${prefix}--dark`);
     disabled && (classes += ` ${prefix}--disabled`);
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     return (
         <label className={classes} style={style}>
@@ -34,19 +33,20 @@ export default function InputRadio({ children, name, checked, value, onChange, s
 
 InputRadio.defaultProps = {
     size: 'md',
-    className: '',
 };
 
 InputRadio.propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
     name: PropTypes.string,
     checked: PropTypes.bool,
     value: PropTypes.string,
     onChange: PropTypes.func,
-    size: PropTypes.string,
+    size: PropTypes.oneOf(['sm', 'md', 'lg']),
     disabled: PropTypes.bool,
     error: PropTypes.bool,
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default InputRadio;

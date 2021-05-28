@@ -1,30 +1,26 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function BreadcrumbsLink({ children, disabled, className, style }) {
-    let prefix = 'pier-breadcrumbs',
-        crumbClasses = prefix + '__crumb',
-        linkClasses = 'pier-link';
+function BreadcrumbsLink({ children, className, style }) {
+    let prefix = 'pier-breadcrumbs__crumb',
+        classes = prefix;
 
-    disabled && (linkClasses += ` pier-link--disabled`);
-
-    className !== '' && (crumbClasses += ` ${className}`);
+    className && (classes += ` ${className}`);
 
     return (
-        <div className={crumbClasses} style={style}>
-            <span className={linkClasses}>{children}</span>
+        <div className={classes} style={style}>
+            {children}
         </div>
     );
 }
 
-BreadcrumbsLink.defaultProps = {
-    disabled: false,
-    className: '',
-};
+BreadcrumbsLink.defaultProps = {};
 
 BreadcrumbsLink.propTypes = {
     children: PropTypes.node.isRequired,
     disabled: PropTypes.bool,
+    onClick: PropTypes.func,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default BreadcrumbsLink;

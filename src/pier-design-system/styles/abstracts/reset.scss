@@ -140,3 +140,7 @@ button {
 table {
 	border-spacing: 0;
 }
+
+:focus-visible {
+	outline: 0;
+}

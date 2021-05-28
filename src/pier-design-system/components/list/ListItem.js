@@ -1,25 +1,24 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function List({ children, className, style }) {
-    let prefix,
-        classes = 'pier-list__item';
+function ListItem({ children, className, style }) {
+    let prefix = 'pier-list',
+        classes = `${prefix}__item`;
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     return (
         <li className={classes} style={style}>
-            <div className="pier-list__content">{children}</div>
+            <div className={`${prefix}__content`}>{children}</div>
         </li>
     );
 }
 
-List.defaultProps = {
-    className: '',
-};
+ListItem.defaultProps = {};
 
-List.propTypes = {
+ListItem.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default ListItem;

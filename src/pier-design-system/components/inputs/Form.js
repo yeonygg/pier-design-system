@@ -1,25 +1,22 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function Form({ children, name, action, method, autocomplete, className, style }) {
+function Form({ children, name, action, method, autocomplete, className, style }) {
     let prefix = `pier-form`,
         classes = prefix;
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     return (
-        <form name={name} action={action} method={method} autocomplete={autocomplete} className={classes} style={style}>
+        <form name={name} action={action} method={method} autoComplete={autocomplete} className={classes} style={style}>
             {children}
         </form>
     );
 }
 
-Form.defaultProps = {
-    className: '',
-};
+Form.defaultProps = {};
 
 Form.propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
     name: PropTypes.string,
     action: PropTypes.string,
     method: PropTypes.string,
@@ -27,3 +24,5 @@ Form.propTypes = {
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default Form;

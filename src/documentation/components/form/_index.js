@@ -1,10 +1,9 @@
 import ReactDOMServer from 'react-dom/server';
 import inputForm from './input-form';
 
-
 export default {
-    title: 'Input - Form',
-    slug: 'input-form',
+    title: 'Form',
+    slug: 'form',
     description: 'This is a description for input-form.',
     'last-updated': '4/6/21',
     variations: [
@@ -14,6 +13,5 @@ export default {
             markup: ReactDOMServer.renderToStaticMarkup(inputForm),
             dark: false,
         },
-
     ],
 };

@@ -1,7 +1,6 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function Button({ children, theme, type, value, icon, size, disabled, cap, pill, error, dark, block, onClick, className, style }) {
+function Button({ children, theme, size, cap, type, value, icon, disabled, pill, error, dark, block, onClick, className, style }) {
     let prefix = `pier-button-standard`,
         classes = prefix;
 
@@ -37,13 +36,16 @@ export default function Button({ children, theme, type, value, icon, size, disab
     }
 
     switch (cap) {
-        case 'cap-right':
+        case 'cap':
+            classes += ``;
+            break;
+        case 'right':
             classes += ` ${prefix}--cap-right`;
             break;
-        case 'cap':
-            classes += ` ${prefix}--cap`;
+        case 'none':
+            classes += ` ${prefix}--cap-none`;
             break;
-        case 'cap-left':
+        case 'left':
             classes += ` ${prefix}--cap-left`;
             break;
     }
@@ -54,7 +56,7 @@ export default function Button({ children, theme, type, value, icon, size, disab
     disabled && (classes += ` ${prefix}--disabled`);
     block && (classes += ` ${prefix}--block`);
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     function renderButton() {
         if (prefix == 'pier-button-hero') {
@@ -80,30 +82,27 @@ export default function Button({ children, theme, type, value, icon, size, disab
 }
 
 Button.defaultProps = {
-    type: 'hero',
+    theme: 'hero',
     size: 'md',
-    disabled: false,
-    cap: '',
-    pill: false,
-    error: false,
-    dark: false,
-    className: '',
+    cap: 'cap',
 };
 
 Button.propTypes = {
     children: PropTypes.node.isRequired,
-    color: PropTypes.string,
+    theme: PropTypes.oneOf(['default', 'hero', 'primary', 'secondary']),
+    size: PropTypes.oneOf(['sm', 'md', 'lg']),
+    cap: PropTypes.oneOf(['cap', 'none', 'right', 'left']),
     type: PropTypes.string,
     value: PropTypes.string,
     icon: PropTypes.string,
-    size: PropTypes.string,
     disabled: PropTypes.bool,
-    cap: PropTypes.string,
     pill: PropTypes.bool,
     error: PropTypes.bool,
     dark: PropTypes.bool,
     block: PropTypes.bool,
-    onClick: PropTypes.bool,
+    onClick: PropTypes.func,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default Button;

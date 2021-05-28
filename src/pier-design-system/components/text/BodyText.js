@@ -1,33 +1,33 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function BodyText({ children, size, color, dark, className, style }) {
-    let classes = 'pier-body-text';
+function BodyText({ children, size, color, dark, className, style }) {
+    let prefix = 'pier-body-text',
+        classes = prefix;
 
     switch (size) {
-        case 'md':
-            classes += '';
+        case 'xs':
+            classes += ` ${prefix}--xs`;
             break;
         case 'sm':
-            classes += ' pier-body-text--sm';
+            classes += ` ${prefix}--sm`;
             break;
-        case 'xs':
-            classes += ' pier-body-text--xs';
+        case 'md':
+            classes += ``;
             break;
     }
 
     switch (color) {
         case 'default':
-            classes += '';
+            classes += ``;
             break;
         case 'light-gray':
-            classes += ' pier-body-text--light-gray';
+            classes += ` ${prefix}--light-gray`;
             break;
     }
 
-    dark && (classes += ' pier-body-text--dark');
+    dark && (classes += ` ${prefix}--dark`);
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     return (
         <p className={classes} style={style}>
@@ -39,15 +39,15 @@ export default function BodyText({ children, size, color, dark, className, style
 BodyText.defaultProps = {
     size: 'md',
     color: 'default',
-    dark: false,
-    className: '',
 };
 
 BodyText.propTypes = {
     children: PropTypes.node.isRequired,
-    size: PropTypes.string,
-    color: PropTypes.string,
+    size: PropTypes.oneOf(['xs', 'sm', 'md']),
+    color: PropTypes.oneOf(['default', 'light-gray']),
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default BodyText;

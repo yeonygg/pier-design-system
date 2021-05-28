@@ -1,7 +1,6 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function IconButton({ children, type, value, icon, size, disabled, cap, pill, error, dark, onClick, className, style }) {
+function IconButton({ children, size, type, value, icon, disabled, pill, error, dark, onClick, className, style }) {
     let prefix = `pier-button-icon`,
         classes = prefix;
 
@@ -17,24 +16,12 @@ export default function IconButton({ children, type, value, icon, size, disabled
             break;
     }
 
-    switch (cap) {
-        case 'cap-right':
-            classes += ` ${prefix}--cap-right`;
-            break;
-        case 'cap':
-            classes += ` ${prefix}--cap`;
-            break;
-        case 'cap-left':
-            classes += ` ${prefix}--cap-left`;
-            break;
-    }
-
     pill && (classes += ` ${prefix}--pill`);
     error && (classes += ` ${prefix}--error`);
     dark && (classes += ` ${prefix}--dark`);
     disabled && (classes += ` ${prefix}--disabled`);
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     return (
         <button className={classes} style={style} type={type} value={value} onClick={onClick}>
@@ -46,22 +33,15 @@ export default function IconButton({ children, type, value, icon, size, disabled
 
 IconButton.defaultProps = {
     size: 'md',
-    disabled: false,
-    cap: '',
-    pill: false,
-    error: false,
-    dark: false,
-    className: '',
 };
 
 IconButton.propTypes = {
     children: PropTypes.node,
+    size: PropTypes.oneOf(['sm', 'md', 'lg']),
     type: PropTypes.string,
     value: PropTypes.string,
     icon: PropTypes.string,
-    size: PropTypes.string,
     disabled: PropTypes.bool,
-    cap: PropTypes.string,
     pill: PropTypes.bool,
     error: PropTypes.bool,
     dark: PropTypes.bool,
@@ -69,3 +49,5 @@ IconButton.propTypes = {
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default IconButton;

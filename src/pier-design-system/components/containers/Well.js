@@ -1,22 +1,42 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function Well({ children, size, className, style }) {
-    let classes = 'pier-well';
+function Well({ children, size, theme, dark, className, style }) {
+    let prefix = 'pier-well',
+        classes = prefix;
 
     switch (size) {
-        case 'lg':
-            classes += '';
+        case 'sm':
+            classes += ` ${prefix}--sm`;
             break;
         case 'md':
-            classes += ' pier-well--md';
+            classes += ` ${prefix}--md`;
             break;
-        case 'sm':
-            classes += ' pier-well--sm';
+        case 'lg':
+            classes += ``;
             break;
     }
 
-    classes += ` ${className}`;
+    switch (theme) {
+        case 'default':
+            classes += ``;
+            break;
+        case 'primary':
+            classes += ` ${prefix}--primary`;
+            break;
+        case 'error':
+            classes += ` ${prefix}--error`;
+            break;
+        case 'green':
+            classes += ` ${prefix}--green`;
+            break;
+        case 'blue':
+            classes += ` ${prefix}--blue`;
+            break;
+    }
+
+    dark && (classes += ` ${prefix}--dark`);
+
+    className && (classes += ` ${className}`);
 
     return (
         <div className={classes} style={style}>
@@ -27,12 +47,16 @@ export default function Well({ children, size, className, style }) {
 
 Well.defaultProps = {
     size: 'lg',
-    className: '',
+    theme: 'default',
 };
 
 Well.propTypes = {
     children: PropTypes.node.isRequired,
-    size: PropTypes.string,
+    size: PropTypes.oneOf(['sm', 'md', 'lg']),
+    theme: PropTypes.oneOf(['default', 'primary', 'error', 'green', 'blue']),
+    dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default Well;

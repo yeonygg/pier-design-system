@@ -4,8 +4,8 @@ import color from './color';
 import dark from './dark';
 
 export default {
-    title: 'Wells',
-    slug: 'wells',
+    title: 'Well',
+    slug: 'well',
     description: 'This is a description for wells.',
     'last-updated': '3/24/21',
     variations: [

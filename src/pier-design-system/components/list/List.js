@@ -1,28 +1,26 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 import { Fragment } from 'react';
 
-export default function List({ children, ordered, size, dark, className, style }) {
+function List({ children, size, ordered, dark, className, style }) {
     let prefix = 'pier-list',
         classes = prefix;
 
-    ordered && (classes += ` ${prefix}--ordered`);
-
     switch (size) {
-        case 'lg':
-            classes += ``;
-            break;
-        case 'md':
-            classes += ` ${prefix}--md`;
-            break;
         case 'sm':
             classes += ` ${prefix}--sm`;
             break;
+        case 'md':
+            classes += ``;
+            break;
+        case 'lg':
+            classes += ` ${prefix}--lg`;
+            break;
     }
 
+    ordered && (classes += ` ${prefix}--ordered`);
     dark && (classes += ` ${prefix}--dark`);
 
-    className !== '' && (classes += ` ${className}`);
+    className && (classes += ` ${className}`);
 
     return (
         <Fragment>
@@ -40,17 +38,16 @@ export default function List({ children, ordered, size, dark, className, style }
 }
 
 List.defaultProps = {
-    ordered: false,
-    size: 'lg',
-    className: '',
-    dark: false,
+    size: 'md',
 };
 
 List.propTypes = {
     children: PropTypes.node.isRequired,
+    size: PropTypes.oneOf(['sm', 'md', 'lg']),
     ordered: PropTypes.bool,
-    size: PropTypes.string,
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default List;

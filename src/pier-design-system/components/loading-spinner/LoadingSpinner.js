@@ -26,14 +26,21 @@ export default function LoadingSpinner({ theme, size, dark, className, style }) 
     }
 
     dark && (classes += ` ${prefix}--dark`);
-    classes += ` ${className}`;
+
+    className && (classes += ` ${className}`);
 
     return <div className={classes} style={style}></div>;
 }
 
-LoadingSpinner.defaultProps = {};
+LoadingSpinner.defaultProps = {
+    theme: 'default',
+    size: 'md',
+};
 
 LoadingSpinner.propTypes = {
+    theme: PropTypes.oneOf(['default', 'gumgum']),
+    size: PropTypes.oneOf(['sm', 'md', 'lg']),
+    dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
 };

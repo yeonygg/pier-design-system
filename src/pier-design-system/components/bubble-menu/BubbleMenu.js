@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export default function BubbleMenu({ children, open, position, size, dark, className, style }) {
+function BubbleMenu({ children, open, size, position, dark, className, style }) {
     var prefix = 'pier-bubble-menu',
         classes = prefix;
 
@@ -34,7 +34,7 @@ export default function BubbleMenu({ children, open, position, size, dark, class
     dark && (classes += ` ${prefix}--dark`);
     open && (classes += ` ${prefix}--open`);
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     return (
         <div className={classes} style={style}>
@@ -45,15 +45,17 @@ export default function BubbleMenu({ children, open, position, size, dark, class
 
 BubbleMenu.defaultProps = {
     size: 'md',
-    className: '',
+    position: 'bottom left',
 };
 
 BubbleMenu.propTypes = {
     children: PropTypes.node.isRequired,
     open: PropTypes.bool,
-    position: PropTypes.string,
-    size: PropTypes.string,
+    size: PropTypes.oneOf(['sm', 'md', 'lg']),
+    position: PropTypes.oneOf(['top left', 'top right', 'bottom left', 'bottom right']),
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default BubbleMenu;

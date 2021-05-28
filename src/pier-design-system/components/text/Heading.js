@@ -1,27 +1,33 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function Heading({ children, size, dark, className, style }) {
-    let classes = 'pier-heading';
+function Heading({ children, size, color, dark, className, style }) {
+    let prefix = 'pier-heading',
+        classes = prefix;
 
     switch (size) {
-        case 'lg':
-            classes += ' pier-heading--lg';
-            break;
-        case 'md':
-            classes += '';
+        case 'xs':
+            classes += ` ${prefix}--xs`;
             break;
         case 'sm':
-            classes += ' pier-heading--sm';
+            classes += ` ${prefix}--sm`;
             break;
-        case 'xs':
-            classes += ' pier-heading--xs';
+        case 'md':
+            classes += ``;
+            break;
+        case 'lg':
+            classes += ` ${prefix}--lg`;
             break;
     }
 
-    dark && (classes += ' pier-heading--dark');
+    switch (color) {
+        case 'default':
+            classes += ``;
+            break;
+    }
 
-    classes += ` ${className}`;
+    dark && (classes += ` ${prefix}--dark`);
+
+    className && (classes += ` ${className}`);
 
     switch (size) {
         case 'lg':
@@ -53,14 +59,16 @@ export default function Heading({ children, size, dark, className, style }) {
 
 Heading.defaultProps = {
     size: 'md',
-    dark: false,
-    className: '',
+    color: 'default',
 };
 
 Heading.propTypes = {
     children: PropTypes.node.isRequired,
-    size: PropTypes.string,
+    size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
+    color: PropTypes.oneOf(['default']),
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default Heading;

@@ -4,9 +4,9 @@ import sizes from './sizes';
 import dark from './dark';
 
 export default {
-    title: 'Bubble menu',
-    slug: 'bubble menu',
-    description: 'This is a description for buttons.',
+    title: 'Bubble Menu',
+    slug: 'bubble-menu',
+    description: 'This is a description for bubble menu.',
     'last-updated': '3/30/21',
     variations: [
         {

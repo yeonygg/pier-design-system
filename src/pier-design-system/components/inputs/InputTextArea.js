@@ -1,7 +1,6 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function InputTextArea({ name, placeholder, value, onChange, size, disabled, cap, pill, error, dark, resize, className, style }) {
+function InputTextArea({ name, placeholder, value, onChange, onFocus, onBlur, size, disabled, cap, pill, error, dark, resize, className, style }) {
     let prefix = `pier-input-textarea`,
         classes = prefix;
 
@@ -18,6 +17,9 @@ export default function InputTextArea({ name, placeholder, value, onChange, size
     }
 
     switch (cap) {
+        case 'cap':
+            classes += ``;
+            break;
         case 'right':
             classes += ` ${prefix}--cap-right`;
             break;
@@ -46,14 +48,26 @@ export default function InputTextArea({ name, placeholder, value, onChange, size
     dark && (classes += ` ${prefix}--dark`);
     disabled && (classes += ` ${prefix}--disabled`);
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
-    return <textarea name={name} className={classes} style={style} placeholder={placeholder} value={value} onChange={onChange}></textarea>;
+    return (
+        <textarea
+            name={name}
+            className={classes}
+            style={style}
+            placeholder={placeholder}
+            value={value}
+            onChange={onChange}
+            onFocus={onFocus}
+            onBlur={onBlur}
+        ></textarea>
+    );
 }
 
 InputTextArea.defaultProps = {
     size: 'md',
-    className: '',
+    cap: 'cap',
+    resize: 'vertical',
 };
 
 InputTextArea.propTypes = {
@@ -61,12 +75,17 @@ InputTextArea.propTypes = {
     placeholder: PropTypes.string,
     value: PropTypes.string,
     onChange: PropTypes.func,
-    size: PropTypes.string,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
+    size: PropTypes.oneOf(['sm', 'md', 'lg']),
     disabled: PropTypes.bool,
-    cap: PropTypes.string,
+    cap: PropTypes.oneOf(['cap', 'none', 'right', 'left']),
     pill: PropTypes.bool,
     error: PropTypes.bool,
     dark: PropTypes.bool,
+    resize: PropTypes.oneOf(['auto', 'horizontal', 'vertical']),
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default InputTextArea;

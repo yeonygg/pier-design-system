@@ -1,10 +1,22 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function NavSubLabel({ children }) {
-    return <div className="pier-nav__sub-label">{children}</div>;
+function NavSubLabel({ children, className, style }) {
+    var prefix = 'pier-nav__sub-label',
+        classes = prefix;
+
+    className && (classes += ` ${className}`);
+
+    return (
+        <div className={classes} style={style}>
+            {children}
+        </div>
+    );
 }
 
 NavSubLabel.propTypes = {
     children: PropTypes.node.isRequired,
+    className: PropTypes.string,
+    style: PropTypes.object,
 };
+
+export default NavSubLabel;

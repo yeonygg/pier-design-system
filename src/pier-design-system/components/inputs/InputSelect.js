@@ -1,7 +1,6 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function InputSelect({ children, name, value, onChange, size, disabled, cap, pill, error, dark, className, style }) {
+function InputSelect({ children, name, value, onChange, size, disabled, cap, pill, error, dark, className, style }) {
     let prefix = `pier-input-select`,
         classes = prefix;
 
@@ -18,6 +17,9 @@ export default function InputSelect({ children, name, value, onChange, size, dis
     }
 
     switch (cap) {
+        case 'cap':
+            classes += ``;
+            break;
         case 'right':
             classes += ` ${prefix}--cap-right`;
             break;
@@ -34,7 +36,7 @@ export default function InputSelect({ children, name, value, onChange, size, dis
     dark && (classes += ` ${prefix}--dark`);
     disabled && (classes += ` ${prefix}--disabled`);
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     return (
         <select name={name} className={classes} style={style} value={value} onChange={onChange}>
@@ -45,7 +47,7 @@ export default function InputSelect({ children, name, value, onChange, size, dis
 
 InputSelect.defaultProps = {
     size: 'md',
-    className: '',
+    cap: 'cap',
 };
 
 InputSelect.propTypes = {
@@ -53,12 +55,14 @@ InputSelect.propTypes = {
     name: PropTypes.string,
     value: PropTypes.string,
     onChange: PropTypes.func,
-    size: PropTypes.string,
+    size: PropTypes.oneOf(['sm', 'md', 'lg']),
     disabled: PropTypes.bool,
-    cap: PropTypes.string,
+    cap: PropTypes.oneOf(['cap', 'none', 'right', 'left']),
     pill: PropTypes.bool,
     error: PropTypes.bool,
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default InputSelect;

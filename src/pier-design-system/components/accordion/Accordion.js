@@ -1,8 +1,7 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-export default function Button({ children, title, startOpen, inCard, icon, size, disabled, dark, className, style }) {
+function Accordion({ children, title, startOpen, inCard, icon, size, disabled, dark, onClick, className, style }) {
     const [open, setOpen] = useState(startOpen);
 
     let prefix = `pier-accordion`,
@@ -28,11 +27,17 @@ export default function Button({ children, title, startOpen, inCard, icon, size,
     inCard && (classes += ` ${prefix}--card`);
     open && (classes += ` ${prefix}--open`);
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     return (
         <div className={classes} style={style}>
-            <div className="pier-accordion__title" onClick={() => setOpen(!open)}>
+            <div
+                className="pier-accordion__title"
+                onClick={() => {
+                    setOpen(!open);
+                    onClick && onClick();
+                }}
+            >
                 <h1 className="pier-accordion__heading">
                     {icon && <i className={`pier-accordion__icon ${icon}`}></i>}
                     {title}
@@ -43,21 +48,22 @@ export default function Button({ children, title, startOpen, inCard, icon, size,
     );
 }
 
-Button.defaultProps = {
-    startOpen: false,
+Accordion.defaultProps = {
     size: 'md',
-    className: '',
 };
 
-Button.propTypes = {
+Accordion.propTypes = {
     children: PropTypes.node.isRequired,
     title: PropTypes.string.isRequired,
     startOpen: PropTypes.bool,
     inCard: PropTypes.bool,
     icon: PropTypes.string,
-    size: PropTypes.string,
+    size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     disabled: PropTypes.bool,
     dark: PropTypes.bool,
+    onClick: PropTypes.func,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default Accordion;

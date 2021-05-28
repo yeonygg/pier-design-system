@@ -2,13 +2,13 @@ import textBody from './text-body/_index';
 import textHeading from './text-heading/_index';
 import textLabel from './text-label/_index';
 import textCodeblock from './text-codeblock/_index';
-import link from './link/_index';
+import link from './text-link/_index';
 import horizontalRule from './horizontal-rule/_index';
 import list from './list/_index';
 import breadcrumbs from './breadcrumbs/_index';
 import navigation from './navigation/_index';
-import tags from './tags/_index';
-import cards from './cards/_index';
+import tags from './tag/_index';
+import cards from './card/_index';
 import wells from './wells/_index';
 import bubbleMenu from './bubble-menu/_index';
 import buttonHero from './button-hero/_index';
@@ -23,7 +23,7 @@ import inputCheckbox from './input-checkbox/_index';
 import inputRadio from './input-radio/_index';
 import inputToggle from './input-toggle/_index';
 import table from './table/_index';
-import inputForm from './input-form/_index';
+import inputForm from './form/_index';
 import accordion from './accordion/_index';
 import loadingSpinner from './loading-spinner/_index';
 
@@ -58,5 +58,11 @@ componentsData.push(
     accordion,
     loadingSpinner
 );
+
+componentsData.sort(function (a, b) {
+    var textA = a.title.toUpperCase();
+    var textB = b.title.toUpperCase();
+    return textA < textB ? -1 : textA > textB ? 1 : 0;
+});
 
 export default componentsData;

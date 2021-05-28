@@ -1,7 +1,6 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function InputCheckbox({ children, name, checked, indeterminate, value, onChange, size, disabled, error, dark, className, style }) {
+function InputCheckbox({ children, name, checked, indeterminate, value, onChange, size, disabled, error, dark, className, style }) {
     let prefix = `pier-input-checkbox`,
         classes = prefix;
 
@@ -21,7 +20,7 @@ export default function InputCheckbox({ children, name, checked, indeterminate, 
     dark && (classes += ` ${prefix}--dark`);
     disabled && (classes += ` ${prefix}--disabled`);
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     return (
         <label className={classes} style={style}>
@@ -35,14 +34,13 @@ export default function InputCheckbox({ children, name, checked, indeterminate, 
                 onChange={onChange}
             />
             <div className={prefix + '__indicator'}></div>
-            <span className={prefix + '__label'}>{children}</span>
+            {children && <span className={prefix + '__label'}>{children}</span>}
         </label>
     );
 }
 
 InputCheckbox.defaultProps = {
     size: 'md',
-    className: '',
 };
 
 InputCheckbox.propTypes = {
@@ -52,10 +50,12 @@ InputCheckbox.propTypes = {
     indeterminate: PropTypes.bool,
     value: PropTypes.string,
     onChange: PropTypes.func,
-    size: PropTypes.string,
+    size: PropTypes.oneOf(['sm', 'md', 'lg']),
     disabled: PropTypes.bool,
     error: PropTypes.bool,
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default InputCheckbox;

@@ -5,7 +5,7 @@ import dark from './dark';
 
 export default {
     title: 'Horizontal Rule',
-    slug: 'horizontal rule',
+    slug: 'horizontal-rule',
     description: 'This is a description for horizontal rule.',
     'last-updated': '3/25/21',
     variations: [

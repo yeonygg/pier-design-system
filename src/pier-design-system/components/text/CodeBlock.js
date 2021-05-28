@@ -1,24 +1,30 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function CodeBlock({ children, size, dark, className, style }) {
-    let classes = 'pier-codeblock';
+function CodeBlock({ children, size, color, dark, className, style }) {
+    let prefix = 'pier-codeblock',
+        classes = prefix;
 
     switch (size) {
-        case 'md':
-            classes += '';
+        case 'xs':
+            classes += ` ${prefix}--xs`;
             break;
         case 'sm':
-            classes += ' pier-codeblock--sm';
+            classes += ` ${prefix}--sm`;
             break;
-        case 'xs':
-            classes += ' pier-codeblock--xs';
+        case 'md':
+            classes += ``;
             break;
     }
 
-    dark && (classes += ' pier-codeblock--dark');
+    switch (color) {
+        case 'default':
+            classes += ``;
+            break;
+    }
 
-    classes += ` ${className}`;
+    dark && (classes += ` ${prefix}--dark`);
+
+    className && (classes += ` ${className}`);
 
     return (
         <code className={classes} style={style}>
@@ -29,14 +35,16 @@ export default function CodeBlock({ children, size, dark, className, style }) {
 
 CodeBlock.defaultProps = {
     size: 'md',
-    dark: false,
-    className: '',
+    color: 'default',
 };
 
 CodeBlock.propTypes = {
     children: PropTypes.node.isRequired,
-    size: PropTypes.string,
+    size: PropTypes.oneOf(['xs', 'sm', 'md']),
+    color: PropTypes.oneOf(['default']),
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default CodeBlock;

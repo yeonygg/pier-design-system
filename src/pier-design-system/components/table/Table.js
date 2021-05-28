@@ -1,7 +1,6 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function Table({ columns, data, hideHeader, size, striped, dark, className, style }) {
+function Table({ columns, data, size, hideHeader, striped, dark, className, style }) {
     let prefix = `pier-table`,
         classes = prefix;
 
@@ -20,7 +19,7 @@ export default function Table({ columns, data, hideHeader, size, striped, dark, 
     striped && (classes += ` ${prefix}--striped`);
     dark && (classes += ` ${prefix}--dark`);
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     function renderHeader() {
         if (columns.length > 0) {
@@ -59,16 +58,18 @@ export default function Table({ columns, data, hideHeader, size, striped, dark, 
 }
 
 Table.defaultProps = {
-    className: '',
+    size: 'md',
 };
 
 Table.propTypes = {
     columns: PropTypes.array.isRequired,
     data: PropTypes.array.isRequired,
+    size: PropTypes.oneOf(['sm', 'md', 'lg']),
     hideHeader: PropTypes.bool,
-    size: PropTypes.string,
     striped: PropTypes.bool,
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default Table;

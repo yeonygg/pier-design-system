@@ -1,28 +1,28 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function Section({ children, padding, className, style }) {
-    let classes = 'pier-section';
+function Section({ children, padding, className, style }) {
+    let prefix = 'pier-section',
+        classes = prefix;
 
     switch (padding) {
-        case 'xl':
-            classes += ' pier-section--xl';
-            break;
-        case 'lg':
-            classes += ' pier-section--lg';
-            break;
-        case 'md':
-            classes += '';
+        case 'xs':
+            classes += ` ${prefix}--xs`;
             break;
         case 'sm':
-            classes += ' pier-section--sm';
+            classes += ` ${prefix}--sm`;
             break;
-        case 'xs':
-            classes += ' pier-section--xs';
+        case 'md':
+            classes += ``;
+            break;
+        case 'lg':
+            classes += ` ${prefix}--lg`;
+            break;
+        case 'xl':
+            classes += ` ${prefix}--xl`;
             break;
     }
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     return (
         <div className={classes} style={style}>
@@ -33,12 +33,13 @@ export default function Section({ children, padding, className, style }) {
 
 Section.defaultProps = {
     padding: 'md',
-    className: '',
 };
 
 Section.propTypes = {
     children: PropTypes.node.isRequired,
-    padding: PropTypes.string,
+    padding: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default Section;

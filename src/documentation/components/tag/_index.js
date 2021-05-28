@@ -1,14 +1,16 @@
 import ReactDOMServer from 'react-dom/server';
 import base from './base';
 import sizes from './sizes';
+import styles from './styles';
 import disabled from './disabled';
 import pill from './pill';
 import dark from './dark';
+import staticTag from './static';
 
 export default {
-    title: 'Button - Icon',
-    slug: 'button-icon',
-    description: 'This is a description for buttons.',
+    title: 'Tag',
+    slug: 'tag',
+    description: 'This is a description for tags.',
     'last-updated': '3/30/21',
     variations: [
         {
@@ -21,6 +23,12 @@ export default {
             name: 'Sizes',
             description: '',
             markup: ReactDOMServer.renderToStaticMarkup(sizes),
+            dark: false,
+        },
+        {
+            name: 'Styles',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(styles),
             dark: false,
         },
         {
@@ -40,6 +48,12 @@ export default {
             description: '',
             markup: ReactDOMServer.renderToStaticMarkup(dark),
             dark: true,
+        },
+        {
+            name: 'Static',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(staticTag),
+            dark: false,
         },
     ],
 };

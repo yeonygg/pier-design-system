@@ -1,31 +1,31 @@
 import ReactDOMServer from 'react-dom/server';
 import base from './base';
-import sizes from './sizes';
-import disabled from './disabled';
+import link from './link';
+import color from './color';
 import dark from './dark';
 
 export default {
-    title: 'Link',
-    slug: 'link',
-    description: 'This is a description for link.',
-    'last-updated': '3/25/21',
+    title: 'Card',
+    slug: 'card',
+    description: 'This is a description for cards.',
+    'last-updated': '3/24/21',
     variations: [
         {
             name: 'Base',
-            description: '',
+            description: 'These are the size modifiers.',
             markup: ReactDOMServer.renderToStaticMarkup(base),
             dark: false,
         },
         {
-            name: 'Sizes',
-            description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(sizes),
+            name: 'Link',
+            description: 'These are the link modifiers.',
+            markup: ReactDOMServer.renderToStaticMarkup(link),
             dark: false,
         },
         {
-            name: 'Disabled',
-            description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(disabled),
+            name: 'Color',
+            description: 'These are the color modifiers.',
+            markup: ReactDOMServer.renderToStaticMarkup(color),
             dark: false,
         },
         {

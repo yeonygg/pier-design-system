@@ -1,11 +1,10 @@
-import react from 'react';
 import PropTypes from 'prop-types';
 
-export default function Screen({ children, className, style }) {
+function Screen({ children, className, style }) {
     let prefix = 'pier-screen',
         classes = prefix;
 
-    classes += ` ${className}`;
+    className && (classes += ` ${className}`);
 
     return (
         <div className={classes} style={style}>
@@ -14,12 +13,12 @@ export default function Screen({ children, className, style }) {
     );
 }
 
-Screen.defaultProps = {
-    className: '',
-};
+Screen.defaultProps = {};
 
 Screen.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
     style: PropTypes.object,
 };
+
+export default Screen;
