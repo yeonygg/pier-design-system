@@ -2,7 +2,8 @@ import { Fragment } from "react";
 
 export default(
     <Fragment>
-    <div className="pier-loading-spinner -m-r-5"></div>
+    <div className="pier-loading-spinner"></div>
+
     </Fragment>
 );
 
