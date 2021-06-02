@@ -12,7 +12,8 @@ export default function Home({ appData }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Layout appData={appData}>
-                <Fragment></Fragment>
+                <Fragment>
+                </Fragment>
             </Layout>
         </Fragment>
     );
