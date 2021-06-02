@@ -62,6 +62,14 @@ $card-radii: (
 
 }
 
+.pier-card--center {
+	justify-content: center;
+	text-align: center;
+}
+
+.pier-card--image {
+	
+}
 .pier-card--primary {
 	background-color: map-get($colorsCyan, light-4);
 	border: 0.0625rem solid map-get($colorsCyan, light-3);

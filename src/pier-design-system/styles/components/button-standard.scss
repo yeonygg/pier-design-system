@@ -75,9 +75,26 @@ $default-size: md;
 }
 
 .pier-button-standard--secondary {
-  background: transparent;
+  background: map-get($colorsGrays, white);
   border: 1px solid map-fetch($colorsCyan, default);
   color: map-fetch($colorsCyan, default);
+
+  &:hover {
+    background: map-fetch($colorsCyan, light-4);
+    border: 1px solid map-fetch($colorsCyan, default);
+  }
+
+  &:focus {
+    border: 1px solid map-fetch($colorsCyan, light-2);
+  }
+
+  &:active {
+    background: map-fetch($colorsCyan, light-3);
+  }
+}
+
+.pier-button-standard--secondary-dark {
+  background: transparent;
 
   &:hover {
     background: rgba(map-fetch($colorsCyan, default), 0.15);
@@ -91,6 +108,7 @@ $default-size: md;
   &:active {
     background: transparent;
   }
+
 }
 
 .pier-button-standard--secondary.pier-button-standard--dark {
