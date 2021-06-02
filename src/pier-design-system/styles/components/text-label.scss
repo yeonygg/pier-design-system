@@ -19,12 +19,14 @@ $label-sizes: (
 	font-family: $font-family;
 	font-weight: $font-weight-extrabold;
 	font-size: map-fetch($label-sizes, ($default-size, desktop));
+	margin-bottom: map-fetch($body-sizes, ($default-size, desktop)) / 4;
 	color: map-fetch($colorsGrays, gray);
 	line-height: auto;
 	text-transform: uppercase;
 
 	@include build-media-query(mobile) {
 		font-size: map-fetch($label-sizes, ($default-size, mobile));
+		margin-bottom: map-fetch($body-sizes, ($default-size, mobile)) / 4;
 	}
 }
 
@@ -35,9 +37,11 @@ $label-sizes: (
 @each $prefix, $size in $label-sizes {
 	.pier-label--#{$prefix} {
 		font-size: map-fetch($size, desktop);
+		margin-bottom: map-fetch($size, desktop) / 4;
 
 		@include build-media-query(mobile) {
 			font-size: map-fetch($size, mobile);
+			margin-bottom: map-fetch($size, mobile) / 4;
 		}
 	}
 }

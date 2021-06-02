@@ -2,6 +2,7 @@ import ReactDOMServer from 'react-dom/server';
 import base from './base';
 import sizes from './sizes';
 import dark from './dark';
+import error from './error';
 
 export default {
     title: 'Text - Heading',
@@ -19,6 +20,12 @@ export default {
             name: 'Sizes',
             description: '',
             markup: ReactDOMServer.renderToStaticMarkup(sizes),
+            dark: false,
+        },
+        {
+            name: 'Error',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(error),
             dark: false,
         },
         {

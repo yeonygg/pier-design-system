@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function BodyText({ children, size, color, dark, className, style }) {
+function BodyText({ children, size, color, error, dark, className, style }) {
     let prefix = 'pier-body-text',
         classes = prefix;
 
@@ -20,12 +20,13 @@ function BodyText({ children, size, color, dark, className, style }) {
         case 'default':
             classes += ``;
             break;
-        case 'light-gray':
-            classes += ` ${prefix}--light-gray`;
+        case 'light':
+            classes += ` ${prefix}--light`;
             break;
     }
 
     dark && (classes += ` ${prefix}--dark`);
+    error && (classes += ` ${prefix}--error`);
 
     className && (classes += ` ${className}`);
 
@@ -44,7 +45,8 @@ BodyText.defaultProps = {
 BodyText.propTypes = {
     children: PropTypes.node.isRequired,
     size: PropTypes.oneOf(['xs', 'sm', 'md']),
-    color: PropTypes.oneOf(['default', 'light-gray']),
+    color: PropTypes.oneOf(['default', 'light']),
+    error: PropTypes.bool,
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,

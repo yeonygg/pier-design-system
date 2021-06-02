@@ -2,6 +2,7 @@ import ReactDOMServer from 'react-dom/server';
 import base from './base';
 import sizes from './sizes';
 import dark from './dark';
+import position from './position';
 
 export default {
     title: 'Bubble Menu',
@@ -19,6 +20,12 @@ export default {
             name: 'Sizes',
             description: '',
             markup: ReactDOMServer.renderToStaticMarkup(sizes),
+            dark: false,
+        },
+        {
+            name: 'Position',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(position),
             dark: false,
         },
         {

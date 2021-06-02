@@ -18,7 +18,7 @@
 @import './components/text-heading';
 @import './components/text-codeblock';
 @import './components/text-label';
-@import './components/link';
+@import './components/text-link';
 @import './components/button-hero';
 @import './components/button-standard';
 @import './components/button-icon';
@@ -42,6 +42,7 @@
 @import './components/bubble-menu';
 @import './components/accordion';
 @import './components/loading-spinner';
+@import './components/input-combo';
 
 //utilities
 @import './utilities/border-radius';

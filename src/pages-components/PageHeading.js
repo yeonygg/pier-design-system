@@ -32,7 +32,7 @@ export default function PageHeading({ breadcrumbs, title, lastUpdated, descripti
                 </Heading>
                 <HR theme="hero" />
             </div>
-            <BodyText size="xs" color="light-gray">
+            <BodyText size="xs" color="light">
                 Last updated: {lastUpdated}
             </BodyText>
             <BodyText>{description}</BodyText>

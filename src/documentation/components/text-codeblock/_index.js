@@ -16,7 +16,7 @@ export default {
             dark: false,
         },
         {
-            name: 'With Ellipsis',
+            name: 'Sizes',
             description: '',
             markup: ReactDOMServer.renderToStaticMarkup(sizes),
             dark: false,

@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 
 export default (
     <Fragment>
-        <div className="pier-accordion">
+        <div className="pier-accordion pier-accordion--open">
             <div className="pier-accordion__title">
                 <h1 className="pier-accordion__heading">
                     <span className="pier-accordion__icon fas fa-atom"></span>Accordion

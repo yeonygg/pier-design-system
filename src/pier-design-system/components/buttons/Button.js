@@ -36,14 +36,14 @@ function Button({ children, theme, size, cap, type, value, icon, disabled, pill,
     }
 
     switch (cap) {
-        case 'cap':
+        case 'none':
             classes += ``;
             break;
         case 'right':
             classes += ` ${prefix}--cap-right`;
             break;
-        case 'none':
-            classes += ` ${prefix}--cap-none`;
+        case 'cap':
+            classes += ` ${prefix}--cap`;
             break;
         case 'left':
             classes += ` ${prefix}--cap-left`;
@@ -84,7 +84,7 @@ function Button({ children, theme, size, cap, type, value, icon, disabled, pill,
 Button.defaultProps = {
     theme: 'hero',
     size: 'md',
-    cap: 'cap',
+    cap: 'none',
 };
 
 Button.propTypes = {

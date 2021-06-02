@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function Heading({ children, size, color, dark, className, style }) {
+function Heading({ children, size, color, error, dark, className, style }) {
     let prefix = 'pier-heading',
         classes = prefix;
 
@@ -26,6 +26,7 @@ function Heading({ children, size, color, dark, className, style }) {
     }
 
     dark && (classes += ` ${prefix}--dark`);
+    error && (classes += ` ${prefix}--error`);
 
     className && (classes += ` ${className}`);
 
@@ -66,6 +67,7 @@ Heading.propTypes = {
     children: PropTypes.node.isRequired,
     size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     color: PropTypes.oneOf(['default']),
+    error: PropTypes.bool,
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,

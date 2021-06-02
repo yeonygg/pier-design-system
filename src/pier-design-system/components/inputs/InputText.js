@@ -17,7 +17,7 @@ function InputText({ type, name, placeholder, value, onChange, onFocus, onBlur, 
     }
 
     switch (cap) {
-        case 'cap':
+        case 'none':
             classes += ``;
             break;
         case 'right':
@@ -26,8 +26,8 @@ function InputText({ type, name, placeholder, value, onChange, onFocus, onBlur, 
         case 'left':
             classes += ` ${prefix}--cap-left`;
             break;
-        case 'none':
-            classes += ` ${prefix}--cap-none`;
+        case 'cap':
+            classes += ` ${prefix}--cap`;
             break;
     }
 
@@ -55,7 +55,7 @@ function InputText({ type, name, placeholder, value, onChange, onFocus, onBlur, 
 
 InputText.defaultProps = {
     size: 'md',
-    cap: 'cap',
+    cap: 'none',
 };
 
 InputText.propTypes = {

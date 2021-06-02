@@ -1,24 +1,17 @@
 
+.pier-input-group {
+    display: block;
+    width: 100%;
+	margin-bottom: .5rem;
+}
+
 .pier-input-group__validation {
     font-family: $font-family;
     font-size: .75rem;
+	margin-top: .2rem;
     color: map-get($colorsGrays, gray-4);
-}
-
-.pier-input-group__validation--sm  {
-    font-size: 0.625rem;
 }
 
 .pier-input-group__validation--error {
     color: map-get($colorsRed, default);
-}
-
-.pier-input-combo {
-    display: flex;
-    width: 100%;
-}
-
-.pier-input-group {
-    display: block;
-    width: 100%;
 }

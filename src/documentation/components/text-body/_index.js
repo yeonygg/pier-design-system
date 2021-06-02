@@ -3,6 +3,7 @@ import base from './base';
 import sizes from './sizes';
 import color from './color';
 import dark from './dark';
+import error from './error';
 
 export default {
     title: 'Text - Body',
@@ -26,6 +27,12 @@ export default {
             name: 'Color',
             description: 'These are the color modifiers.',
             markup: ReactDOMServer.renderToStaticMarkup(color),
+            dark: false,
+        },
+        {
+            name: 'Error',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(error),
             dark: false,
         },
         {

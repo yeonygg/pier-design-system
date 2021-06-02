@@ -49,34 +49,6 @@ $heading-sizes: (
 	}
 }
 
-.pier-heading--primary {
-	color: map-get($colorsCyan, dark-1);
-}
-
 .pier-heading--error {
 	color: map-get($colorsRed, default);
-}
-
-.pier-heading--green {
-	color: map-get($colorsGreen, dark-1);
-}
-
-.pier-heading--blue {
-	color: map-get($colorsBlue, default);
-}
-
-.pier-heading--dark.pier-heading--primary {
-color: map-get($colorsCyan, light-2);
-}
-
-.pier-heading--dark.pier-heading--error {
-	color: map-get($colorsRed, light-1);
-}
-
-.pier-heading--dark.pier-heading--green {
-	color: map-get($colorsGreen, light-2);
-}
-
-.pier-heading--dark.pier-heading--blue {
-	color: map-get($colorsBlue, light-2);
 }

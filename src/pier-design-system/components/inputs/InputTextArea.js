@@ -17,7 +17,7 @@ function InputTextArea({ name, placeholder, value, onChange, onFocus, onBlur, si
     }
 
     switch (cap) {
-        case 'cap':
+        case 'none':
             classes += ``;
             break;
         case 'right':
@@ -26,8 +26,8 @@ function InputTextArea({ name, placeholder, value, onChange, onFocus, onBlur, si
         case 'left':
             classes += ` ${prefix}--cap-left`;
             break;
-        case 'none':
-            classes += ` ${prefix}--cap-none`;
+        case 'cap':
+            classes += ` ${prefix}--cap`;
             break;
     }
 
@@ -66,7 +66,7 @@ function InputTextArea({ name, placeholder, value, onChange, onFocus, onBlur, si
 
 InputTextArea.defaultProps = {
     size: 'md',
-    cap: 'cap',
+    cap: 'none',
     resize: 'vertical',
 };
 

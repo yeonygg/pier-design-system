@@ -2,29 +2,19 @@ import { Fragment } from 'react';
 
 export default (
     <Fragment>
-    <div className="-justify-content-center -align-items-center" style={{height: "270px"}}>
-        <div className="pier-nav-container">
-            <button className="pier-button-icon pier-button-icon--dark">
-                <i className="far fa-bell pier-button-icon__icon"></i>
-            </button>
-            <div className="pier-bubble-menu">
-                <ul className="pier-bubble-menu--list pier-bubble-menu--list-dark">
-                    <li>
-                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-dark" tabIndex="0">Alert 1</div>
-                    </li>
-                    <li>
-                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-dark" tabIndex="0">Alert 2</div>
-                    </li>
-                    <li>
-                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-dark" tabIndex="0">Alert 3</div>
-                    </li>
-                    <li className="pier-bubble-menu--list-divider pier-bubble-menu--list-divider-dark"></li>
-                    <li>
-                        <div className="pier-bubble-menu--list-link pier-bubble-menu--list-link-dark" tabIndex="0">Clear Alerts</div>
-                    </li>
-                </ul>
+        <div className="-d-flex -justify-content-center -align-items-center" style={{ height: '600px' }}>
+            <div>
+                <button className="pier-button-icon pier-button-icon--dark">
+                    <i className="fas fa-pen pier-button-icon__icon"></i>
+                </button>
+                <div className="pier-bubble-menu pier-bubble-menu--dark pier-bubble-menu--open">
+                    <div className="pier-bubble-menu__label">Alerts</div>
+                    <div className="pier-bubble-menu__item">Alert 1</div>
+                    <div className="pier-bubble-menu__item">Alert 2</div>
+                    <div className="pier-bubble-menu__item">Alert 3</div>
+                    <div className="pier-bubble-menu__item pier-bubble-menu__item--divider">Clear Alerts</div>
+                </div>
             </div>
-        </div>
         </div>
     </Fragment>
 );

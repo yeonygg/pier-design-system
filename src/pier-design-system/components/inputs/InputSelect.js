@@ -17,7 +17,7 @@ function InputSelect({ children, name, value, onChange, size, disabled, cap, pil
     }
 
     switch (cap) {
-        case 'cap':
+        case 'none':
             classes += ``;
             break;
         case 'right':
@@ -26,8 +26,8 @@ function InputSelect({ children, name, value, onChange, size, disabled, cap, pil
         case 'left':
             classes += ` ${prefix}--cap-left`;
             break;
-        case 'none':
-            classes += ` ${prefix}--cap-none`;
+        case 'cap':
+            classes += ` ${prefix}--cap`;
             break;
     }
 
@@ -47,7 +47,7 @@ function InputSelect({ children, name, value, onChange, size, disabled, cap, pil
 
 InputSelect.defaultProps = {
     size: 'md',
-    cap: 'cap',
+    cap: 'none',
 };
 
 InputSelect.propTypes = {

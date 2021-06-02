@@ -60,14 +60,6 @@ $code-sizes: (
     }
 }
 
-.pier-body-text--dark {
-    color: map-fetch($colorsGrays, 'lighter');
-}
-
-.pier-body-text--light-gray {
-    color: map-fetch($colorsGrays, 'light-gray');
-}
-
 @each $prefix, $size in $body-sizes {
     .pier-body-text--#{$prefix} {
         font-size: map-fetch($size, desktop);
@@ -92,34 +84,14 @@ $code-sizes: (
     }
 }
 
-.pier-body-text--primary {
-    color: map-get($colorsCyan, dark-1);
+.pier-body-text--dark {
+    color: map-fetch($colorsGrays, 'lighter');
+}
+
+.pier-body-text--light {
+    color: map-fetch($colorsGrays, 'light-gray');
 }
 
 .pier-body-text--error {
     color: map-get($colorsRed, default);
-}
-
-.pier-body-text--green {
-    color: map-get($colorsGreen, dark-1);
-}
-
-.pier-body-text--blue {
-    color: map-get($colorsBlue, default);
-}
-
-.pier-body-text--dark.pier-body-text--primary {
-	color: map-get($colorsCyan, light-2);
-}
-
-.pier-body-text--dark.pier-body-text--error {
-	color: map-get($colorsRed, light-1);
-}
-
-.pier-body-text--dark.pier-body-text--green {
-	color: map-get($colorsGreen, light-2);
-}
-
-.pier-body-text--dark.pier-body-text--blue {
-	color: map-get($colorsBlue, light-2);
 }

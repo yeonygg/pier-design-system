@@ -1,12 +1,7 @@
 import ReactDOMServer from 'react-dom/server';
-import inputTextGroup from './input-text-group';
-import inputSelectGroup from './input-select-group';
-import inputTextareaGroup from './input-textarea-group';
-import inputRadioGroup from './input-radio-group';
-import inputCheckboxGroup from './input-checkbox-group';
-import inputToggleGroup from './input-toggle-group';
-import inputTextGroupSizes from './input-text-group-sizes';
-import inputTextGroupError from './input-text-group-error';
+import base from './base';
+import sizes from './sizes';
+import error from './error';
 
 export default {
     title: 'Input - Group',
@@ -15,51 +10,21 @@ export default {
     'last-updated': '4/6/21',
     variations: [
         {
-            name: 'Input Text',
+            name: 'Base',
             description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(inputTextGroup),
+            markup: ReactDOMServer.renderToStaticMarkup(base),
             dark: false,
         },
         {
-            name: 'Input Select',
+            name: 'Sizes',
             description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(inputSelectGroup),
+            markup: ReactDOMServer.renderToStaticMarkup(sizes),
             dark: false,
         },
         {
-            name: 'Input Textarea',
+            name: 'Error',
             description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(inputTextareaGroup),
-            dark: false,
-        },
-        {
-            name: 'Input Radio Group',
-            description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(inputRadioGroup),
-            dark: false,
-        },
-        {
-            name: 'Input Checkbox Group',
-            description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(inputCheckboxGroup),
-            dark: false,
-        },
-        {
-            name: 'Input Toggle Group',
-            description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(inputToggleGroup),
-            dark: false,
-        },
-        {
-            name: 'Input Text Group Sizes',
-            description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(inputTextGroupSizes),
-            dark: false,
-        },
-        {
-            name: 'Input Text Group Error',
-            description: '',
-            markup: ReactDOMServer.renderToStaticMarkup(inputTextGroupError),
+            markup: ReactDOMServer.renderToStaticMarkup(error),
             dark: false,
         },
     ],
