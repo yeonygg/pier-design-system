@@ -71,12 +71,12 @@ export default function Home({ appData }) {
                             </Heading>
                             <Section className="-m-h-12 -p-h-12 -m-b-3">
                                 <BodyText size="md" className="-c-white -text-a-center">
-                                    Pier Design System is Gumgum's UX/UI design tool built to create Creative Dashboard and future marketing projects! Quickly
-                                    design and customize responsive sites!
+                                    Pier Design System is Gumgum's UX/UI design system and React component library built to create presentational web projects
+                                    and applications.
                                 </BodyText>
                             </Section>
                             <Section className="-d-flex -justify-content-center -m-b-12">
-                                <NextLink href={`/components`}>
+                                <NextLink href={`https://www.npmjs.com/package/pier-design-system`}>
                                     <a>
                                         <button class="pier-button-standard pier-button-standard--secondary pier-button-standard--lg -m-l-4">
                                             Get Started
@@ -98,7 +98,6 @@ export default function Home({ appData }) {
                                     <img src="/brain_icon.png" style={{ width: '60%' }} />
                                     <div className="pier-section">
                                         <h1 className="pier-heading pier-heading--sm">Abstracts</h1>
-                                        <p className="pier-body-text -p-b-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
                                         <button className="pier-button-hero pier-button-hero--pill">
                                             <span className="pier-button-hero__content">Explore</span>
                                         </button>
@@ -112,7 +111,6 @@ export default function Home({ appData }) {
                                     <img src="/components_icon.png" style={{ width: '60%' }} />
                                     <div className="pier-section">
                                         <h1 className="pier-heading pier-heading--sm">Components</h1>
-                                        <p className="pier-body-text -p-b-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
                                         <button className="pier-button-hero pier-button-hero--pill">
                                             <span className="pier-button-hero__content">Explore</span>
                                         </button>
@@ -126,7 +124,6 @@ export default function Home({ appData }) {
                                     <img src="/utilities_icon.png" style={{ width: '60%' }} />
                                     <div className="pier-section">
                                         <h1 className="pier-heading pier-heading--sm">Utilities</h1>
-                                        <p className="pier-body-text -p-b-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
                                         <button className="pier-button-hero pier-button-hero--pill">
                                             <span className="pier-button-hero__content">Explore</span>
                                         </button>
@@ -137,38 +134,30 @@ export default function Home({ appData }) {
                     </Section>
 
                     <h1 className="pier-heading pier-heading--sm">Links to Resources</h1>
-                    <NextLink href={`https://www.github.com`}>
+                    <NextLink href={`https://github.com/gg-jarrod/pier-design-system`}>
                         <a target="_blank">
                             <Card className="pier-card">
                                 <div className="pier-section">
                                     <h1 className="pier-heading pier-heading--sm">
                                         <Link>Github</Link>
                                     </h1>
-                                    <p className="pier-body-text">
-                                        Millions of developers and companies build, ship, and maintain their software on GitHub—the largest and most advanced
-                                        development platform in the world.
-                                    </p>
+                                    <p className="pier-body-text">Create a fork of Pier to use for your own design system!</p>
                                 </div>
                             </Card>
                         </a>
                     </NextLink>
-
-                    <NextLink href={`https://www.npmjs.com/`}>
+                    <NextLink href={`https://www.npmjs.com/package/pier-design-system`}>
                         <a target="_blank">
                             <Card className="pier-card">
                                 <div className="pier-section">
                                     <h1 className="pier-heading pier-heading--sm">
                                         <Link>NPM</Link>
                                     </h1>
-                                    <p className="pier-body-text">
-                                        We're npm, Inc., the company behind Node package manager, the npm Registry, and npm CLI. We offer those to the community
-                                        for free, but our day job is building and selling useful tools for developers like you.
-                                    </p>
+                                    <p className="pier-body-text">Use Pier in your own web/React project.</p>
                                 </div>
                             </Card>
                         </a>
                     </NextLink>
-                    <Section className="-m-v-12"></Section>
                     <Section className="-m-v-12"></Section>
                 </div>
             </Layout>

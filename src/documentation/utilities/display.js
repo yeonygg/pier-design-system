@@ -33,7 +33,7 @@ export default {
             description: '',
         },
         {
-            class: '-d-flew, -d-[grid-breakpoints]-flew',
+            class: '-d-flex, -d-[grid-breakpoints]-flex',
             description: '',
         },
         {
