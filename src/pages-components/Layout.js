@@ -14,9 +14,10 @@ import IconButton from 'src/pier-design-system/components/buttons/IconButton';
 import BubbleMenu from 'src/pier-design-system/components/bubble-menu/BubbleMenu';
 import BubbleMenuItem from 'src/pier-design-system/components/bubble-menu/BubbleMenuItem';
 
-export default function Layout({ children, appData }) {
+export default function Layout({ children, appData, isHome }) {
     const [mobileNav, setMobileNav] = useState(false);
     let isDesktop = useMediaQuery('(min-width: 768px)');
+    
 
     return (
         <Fragment>
@@ -121,25 +122,30 @@ export default function Layout({ children, appData }) {
                     </Nav>
                 )}
             </Screen>
-            <div
-                style={
-                    isDesktop
-                        ? {
-                              maxWidth: '1040px',
-                              margin: '0 auto',
-                              width: '100%',
-                              paddingLeft: '240px',
-                          }
-                        : {
-                              maxWidth: '1040px',
-                              margin: '0 auto',
-                              width: '100%',
-                              paddingTop: '72px',
-                          }
-                }
-            >
-                {children}
-            </div>
+            {isHome ? (
+                <div>{children}</div>
+            ) : (
+                <div
+                    style={
+                        isDesktop
+                            ? {
+                                  maxWidth: '1040px',
+                                  margin: '0 auto',
+                                  width: '100%',
+                                  paddingLeft: '240px',
+                              }
+                            : {
+                                  maxWidth: '1040px',
+                                  margin: '0 auto',
+                                  width: '100%',
+                                  paddingTop: '72px',
+                              }
+                    }
+                >
+                    {children}
+                </div>
+            )}
+            
         </Fragment>
     );
 }
@@ -147,4 +153,5 @@ export default function Layout({ children, appData }) {
 Layout.propTypes = {
     children: PropTypes.node.isRequired,
     appData: PropTypes.object,
+    isHome: PropTypes.bool,
 };
