@@ -11,14 +11,15 @@ import Link from 'src/pier-design-system/components/text/Link';
 import NextLink from 'next/link';
 
 export default function Home({ appData }) {
-    const heroImage = {
-        
+    const heroVideo = {
         height: '100%',
         width: '100%',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
+        objectFit: 'cover',
         position: 'absolute',
+        top: '0',
+        left: '0',
     };
 
     const bodyLayout = {
@@ -37,8 +38,9 @@ export default function Home({ appData }) {
         backgroundSize: 'cover',
         position: 'absolute',
         zIndex: '0',
+        top: '700px',
         bottom: '0',
-        letf: '0',
+        left: '0',
         right: '0',
     };
 
@@ -51,11 +53,11 @@ export default function Home({ appData }) {
 
             <Layout appData={appData} isHome>
                 <div style={{ postion: 'relative', width: '100%' }}>
-                    
-                    <video style={heroImage} playsInline autoPlay loop muted>
-                    <source src="/hero_video.mp4" type="video/mp4"/>
-                    </video>
-                 
+                    <div style={heroVideo}>
+                        <video style={heroVideo} playsInline autoPlay loop muted>
+                            <source src="/hero_video.mp4" type="video/mp4" />
+                        </video>
+                    </div>
 
                     <div style={heroElement}></div>
 
@@ -74,10 +76,12 @@ export default function Home({ appData }) {
                                 </BodyText>
                             </Section>
                             <Section className="-d-flex -justify-content-center -m-b-12">
-                            <NextLink href={`/components`}>
-                            <a>
-                                <button class="pier-button-standard pier-button-standard--secondary pier-button-standard--lg -m-l-4">Get Started</button>
-                                </a>
+                                <NextLink href={`/components`}>
+                                    <a>
+                                        <button class="pier-button-standard pier-button-standard--secondary pier-button-standard--lg -m-l-4">
+                                            Get Started
+                                        </button>
+                                    </a>
                                 </NextLink>
                             </Section>
                             <Section className="-m-v-12"></Section>
@@ -88,19 +92,19 @@ export default function Home({ appData }) {
                 </div>
                 <div style={bodyLayout}>
                     <Section className="-d-flex -justify-content-center -p-h-0" style={{ marginTop: '-360px' }}>
-                    <NextLink href={`/abstracts`}>
-                    <a>
-                        <Card className="pier-card pier-card--link pier-card--center pier-card--image -p-v-10 -p-h-3 -m-r-5">
-                            <img src="/brain_icon.png" style={{ width: '60%' }} />
-                            <div className="pier-section">
-                                <h1 className="pier-heading pier-heading--sm">Abstracts</h1>
-                                <p className="pier-body-text -p-b-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
-                                <button className="pier-button-hero pier-button-hero--pill">
-                                    <span className="pier-button-hero__content">Explore</span>
-                                </button>
-                            </div>
-                        </Card>
-                        </a>
+                        <NextLink href={`/abstracts`}>
+                            <a>
+                                <Card className="pier-card pier-card--link pier-card--center pier-card--image -p-v-10 -p-h-3 -m-r-5">
+                                    <img src="/brain_icon.png" style={{ width: '60%' }} />
+                                    <div className="pier-section">
+                                        <h1 className="pier-heading pier-heading--sm">Abstracts</h1>
+                                        <p className="pier-body-text -p-b-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                                        <button className="pier-button-hero pier-button-hero--pill">
+                                            <span className="pier-button-hero__content">Explore</span>
+                                        </button>
+                                    </div>
+                                </Card>
+                            </a>
                         </NextLink>
                         <NextLink href={`/components`}>
                             <a>
@@ -134,28 +138,34 @@ export default function Home({ appData }) {
 
                     <h1 className="pier-heading pier-heading--sm">Links to Resources</h1>
                     <NextLink href={`https://www.github.com`}>
-                    <a target="_blank">
-                        <Card className="pier-card">
-                            <div className="pier-section">
-                                <h1 className="pier-heading pier-heading--sm">
-                                    <Link>Github</Link>
-                                </h1>
-                                <p className="pier-body-text">Millions of developers and companies build, ship, and maintain their software on GitHub—the largest and most advanced development platform in the world.</p>
-                            </div>
-                        </Card>
+                        <a target="_blank">
+                            <Card className="pier-card">
+                                <div className="pier-section">
+                                    <h1 className="pier-heading pier-heading--sm">
+                                        <Link>Github</Link>
+                                    </h1>
+                                    <p className="pier-body-text">
+                                        Millions of developers and companies build, ship, and maintain their software on GitHub—the largest and most advanced
+                                        development platform in the world.
+                                    </p>
+                                </div>
+                            </Card>
                         </a>
                     </NextLink>
 
                     <NextLink href={`https://www.npmjs.com/`}>
-                    <a target="_blank">
-                        <Card className="pier-card">
-                            <div className="pier-section">
-                                <h1 className="pier-heading pier-heading--sm">
-                                    <Link>NPM</Link>
-                                </h1>
-                                <p className="pier-body-text">We're npm, Inc., the company behind Node package manager, the npm Registry, and npm CLI. We offer those to the community for free, but our day job is building and selling useful tools for developers like you.</p>
-                            </div>
-                        </Card>
+                        <a target="_blank">
+                            <Card className="pier-card">
+                                <div className="pier-section">
+                                    <h1 className="pier-heading pier-heading--sm">
+                                        <Link>NPM</Link>
+                                    </h1>
+                                    <p className="pier-body-text">
+                                        We're npm, Inc., the company behind Node package manager, the npm Registry, and npm CLI. We offer those to the community
+                                        for free, but our day job is building and selling useful tools for developers like you.
+                                    </p>
+                                </div>
+                            </Card>
                         </a>
                     </NextLink>
                     <Section className="-m-v-12"></Section>
