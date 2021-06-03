@@ -72,7 +72,7 @@ $default-size: md;
 }
 
 .pier-input-checkbox__input:checked ~ .pier-input-checkbox__label {
-    color: map-fetch($colorsGrays, dark-2);
+    color: map-fetch($colorsGrays, darker);
 }
 
 .pier-input-checkbox__input:focus ~ .pier-input-checkbox__indicator {
@@ -151,7 +151,7 @@ $default-size: md;
       }
 
     .pier-input-checkbox__input:checked ~ .pier-input-checkbox__label {
-        color: map-fetch($colorsGrays, light-gray);
+        color: map-fetch($colorsGrays, white);
     }
 }
 

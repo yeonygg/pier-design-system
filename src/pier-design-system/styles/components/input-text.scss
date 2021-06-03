@@ -6,7 +6,7 @@ $default-size: md;
   border: 1px solid map-get($colorsGrays, gray-3);
   width: 100%;
   font-family: $font-family;
-  color: map-get($colorsGrays, dark-1);
+  color: map-get($colorsGrays, darker);
   transition: 0.1s ease-in-out;
   overflow: hidden;
   height: map-fetch($input-heights, ($default-size, desktop));
@@ -97,7 +97,7 @@ $default-size: md;
 }
 
 .pier-input-text--dark {
-  color: map-get($colorsGrays, gray-2);
+  color: map-get($colorsGrays, white);
   background: map-get($colorsGrays, dark-4);
   border: 1px solid map-get($colorsGrays, dark-2);
 

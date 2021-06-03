@@ -3,7 +3,7 @@ $default-size: md;
 .pier-input-textarea {
   
   font-family: $font-family;
-  color: map-get($colorsGrays, dark-1);
+  color: map-get($colorsGrays, darker);
   text-align: left;
   display: block;
   width: 100%;
@@ -94,7 +94,7 @@ $default-size: md;
 }
 
 .pier-input-textarea--dark {
-  color: map-get($colorsGrays, gray-2);
+  color: map-get($colorsGrays, white);
   background: map-get($colorsGrays, dark-4);
   border: 1px solid map-get($colorsGrays, dark-2);
 

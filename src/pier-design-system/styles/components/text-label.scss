@@ -20,7 +20,7 @@ $label-sizes: (
 	font-weight: $font-weight-extrabold;
 	font-size: map-fetch($label-sizes, ($default-size, desktop));
 	margin-bottom: map-fetch($body-sizes, ($default-size, desktop)) / 4;
-	color: map-fetch($colorsGrays, gray);
+	color: map-fetch($colorsGrays, gray-2);
 	line-height: auto;
 	text-transform: uppercase;
 
@@ -31,7 +31,7 @@ $label-sizes: (
 }
 
 .pier-label--dark {
-	color: map-fetch($colorsGrays, light-gray);
+	color: map-fetch($colorsGrays, dark-1);
 }
 
 @each $prefix, $size in $label-sizes {

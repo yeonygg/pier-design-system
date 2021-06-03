@@ -73,7 +73,7 @@ $default-size: md;
 }
 
 .pier-input-radio__input:checked ~ .pier-input-radio__label {
-  color: map-fetch($colorsGrays, dark-2);
+  color: map-fetch($colorsGrays, darker);
 }
 
 .pier-input-radio__input:focus ~ .pier-input-radio__indicator {
@@ -120,7 +120,7 @@ $default-size: md;
   }
   
   .pier-input-radio__input:checked ~ .pier-input-radio__label {
-    color: map-fetch($colorsGrays, light-gray);
+    color: map-fetch($colorsGrays, white);
   }
 }
 

@@ -31,7 +31,7 @@ $default-size: md;
     }
 
     &:valid {
-        color: map-get($colorsGrays, dark-1);
+        color: map-get($colorsGrays, darker);
     }
 
     &:hover {
@@ -130,7 +130,7 @@ $default-size: md;
     background-size: 0.65em auto, 100%;
 
     &:valid {
-        color: map-get($colorsGrays, gray-2);
+        color: map-get($colorsGrays, white);
     }
 
     &:focus {
