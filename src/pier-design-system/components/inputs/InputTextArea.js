@@ -5,6 +5,9 @@ function InputTextArea({ name, placeholder, value, onChange, onFocus, onBlur, si
         classes = prefix;
 
     switch (size) {
+        case 'xs':
+            classes += ` ${prefix}--xs`;
+            break;
         case 'sm':
             classes += ` ${prefix}--sm`;
             break;
@@ -77,7 +80,7 @@ InputTextArea.propTypes = {
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     onBlur: PropTypes.func,
-    size: PropTypes.oneOf(['sm', 'md', 'lg']),
+    size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     disabled: PropTypes.bool,
     cap: PropTypes.oneOf(['cap', 'none', 'right', 'left']),
     pill: PropTypes.bool,

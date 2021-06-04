@@ -24,6 +24,9 @@ function Button({ children, theme, size, cap, type, value, icon, disabled, pill,
     }
 
     switch (size) {
+        case 'xs':
+            classes += ` ${prefix}--xs`;
+            break;
         case 'sm':
             classes += ` ${prefix}--sm`;
             break;
@@ -90,7 +93,7 @@ Button.defaultProps = {
 Button.propTypes = {
     children: PropTypes.node.isRequired,
     theme: PropTypes.oneOf(['default', 'hero', 'primary', 'secondary']),
-    size: PropTypes.oneOf(['sm', 'md', 'lg']),
+    size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     cap: PropTypes.oneOf(['cap', 'none', 'right', 'left']),
     type: PropTypes.string,
     value: PropTypes.string,

@@ -34,7 +34,7 @@ Link.defaultProps = {
 
 Link.propTypes = {
     children: PropTypes.node.isRequired,
-    size: PropTypes.oneOf(['xs, sm, md']),
+    size: PropTypes.oneOf(['xs', 'sm', 'md']),
     dark: PropTypes.bool,
     disabled: PropTypes.bool,
     onClick: PropTypes.func,

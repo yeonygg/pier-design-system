@@ -1127,6 +1127,11 @@
     remark "^13.0.0"
     unist-util-find-all-after "^3.0.2"
 
+"@tevhooks/use-media-query@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@tevhooks/use-media-query/-/use-media-query-1.1.0.tgz#bc6ffbf7c42e41b48243536869b7b2bc218a51e2"
+  integrity sha512-B0lj56gi3BULEysx9Z1/7SqV7Rzz1hz6/Wle8oq5KR8cIJ5xCBdCyR9caHJse1yveolheXGzHFugWXsU0CKWeQ==
+
 "@types/eslint-visitor-keys@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"

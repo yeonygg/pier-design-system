@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Fragment, useState } from 'react';
-import useMediaQuery from 'src/pages-hooks/useMediaQuery';
+import useMediaQuery from 'src/pages-components/hooks/useMediaQuery';
 import Heading from 'src/pier-design-system/components/text/Heading';
 import NextLink from 'next/link';
 import Nav from 'src/pier-design-system/components/navigation/Nav';
@@ -14,52 +14,15 @@ import IconButton from 'src/pier-design-system/components/buttons/IconButton';
 import BubbleMenu from 'src/pier-design-system/components/bubble-menu/BubbleMenu';
 import BubbleMenuItem from 'src/pier-design-system/components/bubble-menu/BubbleMenuItem';
 
-export default function Layout({ children, appData, isHome }) {
+export default function Layout({ children, appData }) {
     const [mobileNav, setMobileNav] = useState(false);
-    let isDesktop = useMediaQuery('(min-width: 768px)');
-    
+    const isMobileScreen = useMediaQuery('(min-width: 846px)');
 
     return (
         <Fragment>
-            <Screen>
-                {!isDesktop ? (
-                    <Nav mobile>
-                        <NextLink href="/">
-                            <a>
-                                <Heading size="sm" className="-m-a-4">
-                                    Pier Design System
-                                </Heading>
-                            </a>
-                        </NextLink>
-                        <div>
-                            <IconButton
-                                icon="far fa-bars"
-                                className="-m-a-4"
-                                onClick={() => {
-                                    setMobileNav(!mobileNav);
-                                }}
-                            ></IconButton>
-                            <BubbleMenu open={mobileNav} className="-m-r-2">
-                                <NextLink href="/abstracts">
-                                    <a>
-                                        <BubbleMenuItem>Abstracts</BubbleMenuItem>
-                                    </a>
-                                </NextLink>
-                                <NextLink href="/components">
-                                    <a>
-                                        <BubbleMenuItem>Components</BubbleMenuItem>
-                                    </a>
-                                </NextLink>
-                                <NextLink href="/utilities">
-                                    <a>
-                                        <BubbleMenuItem>Utilities</BubbleMenuItem>
-                                    </a>
-                                </NextLink>
-                            </BubbleMenu>
-                        </div>
-                    </Nav>
-                ) : (
-                    <Nav>
+            {isMobileScreen ? (
+                <div className="-d-flex" style={{ width: '100vw', height: '100vh', position: 'fixed' }}>
+                    <Nav isCollapsible width={240}>
                         <NextLink href="/">
                             <a>
                                 <Heading size="sm" className="-m-b-0 -p-a-7">
@@ -120,32 +83,50 @@ export default function Layout({ children, appData, isHome }) {
                             </NavItemContainer>
                         </NavItemGroup>
                     </Nav>
-                )}
-            </Screen>
-            {isHome ? (
-                <div>{children}</div>
-            ) : (
-                <div
-                    style={
-                        isDesktop
-                            ? {
-                                  maxWidth: '1040px',
-                                  margin: '0 auto',
-                                  width: '100%',
-                                  paddingLeft: '240px',
-                              }
-                            : {
-                                  maxWidth: '1040px',
-                                  margin: '0 auto',
-                                  width: '100%',
-                                  paddingTop: '72px',
-                              }
-                    }
-                >
-                    {children}
+                    <div style={{ width: '100%', flex: 1, overflow: 'scroll' }}>{children}</div>
                 </div>
+            ) : (
+                <Fragment>
+                    <Screen>
+                        <Nav mobile>
+                            <NextLink href="/">
+                                <a>
+                                    <Heading size="sm" className="-m-a-4">
+                                        Pier Design System
+                                    </Heading>
+                                </a>
+                            </NextLink>
+                            <div>
+                                <IconButton
+                                    icon="far fa-bars"
+                                    className="-m-a-4"
+                                    onClick={() => {
+                                        setMobileNav(!mobileNav);
+                                    }}
+                                ></IconButton>
+                                <BubbleMenu open={mobileNav} className="-m-r-2">
+                                    <NextLink href="/abstracts">
+                                        <a>
+                                            <BubbleMenuItem>Abstracts</BubbleMenuItem>
+                                        </a>
+                                    </NextLink>
+                                    <NextLink href="/components">
+                                        <a>
+                                            <BubbleMenuItem>Components</BubbleMenuItem>
+                                        </a>
+                                    </NextLink>
+                                    <NextLink href="/utilities">
+                                        <a>
+                                            <BubbleMenuItem>Utilities</BubbleMenuItem>
+                                        </a>
+                                    </NextLink>
+                                </BubbleMenu>
+                            </div>
+                        </Nav>
+                    </Screen>
+                    <div style={{ width: '100%', paddingTop: '72px' }}>{children}</div>
+                </Fragment>
             )}
-            
         </Fragment>
     );
 }
@@ -153,5 +134,4 @@ export default function Layout({ children, appData, isHome }) {
 Layout.propTypes = {
     children: PropTypes.node.isRequired,
     appData: PropTypes.object,
-    isHome: PropTypes.bool,
 };

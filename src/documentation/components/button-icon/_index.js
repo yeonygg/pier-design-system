@@ -4,6 +4,7 @@ import sizes from './sizes';
 import disabled from './disabled';
 import pill from './pill';
 import dark from './dark';
+import secondary from './secondary';
 
 export default {
     title: 'Button - Icon',
@@ -21,6 +22,12 @@ export default {
             name: 'Sizes',
             description: '',
             markup: ReactDOMServer.renderToStaticMarkup(sizes),
+            dark: false,
+        },
+        {
+            name: 'Secondary',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(secondary),
             dark: false,
         },
         {

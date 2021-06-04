@@ -1,4 +1,4 @@
-$default-size: md;
+$default-size: sm;
 
 .pier-button-icon {
   display: inline-flex;
@@ -7,7 +7,7 @@ $default-size: md;
   align-items: center;
   text-align: center;
   border: none;
-  color: map-get($colorsGrays, gray-2);
+  color: map-get($colorsGrays, light-gray);
   background: transparent;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
@@ -23,23 +23,28 @@ $default-size: md;
   }
 
   &:hover {
-    background: map-get($colorsGrays, light-2);
-    transform: scale(1.1);
+    background: map-get($colorsGrays, light);
+    transform: scale(1.05);
 
     .pier-button-icon__icon {
       background: build-gradient(90deg, primaryBoulevard);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+	  filter: drop-shadow(0 1px 4px rgba(map-get($colorsGrays, white), 1)) drop-shadow(0 1px 16px rgba(map-get($colorsGrays, white), 1))
     }
   }
 
   &:focus {
-    background: map-get($colorsGrays, light-3);
+    box-shadow: 2px 0px 8px rgba(map-get($colorsCyan, default), .5), -2px 0px 8px rgba(map-get($colorsGreen, default), .5);
   }
 
   &:active {
     background: map-get($colorsGrays, gray-4);
   }
+}
+
+.pier-button-icon__icon {
+	transition: all 0.2s ease-in-out;
 }
 
 @each $prefix, $size in $input-heights {
@@ -59,10 +64,6 @@ $default-size: md;
   }
 }
 
-
-.pier-button-icon__icon {
-}
-
 .pier-button-icon--pill {
   border-radius: 100px;
 }
@@ -73,17 +74,38 @@ $default-size: md;
 }
 
 .pier-button-icon--dark {
-  color: map-get($colorsGrays, gray-3);
+  color: map-get($colorsGrays, dark-1);
 
   &:hover {
-    background: map-get($colorsGrays, dark-3);
-  }
-
-  &:focus {
     background: map-get($colorsGrays, dark);
+	
+	.pier-button-icon__icon {
+		background: build-gradient(90deg, primaryBoulevard);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		filter: drop-shadow(0 1px 4px rgba(map-get($colorsGrays, black), .35)) drop-shadow(0 1px 16px rgba(map-get($colorsGrays, black), .35))
+	  }
   }
 
   &:active {
-    background: map-get($colorsGrays, dark-4);
+    background: map-get($colorsGrays, dark-3);
   }
+}
+
+.pier-button-icon--secondary {
+	background: map-fetch($colorsGrays, white);
+	border: 1px solid map-fetch($colorsGrays, light);
+
+	&:active {
+		border: 1px solid map-fetch($colorsGrays, gray-4);
+	  }
+}
+
+.pier-button-icon--secondary.pier-button-icon--dark {
+	background: map-fetch($colorsGrays, darker);
+	border: 1px solid map-fetch($colorsGrays, dark);
+
+	&:hover {
+		background: map-get($colorsGrays, dark);
+	}
 }

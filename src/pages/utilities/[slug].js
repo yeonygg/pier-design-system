@@ -7,6 +7,7 @@ import BodyText from 'src/pier-design-system/components/text/BodyText';
 import Section from 'src/pier-design-system/components/containers/Section';
 import Card from 'src/pier-design-system/components/containers/Card';
 import PageHeading from 'src/pages-components/PageHeading';
+import BodyContent from 'src/pages-components/BodyContent';
 
 export default function ComponentPage({ appData, utility }) {
     const breadcrumbs = [
@@ -21,26 +22,28 @@ export default function ComponentPage({ appData, utility }) {
                 <title>{utility.title} | Pier Design System</title>
             </Head>
             <Layout appData={appData}>
-                <PageHeading
-                    breadcrumbs={breadcrumbs}
-                    title={utility.title}
-                    lastUpdated={utility['last-updated']}
-                    description={utility.description}
-                ></PageHeading>
-                <Section>
-                    {utility.variations.map((item, i) => {
-                        return (
-                            <Card key={i}>
-                                <Section>
-                                    <BodyText className={item.description == '' ? '-m-b-0' : ''}>
-                                        <span className="pier-body-text__inline-code">{item.class}</span>
-                                    </BodyText>
-                                    <BodyText className="-m-b-0">{item.description}</BodyText>
-                                </Section>
-                            </Card>
-                        );
-                    })}
-                </Section>
+                <BodyContent>
+                    <PageHeading
+                        breadcrumbs={breadcrumbs}
+                        title={utility.title}
+                        lastUpdated={utility['last-updated']}
+                        description={utility.description}
+                    ></PageHeading>
+                    <Section>
+                        {utility.variations.map((item, i) => {
+                            return (
+                                <Card key={i}>
+                                    <Section>
+                                        <BodyText className={item.description == '' ? '-m-b-0' : ''}>
+                                            <span className="pier-body-text__inline-code">{item.class}</span>
+                                        </BodyText>
+                                        <BodyText className="-m-b-0">{item.description}</BodyText>
+                                    </Section>
+                                </Card>
+                            );
+                        })}
+                    </Section>
+                </BodyContent>
             </Layout>
         </Fragment>
     );
