@@ -20,11 +20,23 @@ function HR({ size, theme, className, style }) {
         case 'hero':
             classes += ` ${prefix}--hero`;
             break;
+        case 'lighter':
+            classes += ` ${prefix}--lighter`;
+            break;
+        case 'light-gray':
+            classes += ` ${prefix}--light-gray`;
+            break;
         case 'light':
             classes += ``;
             break;
+        case 'white':
+            classes += ` ${prefix}--white`;
+            break;
         case 'dark':
             classes += ` ${prefix}--dark`;
+            break;
+        case 'darker':
+            classes += ` ${prefix}--darker`;
             break;
         case 'gray':
             classes += ` ${prefix}--gray`;
@@ -43,7 +55,7 @@ HR.defaultProps = {
 
 HR.propTypes = {
     size: PropTypes.oneOf(['sm', 'md', 'lg']),
-    theme: PropTypes.oneOf(['hero', 'light', 'dark', 'gray']),
+    theme: PropTypes.oneOf(['hero', 'white', 'lighter', 'light-gray', 'light', 'dark', 'darker', 'gray']),
     className: PropTypes.string,
     style: PropTypes.object,
 };

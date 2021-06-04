@@ -4,33 +4,37 @@ $hr-sizes: (
 	sm: 1px
 );
 
+$hr-themes: (
+	white: map-get($colorsGrays , white),
+	lighter: map-get($colorsGrays , lighter),
+	light: map-get($colorsGrays , light),
+	light-gray: map-get($colorsGrays , light-gray),
+	gray: map-get($colorsGrays , gray),
+	dark: map-get($colorsGrays , dark),
+	darker: map-get($colorsGrays , darker),
+	hero: build-gradient(90deg, primaryBoulevard)
+);
+
+$default-size: sm;
+$default-theme: light;
+
 .pier-hr {
 	width: 100%;
-	height: map-get($hr-sizes, sm);
-	background: map-get($colorsGrays, light);
+	height: map-get($hr-sizes, $default-size);
+	background: map-get($hr-themes, $default-theme);
 	margin: 0;
+	border-radius: 100rem;
 }
 
-.pier-hr--primary {
-	background: map-get($colorsCyan, default);
-}
 
-.pier-hr--dark {
-	background: map-get($colorsGrays, dark-1);
-}
+@each $prefix, $size in $hr-sizes {
+	.pier-hr--#{$prefix} {
+		height: $size;
+	}
+  }
 
-.pier-hr--hero {
-	background: build-gradient(90deg, primaryBoulevard);
-	height: map-get($hr-sizes, lg);
-	border-radius: 2px;
-}
-
-.pier-hr--hero-thin {
-	background: build-gradient(90deg, primaryBoulevard);
-}
-
-.pier-hr--deepOcean {
-	background: build-gradient(90deg, deepOcean);
-	height: map-get($hr-sizes, lg);
-	border-radius: 2px;
-}
+  @each $prefix, $theme in $hr-themes {
+	.pier-hr--#{$prefix} {
+		background: $theme;
+	}
+  }
