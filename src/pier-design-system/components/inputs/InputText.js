@@ -5,6 +5,9 @@ function InputText({ type, name, placeholder, value, onChange, onFocus, onBlur, 
         classes = prefix;
 
     switch (size) {
+        case 'xs':
+            classes += ` ${prefix}--xs`;
+            break;
         case 'sm':
             classes += ` ${prefix}--sm`;
             break;
@@ -66,7 +69,7 @@ InputText.propTypes = {
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     onBlur: PropTypes.func,
-    size: PropTypes.oneOf(['sm', 'md', 'lg']),
+    size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     disabled: PropTypes.bool,
     cap: PropTypes.oneOf(['cap', 'none', 'right', 'left']),
     pill: PropTypes.bool,

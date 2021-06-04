@@ -1,7 +1,7 @@
 .pier-nav {
 	background-color: map-get($colorsGrays, "light-4");
 	height: 100%;
-	width: 240px;
+	width: 100%;
 	border-right: 1px solid map-get($colorsGrays, "light");
 	box-shadow: 0 0 2rem rgba(map-get($colorsGrays, gray), 0.15);
 	overflow: scroll;

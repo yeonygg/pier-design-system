@@ -1,5 +1,7 @@
 $default-size: md;
 
+$height-multiplier: 2.5;
+
 .pier-input-textarea {
   
   font-family: $font-family;
@@ -18,13 +20,13 @@ $default-size: md;
   white-space: pre-wrap;
   overflow-wrap: break-word;
   line-height: 1.55rem;
-  height: map-fetch($input-heights, ($default-size, desktop));
+  height: map-fetch($input-heights, ($default-size, desktop)) * $height-multiplier;
   border-radius: map-fetch($input-border-radii, $default-size);
   padding: map-fetch($input-textarea-padding, ($default-size, desktop));
   font-size: map-fetch($input-text-sizes, ($default-size, desktop));
 
   @include build-media-query(mobile) {
-    height: map-fetch($input-heights, ($default-size, desktop));
+    height: map-fetch($input-heights, ($default-size, desktop)) * $height-multiplier;
     padding: map-fetch($input-textarea-padding, ($default-size, mobile));
     font-size: map-fetch($input-text-sizes, ($default-size, mobile));
   }
@@ -45,13 +47,13 @@ $default-size: md;
 
 @each $prefix, $size in $input-heights {
   .pier-input-textarea--#{$prefix} {
-    height: map-fetch($input-heights, ($prefix, desktop));
+    height: map-fetch($input-heights, ($prefix, desktop)) * $height-multiplier;
     border-radius: map-fetch($input-border-radii, $prefix);
     padding: map-fetch($input-textarea-padding, ($prefix, desktop));
     font-size: map-fetch($input-text-sizes, ($prefix, desktop));
 
     @include build-media-query(mobile) {
-      height: map-fetch($input-heights, ($prefix, desktop));
+      height: map-fetch($input-heights, ($prefix, desktop)) * $height-multiplier;
       padding: map-fetch($input-textarea-padding, ($prefix, mobile));
       font-size: map-fetch($input-text-sizes, ($prefix, mobile));
     }

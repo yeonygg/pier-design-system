@@ -72,7 +72,7 @@ export default function Home({ appData }) {
                             <Section className="-d-flex -justify-content-center -m-b-12">
                                 <NextLink href={`https://www.npmjs.com/package/pier-design-system`}>
                                     <a>
-                                        <button class="pier-button-standard pier-button-standard--secondary pier-button-standard--lg -m-l-4">
+                                        <button className="pier-button-standard pier-button-standard--secondary pier-button-standard--lg -m-l-4">
                                             Get Started
                                         </button>
                                     </a>

@@ -5,6 +5,9 @@ function InputSelect({ children, name, value, onChange, size, disabled, cap, pil
         classes = prefix;
 
     switch (size) {
+        case 'xs':
+            classes += ` ${prefix}--xs`;
+            break;
         case 'sm':
             classes += ` ${prefix}--sm`;
             break;
@@ -55,7 +58,7 @@ InputSelect.propTypes = {
     name: PropTypes.string,
     value: PropTypes.string,
     onChange: PropTypes.func,
-    size: PropTypes.oneOf(['sm', 'md', 'lg']),
+    size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     disabled: PropTypes.bool,
     cap: PropTypes.oneOf(['cap', 'none', 'right', 'left']),
     pill: PropTypes.bool,

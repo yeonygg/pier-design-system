@@ -5,6 +5,9 @@ function InputCheckbox({ children, name, checked, indeterminate, value, onChange
         classes = prefix;
 
     switch (size) {
+        case 'xs':
+            classes += ` ${prefix}--xs`;
+            break;
         case 'sm':
             classes += ` ${prefix}--sm`;
             break;
@@ -50,7 +53,7 @@ InputCheckbox.propTypes = {
     indeterminate: PropTypes.bool,
     value: PropTypes.string,
     onChange: PropTypes.func,
-    size: PropTypes.oneOf(['sm', 'md', 'lg']),
+    size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     disabled: PropTypes.bool,
     error: PropTypes.bool,
     dark: PropTypes.bool,

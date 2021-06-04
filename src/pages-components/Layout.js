@@ -22,7 +22,7 @@ export default function Layout({ children, appData }) {
         <Fragment>
             {isMobileScreen ? (
                 <div className="-d-flex" style={{ width: '100vw', height: '100vh', position: 'fixed' }}>
-                    <Nav>
+                    <Nav isCollapsible width={240}>
                         <NextLink href="/">
                             <a>
                                 <Heading size="sm" className="-m-b-0 -p-a-7">

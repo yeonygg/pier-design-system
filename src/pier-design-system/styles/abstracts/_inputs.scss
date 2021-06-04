@@ -1,4 +1,8 @@
 $input-text-sizes: (
+	xs: (
+		desktop: .75rem,
+		mobile: 0.625rem
+	),
 	sm: ( 
 		desktop: .875rem,
 		mobile: .75rem
@@ -14,6 +18,10 @@ $input-text-sizes: (
 );
 
 $input-label-sizes: (
+	xs: (
+		desktop: .75rem,
+		mobile: 0.625rem
+	),
 	sm: ( 
 		desktop: .875rem,
 		mobile: .75rem
@@ -31,6 +39,10 @@ $input-label-sizes: (
 $input-text-line-height: 1;
 
 $input-icon-sizes: (
+	xs: (
+		desktop: 0.75rem,
+		mobile: 0.625rem
+	),
 	sm: (
 		desktop: 1.125rem,
 		mobile: 1rem
@@ -46,9 +58,13 @@ $input-icon-sizes: (
 );
 
 $input-heights: (
+	xs: (
+		desktop: 1.5rem,
+		mobile: 1.25rem
+	),
 	sm: (
 		desktop: 2.125rem,
-		mobile: 2
+		mobile: 2rem
 	),
 	md: (
 		desktop: 2.75rem,
@@ -61,18 +77,24 @@ $input-heights: (
 );
 
 $input-border-radii: (
+	xs: .25rem,
 	sm: .375rem,
 	md: .5rem,
 	lg: .625rem
 );
 
 $button-inner-radii: (
+	xs: 0.221rem,
 	sm: 0.338rem,
 	md: 0.463rem,
 	lg: 0.588rem
 );
 
 $input-padding: (
+	xs: (
+		desktop: 0.625rem,
+		mobile: 0.5rem
+	),
 	sm: (
 		desktop: 0.75rem,
 		mobile: 0.625rem
@@ -88,21 +110,29 @@ $input-padding: (
 );
 
 $input-textarea-padding: (
+	xs: (
+		desktop: 0.25rem 0.625rem,
+		mobile: 0.2rem 0.5rem
+	),
 	sm: (
 		desktop: 0.375rem 0.75rem,
-		mobile: 0.25 0.625rem
+		mobile: 0.25rem 0.625rem
 	),
 	md: (
 		desktop: 0.5rem 0.875rem,
-		mobile: 0.375 0.75rem
+		mobile: 0.375rem 0.75rem
 	),
 	lg: (
 		desktop: 0.625rem 1rem,
-		mobile: 0.5 0.875rem
+		mobile: 0.5rem 0.875rem
 	)
 );
 
 $button-padding: (
+	xs: (
+		desktop: 1rem,
+		mobile: 0.875rem
+	),
 	sm: (
 		desktop: 1.25rem,
 		mobile: 1.125rem
@@ -116,22 +146,3 @@ $button-padding: (
 		mobile: 1.813rem
 	)
 );
-
-$button-icon-padding: (
-	sm: (
-		desktop: 0.5rem,
-		mobile: 0.438rem
-	),
-	md: (
-		desktop: 0.625rem,
-		mobile: 0.563rem
-	),
-	lg: (
-		desktop: 1rem,
-		mobile: 0.875rem
-	)
-);
-
-		// go down 2px sizes for mobile!
-
-
