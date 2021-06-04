@@ -9,6 +9,7 @@ import Section from 'src/pier-design-system/components/containers/Section';
 import Card from 'src/pier-design-system/components/containers/Card';
 import Link from 'src/pier-design-system/components/text/Link';
 import NextLink from 'next/link';
+import BodyContent from 'src/pages-components/BodyContent';
 
 export default function Home({ appData }) {
     const heroVideo = {
@@ -20,13 +21,6 @@ export default function Home({ appData }) {
         position: 'absolute',
         top: '0',
         left: '0',
-    };
-
-    const bodyLayout = {
-        maxWidth: '1040px',
-        margin: '0 auto',
-        width: '100%',
-        paddingLeft: '240px',
     };
 
     const heroElement = {
@@ -51,7 +45,7 @@ export default function Home({ appData }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Layout appData={appData} isHome>
+            <Layout appData={appData}>
                 <div style={{ postion: 'relative', width: '100%' }}>
                     <div style={heroVideo}>
                         <video style={heroVideo} playsInline autoPlay loop muted>
@@ -61,7 +55,7 @@ export default function Home({ appData }) {
 
                     <div style={heroElement}></div>
 
-                    <div style={bodyLayout}>
+                    <BodyContent>
                         <Section className="-d-flex -justify-content-center -p-t-10">
                             <img style={{ width: '17%' }} src="/gumgum_logo.svg" />
                         </Section>
@@ -88,10 +82,10 @@ export default function Home({ appData }) {
                             <Section className="-m-v-12"></Section>
                             <Section className="-m-v-12"></Section>
                         </Section>
-                    </div>
+                    </BodyContent>
                 </div>
-                <div style={bodyLayout}>
-                    <Section className="-d-flex -justify-content-center -p-h-0" style={{ marginTop: '-360px' }}>
+                <BodyContent>
+                    <Section className="-d-flex -justify-content-center" style={{ marginTop: '-360px' }}>
                         <NextLink href={`/abstracts`}>
                             <a>
                                 <Card className="pier-card pier-card--link pier-card--center pier-card--image -p-v-10 -p-h-3 -m-r-5">
@@ -132,34 +126,35 @@ export default function Home({ appData }) {
                             </a>
                         </NextLink>
                     </Section>
-
-                    <h1 className="pier-heading pier-heading--sm">Links to Resources</h1>
-                    <NextLink href={`https://github.com/gg-jarrod/pier-design-system`}>
-                        <a target="_blank">
-                            <Card className="pier-card">
-                                <div className="pier-section">
-                                    <h1 className="pier-heading pier-heading--sm">
-                                        <Link>Github</Link>
-                                    </h1>
-                                    <p className="pier-body-text">Create a fork of Pier to use for your own design system!</p>
-                                </div>
-                            </Card>
-                        </a>
-                    </NextLink>
-                    <NextLink href={`https://www.npmjs.com/package/pier-design-system`}>
-                        <a target="_blank">
-                            <Card className="pier-card">
-                                <div className="pier-section">
-                                    <h1 className="pier-heading pier-heading--sm">
-                                        <Link>NPM</Link>
-                                    </h1>
-                                    <p className="pier-body-text">Use Pier in your own web/React project.</p>
-                                </div>
-                            </Card>
-                        </a>
-                    </NextLink>
+                    <Section>
+                        <h1 className="pier-heading pier-heading--sm">Links to Resources</h1>
+                        <NextLink href={`https://github.com/gg-jarrod/pier-design-system`}>
+                            <a target="_blank">
+                                <Card className="pier-card">
+                                    <div className="pier-section">
+                                        <h1 className="pier-heading pier-heading--sm">
+                                            <Link>Github</Link>
+                                        </h1>
+                                        <p className="pier-body-text">Create a fork of Pier to use for your own design system!</p>
+                                    </div>
+                                </Card>
+                            </a>
+                        </NextLink>
+                        <NextLink href={`https://www.npmjs.com/package/pier-design-system`}>
+                            <a target="_blank">
+                                <Card className="pier-card">
+                                    <div className="pier-section">
+                                        <h1 className="pier-heading pier-heading--sm">
+                                            <Link>NPM</Link>
+                                        </h1>
+                                        <p className="pier-body-text">Use Pier in your own web/React project.</p>
+                                    </div>
+                                </Card>
+                            </a>
+                        </NextLink>
+                    </Section>
                     <Section className="-m-v-12"></Section>
-                </div>
+                </BodyContent>
             </Layout>
         </Fragment>
     );

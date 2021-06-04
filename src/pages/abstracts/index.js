@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import API from 'src/documentation/API';
 import { Fragment } from 'react';
 import Layout from 'src/pages-components/Layout';
+import BodyContent from 'src/pages-components/BodyContent';
 
 export default function Home({ appData }) {
     return (
@@ -12,7 +13,7 @@ export default function Home({ appData }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Layout appData={appData}>
-                <Fragment></Fragment>
+                <BodyContent></BodyContent>
             </Layout>
         </Fragment>
     );
