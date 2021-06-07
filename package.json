@@ -1,6 +1,6 @@
 {
 	"name": "pier-design-system",
-	"version": "0.5.0",
+	"version": "0.5.1",
 	"description": "A presentational design system and react component library",
 	"keywords": [
 		"pier design system",
@@ -27,8 +27,8 @@
 		"dev": "next dev",
 		"next:build": "next build",
 		"rollup:build": "rollup -c",
-		"sass:build": "sass --no-source-map src/pier-design-system/styles/main.scss dist/pier-design-system.css",
-		"postsass:build": "uglifycss dist/pier-design-system.css --output dist/pier-design-system.css",
+		"sass:build": "sass --no-source-map src/pier-design-system/styles/main.scss dist/styles.css",
+		"postsass:build": "uglifycss dist/styles.css --output dist/styles.css",
 		"prenpm-pkg-build": "rimraf dist",
 		"npm-pkg-build": "yarn sass:build && yarn rollup:build",
 		"build": "yarn next:build && yarn npm-pkg-build",
