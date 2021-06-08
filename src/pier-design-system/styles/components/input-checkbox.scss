@@ -1,5 +1,12 @@
 $default-size: md;
 
+$indicator-box-sizes: (
+    sm:  0.938rem,
+    md:  1.25rem,
+    lg:  1.5625,
+
+);
+
 .pier-input-checkbox {
     display: inline-flex;
     align-items: center;
@@ -52,6 +59,7 @@ $default-size: md;
     }
 
     &:active {
+        border: transparent;
         background-image: build-gradient(90deg, primaryBoulevard);
     }
 }
@@ -61,6 +69,13 @@ $default-size: md;
     height: 1.5625rem;
     margin-right: 0.52083rem;
     border-radius: 0.46922rem;
+}
+
+.pier-input-checkbox__indicator--sm {
+    width: 0.938rem;
+    height: 0.938rem;
+    margin-right: 0.281rem;
+    border-radius: 0.25rem;
 }
 
 .pier-input-checkbox__input:checked ~ .pier-input-checkbox__indicator {
