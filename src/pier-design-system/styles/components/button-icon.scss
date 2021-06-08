@@ -39,6 +39,7 @@ $default-size: sm;
   }
 
   &:active {
+    transform: scale(0.99);
     background: map-get($colorsGrays, gray-4);
   }
 }
