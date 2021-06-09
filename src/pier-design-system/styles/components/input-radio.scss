@@ -53,6 +53,7 @@ $default-size: md;
     border: 1px solid map-get($colorsGrays, dark-1);
   }
   &:active {
+    border: transparent;
     background-image: build-gradient(90deg, primaryBoulevard);
 }
 }
@@ -61,13 +62,20 @@ $default-size: md;
   width: 1.5625rem;
   height: 1.5625rem;
   margin-right: 0.52083rem;
-  border-radius: 9999999px;
+  border-radius: 999rem;
+}
+
+.pier-input-radio__indicator--sm {
+  width: 0.938rem;
+  height: 0.938rem;
+  margin-right: 0.281rem;
+  border-radius: 999rem;
 }
 
 .pier-input-radio__input:checked ~ .pier-input-radio__indicator {
-  border-color: transparent;
+  border: transparent;
   background-position: center center;
-  background-size: 43% 43%, 110% 110%;
+  background-size: 40% 40%, 100% 100%;
   background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='circle' class='svg-inline--fa fa-circle fa-w-16' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23FFFFFF' d='M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z'%3E%3C/path%3E%3C/svg%3E"),
     build-gradient(90deg, primaryBoulevard);
 }

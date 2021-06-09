@@ -33,8 +33,8 @@ $default-theme: light;
 	}
   }
 
-  @each $prefix, $theme in $hr-themes {
-	.pier-hr--#{$prefix} {
+  @each $color, $theme in $hr-themes {
+	.pier-hr--#{$color} {
 		background: $theme;
 	}
   }
