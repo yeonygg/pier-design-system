@@ -17,7 +17,7 @@ $card-radii: (
 
 .pier-card--dark {
     background-color: map-get($colorsGrays, darker);
-    border: 0.0625rem solid map-get($colorsGrays, dark-2);
+    border: 0.0625rem solid map-get($colorsGrays, dark-3);
 }
 
 @each $prefix, $radius in $card-radii {

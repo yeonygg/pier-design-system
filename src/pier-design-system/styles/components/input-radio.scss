@@ -85,7 +85,7 @@ $default-size: md;
 }
 
 .pier-input-radio__input:focus ~ .pier-input-radio__indicator {
-  box-shadow: 0px 0px 5px 0px rgba(map-fetch($colorsCyan, light-1), 0.5);
+  box-shadow: 0px 0px 5px 0px rgba(map-fetch($colorsCyan, default), 0.5);
 }
 
 .pier-input-radio--error {

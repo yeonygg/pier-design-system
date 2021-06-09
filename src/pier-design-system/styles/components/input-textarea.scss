@@ -42,6 +42,7 @@ $height-multiplier: 2.5;
 
   &:focus {
     @include build-input-focus-state(map-get($colorsBlue, dark-1));
+    box-shadow: 0px 0px 5px 0px rgba(map-fetch($colorsCyan, default), 0.5);
   }
 }
 
