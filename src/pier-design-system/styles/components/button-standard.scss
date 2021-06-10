@@ -28,6 +28,7 @@ $default-size: md;
   }
 
   &:active {
+    transform: scale(0.99);
     background: map-fetch($colorsCyan, dark-1);
   }
 
@@ -112,6 +113,8 @@ $default-size: md;
 }
 
 .pier-button-standard--secondary.pier-button-standard--dark {
+
+  background: transparent;
 
   &:focus {
 

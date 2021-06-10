@@ -60,9 +60,11 @@ $default-size: md;
     }
 
     &:active {
+        border: transparent;
         background-image: build-gradient(90deg, primaryBoulevard);
 
         &:after {
+            transform: scale(0.90);
             background-color: map-get($colorsGrays, white);
             background-image: none;
         }
@@ -99,7 +101,7 @@ $default-size: md;
 }
 
 .pier-input-toggle__input:checked ~ .pier-input-toggle__indicator {
-    border-color: transparent;
+    border: transparent;
     background-position: center center;
     background-size: 110% 110%;
     background-image: build-gradient(90deg, primaryBoulevard);
@@ -107,16 +109,19 @@ $default-size: md;
     &::before {
         opacity: 0;
     }
+
+    &:active {
+        &::after {
+            transform: scale(0.90);
+        }
+    }
+
 }
 
 .pier-input-toggle__input:checked ~ .pier-input-toggle__indicator:after {
     background-color: map-get($colorsGrays, white);
     background-image: none;
     left: calc(50% + 2px);
-
-    &:active {
-
-    }
 }
 
 .pier-input-toggle__input:checked ~ .pier-input-toggle__label {
@@ -124,7 +129,7 @@ $default-size: md;
 }
 
 .pier-input-toggle__input:focus ~ .pier-input-toggle__indicator {
-    box-shadow: 0px 0px 5px 0px rgba(map-fetch($colorsCyan, light-1), 0.5);
+    box-shadow: 0px 0px 5px 0px rgba(map-fetch($colorsCyan, default), 0.5);
 }
 
 .pier-input-toggle--disabled {
@@ -132,13 +137,6 @@ $default-size: md;
     pointer-events: none;
 }
 
-.pier-input-toggle__input:focus + .pier-input-toggle__indicator {
-    box-shadow: 0px 0px 5px 0px rgba(map-fetch($colorsCyan, light-1), 0.5);
-}
-
-.pier-input-toggle__input:focus ~ .pier-input-toggle__indicator {
-    box-shadow: 0px 0px 5px 0px rgba(map-fetch($colorsCyan, light-1), 0.5);
-}
 
 .pier-input-toggle--error {
 

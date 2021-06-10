@@ -30,7 +30,7 @@ export default function PageHeading({ breadcrumbs, title, lastUpdated, descripti
                 <Heading style={{ paddingRight: '4px' }} className="-m-b-1">
                     {title}
                 </Heading>
-                <HR theme="hero" />
+                <HR theme="hero" size="lg"/>
             </div>
             <BodyText size="xs" color="light">
                 Last updated: {lastUpdated}
