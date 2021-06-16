@@ -59,13 +59,13 @@ $well-borders: (
 }
 
 @each $prefix, $theme in $well-themes {
-	.pier-well--#{$prefix} {
+	.pier-well--#{"" + $prefix} {
 		background: map-fetch($theme, light);
 		border: 0.0625rem solid map-fetch($well-borders, ($prefix, light));
 		box-shadow: inset 0 0 1rem rgba(map-fetch($theme, dark), 0.25);
 	}
 
-	.pier-well--dark.pier-well--#{$prefix} {
+	.pier-well--dark.pier-well--#{"" + $prefix} {
 		background: map-fetch($theme, dark);
 		border: 0.0625rem solid map-fetch($well-borders, ($prefix, dark));
 		box-shadow: inset 0 0 1rem rgba(map-fetch($colorsGrays, black), 0.4);
