@@ -5,6 +5,7 @@ import { Fragment } from 'react';
 import Layout from 'src/pages-components/Layout';
 import BodyContent from 'src/pages-components/BodyContent';
 
+
 export default function Home({ appData }) {
     return (
         <Fragment>
