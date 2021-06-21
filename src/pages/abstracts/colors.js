@@ -48,9 +48,11 @@ export default function LayoutPage({ appData }) {
                         <Card className="-m-b-0 -br-b-0">
                             <Section className="-d-flex">
                             <div className="pier-color-box -bgc-blue-dark-2"></div>
+                            <div className="-d-flex -m-t-4">
                             <Heading className="-m-l-4 -c-gray-3" size="xs">Gray Light-4</Heading><br></br>
                             <BodyText size="sm" className="-m-l-4"> HEX #F7F8F8
                         </BodyText>
+                        </div>
                             </Section>
                         </Card>
                         <Well className="-m-b-0 -br-t-0" style={{ marginTop: '-1px' }}>
