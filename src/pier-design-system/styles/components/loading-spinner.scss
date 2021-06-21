@@ -23,15 +23,15 @@
 
 .pier-loading-spinner--sm {
     animation: rotate 1s linear infinite;
-    height: 70px;
-    width: 70px;
+    height: 40px;
+    width: 40px;
 
 }
 
 .pier-loading-spinner--lg {
     animation: rotate 1s linear infinite;
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
 }
 
 .pier-loading-spinner--md {
@@ -48,7 +48,7 @@
 
 .path {
     stroke-dasharray: 400;
-    animation: dash 4s linear infinite;
+    animation: dash 3s ease-in-out infinite;
 }
 
 
