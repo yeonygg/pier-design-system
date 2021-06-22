@@ -1,6 +1,7 @@
 import ReactDOMServer from 'react-dom/server';
 import base from './base';
 import sizes from './sizes';
+import gumgumSizes from './gumgum-sizes';
 import dark from './dark';
 
 export default {
@@ -19,6 +20,12 @@ export default {
             name: 'Sizes',
             description: '',
             markup: ReactDOMServer.renderToStaticMarkup(sizes),
+            dark: false,
+        },
+        {
+            name: 'Gumgum Sizes',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(gumgumSizes),
             dark: false,
         },
         {
