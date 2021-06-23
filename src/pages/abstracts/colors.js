@@ -152,6 +152,53 @@ export default function LayoutPage({ appData }) {
                 </Section>
 
                 <Section>
+                <Heading size="sm">Gradients</Heading>
+                <Card className="-m-b-0">
+                    <Section className="-d-flex">
+                    <div className="pier-color-box--gradient-1 -m-r-5"></div>
+                    <div className="pier-color-box--gradient-2 -m-r-5"></div>
+                    <div className="pier-color-box--gradient-3 -m-r-5"></div>
+                    <div className="pier-color-box--gradient-4 -m-r-5"></div>
+                    <div className="pier-color-box--gradient-5"></div>
+
+                    </Section>
+
+                    <Section className="-d-flex">
+                    <div className="-m-r-12">
+                        <Heading size="xs">Primary<br></br> Boulevard</Heading>
+                        <BodyText size="xs">Green<br></br> #08D18B</BodyText>
+                        <BodyText size="xs">Cyan<br></br> #25B9EF</BodyText>
+                        </div>
+
+                        <div className="-m-r-10">
+                        <Heading size="xs">Deep Ocean</Heading>
+                        <BodyText size="xs">Blue<br></br> #176FB3</BodyText>
+                        <BodyText size="xs">Cyan<br></br> #25B9EF</BodyText>
+                        </div>
+
+                        <div className="-m-r-12">
+                        <Heading size="xs">Neon Sky</Heading>
+                        <BodyText size="xs">Cyan<br></br> #25B9EF</BodyText>
+                        <BodyText size="xs">Teal<br></br> #08D18B</BodyText>
+                        </div>
+
+                        <div className="-m-r-11">
+                        <Heading size="xs">Early Sunset</Heading>
+                        <BodyText size="xs">Red<br></br> #08D18B</BodyText>
+                        <BodyText size="xs">Orange<br></br> #25B9EF</BodyText>
+                        </div>
+
+                        <div className="">
+                        <Heading size="xs">Fireside Glow</Heading>
+                        <BodyText size="xs">Orange<br></br> #08D18B</BodyText>
+                        <BodyText size="xs">Yellow<br></br> #25B9EF</BodyText>
+                        </div>
+                        
+                    </Section>
+                </Card>
+            </Section>
+
+                <Section>
                 <Heading size="sm">Primary</Heading>
                 <Card className="-m-b-0">
                     <Section className="-d-flex">
