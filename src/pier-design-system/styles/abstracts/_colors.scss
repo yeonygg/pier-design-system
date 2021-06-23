@@ -144,5 +144,12 @@ $gradients: (
 
 .pier-color-box {
 	height: 50px;
-	width: 100px;
+	width: 99px;
+}
+
+.pier-color-box--border {
+	height: 50px;
+	width: 99px;
+	border: 1px solid map-get($colorsGrays, light-2);
+
 }
