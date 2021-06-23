@@ -43,6 +43,54 @@ export default function LayoutPage({ appData }) {
                         lastUpdated="6/21/21"
                         description="This is  description for Pier's colors"
                     ></PageHeading>
+
+
+                <Section>
+                <Heading size="sm">Gradients</Heading>
+                <Card className="-m-b-0">
+                    <Section className="-d-flex">
+                    <div className="pier-color-box--gradient-1 -m-r-5"></div>
+                    <div className="pier-color-box--gradient-2 -m-r-5"></div>
+                    <div className="pier-color-box--gradient-3 -m-r-5"></div>
+                    <div className="pier-color-box--gradient-4 -m-r-5"></div>
+                    <div className="pier-color-box--gradient-5"></div>
+
+                    </Section>
+
+                    <Section className="-d-flex">
+                    <div className="-m-r-12">
+                        <Heading size="xs">Primary<br></br> Boulevard</Heading>
+                        <BodyText size="xs">Green<br></br> #08D18B</BodyText>
+                        <BodyText size="xs">Cyan<br></br> #25B9EF</BodyText>
+                        </div>
+
+                        <div className="-m-r-10">
+                        <Heading size="xs">Deep Ocean</Heading>
+                        <BodyText size="xs">Blue<br></br> #176FB3</BodyText>
+                        <BodyText size="xs">Cyan<br></br> #25B9EF</BodyText>
+                        </div>
+
+                        <div className="-m-r-12">
+                        <Heading size="xs">Neon Sky</Heading>
+                        <BodyText size="xs">Cyan<br></br> #25B9EF</BodyText>
+                        <BodyText size="xs">Teal<br></br> #08D18B</BodyText>
+                        </div>
+
+                        <div className="-m-r-11">
+                        <Heading size="xs">Early Sunset</Heading>
+                        <BodyText size="xs">red<br></br> #08D18B</BodyText>
+                        <BodyText size="xs">Orange<br></br> #25B9EF</BodyText>
+                        </div>
+
+                        <div className="">
+                        <Heading size="xs">Fireside Glow</Heading>
+                        <BodyText size="xs">Orange<br></br> #08D18B</BodyText>
+                        <BodyText size="xs">Yellow<br></br> #25B9EF</BodyText>
+                        </div>
+                        
+                    </Section>
+                </Card>
+            </Section>
                     <Section>
                         <Heading size="sm">Light Grays</Heading>
                         <Card className="-m-b-0">
@@ -152,53 +200,6 @@ export default function LayoutPage({ appData }) {
                 </Section>
 
                 <Section>
-                <Heading size="sm">Gradients</Heading>
-                <Card className="-m-b-0">
-                    <Section className="-d-flex">
-                    <div className="pier-color-box--gradient-1 -m-r-5"></div>
-                    <div className="pier-color-box--gradient-2 -m-r-5"></div>
-                    <div className="pier-color-box--gradient-3 -m-r-5"></div>
-                    <div className="pier-color-box--gradient-4 -m-r-5"></div>
-                    <div className="pier-color-box--gradient-5"></div>
-
-                    </Section>
-
-                    <Section className="-d-flex">
-                    <div className="-m-r-12">
-                        <Heading size="xs">Primary<br></br> Boulevard</Heading>
-                        <BodyText size="xs">Green<br></br> #08D18B</BodyText>
-                        <BodyText size="xs">Cyan<br></br> #25B9EF</BodyText>
-                        </div>
-
-                        <div className="-m-r-10">
-                        <Heading size="xs">Deep Ocean</Heading>
-                        <BodyText size="xs">Blue<br></br> #176FB3</BodyText>
-                        <BodyText size="xs">Cyan<br></br> #25B9EF</BodyText>
-                        </div>
-
-                        <div className="-m-r-12">
-                        <Heading size="xs">Neon Sky</Heading>
-                        <BodyText size="xs">Cyan<br></br> #25B9EF</BodyText>
-                        <BodyText size="xs">Teal<br></br> #08D18B</BodyText>
-                        </div>
-
-                        <div className="-m-r-11">
-                        <Heading size="xs">Early Sunset</Heading>
-                        <BodyText size="xs">Red<br></br> #08D18B</BodyText>
-                        <BodyText size="xs">Orange<br></br> #25B9EF</BodyText>
-                        </div>
-
-                        <div className="">
-                        <Heading size="xs">Fireside Glow</Heading>
-                        <BodyText size="xs">Orange<br></br> #08D18B</BodyText>
-                        <BodyText size="xs">Yellow<br></br> #25B9EF</BodyText>
-                        </div>
-                        
-                    </Section>
-                </Card>
-            </Section>
-
-                <Section>
                 <Heading size="sm">Primary</Heading>
                 <Card className="-m-b-0">
                     <Section className="-d-flex">
@@ -302,7 +303,7 @@ export default function LayoutPage({ appData }) {
                     </div>
 
                     <div className="-m-r-7">
-                    <Heading size="xs">Cyan</Heading>
+                    <Heading size="xs">Green</Heading>
                     <BodyText size="xs">HEX<br></br> #08D18B</BodyText>
                     </div>
 
@@ -368,7 +369,7 @@ export default function LayoutPage({ appData }) {
                 </div>
 
                 <div className="-m-r-7">
-                <Heading size="xs">Cyan</Heading>
+                <Heading size="xs">Blue</Heading>
                 <BodyText size="xs">HEX<br></br> #176FB3</BodyText>
                 </div>
 
@@ -396,8 +397,269 @@ export default function LayoutPage({ appData }) {
         </Card>
     </Section>
 
-            
+    <Section>
+    <Heading size="sm">Teal</Heading>
+    <Card className="-m-b-0">
+        <Section className="-d-flex">
+        <div className="pier-color-box -bgc-teal-light-4"></div>
+        <div className="pier-color-box -bgc-teal-light-3"></div>
+        <div className="pier-color-box -bgc-teal-light-2"></div>
+        <div className="pier-color-box -bgc-teal-light-1"></div>
+        <div className="pier-color-box -bgc-teal"></div>
+        <div className="pier-color-box -bgc-teal-dark-1"></div>
+        <div className="pier-color-box -bgc-teal-dark-2"></div>
+        <div className="pier-color-box -bgc-teal-dark-3"></div>
+        <div className="pier-color-box -bgc-teal-dark-4"></div>
 
+        </Section>
+
+        <Section className="-d-flex">
+        <div className="-m-r-7">
+            <Heading size="xs">Light-4</Heading>
+            <BodyText size="xs">HEX<br></br> #DAF8EE</BodyText>
+            </div>
+
+            <div className="-m-r-7">
+            <Heading size="xs">Light-3</Heading>
+            <BodyText size="xs">HEX<br></br> #9CEDD1</BodyText>
+            </div>
+
+            <div className="-m-r-7">
+            <Heading size="xs">Light-2</Heading>
+            <BodyText size="xs">HEX<br></br> #5EE1B4</BodyText>
+            </div>
+
+            <div className="-m-r-7">
+            <Heading size="xs">Light-1</Heading>
+            <BodyText size="xs">HEX<br></br> #2DD89C</BodyText>
+            </div>
+
+            <div className="-m-r-7">
+            <Heading size="xs">Teal</Heading>
+            <BodyText size="xs">HEX<br></br> #08D18B</BodyText>
+            </div>
+
+            <div className="-m-r-7">
+            <Heading size="xs">Dark-1</Heading>
+            <BodyText size="xs">HEX<br></br> #05B67A</BodyText>
+            </div>
+
+            <div className="-m-r-7">
+            <Heading size="xs">Dark-2</Heading>
+            <BodyText size="xs">HEX<br></br> #039162</BodyText>
+            </div>
+
+            <div className="-m-r-7">
+            <Heading size="xs">Dark-3</Heading>
+            <BodyText size="xs">HEX<br></br> #026D4B</BodyText>
+            </div>
+
+            <div className="">
+            <Heading size="xs">Dark-4</Heading>
+            <BodyText size="xs">HEX<br></br> #014834</BodyText>
+            </div>
+            
+        </Section>
+    </Card>
+</Section>
+
+    <Section>
+    <Heading size="sm">Yellow</Heading>
+    <Card className="-m-b-0">
+        <Section className="-d-flex">
+        <div className="pier-color-box -bgc-yellow-light-4"></div>
+        <div className="pier-color-box -bgc-yellow-light-3"></div>
+        <div className="pier-color-box -bgc-yellow-light-2"></div>
+        <div className="pier-color-box -bgc-yellow-light-1"></div>
+        <div className="pier-color-box -bgc-yellow"></div>
+        <div className="pier-color-box -bgc-yellow-dark-1"></div>
+        <div className="pier-color-box -bgc-yellow-dark-2"></div>
+        <div className="pier-color-box -bgc-yellow-dark-3"></div>
+        <div className="pier-color-box -bgc-yellow-dark-4"></div>
+
+        </Section>
+
+        <Section className="-d-flex">
+        <div className="-m-r-7">
+            <Heading size="xs">Light-4</Heading>
+            <BodyText size="xs">HEX<br></br> #DCE9F4</BodyText>
+            </div>
+
+            <div className="-m-r-7">
+            <Heading size="xs">Light-3</Heading>
+            <BodyText size="xs">HEX<br></br> #A2C5E0</BodyText>
+            </div>
+
+            <div className="-m-r-7">
+            <Heading size="xs">Light-2</Heading>
+            <BodyText size="xs">HEX<br></br> #68A1CE</BodyText>
+            </div>
+
+            <div className="-m-r-7">
+            <Heading size="xs">Light-1</Heading>
+            <BodyText size="xs">HEX<br></br> #3A84BE</BodyText>
+            </div>
+
+            <div className="-m-r-7">
+            <Heading size="xs">Yellow</Heading>
+            <BodyText size="xs">HEX<br></br> #176FB3</BodyText>
+            </div>
+
+            <div className="-m-r-7">
+            <Heading size="xs">Dark-1</Heading>
+            <BodyText size="xs">HEX<br></br> #0F62A3</BodyText>
+            </div>
+
+            <div className="-m-r-7">
+            <Heading size="xs">Dark-2</Heading>
+            <BodyText size="xs">HEX<br></br> #0A4E86</BodyText>
+            </div>
+
+            <div className="-m-r-7">
+            <Heading size="xs">Dark-3</Heading>
+            <BodyText size="xs">HEX<br></br> #053B68</BodyText>
+            </div>
+
+            <div className="">
+            <Heading size="xs">Dark-4</Heading>
+            <BodyText size="xs">HEX<br></br> #02274B</BodyText>
+            </div>
+            
+        </Section>
+    </Card>
+</Section>
+
+<Section>
+<Heading size="sm">Orange</Heading>
+<Card className="-m-b-0">
+    <Section className="-d-flex">
+    <div className="pier-color-box -bgc-orange-light-4"></div>
+    <div className="pier-color-box -bgc-orange-light-3"></div>
+    <div className="pier-color-box -bgc-orange-light-2"></div>
+    <div className="pier-color-box -bgc-orange-light-1"></div>
+    <div className="pier-color-box -bgc-orange"></div>
+    <div className="pier-color-box -bgc-orange-dark-1"></div>
+    <div className="pier-color-box -bgc-orange-dark-2"></div>
+    <div className="pier-color-box -bgc-orange-dark-3"></div>
+    <div className="pier-color-box -bgc-orange-dark-4"></div>
+
+    </Section>
+
+    <Section className="-d-flex">
+    <div className="-m-r-7">
+        <Heading size="xs">Light-4</Heading>
+        <BodyText size="xs">HEX<br></br> #DCE9F4</BodyText>
+        </div>
+
+        <div className="-m-r-7">
+        <Heading size="xs">Light-3</Heading>
+        <BodyText size="xs">HEX<br></br> #A2C5E0</BodyText>
+        </div>
+
+        <div className="-m-r-7">
+        <Heading size="xs">Light-2</Heading>
+        <BodyText size="xs">HEX<br></br> #68A1CE</BodyText>
+        </div>
+
+        <div className="-m-r-7">
+        <Heading size="xs">Light-1</Heading>
+        <BodyText size="xs">HEX<br></br> #3A84BE</BodyText>
+        </div>
+
+        <div className="-m-r-7">
+        <Heading size="xs">Orange</Heading>
+        <BodyText size="xs">HEX<br></br> #176FB3</BodyText>
+        </div>
+
+        <div className="-m-r-7">
+        <Heading size="xs">Dark-1</Heading>
+        <BodyText size="xs">HEX<br></br> #0F62A3</BodyText>
+        </div>
+
+        <div className="-m-r-7">
+        <Heading size="xs">Dark-2</Heading>
+        <BodyText size="xs">HEX<br></br> #0A4E86</BodyText>
+        </div>
+
+        <div className="-m-r-7">
+        <Heading size="xs">Dark-3</Heading>
+        <BodyText size="xs">HEX<br></br> #053B68</BodyText>
+        </div>
+
+        <div className="">
+        <Heading size="xs">Dark-4</Heading>
+        <BodyText size="xs">HEX<br></br> #02274B</BodyText>
+        </div>
+        
+    </Section>
+</Card>
+</Section>
+
+<Section>
+<Heading size="sm">Red</Heading>
+<Card className="-m-b-0">
+    <Section className="-d-flex">
+    <div className="pier-color-box -bgc-red-light-4"></div>
+    <div className="pier-color-box -bgc-red-light-3"></div>
+    <div className="pier-color-box -bgc-red-light-2"></div>
+    <div className="pier-color-box -bgc-red-light-1"></div>
+    <div className="pier-color-box -bgc-red"></div>
+    <div className="pier-color-box -bgc-red-dark-1"></div>
+    <div className="pier-color-box -bgc-red-dark-2"></div>
+    <div className="pier-color-box -bgc-red-dark-3"></div>
+    <div className="pier-color-box -bgc-red-dark-4"></div>
+
+    </Section>
+
+    <Section className="-d-flex">
+    <div className="-m-r-7">
+        <Heading size="xs">Light-4</Heading>
+        <BodyText size="xs">HEX<br></br> #DCE9F4</BodyText>
+        </div>
+
+        <div className="-m-r-7">
+        <Heading size="xs">Light-3</Heading>
+        <BodyText size="xs">HEX<br></br> #A2C5E0</BodyText>
+        </div>
+
+        <div className="-m-r-7">
+        <Heading size="xs">Light-2</Heading>
+        <BodyText size="xs">HEX<br></br> #68A1CE</BodyText>
+        </div>
+
+        <div className="-m-r-7">
+        <Heading size="xs">Light-1</Heading>
+        <BodyText size="xs">HEX<br></br> #3A84BE</BodyText>
+        </div>
+
+        <div className="-m-r-7">
+        <Heading size="xs">Red</Heading>
+        <BodyText size="xs">HEX<br></br> #176FB3</BodyText>
+        </div>
+
+        <div className="-m-r-7">
+        <Heading size="xs">Dark-1</Heading>
+        <BodyText size="xs">HEX<br></br> #0F62A3</BodyText>
+        </div>
+
+        <div className="-m-r-7">
+        <Heading size="xs">Dark-2</Heading>
+        <BodyText size="xs">HEX<br></br> #0A4E86</BodyText>
+        </div>
+
+        <div className="-m-r-7">
+        <Heading size="xs">Dark-3</Heading>
+        <BodyText size="xs">HEX<br></br> #053B68</BodyText>
+        </div>
+
+        <div className="">
+        <Heading size="xs">Dark-4</Heading>
+        <BodyText size="xs">HEX<br></br> #02274B</BodyText>
+        </div>
+        
+    </Section>
+</Card>
+</Section>
                 </BodyContent>
             </Layout>
         </Fragment>
