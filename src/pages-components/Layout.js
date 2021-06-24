@@ -48,6 +48,11 @@ export default function Layout({ children, appData }) {
                                         <NavSubItem>Colors</NavSubItem>
                                     </a>
                                 </NextLink>
+                                <NextLink href="/abstracts/fonts">
+                                <a>
+                                    <NavSubItem>Fonts</NavSubItem>
+                                </a>
+                            </NextLink>
                                 </NavItemDropdown>
                             </NavItemContainer>
                             <NavItemContainer>

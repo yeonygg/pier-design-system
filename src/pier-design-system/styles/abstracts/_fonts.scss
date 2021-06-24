@@ -17,3 +17,10 @@ $font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-extrabold: 800;
 $font-weight-black: 900;
+
+.pier-fonts {
+    font-family: $font-family;
+    font-size: 45px;
+    line-height: 1.6;
+    letter-spacing: 15px;
+}
