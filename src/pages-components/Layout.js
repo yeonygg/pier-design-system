@@ -50,7 +50,7 @@ export default function Layout({ children, appData }) {
                                 </NextLink>
                                 <NextLink href="/abstracts/fonts">
                                 <a>
-                                    <NavSubItem>Fonts</NavSubItem>
+                                    <NavSubItem>Typography</NavSubItem>
                                 </a>
                             </NextLink>
                                 </NavItemDropdown>

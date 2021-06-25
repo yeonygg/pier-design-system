@@ -145,12 +145,24 @@ $gradients: (
 .pier-color-box {
 	height: 50px;
 	width: 99px;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+
+	&:hover {
+		transform: translateY(-5px);
+	}
 }
 
 .pier-color-box--border {
 	height: 50px;
 	width: 99px;
 	border: 1px solid map-get($colorsGrays, light-2);
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+
+	&:hover {
+		transform: translateY(-5px);
+	}
 
 }
 
@@ -158,28 +170,54 @@ $gradients: (
 	height: 70px;
 	width: 140px;
 	background: build-gradient(90deg, primaryBoulevard);
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+
+	&:hover {
+		transform: scale(1.05);
+	}
 }
 
 .pier-color-box--gradient-2 {
 	height: 70px;
 	width: 140px;
 	background: build-gradient(90deg, deepOcean);
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+	&:hover {
+		transform: scale(1.05);
+	}
 }
 
 .pier-color-box--gradient-3 {
 	height: 70px;
 	width: 140px;
 	background: build-gradient(90deg, neonSky);
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+	&:hover {
+		transform: scale(1.05);
+	}
 }
 
 .pier-color-box--gradient-4 {
 	height: 70px;
 	width: 140px;
 	background: build-gradient(90deg, earlySunset);
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+	&:hover {
+		transform: scale(1.05);
+	}
 }
 
 .pier-color-box--gradient-5 {
 	height: 70px;
 	width: 140px;
 	background: build-gradient(90deg, firesideGlow);
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+	&:hover {
+		transform: scale(1.05);
+	}
 }
