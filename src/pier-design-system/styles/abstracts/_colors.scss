@@ -144,24 +144,28 @@ $gradients: (
 
 .pier-color-box {
 	height: 50px;
-	width: 99px;
+	width: 100%;
 	cursor: pointer;
 	transition: all .2s ease-in-out;
 
 	&:hover {
 		transform: translateY(-5px);
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
 	}
 }
 
 .pier-color-box--border {
 	height: 50px;
-	width: 99px;
+	width: 100px;
 	border: 1px solid map-get($colorsGrays, light-2);
 	cursor: pointer;
 	transition: all .2s ease-in-out;
 
 	&:hover {
 		transform: translateY(-5px);
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
 	}
 
 }
