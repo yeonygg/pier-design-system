@@ -49,7 +49,8 @@ export default function LayoutPage({ appData }) {
                         <Card className="-m-b-0">
                             <Section className="-d-flex -flex-wrap">
                                 <div className="-flex-column">
-                                    <div className="pier-color-box--gradient-1 -m-r-4"></div>
+                                    <div className="pier-color-box--gradient-1 -m-r-4">
+                                    </div>
                                     <div>
                                         <div className="-m-t-8">
                                             <Heading size="xs">
@@ -120,7 +121,7 @@ export default function LayoutPage({ appData }) {
                         <Card className="-m-b-0">
                             <Section className="-d-flex -flex-wrap">
                                 <div className="-flex-column">
-                                    <div className="pier-color-box--border -bgc-white"></div>
+                                    <div className="pier-color-box--border -bgc-white" data-clipboard-value="#FFFFFF"></div>
                                     <div className="-m-t-8 -m-r-10">
                                         <Heading size="xs">White</Heading>
                                         <BodyText size="xs">#FFFFFF</BodyText>
