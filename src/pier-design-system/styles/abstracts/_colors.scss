@@ -143,21 +143,22 @@ $gradients: (
 }
 
 .pier-color-box {
-	height: 50px;
+	height: 60px;
 	width: 100%;
 	cursor: pointer;
+	display: block;
 	transition: all .2s ease-in-out;
 
 	&:hover {
 		transform: translateY(-5px);
-		border-top-left-radius: 6px;
-		border-top-right-radius: 6px;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
 	}
 }
 
 .pier-color-box--border {
 	height: 50px;
-	width: 100px;
+	width: 100%;
 	border: 1px solid map-get($colorsGrays, light-2);
 	cursor: pointer;
 	transition: all .2s ease-in-out;
@@ -179,6 +180,7 @@ $gradients: (
 
 	&:hover {
 		transform: scale(1.05);
+		border-radius: 8px;
 	}
 }
 
@@ -190,6 +192,7 @@ $gradients: (
 	transition: all .2s ease-in-out;
 	&:hover {
 		transform: scale(1.05);
+		border-radius: 8px;
 	}
 }
 
@@ -201,6 +204,7 @@ $gradients: (
 	transition: all .2s ease-in-out;
 	&:hover {
 		transform: scale(1.05);
+		border-radius: 8px;
 	}
 }
 
@@ -212,6 +216,7 @@ $gradients: (
 	transition: all .2s ease-in-out;
 	&:hover {
 		transform: scale(1.05);
+		border-radius: 8px;
 	}
 }
 
@@ -223,5 +228,6 @@ $gradients: (
 	transition: all .2s ease-in-out;
 	&:hover {
 		transform: scale(1.05);
+		border-radius: 8px;
 	}
 }

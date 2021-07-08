@@ -47,9 +47,9 @@ export default function LayoutPage({ appData }) {
                     <Section>
                         <Heading size="sm">Gradients</Heading>
                         <Card className="-m-b-0">
-                            <Section className="-d-flex">
+                            <Section className="-d-flex -flex-wrap">
                                 <div className="-flex-column">
-                                    <div className="pier-color-box--gradient-1 -m-r-5"></div>
+                                    <div className="pier-color-box--gradient-1 -m-r-4"></div>
                                     <div>
                                         <div className="-m-t-8">
                                             <Heading size="xs">
@@ -65,7 +65,7 @@ export default function LayoutPage({ appData }) {
                                     </div>
                                 </div>
                                 <div className="-flex-column">
-                                    <div className="pier-color-box--gradient-2 -m-r-5"></div>
+                                    <div className="pier-color-box--gradient-2 -m-r-4"></div>
                                     <div className="-m-t-8">
                                         <Heading size="xs">Deep Ocean</Heading>
                                         <BodyText size="xs">
@@ -77,7 +77,7 @@ export default function LayoutPage({ appData }) {
                                     </div>
                                 </div>
                                 <div className="-flex-column">
-                                    <div className="pier-color-box--gradient-3 -m-r-5"></div>
+                                    <div className="pier-color-box--gradient-3 -m-r-4"></div>
                                     <div className="-m-t-8">
                                         <Heading size="xs">Neon Sky</Heading>
                                         <BodyText size="xs">
@@ -89,7 +89,7 @@ export default function LayoutPage({ appData }) {
                                     </div>
                                 </div>
                                 <div className="-flex-column">
-                                    <div className="pier-color-box--gradient-4 -m-r-5"></div>
+                                    <div className="pier-color-box--gradient-4 -m-r-4"></div>
                                     <div className="-m-t-8">
                                         <Heading size="xs">Early Sunset</Heading>
                                         <BodyText size="xs">
@@ -118,7 +118,7 @@ export default function LayoutPage({ appData }) {
                     <Section>
                         <Heading size="sm">Light Grays</Heading>
                         <Card className="-m-b-0">
-                            <Section className="-d-flex">
+                            <Section className="-d-flex -flex-wrap">
                                 <div className="-flex-column">
                                     <div className="pier-color-box--border -bgc-white"></div>
                                     <div className="-m-t-8 -m-r-10">
@@ -177,7 +177,7 @@ export default function LayoutPage({ appData }) {
                     <Section>
                         <Heading size="sm">Dark Grays</Heading>
                         <Card className="-m-b-0">
-                            <Section className="-d-flex -flex-row">
+                            <Section className="-d-flex -flex-row -flex-wrap">
                                 <div className="-flex-column">
                                     <div className="pier-color-box -bgc-gray-2"></div>
                                     <div className="-m-t-8 -m-r-9">
@@ -236,69 +236,69 @@ export default function LayoutPage({ appData }) {
                     <Section>
                         <Heading size="sm">Primary</Heading>
                         <Card className="">
-                            <Section className="-d-flex -flex-row -float-left">
-                                <div className="-d-flex -flex-column">
+                            <Section className="-d-flex -flex-row -flex-wrap">
+                                <div className="-d-flex -flex-column ">
                                     <div className="pier-color-box -bgc-cyan-light-4"></div>
-                                    <div className="-m-t-8">
-                                    <Heading size="xs">Light-4</Heading>
-                                    <BodyText size="xs">#DEF4FD</BodyText>
-                                </div>
+                                    <div className="-m-t-8 -m-r-6">
+                                        <Heading size="xs">Light-4</Heading>
+                                        <BodyText size="xs">#DEF4FD</BodyText>
+                                    </div>
                                 </div>
                                 <div className="-d-flex -flex-column">
                                     <div className="pier-color-box -bgc-cyan-light-3"></div>
-                                    <div className="-m-t-8">
-                                    <Heading size="xs">Light-3</Heading>
-                                    <BodyText size="xs">#A8E3F9</BodyText>
-                                </div>
+                                    <div className="-m-t-8 -m-r-6">
+                                        <Heading size="xs">Light-3</Heading>
+                                        <BodyText size="xs">#A8E3F9</BodyText>
+                                    </div>
                                 </div>
                                 <div className="-d-flex -flex-column">
                                     <div className="pier-color-box -bgc-cyan-light-2"></div>
-                                    <div className="-m-t-8">
-                                    <Heading size="xs">Light-2</Heading>
-                                    <BodyText size="xs">#71D1F5</BodyText>
-                                </div>
+                                    <div className="-m-t-8 -m-r-6">
+                                        <Heading size="xs">Light-2</Heading>
+                                        <BodyText size="xs">#71D1F5</BodyText>
+                                    </div>
                                 </div>
                                 <div className="-d-flex -flex-column">
                                     <div className="pier-color-box -bgc-cyan-light-1"></div>
-                                    <div className="-m-t-8">
-                                    <Heading size="xs">Light-1</Heading>
-                                    <BodyText size="xs">#46C3F1</BodyText>
-                                </div>
+                                    <div className="-m-t-8 -m-r-6">
+                                        <Heading size="xs">Light-1</Heading>
+                                        <BodyText size="xs">#46C3F1</BodyText>
+                                    </div>
                                 </div>
                                 <div className="-d-flex -flex-column">
                                     <div className="pier-color-box -bgc-cyan"></div>
-                                    <div className="-m-t-8">
-                                    <Heading size="xs">Cyan</Heading>
-                                    <BodyText size="xs">#25B9EF</BodyText>
-                                </div>
+                                    <div className="-m-t-8 -m-r-6">
+                                        <Heading size="xs">Cyan</Heading>
+                                        <BodyText size="xs">#25B9EF</BodyText>
+                                    </div>
                                 </div>
                                 <div className="-d-flex -flex-column">
                                     <div className="pier-color-box -bgc-cyan-dark-1"></div>
-                                    <div className="-m-t-8">
-                                    <Heading size="xs">Dark-1</Heading>
-                                    <BodyText size="xs">#1BA2D5</BodyText>
-                                </div>
+                                    <div className="-m-t-8 -m-r-6">
+                                        <Heading size="xs">Dark-1</Heading>
+                                        <BodyText size="xs">#1BA2D5</BodyText>
+                                    </div>
                                 </div>
                                 <div className="-d-flex -flex-column">
                                     <div className="pier-color-box -bgc-cyan-dark-2"></div>
-                                    <div className="-m-t-8">
-                                    <Heading size="xs">Dark-2</Heading>
-                                    <BodyText size="xs">#1481AD</BodyText>
-                                </div>
+                                    <div className="-m-t-8 -m-r-6">
+                                        <Heading size="xs">Dark-2</Heading>
+                                        <BodyText size="xs">#1481AD</BodyText>
+                                    </div>
                                 </div>
                                 <div className="-d-flex -flex-column">
                                     <div className="pier-color-box -bgc-cyan-dark-3"></div>
-                                    <div className="-m-t-8">
-                                    <Heading size="xs">Dark-3</Heading>
-                                    <BodyText size="xs">#0D6185</BodyText>
-                                </div>
+                                    <div className="-m-t-8 -m-r-6">
+                                        <Heading size="xs">Dark-3</Heading>
+                                        <BodyText size="xs">#0D6185</BodyText>
+                                    </div>
                                 </div>
                                 <div className="-d-flex -flex-column">
                                     <div className="pier-color-box -bgc-cyan-dark-4"></div>
-                                    <div className="-m-t-8">
-                                    <Heading size="xs">Dark-4</Heading>
-                                    <BodyText size="xs">#07405E</BodyText>
-                                </div>
+                                    <div className="-m-t-8 -m-r-6">
+                                        <Heading size="xs">Dark-4</Heading>
+                                        <BodyText size="xs">#07405E</BodyText>
+                                    </div>
                                 </div>
                             </Section>
                         </Card>
@@ -307,62 +307,66 @@ export default function LayoutPage({ appData }) {
                     <Section>
                         <Heading size="sm">Green</Heading>
                         <Card className="-m-b-0">
-                            <Section className="-d-flex">
-                                <div className="pier-color-box -bgc-green-light-4"></div>
-                                <div className="pier-color-box -bgc-green-light-3"></div>
-                                <div className="pier-color-box -bgc-green-light-2"></div>
-                                <div className="pier-color-box -bgc-green-light-1"></div>
-                                <div className="pier-color-box -bgc-green"></div>
-                                <div className="pier-color-box -bgc-green-dark-1"></div>
-                                <div className="pier-color-box -bgc-green-dark-2"></div>
-                                <div className="pier-color-box -bgc-green-dark-3"></div>
-                                <div className="pier-color-box -bgc-green-dark-4"></div>
-                            </Section>
-
-                            <Section className="-d-flex">
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-4</Heading>
-                                    <BodyText size="xs">#DAF8EE</BodyText>
+                            <Section className="-d-flex -flex-row -flex-wrap">
+                                <div className="pier-color-box -bgc-green-light-4">
+                                    <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
+                                        <Heading className="-float-left" size="xs">
+                                            Light-4
+                                        </Heading>
+                                        <BodyText className="-float-right" size="xs">
+                                            #DAF8EE
+                                        </BodyText>
+                                    </div>
+                                </div>
+                                <div className="pier-color-box -bgc-green-light-3">
+                                    <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
+                                        <Heading size="xs">Light-3</Heading>
+                                        <BodyText size="xs">#9CEDD1</BodyText>
+                                    </div>
                                 </div>
 
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-3</Heading>
-                                    <BodyText size="xs">#9CEDD1</BodyText>
+                                <div className="pier-color-box -bgc-green-light-2">
+                                    <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
+                                        <Heading size="xs">Light-2</Heading>
+                                        <BodyText size="xs">#5EE1B4</BodyText>
+                                    </div>
                                 </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-2</Heading>
-                                    <BodyText size="xs">#5EE1B4</BodyText>
+                                <div className="pier-color-box -bgc-green-light-1">
+                                <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
+                                <Heading size="xs">Light-1</Heading>
+                                <BodyText size="xs">#2DD89C</BodyText>
                                 </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-1</Heading>
-                                    <BodyText size="xs">#2DD89C</BodyText>
                                 </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Green</Heading>
-                                    <BodyText size="xs">#08D18B</BodyText>
+                                <div className="pier-color-box -bgc-green">
+                                <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
+                                <Heading className="-c-white" size="xs">Green</Heading>
+                                <BodyText className="-c-white" size="xs">#08D18B</BodyText>
                                 </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-1</Heading>
-                                    <BodyText size="xs">#05B67A</BodyText>
                                 </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-2</Heading>
-                                    <BodyText size="xs">#039162</BodyText>
+                                <div className="pier-color-box -bgc-green-dark-1">
+                                <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
+                                <Heading className="-c-white" size="xs">Dark-1</Heading>
+                                <BodyText className="-c-white" size="xs">#05B67A</BodyText>
                                 </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-3</Heading>
-                                    <BodyText size="xs">#026D4B</BodyText>
                                 </div>
-
-                                <div className="">
-                                    <Heading size="xs">Dark-4</Heading>
-                                    <BodyText size="xs">#014834</BodyText>
+                                <div className="pier-color-box -bgc-green-dark-2">
+                                <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
+                                <Heading className="-c-white" size="xs">Dark-2</Heading>
+                                <BodyText className="-c-white" size="xs">#039162</BodyText>
+                                </div>
+                                </div>
+                                <div className="pier-color-box -bgc-green-dark-3">
+                                <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
+                                <Heading className="-c-white" size="xs">Dark-3</Heading>
+                                <BodyText className="-c-white" size="xs">#026D4B</BodyText>
+                                </div>
+                                </div>
+                                
+                                <div className="pier-color-box -bgc-green-dark-4">
+                                <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
+                                <Heading className="-c-white" size="xs">Dark-4</Heading>
+                                <BodyText className="-c-white" size="xs">#014834</BodyText>
+                                </div>
                                 </div>
                             </Section>
                         </Card>
