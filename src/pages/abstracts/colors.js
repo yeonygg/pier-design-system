@@ -49,7 +49,7 @@ export default function LayoutPage({ appData }) {
                         <Card className="-m-b-0">
                             <Section className="-d-flex -flex-wrap">
                                 <div className="-flex-column">
-                                    <div className="pier-color-box--gradient-1 -m-r-4">
+                                    <div className="pier-color-box--gradient-1 -m-r-4" tabIndex="0">
                                     </div>
                                     <div>
                                         <div className="-m-t-8">
