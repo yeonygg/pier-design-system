@@ -54,25 +54,22 @@ export default function LayoutPage({ appData }) {
                     </Section>
 
                     <Section>
-                        <Heading size="sm">Body Copy</Heading>
-                        <CodeBlock size="sm">
-                            Font-family: Mulish<br></br>
-                            Weight: 400
-                        </CodeBlock>
-                        <Card className="-m-t-7">
-                            <Section>
-                                <BodyText size="md" className="pier-fonts">
-                                    ABCDEFGHIJKLM<br></br>NOPQRSTUVWXYZ
-                                </BodyText>
-                                <BodyText size="md" className="pier-fonts">
-                                    abcdefghijklm<br></br>nopqrstuvwxyz
-                                </BodyText>
-                                <BodyText size="md" className="pier-fonts">
-                                    01234567890
-                                </BodyText>
+                        <Heading size="sm">Dark Logo</Heading>
+                        <Card className="-m-t-7 -bgc-dark-4">
+                            <Section className="-align-items-center -p-v-10 -p-h-10">
+                            <img src="/gumgum_logo_dark.svg" style={{ width: 250 }} />
                             </Section>
                         </Card>
                     </Section>
+
+                    <Section>
+                    <Heading size="sm">Animated Logo</Heading>
+                    <Card className="-m-t-7">
+                        <Section className="-align-items-center -p-v-10 -p-h-10">
+                        <img src="/gumgum_logo_ani.gif" style={{ width: 250 }} />
+                        </Section>
+                    </Card>
+                </Section>
                 </BodyContent>
             </Layout>
         </Fragment>
