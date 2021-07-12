@@ -136,191 +136,42 @@ export default function LayoutPage({ appData }) {
                             </Section>
                         </Card>
                     </Section>
-                    <Section>
-                        <Heading size="sm">Light Grays</Heading>
-                        <Card className="-m-b-0">
-                            <Section className="-d-flex -flex-wrap">
-                                <div className="-flex-column">
-                                    <div className="pier-color-box--border -bgc-white" data-clipboard-value="#FFFFFF"></div>
-                                    <div className="-m-t-8 -m-r-10">
-                                        <Heading size="xs">White</Heading>
-                                        <BodyText size="xs">#FFFFFF</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-flex-column">
-                                    <div className="pier-color-box -bgc-light-4"></div>
-                                    <div className="-m-t-8 -m-r-9">
-                                        <Heading size="xs">Light-4</Heading>
-                                        <BodyText size="xs">#F7F8F8</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-flex-column">
-                                    <div className="pier-color-box -bgc-light-3"></div>
-                                    <div className="-m-t-8 -m-r-9">
-                                        <Heading size="xs">Light-3</Heading>
-                                        <BodyText size="xs">#F1F3F3</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-flex-column">
-                                    <div className="pier-color-box -bgc-light-2"></div>
-                                    <div className="-m-t-8 -m-r-9">
-                                        <Heading size="xs">Light-2</Heading>
-                                        <BodyText size="xs">#EBEEEF</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-flex-column">
-                                    <div className="pier-color-box -bgc-light-1"></div>
-                                    <div className="-m-t-8 -m-r-9">
-                                        <Heading size="xs">Light-1</Heading>
-                                        <BodyText size="xs">#E3E7E8</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-flex-column">
-                                    <div className="pier-color-box -bgc-gray-4"></div>
-                                    <div className="-m-t-8 -m-r-9">
-                                        <Heading size="xs">Gray-4</Heading>
-                                        <BodyText size="xs">#D0D6D8</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-flex-column">
-                                    <div className="pier-color-box -bgc-gray-3"></div>
-                                    <div className="-m-t-8 -m-r-9">
-                                        <Heading size="xs">Gray-3</Heading>
-                                        <BodyText size="xs">#BCC5CA</BodyText>
-                                    </div>
-                                </div>
-                            </Section>
-
-                            <Section className="-d-flex"></Section>
-                        </Card>
-                    </Section>
 
                     <Section>
-                        <Heading size="sm">Dark Grays</Heading>
+                        <Heading size="sm">Grays</Heading>
                         <Card className="-m-b-0">
                             <Section className="-d-flex -flex-row -flex-wrap">
-                                <div className="-flex-column">
-                                    <div className="pier-color-box -bgc-gray-2"></div>
-                                    <div className="-m-t-8 -m-r-9">
-                                        <Heading size="xs">Gray-2</Heading>
-                                        <BodyText size="xs">#A5B2B8</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-flex-column">
-                                    <div className="pier-color-box -bgc-gray"></div>
-                                    <div className="-m-t-8 -m-r-9">
-                                        <Heading size="xs">Gray</Heading>
-                                        <BodyText size="xs">#8A9BA3</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-flex-column">
-                                    <div className="pier-color-box -bgc-dark-1"></div>
-                                    <div className="-m-t-8 -m-r-9">
-                                        <Heading size="xs">Dark-1</Heading>
-                                        <BodyText size="xs">#6D808B</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-flex-column">
-                                    <div className="pier-color-box -bgc-dark-2"></div>
-                                    <div className="-m-t-8 -m-r-9">
-                                        <Heading size="xs">Dark-2</Heading>
-                                        <BodyText size="xs">#53626D</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-flex-column">
-                                    <div className="pier-color-box -bgc-dark-3"></div>
-                                    <div className="-m-t-8 -m-r-9">
-                                        <Heading size="xs">Dark-3</Heading>
-                                        <BodyText size="xs">#2D3A43</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-flex-column">
-                                    <div className="pier-color-box -bgc-dark-4"></div>
-                                    <div className="-m-t-8 -m-r-9">
-                                        <Heading size="xs">Dark-4</Heading>
-                                        <BodyText size="xs">#0E1E2A</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-flex-column">
-                                    <div className="pier-color-box -bgc-black"></div>
-                                    <div className="-m-t-8 -m-r-9">
-                                        <Heading size="xs">Black</Heading>
-                                        <BodyText size="xs">#000000</BodyText>
-                                    </div>
-                                </div>
+                                <ColorCard title="White" color="-bgc-white" hex="#FFFFFF"></ColorCard>
+                                <ColorCard title="Light-4" color="-bgc-light-4" hex="#F7F8F8"></ColorCard>
+                                <ColorCard title="Light-3" color="-bgc-light-3" hex="#F1F3F3"></ColorCard>
+                                <ColorCard title="Light-2" color="-bgc-light-2" hex="#EBEEEF"></ColorCard>
+                                <ColorCard title="Light-1" color="-bgc-light-1" hex="#E3E7E8"></ColorCard>
+                                <ColorCard title="Gray-4" color="-bgc-gray-4" hex="#D0D6D8"></ColorCard>
+                                <ColorCard title="Gray-3" color="-bgc-gray-3" hex="#BCC5CA"></ColorCard>
+                                <ColorCard title="Gray-2" color="-bgc-gray-2" hex="#A5B2B8"></ColorCard>
+                                <ColorCard title="Default Gray" color="-bgc-gray" hex="#8A9BA3"></ColorCard>
+                                <ColorCard title="Dark-1" color="-bgc-dark-1" hex="#6D808B"></ColorCard>
+                                <ColorCard title="Dark-2" color="-bgc-dark-2" hex="#53626D"></ColorCard>
+                                <ColorCard title="Dark-3" color="-bgc-dark-3" hex="#2D3A43"></ColorCard>
+                                <ColorCard title="Dark-4" color="-bgc-dark-4" hex="#0E1E2A"></ColorCard>
+                                <ColorCard title="Black" color="-bgc-black" hex="#000000"></ColorCard>
                             </Section>
-
-                            <Section className="-d-flex"></Section>
                         </Card>
                     </Section>
 
                     <Section>
                         <Heading size="sm">Primary</Heading>
-                        <Card className="">
+                        <Card className="-m-b-0">
                             <Section className="-d-flex -flex-row -flex-wrap">
-                                <div className="-d-flex -flex-column ">
-                                    <div className="pier-color-box -bgc-cyan-light-4"></div>
-                                    <div className="-m-t-8 -m-r-6">
-                                        <Heading size="xs">Light-4</Heading>
-                                        <BodyText size="xs">#DEF4FD</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-d-flex -flex-column">
-                                    <div className="pier-color-box -bgc-cyan-light-3"></div>
-                                    <div className="-m-t-8 -m-r-6">
-                                        <Heading size="xs">Light-3</Heading>
-                                        <BodyText size="xs">#A8E3F9</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-d-flex -flex-column">
-                                    <div className="pier-color-box -bgc-cyan-light-2"></div>
-                                    <div className="-m-t-8 -m-r-6">
-                                        <Heading size="xs">Light-2</Heading>
-                                        <BodyText size="xs">#71D1F5</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-d-flex -flex-column">
-                                    <div className="pier-color-box -bgc-cyan-light-1"></div>
-                                    <div className="-m-t-8 -m-r-6">
-                                        <Heading size="xs">Light-1</Heading>
-                                        <BodyText size="xs">#46C3F1</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-d-flex -flex-column">
-                                    <div className="pier-color-box -bgc-cyan"></div>
-                                    <div className="-m-t-8 -m-r-6">
-                                        <Heading size="xs">Cyan</Heading>
-                                        <BodyText size="xs">#25B9EF</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-d-flex -flex-column">
-                                    <div className="pier-color-box -bgc-cyan-dark-1"></div>
-                                    <div className="-m-t-8 -m-r-6">
-                                        <Heading size="xs">Dark-1</Heading>
-                                        <BodyText size="xs">#1BA2D5</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-d-flex -flex-column">
-                                    <div className="pier-color-box -bgc-cyan-dark-2"></div>
-                                    <div className="-m-t-8 -m-r-6">
-                                        <Heading size="xs">Dark-2</Heading>
-                                        <BodyText size="xs">#1481AD</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-d-flex -flex-column">
-                                    <div className="pier-color-box -bgc-cyan-dark-3"></div>
-                                    <div className="-m-t-8 -m-r-6">
-                                        <Heading size="xs">Dark-3</Heading>
-                                        <BodyText size="xs">#0D6185</BodyText>
-                                    </div>
-                                </div>
-                                <div className="-d-flex -flex-column">
-                                    <div className="pier-color-box -bgc-cyan-dark-4"></div>
-                                    <div className="-m-t-8 -m-r-6">
-                                        <Heading size="xs">Dark-4</Heading>
-                                        <BodyText size="xs">#07405E</BodyText>
-                                    </div>
-                                </div>
+                                <ColorCard title="Light-4" color="-bgc-cyan-light-4" hex="#DEF4FD"></ColorCard>
+                                <ColorCard title="Light-3" color="-bgc-cyan-light-3" hex="#A8E3F9"></ColorCard>
+                                <ColorCard title="Light-2" color="-bgc-cyan-light-2" hex="#71D1F5"></ColorCard>
+                                <ColorCard title="Light-1" color="-bgc-cyan-light-1" hex="#46C3F1"></ColorCard>
+                                <ColorCard title="Default Cyan" color="-bgc-cyan" hex="#25B9EF"></ColorCard>
+                                <ColorCard title="Dark-1" color="-bgc-cyan-dark-1" hex="#1BA2D5"></ColorCard>
+                                <ColorCard title="Dark-2" color="-bgc-cyan-dark-2" hex="#1481AD"></ColorCard>
+                                <ColorCard title="Dark-3" color="-bgc-cyan-dark-3" hex="#0D6185"></ColorCard>
+                                <ColorCard title="Dark-4" color="-bgc-cyan-dark-4" hex="#07405E"></ColorCard>
                             </Section>
                         </Card>
                     </Section>
@@ -345,63 +196,16 @@ export default function LayoutPage({ appData }) {
                     <Section>
                         <Heading size="sm">Blue</Heading>
                         <Card className="-m-b-0">
-                            <Section className="-d-flex">
-                                <div className="pier-color-box -bgc-blue-light-4"></div>
-                                <div className="pier-color-box -bgc-blue-light-3"></div>
-                                <div className="pier-color-box -bgc-blue-light-2"></div>
-                                <div className="pier-color-box -bgc-blue-light-1"></div>
-                                <div className="pier-color-box -bgc-blue"></div>
-                                <div className="pier-color-box -bgc-blue-dark-1"></div>
-                                <div className="pier-color-box -bgc-blue-dark-2"></div>
-                                <div className="pier-color-box -bgc-blue-dark-3"></div>
-                                <div className="pier-color-box -bgc-blue-dark-4"></div>
-                            </Section>
-
-                            <Section className="-d-flex">
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-4</Heading>
-                                    <BodyText size="xs">#DCE9F4</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-3</Heading>
-                                    <BodyText size="xs">#A2C5E0</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-2</Heading>
-                                    <BodyText size="xs">#68A1CE</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-1</Heading>
-                                    <BodyText size="xs">#3A84BE</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Blue</Heading>
-                                    <BodyText size="xs">#176FB3</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-1</Heading>
-                                    <BodyText size="xs">#0F62A3</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-2</Heading>
-                                    <BodyText size="xs">#0A4E86</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-3</Heading>
-                                    <BodyText size="xs">#053B68</BodyText>
-                                </div>
-
-                                <div className="">
-                                    <Heading size="xs">Dark-4</Heading>
-                                    <BodyText size="xs">#02274B</BodyText>
-                                </div>
+                            <Section className="-d-flex -flex-row -flex-wrap">
+                                <ColorCard title="Light-4" color="-bgc-blue-light-4" hex="#DCE9F4"></ColorCard>
+                                <ColorCard title="Light-3" color="-bgc-blue-light-3" hex="#A2C5E0"></ColorCard>
+                                <ColorCard title="Light-2" color="-bgc-blue-light-2" hex="#68A1CE"></ColorCard>
+                                <ColorCard title="Light-1" color="-bgc-blue-light-1" hex="#3A84BE"></ColorCard>
+                                <ColorCard title="Default Blue" color="-bgc-blue" hex="#176FB3"></ColorCard>
+                                <ColorCard title="Dark-1" color="-bgc-blue-dark-1" hex="#0F62A3"></ColorCard>
+                                <ColorCard title="Dark-2" color="-bgc-blue-dark-2" hex="#0A4E86"></ColorCard>
+                                <ColorCard title="Dark-3" color="-bgc-blue-dark-3" hex="#053B68"></ColorCard>
+                                <ColorCard title="Dark-4" color="-bgc-blue-dark-4" hex="#02274B"></ColorCard>
                             </Section>
                         </Card>
                     </Section>
@@ -409,63 +213,16 @@ export default function LayoutPage({ appData }) {
                     <Section>
                         <Heading size="sm">Teal</Heading>
                         <Card className="-m-b-0">
-                            <Section className="-d-flex">
-                                <div className="pier-color-box -bgc-teal-light-4"></div>
-                                <div className="pier-color-box -bgc-teal-light-3"></div>
-                                <div className="pier-color-box -bgc-teal-light-2"></div>
-                                <div className="pier-color-box -bgc-teal-light-1"></div>
-                                <div className="pier-color-box -bgc-teal"></div>
-                                <div className="pier-color-box -bgc-teal-dark-1"></div>
-                                <div className="pier-color-box -bgc-teal-dark-2"></div>
-                                <div className="pier-color-box -bgc-teal-dark-3"></div>
-                                <div className="pier-color-box -bgc-teal-dark-4"></div>
-                            </Section>
-
-                            <Section className="-d-flex">
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-4</Heading>
-                                    <BodyText size="xs">#DAF8EE</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-3</Heading>
-                                    <BodyText size="xs">#9CEDD1</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-2</Heading>
-                                    <BodyText size="xs">#5EE1B4</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-1</Heading>
-                                    <BodyText size="xs">#2DD89C</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Teal</Heading>
-                                    <BodyText size="xs">#08D18B</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-1</Heading>
-                                    <BodyText size="xs">#05B67A</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-2</Heading>
-                                    <BodyText size="xs">#039162</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-3</Heading>
-                                    <BodyText size="xs">#026D4B</BodyText>
-                                </div>
-
-                                <div className="">
-                                    <Heading size="xs">Dark-4</Heading>
-                                    <BodyText size="xs">#014834</BodyText>
-                                </div>
+                            <Section className="-d-flex -flex-row -flex-wrap">
+                                <ColorCard title="Light-4" color="-bgc-teal-light-4" hex="#E9FEF8"></ColorCard>
+                                <ColorCard title="Light-3" color="-bgc-teal-light-3" hex="#CAFCEC"></ColorCard>
+                                <ColorCard title="Light-2" color="-bgc-teal-light-2" hex="#B1FAE4"></ColorCard>
+                                <ColorCard title="Light-1" color="-bgc-teal-light-1" hex="#91FADA"></ColorCard>
+                                <ColorCard title="Default Teal" color="-bgc-teal" hex="#6FF7CE"></ColorCard>
+                                <ColorCard title="Dark-1" color="-bgc-teal-dark-1" hex="#5CD8B4"></ColorCard>
+                                <ColorCard title="Dark-2" color="-bgc-teal-dark-2" hex="#46AD92"></ColorCard>
+                                <ColorCard title="Dark-3" color="-bgc-teal-dark-3" hex="#31816F"></ColorCard>
+                                <ColorCard title="Dark-4" color="-bgc-teal-dark-4" hex="#1D564D"></ColorCard>
                             </Section>
                         </Card>
                     </Section>
@@ -473,63 +230,16 @@ export default function LayoutPage({ appData }) {
                     <Section>
                         <Heading size="sm">Yellow</Heading>
                         <Card className="-m-b-0">
-                            <Section className="-d-flex">
-                                <div className="pier-color-box -bgc-yellow-light-4"></div>
-                                <div className="pier-color-box -bgc-yellow-light-3"></div>
-                                <div className="pier-color-box -bgc-yellow-light-2"></div>
-                                <div className="pier-color-box -bgc-yellow-light-1"></div>
-                                <div className="pier-color-box -bgc-yellow"></div>
-                                <div className="pier-color-box -bgc-yellow-dark-1"></div>
-                                <div className="pier-color-box -bgc-yellow-dark-2"></div>
-                                <div className="pier-color-box -bgc-yellow-dark-3"></div>
-                                <div className="pier-color-box -bgc-yellow-dark-4"></div>
-                            </Section>
-
-                            <Section className="-d-flex">
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-4</Heading>
-                                    <BodyText size="xs">#DCE9F4</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-3</Heading>
-                                    <BodyText size="xs">#A2C5E0</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-2</Heading>
-                                    <BodyText size="xs">#68A1CE</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-1</Heading>
-                                    <BodyText size="xs">#3A84BE</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Yellow</Heading>
-                                    <BodyText size="xs">#176FB3</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-1</Heading>
-                                    <BodyText size="xs">#0F62A3</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-2</Heading>
-                                    <BodyText size="xs">#0A4E86</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-3</Heading>
-                                    <BodyText size="xs">#053B68</BodyText>
-                                </div>
-
-                                <div className="">
-                                    <Heading size="xs">Dark-4</Heading>
-                                    <BodyText size="xs">#02274B</BodyText>
-                                </div>
+                            <Section className="-d-flex -flex-row -flex-wrap">
+                                <ColorCard title="Light-4" color="-bgc-yellow-light-4" hex="#FFFAE8"></ColorCard>
+                                <ColorCard title="Light-3" color="-bgc-yellow-light-3" hex="#FEF2BC"></ColorCard>
+                                <ColorCard title="Light-2" color="-bgc-yellow-light-2" hex="#FDE88B"></ColorCard>
+                                <ColorCard title="Light-1" color="-bgc-yellow-light-1" hex="#FCE165"></ColorCard>
+                                <ColorCard title="Default Yellow" color="-bgc-yellow" hex="#FCD93D"></ColorCard>
+                                <ColorCard title="Dark-1" color="-bgc-yellow-dark-1" hex="#D9BC33"></ColorCard>
+                                <ColorCard title="Dark-2" color="-bgc-yellow-dark-2" hex="#A99628"></ColorCard>
+                                <ColorCard title="Dark-3" color="-bgc-yellow-dark-3" hex="#79701E"></ColorCard>
+                                <ColorCard title="Dark-4" color="-bgc-yellow-dark-4" hex="#4A4914"></ColorCard>
                             </Section>
                         </Card>
                     </Section>
@@ -537,63 +247,16 @@ export default function LayoutPage({ appData }) {
                     <Section>
                         <Heading size="sm">Orange</Heading>
                         <Card className="-m-b-0">
-                            <Section className="-d-flex">
-                                <div className="pier-color-box -bgc-orange-light-4"></div>
-                                <div className="pier-color-box -bgc-orange-light-3"></div>
-                                <div className="pier-color-box -bgc-orange-light-2"></div>
-                                <div className="pier-color-box -bgc-orange-light-1"></div>
-                                <div className="pier-color-box -bgc-orange"></div>
-                                <div className="pier-color-box -bgc-orange-dark-1"></div>
-                                <div className="pier-color-box -bgc-orange-dark-2"></div>
-                                <div className="pier-color-box -bgc-orange-dark-3"></div>
-                                <div className="pier-color-box -bgc-orange-dark-4"></div>
-                            </Section>
-
-                            <Section className="-d-flex">
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-4</Heading>
-                                    <BodyText size="xs">#DCE9F4</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-3</Heading>
-                                    <BodyText size="xs">#A2C5E0</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-2</Heading>
-                                    <BodyText size="xs">#68A1CE</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-1</Heading>
-                                    <BodyText size="xs">#3A84BE</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Orange</Heading>
-                                    <BodyText size="xs">#176FB3</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-1</Heading>
-                                    <BodyText size="xs">#0F62A3</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-2</Heading>
-                                    <BodyText size="xs">#0A4E86</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-3</Heading>
-                                    <BodyText size="xs">#053B68</BodyText>
-                                </div>
-
-                                <div className="">
-                                    <Heading size="xs">Dark-4</Heading>
-                                    <BodyText size="xs">#02274B</BodyText>
-                                </div>
+                            <Section className="-d-flex -flex-row -flex-wrap">
+                                <ColorCard title="Light-4" color="-bgc-orange-light-4" hex="#FFF1DE"></ColorCard>
+                                <ColorCard title="Light-3" color="-bgc-orange-light-3" hex="#FEDBA7"></ColorCard>
+                                <ColorCard title="Light-2" color="-bgc-orange-light-2" hex="#FDC46F"></ColorCard>
+                                <ColorCard title="Light-1" color="-bgc-orange-light-1" hex="#FCB243"></ColorCard>
+                                <ColorCard title="Default Orange" color="-bgc-orange" hex="#FCA522"></ColorCard>
+                                <ColorCard title="Dark-1" color="-bgc-orange-dark-1" hex="#D98F1D"></ColorCard>
+                                <ColorCard title="Dark-2" color="-bgc-orange-dark-2" hex="#A97217"></ColorCard>
+                                <ColorCard title="Dark-3" color="-bgc-orange-dark-3" hex="#795511"></ColorCard>
+                                <ColorCard title="Dark-4" color="-bgc-orange-dark-4" hex="#4A380B"></ColorCard>
                             </Section>
                         </Card>
                     </Section>
@@ -601,63 +264,16 @@ export default function LayoutPage({ appData }) {
                     <Section>
                         <Heading size="sm">Red</Heading>
                         <Card className="-m-b-0">
-                            <Section className="-d-flex">
-                                <div className="pier-color-box -bgc-red-light-4"></div>
-                                <div className="pier-color-box -bgc-red-light-3"></div>
-                                <div className="pier-color-box -bgc-red-light-2"></div>
-                                <div className="pier-color-box -bgc-red-light-1"></div>
-                                <div className="pier-color-box -bgc-red"></div>
-                                <div className="pier-color-box -bgc-red-dark-1"></div>
-                                <div className="pier-color-box -bgc-red-dark-2"></div>
-                                <div className="pier-color-box -bgc-red-dark-3"></div>
-                                <div className="pier-color-box -bgc-red-dark-4"></div>
-                            </Section>
-
-                            <Section className="-d-flex">
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-4</Heading>
-                                    <BodyText size="xs">#DCE9F4</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-3</Heading>
-                                    <BodyText size="xs">#A2C5E0</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-2</Heading>
-                                    <BodyText size="xs">#68A1CE</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Light-1</Heading>
-                                    <BodyText size="xs">#3A84BE</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Red</Heading>
-                                    <BodyText size="xs">#176FB3</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-1</Heading>
-                                    <BodyText size="xs">#0F62A3</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-2</Heading>
-                                    <BodyText size="xs">#0A4E86</BodyText>
-                                </div>
-
-                                <div className="-m-t-8">
-                                    <Heading size="xs">Dark-3</Heading>
-                                    <BodyText size="xs">#053B68</BodyText>
-                                </div>
-
-                                <div className="">
-                                    <Heading size="xs">Dark-4</Heading>
-                                    <BodyText size="xs">#02274B</BodyText>
-                                </div>
+                            <Section className="-d-flex -flex-row -flex-wrap">
+                                <ColorCard title="Light-4" color="-bgc-red-light-4" hex="#FBE3E4"></ColorCard>
+                                <ColorCard title="Light-3" color="-bgc-red-light-3" hex="#F3B5B8"></ColorCard>
+                                <ColorCard title="Light-2" color="-bgc-red-light-2" hex="#EC868B"></ColorCard>
+                                <ColorCard title="Light-1" color="-bgc-red-light-1" hex="#E66168"></ColorCard>
+                                <ColorCard title="Default Red" color="-bgc-red" hex="#E24550"></ColorCard>
+                                <ColorCard title="Dark-1" color="-bgc-red-dark-1" hex="#C83941"></ColorCard>
+                                <ColorCard title="Dark-2" color="-bgc-red-dark-2" hex="#9E2C34"></ColorCard>
+                                <ColorCard title="Dark-3" color="-bgc-red-dark-3" hex="#732027"></ColorCard>
+                                <ColorCard title="Dark-4" color="-bgc-red-dark-4" hex="#48141B"></ColorCard>
                             </Section>
                         </Card>
                     </Section>
