@@ -140,6 +140,21 @@ $size in $tag-pill-padding {
 
 }
 
+.pier-tag--white {
+	background-color: map-get($colorsGrays, white);
+	color: map-get($colorsGrays, dark);
+
+	&:hover {
+		opacity: 0.75;
+		color: map-get($colorsGrays, darker);
+
+	}
+
+	&:focus {
+		box-shadow: 0px 1px 5px 0px rgba(map-fetch($colorsGrays, gray-1), 0.3);
+	}
+}
+
 .pier-tag--dark.pier-tag--hero {
 	&:focus {
 		box-shadow: 0px 1px 7px 0px rgba(map-fetch($colorsCyan, default), 0.5);
@@ -153,3 +168,4 @@ $size in $tag-pill-padding {
 .pier-tag--static {
 	pointer-events: none;
 }
+

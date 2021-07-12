@@ -1,0 +1,16 @@
+.pier-item {
+    height: auto;
+    width: 100%;
+    cursor: pointer;
+    display: block;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: scaleX(1.03);
+        border-radius: 8px;
+    }
+}
+
+.pier-item--border {
+    border: 1px solid map-get($colorsGrays, light-2);
+}

@@ -120,6 +120,10 @@ $card-borders: (
 	}
   }
 
+  .gradient_bg {
+	  background: build-gradient(90deg, primaryBoulevard);
+  }
+
 
 
 

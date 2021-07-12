@@ -27,6 +27,9 @@ function Tag({ children, size, theme, dark, disabled, pill, isStatic, onClick, c
         case 'primary':
             classes += ` ${prefix}--primary`;
             break;
+        case 'white':
+            classes += ` ${prefix}--white`;
+            break;
     }
 
     dark && (classes += ` ${prefix}--dark`);

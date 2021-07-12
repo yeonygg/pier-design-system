@@ -14,6 +14,8 @@ import parserHtml from 'prettier/esm/parser-html';
 import Accordion from 'src/pier-design-system/components/accordion/Accordion';
 import BodyContent from 'src/pages-components/BodyContent';
 import BodyText from 'src/pier-design-system/components/text/BodyText';
+import Tag from 'src/pier-design-system/components/tag/Tag';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export default function LayoutPage({ appData }) {
     const breadcrumbs = [
@@ -21,6 +23,25 @@ export default function LayoutPage({ appData }) {
         { label: 'Abstracts', link: '', disabled: false },
         { label: 'Colors', link: '', disabled: true },
     ];
+
+    function ColorCard({ title, color, hex }) {
+        const classes = `pier-item ${color}`;
+        return (
+            <CopyToClipboard text={hex} onCopy={() => {}}>
+                <div className={classes}>
+                    <div className="-d-flex -justify-content-between -align-items-center -p-a-4">
+                        <Tag theme="white" isStatic size="xs">
+                            {title}
+                        </Tag>
+
+                        <Tag theme="white" size="xs">
+                            {hex}
+                        </Tag>
+                    </div>
+                </div>
+            </CopyToClipboard>
+        );
+    }
 
     function prettierHTMLFormat(html) {
         return prettier.format(html, {
@@ -49,8 +70,7 @@ export default function LayoutPage({ appData }) {
                         <Card className="-m-b-0">
                             <Section className="-d-flex -flex-wrap">
                                 <div className="-flex-column">
-                                    <div className="pier-color-box--gradient-1 -m-r-4" tabIndex="0">
-                                    </div>
+                                    <div className="pier-color-box--gradient-1 -m-r-4" tabIndex="0"></div>
                                     <div>
                                         <div className="-m-t-8">
                                             <Heading size="xs">
@@ -309,66 +329,15 @@ export default function LayoutPage({ appData }) {
                         <Heading size="sm">Green</Heading>
                         <Card className="-m-b-0">
                             <Section className="-d-flex -flex-row -flex-wrap">
-                                <div className="pier-color-box -bgc-green-light-4">
-                                    <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
-                                        <Heading className="-float-left" size="xs">
-                                            Light-4
-                                        </Heading>
-                                        <BodyText className="-float-right" size="xs">
-                                            #DAF8EE
-                                        </BodyText>
-                                    </div>
-                                </div>
-                                <div className="pier-color-box -bgc-green-light-3">
-                                    <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
-                                        <Heading size="xs">Light-3</Heading>
-                                        <BodyText size="xs">#9CEDD1</BodyText>
-                                    </div>
-                                </div>
-
-                                <div className="pier-color-box -bgc-green-light-2">
-                                    <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
-                                        <Heading size="xs">Light-2</Heading>
-                                        <BodyText size="xs">#5EE1B4</BodyText>
-                                    </div>
-                                </div>
-                                <div className="pier-color-box -bgc-green-light-1">
-                                <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
-                                <Heading size="xs">Light-1</Heading>
-                                <BodyText size="xs">#2DD89C</BodyText>
-                                </div>
-                                </div>
-                                <div className="pier-color-box -bgc-green">
-                                <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
-                                <Heading className="-c-white" size="xs">Green</Heading>
-                                <BodyText className="-c-white" size="xs">#08D18B</BodyText>
-                                </div>
-                                </div>
-                                <div className="pier-color-box -bgc-green-dark-1">
-                                <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
-                                <Heading className="-c-white" size="xs">Dark-1</Heading>
-                                <BodyText className="-c-white" size="xs">#05B67A</BodyText>
-                                </div>
-                                </div>
-                                <div className="pier-color-box -bgc-green-dark-2">
-                                <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
-                                <Heading className="-c-white" size="xs">Dark-2</Heading>
-                                <BodyText className="-c-white" size="xs">#039162</BodyText>
-                                </div>
-                                </div>
-                                <div className="pier-color-box -bgc-green-dark-3">
-                                <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
-                                <Heading className="-c-white" size="xs">Dark-3</Heading>
-                                <BodyText className="-c-white" size="xs">#026D4B</BodyText>
-                                </div>
-                                </div>
-                                
-                                <div className="pier-color-box -bgc-green-dark-4">
-                                <div className="-d-flex -justify-content-between -align-items-center -p-h-8 -p-t-4">
-                                <Heading className="-c-white" size="xs">Dark-4</Heading>
-                                <BodyText className="-c-white" size="xs">#014834</BodyText>
-                                </div>
-                                </div>
+                                <ColorCard title="Light-4" color="-bgc-green-light-4" hex="#DAF8EE"></ColorCard>
+                                <ColorCard title="Light-3" color="-bgc-green-light-3" hex="#9CEDD1"></ColorCard>
+                                <ColorCard title="Light-2" color="-bgc-green-light-2" hex="#5EE1B4"></ColorCard>
+                                <ColorCard title="Light-1" color="-bgc-green-light-1" hex="#2DD89C"></ColorCard>
+                                <ColorCard title="Default Green" color="-bgc-green" hex="#08D18B"></ColorCard>
+                                <ColorCard title="Dark-1" color="-bgc-green-dark-1" hex="#05B67A"></ColorCard>
+                                <ColorCard title="Dark-2" color="-bgc-green-dark-2" hex="#039162"></ColorCard>
+                                <ColorCard title="Dark-3" color="-bgc-green-dark-3" hex="#026D4B"></ColorCard>
+                                <ColorCard title="Dark-4" color="-bgc-green-dark-4" hex="#014834"></ColorCard>
                             </Section>
                         </Card>
                     </Section>

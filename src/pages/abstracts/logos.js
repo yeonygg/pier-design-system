@@ -46,30 +46,55 @@ export default function LayoutPage({ appData }) {
 
                     <Section>
                         <Heading size="sm">Main Logo</Heading>
+                        <div className="-d-flex">
+                            <Card className="-m-t-7 -m-r-5" style={{ width: '100%' }}>
+                                <Section className="-d-flex -align-items-center -justify-content-center">
+                                    <img src="/gumgum_logo_color.svg" style={{ width: 250 }} />
+                                </Section>
+                            </Card>
+
+                            <Card className="-m-t-7 -bgc-dark-4" style={{ width: '100%' }}>
+                                <Section className="-d-flex -align-items-center -justify-content-center">
+                                    <img src="/gumgum_logo_dark.svg" style={{ width: 250 }} />
+                                </Section>
+                            </Card>
+                        </div>
+                    </Section>
+
+                    <Section>
+                        <Heading size="sm">Animated Logo</Heading>
                         <Card className="-m-t-7">
-                            <Section className="-align-items-center -p-v-10 -p-h-10">
-                            <img src="/gumgum_logo_color.svg" style={{ width: 250 }} />
+                            <Section className="-align-items-center -p-v-12 -p-l-12">
+                                <img src="/gumgum_logo_ani.gif" style={{ width: 500 }} />
                             </Section>
                         </Card>
                     </Section>
 
                     <Section>
-                        <Heading size="sm">Dark Logo</Heading>
-                        <Card className="-m-t-7 -bgc-dark-4">
-                            <Section className="-align-items-center -p-v-10 -p-h-10">
-                            <img src="/gumgum_logo_dark.svg" style={{ width: 250 }} />
+                    <Heading size="sm">Gumgum Logo Mark</Heading>
+                    <div className="-d-flex">
+                        <Card className="-m-t-7 -m-r-5" style={{ width: '100%' }}>
+                            <Section className="-align-items-center -p-v-11 -p-h-11">
+                                <img src="/gg_logo.svg" style={{ width: 125 }} />
                             </Section>
                         </Card>
-                    </Section>
 
-                    <Section>
-                    <Heading size="sm">Animated Logo</Heading>
-                    <Card className="-m-t-7">
-                        <Section className="-align-items-center -p-v-10 -p-h-10">
-                        <img src="/gumgum_logo_ani.gif" style={{ width: 250 }} />
+                        <Card className="-m-t-7 -m-r-5 -bgc-dark-4" style={{ width: '100%' }}>
+                            <Section className="-align-items-center -p-v-11 -p-h-11">
+                                <img src="/gg_logo.svg" style={{ width: 125 }} />
+                            </Section>
+                        </Card>
+
+                        <Card className="-m-t-7 gradient_bg" style={{ width: '100%' }}>
+                        <Section className="-align-items-center -p-v-11 -p-h-11">
+                            <img src="/gg_logo_white.svg" style={{ width: 125 }} />
                         </Section>
                     </Card>
+                    </div>
                 </Section>
+
+
+
                 </BodyContent>
             </Layout>
         </Fragment>
