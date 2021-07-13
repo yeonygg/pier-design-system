@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import PropTypes from 'prop-types';
+import PropTypes, { element } from 'prop-types';
 import Layout from 'src/pages-components/Layout';
 import { Fragment } from 'react';
 import API from 'src/documentation/API';
@@ -33,10 +33,11 @@ export default function LayoutPage({ appData }) {
                         <Tag theme="white" isStatic size="xs">
                             {title}
                         </Tag>
-
-                        <Tag theme="white" size="xs">
-                            {hex}
-                        </Tag>
+                        <span className="pier-tooltip pier-tooltip--left" data-tooltip="Copied to Clipboard!">
+                            <Tag theme="white" size="xs">
+                                {hex}
+                            </Tag>
+                        </span>
                     </div>
                 </div>
             </CopyToClipboard>
