@@ -53,6 +53,32 @@ function ColorCard({ title, color, hex }) {
     );
 }
 
+function ColorCardGradient({ title, color, hex }) {
+    const classes = `pier-item ${color}`;
+    const [clicked, setClicked] = useState(false);
+
+    function clickColor() {
+        setClicked(true);
+        setTimeout(() => {
+            setClicked(false);
+        }, 1000);
+    }
+    return (
+        <CopyToClipboard
+            text={hex}
+            onCopy={() => {
+                clickColor();
+            }}
+        >
+            <div className={classes}>
+                <div className="-d-flex -justify-content-between -align-items-center -p-a-4" style={{ height: 100 }}>
+                    <Tooltip text="Copied to Clipboard!" position="bottom" open={clicked}></Tooltip>
+                </div>
+            </div>
+        </CopyToClipboard>
+    );
+}
+
 export default function LayoutPage({ appData }) {
     const breadcrumbs = [
         { label: 'Home', link: '/', disabled: false },
@@ -86,32 +112,27 @@ export default function LayoutPage({ appData }) {
                         <Heading size="sm">Gradients</Heading>
                         <Card className="-m-b-0">
                             <Section className="-d-flex -flex-wrap">
-                                <div className="-flex-column">
-                                    <ColorCard color="-bgc-primaryBoulevard-180" hex="#FFFFFF"></ColorCard>
-                                    <div>
+                                <div className="-flex-column -m-r-8">
+                                    <ColorCardGradient color="-bgg-primaryBoulevard" hex="hello world"></ColorCardGradient>
+                                    <div className="-m-t-8">
+                                        <Heading size="xs">Primary Boulevard</Heading>
+                                        <BodyText size="xs">
+                                            Cyan<br></br> #25B9EF
+                                        </BodyText>
+                                        <BodyText size="xs">
+                                            Green<br></br> #08D18B
+                                        </BodyText>
+                                    </div>
+                                    <div className="-flex-column">
                                         <div className="-m-t-8">
-                                            <Heading size="xs">
-                                                Primary<br></br> Boulevard
-                                            </Heading>
+                                            <Heading size="xs">Deep Ocean</Heading>
                                             <BodyText size="xs">
-                                                Green<br></br> #08D18B
+                                                Blue<br></br> #176FB3
                                             </BodyText>
                                             <BodyText size="xs">
                                                 Cyan<br></br> #25B9EF
                                             </BodyText>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="-flex-column">
-                                    <div className="pier-color-box--gradient-2 -m-r-4"></div>
-                                    <div className="-m-t-8">
-                                        <Heading size="xs">Deep Ocean</Heading>
-                                        <BodyText size="xs">
-                                            Blue<br></br> #176FB3
-                                        </BodyText>
-                                        <BodyText size="xs">
-                                            Cyan<br></br> #25B9EF
-                                        </BodyText>
                                     </div>
                                 </div>
                                 <div className="-flex-column">
