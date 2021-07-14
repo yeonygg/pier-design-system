@@ -15,7 +15,43 @@ import Accordion from 'src/pier-design-system/components/accordion/Accordion';
 import BodyContent from 'src/pages-components/BodyContent';
 import BodyText from 'src/pier-design-system/components/text/BodyText';
 import Tag from 'src/pier-design-system/components/tag/Tag';
+import Tooltip from 'src/pier-design-system/components/tooltip/Tooltip';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import React, { useState } from 'react';
+
+function ColorCard({ title, color, hex }) {
+    const classes = `pier-item ${color}`;
+    const [clicked, setClicked] = useState(false);
+
+    function clickColor() {
+        setClicked(true);
+        setTimeout(() => {
+            setClicked(false);
+        }, 1000);
+    }
+    return (
+        <CopyToClipboard
+            text={hex}
+            onCopy={() => {
+                clickColor();
+            }}
+        >
+            <div className={classes}>
+                <div className="-d-flex -justify-content-between -align-items-center -p-a-4">
+                    <Tag theme="white" isStatic size="xs">
+                        {title}
+                    </Tag>
+
+                    <Tooltip text={clicked ? 'Copied to Clipboard!' : 'Click to Copy'} position="left" open={clicked}>
+                        <Tag theme="white" size="xs">
+                            {hex}
+                        </Tag>
+                    </Tooltip>
+                </div>
+            </div>
+        </CopyToClipboard>
+    );
+}
 
 export default function LayoutPage({ appData }) {
     const breadcrumbs = [
@@ -23,26 +59,6 @@ export default function LayoutPage({ appData }) {
         { label: 'Abstracts', link: '', disabled: false },
         { label: 'Colors', link: '', disabled: true },
     ];
-
-    function ColorCard({ title, color, hex }) {
-        const classes = `pier-item ${color}`;
-        return (
-            <CopyToClipboard text={hex} onCopy={() => {}}>
-                <div className={classes}>
-                    <div className="-d-flex -justify-content-between -align-items-center -p-a-4">
-                        <Tag theme="white" isStatic size="xs">
-                            {title}
-                        </Tag>
-                        <span className="pier-tooltip pier-tooltip--left" data-tooltip="Copied to Clipboard!">
-                            <Tag theme="white" size="xs">
-                                {hex}
-                            </Tag>
-                        </span>
-                    </div>
-                </div>
-            </CopyToClipboard>
-        );
-    }
 
     function prettierHTMLFormat(html) {
         return prettier.format(html, {
@@ -71,7 +87,7 @@ export default function LayoutPage({ appData }) {
                         <Card className="-m-b-0">
                             <Section className="-d-flex -flex-wrap">
                                 <div className="-flex-column">
-                                    <div className="pier-color-box--gradient-1 -m-r-4" tabIndex="0"></div>
+                                    <ColorCard color="-bgc-primaryBoulevard-180" hex="#FFFFFF"></ColorCard>
                                     <div>
                                         <div className="-m-t-8">
                                             <Heading size="xs">

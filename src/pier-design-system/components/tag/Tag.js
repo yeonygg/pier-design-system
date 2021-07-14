@@ -56,7 +56,7 @@ function Tag({ children, size, theme, dark, disabled, pill, isStatic, onClick, c
 
 Tag.defaultProps = {
     size: 'md',
-    theme: 'default',
+    position: 'default',
 };
 
 Tag.propTypes = {

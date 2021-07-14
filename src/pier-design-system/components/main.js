@@ -50,3 +50,5 @@ export { default as CodeBlock } from './text/CodeBlock';
 export { default as Heading } from './text/Heading';
 export { default as Label } from './text/Label';
 export { default as Link } from './text/Link';
+//tooltip
+export { default as Tooltip } from './tooltip/Tooltip';
