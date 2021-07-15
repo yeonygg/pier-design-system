@@ -2,37 +2,33 @@
     position: relative;
     display: inline-block;
     font-family: $font-family;
-}
 
-[data-tooltip]:before,
-[data-tooltip]:after {
-    position: absolute;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    visibility: hidden;
-    opacity: 0;
-    z-index: 1000000;
-    pointer-events: none;
-    -webkit-transition: 0.3s ease;
-    -moz-transition: 0.3s ease;
-    transition: 0.3s ease;
-    -webkit-transition-delay: 0ms;
-    -moz-transition-delay: 0ms;
-    transition-delay: 0ms;
-}
+    &::before,
+    &::after {
+        position: absolute;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1000000;
+        pointer-events: none;
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        transition: 0.3s ease;
+        -webkit-transition-delay: 0ms;
+        -moz-transition-delay: 0ms;
+        transition-delay: 0ms;
 
-[data-tooltip]:hover:before,
-[data-tooltip]:hover:after {
-    visibility: visible;
-    opacity: 1;
-}
+        &:hover {
+            visibility: visible;
+            opacity: 1;
 
-[data-tooltip]:hover:before,
-[data-tooltip]:hover:after {
-    -webkit-transition-delay: 100ms;
-    -moz-transition-delay: 100ms;
-    transition-delay: 100ms;
+            -webkit-transition-delay: 100ms;
+            -moz-transition-delay: 100ms;
+            transition-delay: 100ms;
+        }
+    }
 }
 
 [data-tooltip]:before {
@@ -60,36 +56,32 @@
 }
 
 // Tooltip positioning
-.pier-tooltip--top-left:before {
-    border-top-color: map-get($colorsGrays, dark-2);
+.pier-tooltip--top-left,
+.pier-tooltip--top-right,
+.pier-tooltip--top {
+    &::before {
+        border-top-color: map-get($colorsGrays, dark-2);
+    }
 }
 
-.pier-tooltip--top-right:before {
-    border-top-color: map-get($colorsGrays, dark-2);
+.pier-tooltip--bottom-left,
+.pier-tooltip--bottom-right,
+.pier-tooltip--bottom {
+    &::before {
+        border-bottom-color: map-get($colorsGrays, dark-2);
+    }
 }
 
-.pier-tooltip--top:before {
-    border-top-color: map-get($colorsGrays, dark-2);
+.pier-tooltip--left {
+    &::before {
+        border-left-color: map-get($colorsGrays, dark-2);
+    }
 }
 
-.pier-tooltip--bottom-left:before {
-    border-bottom-color: map-get($colorsGrays, dark-2);
-}
-
-.pier-tooltip--bottom-right:before {
-    border-bottom-color: map-get($colorsGrays, dark-2);
-}
-
-.pier-tooltip--bottom:before {
-    border-bottom-color: map-get($colorsGrays, dark-2);
-}
-
-.pier-tooltip--left:before {
-    border-left-color: map-get($colorsGrays, dark-2);
-}
-
-.pier-tooltip--right:before {
-    border-right-color: map-get($colorsGrays, dark-2);
+.pier-tooltip--right {
+    &::before {
+        border-right-color: map-get($colorsGrays, dark-2);
+    }
 }
 
 // Tooltip for block-level elements

@@ -133,7 +133,7 @@ export default function LayoutPage({ appData }) {
                                 <div className="-flex-column -m-r-5">
                                     <ColorCardGradient color="-bgc-deepOcean" hex="linear-gradient(90deg, #25B9EF -7%, #6FF7CE 107%);"></ColorCardGradient>
                                     <div className="-m-t-8">
-                                        <Heading size="xs">Neon Sky</Heading>
+                                        <Heading size="xs">Deep Ocean</Heading>
                                         <BodyText size="xs">
                                             Cyan<br></br> #25B9EF
                                         </BodyText>
