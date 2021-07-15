@@ -53,12 +53,12 @@
 
 @each $gradient, $values in $gradients {
     @each $angle in (0, 90, 180, 270) {
-        .-bgg-#{$gradient}-#{$angle} {
-            background: build-gradient(($angle + 'deg'), $gradient);
+        .-bgc-#{$gradient}-#{$angle} {
+            background: build-gradient(($angle + deg), $gradient);
         }
         @if $angle == 90 {
-            .-bgg-#{$gradient} {
-                background: build-gradient(($angle + 'deg'), $gradient);
+            .-bgc-#{$gradient} {
+                background: build-gradient(($angle + deg), $gradient);
             }
         }
     }

@@ -71,7 +71,7 @@ function ColorCardGradient({ title, color, hex }) {
             }}
         >
             <div className={classes}>
-                <div className="-d-flex -justify-content-between -align-items-center -p-a-4" style={{ height: 100 }}>
+                <div className="-d-flex -justify-content-between -align-items-center -p-a-10" style={{ height: 100, width: 139 }}>
                     <Tooltip text="Copied to Clipboard!" position="bottom" open={clicked}></Tooltip>
                 </div>
             </div>
@@ -112,10 +112,15 @@ export default function LayoutPage({ appData }) {
                         <Heading size="sm">Gradients</Heading>
                         <Card className="-m-b-0">
                             <Section className="-d-flex -flex-wrap">
-                                <div className="-flex-column -m-r-8">
-                                    <ColorCardGradient color="-bgg-primaryBoulevard" hex="hello world"></ColorCardGradient>
+                                <div className="-flex-column -m-r-5">
+                                    <ColorCardGradient
+                                        color="-bgc-primaryBoulevard"
+                                        hex="linear-gradient(90deg, #08D18B -7%, #25B9EF 107%);"
+                                    ></ColorCardGradient>
                                     <div className="-m-t-8">
-                                        <Heading size="xs">Primary Boulevard</Heading>
+                                        <Heading size="xs">
+                                            Primary <br></br> Boulevard
+                                        </Heading>
                                         <BodyText size="xs">
                                             Cyan<br></br> #25B9EF
                                         </BodyText>
@@ -123,51 +128,54 @@ export default function LayoutPage({ appData }) {
                                             Green<br></br> #08D18B
                                         </BodyText>
                                     </div>
-                                    <div className="-flex-column">
-                                        <div className="-m-t-8">
-                                            <Heading size="xs">Deep Ocean</Heading>
-                                            <BodyText size="xs">
-                                                Blue<br></br> #176FB3
-                                            </BodyText>
-                                            <BodyText size="xs">
-                                                Cyan<br></br> #25B9EF
-                                            </BodyText>
-                                        </div>
-                                    </div>
                                 </div>
-                                <div className="-flex-column">
-                                    <div className="pier-color-box--gradient-3 -m-r-4"></div>
+
+                                <div className="-flex-column -m-r-5">
+                                    <ColorCardGradient color="-bgc-deepOcean" hex="linear-gradient(90deg, #25B9EF -7%, #6FF7CE 107%);"></ColorCardGradient>
                                     <div className="-m-t-8">
                                         <Heading size="xs">Neon Sky</Heading>
                                         <BodyText size="xs">
                                             Cyan<br></br> #25B9EF
                                         </BodyText>
                                         <BodyText size="xs">
-                                            Teal<br></br> #08D18B
+                                            Teal<br></br> #6FF7CE
                                         </BodyText>
                                     </div>
                                 </div>
-                                <div className="-flex-column">
-                                    <div className="pier-color-box--gradient-4 -m-r-4"></div>
+
+                                <div className="-flex-column -m-r-5">
+                                    <ColorCardGradient color="-bgc-neonSky" hex="linear-gradient(90deg, #25B9EF -7%, #6FF7CE 107%);"></ColorCardGradient>
+                                    <div className="-m-t-8">
+                                        <Heading size="xs">Neon Sky</Heading>
+                                        <BodyText size="xs">
+                                            Cyan<br></br> #25B9EF
+                                        </BodyText>
+                                        <BodyText size="xs">
+                                            Teal<br></br> #6FF7CE
+                                        </BodyText>
+                                    </div>
+                                </div>
+                                <div className="-flex-column -m-r-5">
+                                    <ColorCardGradient color="-bgc-earlySunset" hex="linear-gradient(0deg, #E24550 -7%, #FCA522 107%);"></ColorCardGradient>
                                     <div className="-m-t-8">
                                         <Heading size="xs">Early Sunset</Heading>
                                         <BodyText size="xs">
-                                            Red<br></br> #08D18B
+                                            Red<br></br> #E24550
                                         </BodyText>
                                         <BodyText size="xs">
-                                            Orange<br></br> #25B9EF
+                                            Orange<br></br> #FCA522
                                         </BodyText>
                                     </div>
                                 </div>
                                 <div className="-flex-column">
-                                    <div className="pier-color-box--gradient-5"></div>
+                                    <ColorCardGradient color="-bgc-firesideGlow" hex="linear-gradient(90deg, #FCA522 -7%, #FCD93D 107%);"></ColorCardGradient>
                                     <div className="-m-t-8">
                                         <Heading size="xs">Fireside Glow</Heading>
                                         <BodyText size="xs">
-                                            Orange<br></br> #08D18B
+                                            Orange<br></br> #FCA522
                                         </BodyText>
                                         <BodyText size="xs">
-                                            Yellow<br></br> #25B9EF
+                                            Yellow<br></br> #FCD93D
                                         </BodyText>
                                     </div>
                                 </div>
