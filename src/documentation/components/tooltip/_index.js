@@ -1,6 +1,8 @@
 import ReactDOMServer from 'react-dom/server';
 import base from './base';
-
+import bottom from './bottom';
+import right from './right';
+import left from './left';
 
 export default {
     title: 'Tooltip',
@@ -14,6 +16,23 @@ export default {
             markup: ReactDOMServer.renderToStaticMarkup(base),
             dark: false,
         },
-
+        {
+            name: 'Bottom',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(bottom),
+            dark: false,
+        },
+        {
+            name: 'Left',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(left),
+            dark: false,
+        },
+        {
+            name: 'Right',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(right),
+            dark: false,
+        },
     ],
 };
