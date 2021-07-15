@@ -141,8 +141,3 @@ $gradients: (
 @function build-gradient-webkit($angle, $gradient) {
     @return -webkit-linear-gradient($angle, map-fetch($gradients, ($gradient, color1)) -7%, map-fetch($gradients, ($gradient, color2)) 107%);
 }
-
-.pier-color-box {
-	height: 50px;
-	width: 100px;
-}

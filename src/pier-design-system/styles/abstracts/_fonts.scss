@@ -17,3 +17,23 @@ $font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-extrabold: 800;
 $font-weight-black: 900;
+
+.pier-fonts {
+    font-family: $font-family;
+    font-size: 35px;
+    line-height: 1.6;
+}
+
+.pier-fonts--bold {
+    font-weight: 700;
+}
+
+.pier-fonts--extrabold {
+    font-weight: 800;
+}
+
+.pier-fonts--roboto {
+    font-family: $font-family-code;
+    font-size: 35px;
+    line-height: 1.6;
+}

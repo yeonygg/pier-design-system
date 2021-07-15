@@ -26,6 +26,7 @@ import table from './table/_index';
 import inputForm from './form/_index';
 import accordion from './accordion/_index';
 import loadingSpinner from './loading-spinner/_index';
+import toolTip from './tooltip/_index';
 
 let componentsData = [];
 componentsData.push(
@@ -56,7 +57,8 @@ componentsData.push(
     inputForm,
     inputCombo,
     accordion,
-    loadingSpinner
+    loadingSpinner,
+    toolTip
 );
 
 componentsData.sort(function (a, b) {
