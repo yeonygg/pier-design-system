@@ -12,11 +12,11 @@ body {
     font-family: $font-family;
     font-size: 1rem;
     height: 100%;
-	background-color: map-get($colorsGrays, 'white');
+    background-color: map-get($colorsGrays, 'white');
 }
 
 html {
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
     text-rendering: geometricPrecision;
     font-smooth: subpixel-antialiased;
     -webkit-font-smoothing: subpixel-antialiased;
@@ -24,7 +24,7 @@ html {
 
     overflow-y: auto;
 
-    @media (max-width:600px) {
+    @media (max-width: 600px) {
         overflow-y: auto;
     }
 }
@@ -66,27 +66,79 @@ hr {
 }
 
 code {
-	font-family: $font-family-code;
+    font-family: $font-family-code;
 }
 
 a,
 a:hover {
-    color:inherit;
+    color: inherit;
     text-decoration: none;
 }
 
-ul,
-ol {
-    padding: 0;
-    list-style-position: inside !important;
+li {
+    font-size: inherit;
+    list-style: none;
 }
 
 ul {
+    display: block;
+    line-height: 1.55;
+    color: map-get($colorsGrays, dark);
+    padding: 0;
+    list-style-position: inside !important;
     list-style: disc;
+    font-size: 1rem;
+    padding-left: 1rem;
+    margin: 0.875rem;
+
+    li {
+        font-size: inherit;
+        display: flex;
+        margin-bottom: 0.875rem;
+        list-style: none;
+
+        &:before {
+            content: '';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            background-color: map-get($colorsGrays, gray);
+            border: 1px solid map-get($colorsGrays, gray);
+            color: map-get($colorsGrays, gray);
+            font-weight: $font-weight-semibold;
+            border-radius: 50px;
+            width: 6px;
+            height: 6px;
+            margin: 9px;
+        }
+    }
 }
 
-li {
-    list-style: none;
+ol {
+    display: block;
+    line-height: 1.55;
+    color: map-get($colorsGrays, dark);
+    padding: 0;
+    list-style-position: inside !important;
+    list-style: disc;
+    font-size: 1rem;
+    padding-left: 1rem;
+    margin: 0.875rem;
+
+    li {
+        counter-increment: level1;
+
+        &:before {
+            content: counter(level1);
+            background-color: transparent;
+            border: 1px solid map-get($colorsGrays, gray);
+            font-size: 0.75rem;
+            width: 24px;
+            height: 24px;
+            margin: 0;
+        }
+    }
 }
 
 a:hover {
@@ -94,11 +146,11 @@ a:hover {
 }
 
 i {
-	font-style: normal;
+    font-style: normal;
 }
 
 button {
-	padding: 0;
+    padding: 0;
 }
 
 textarea:focus,
@@ -120,16 +172,16 @@ button:focus:active {
     outline: none;
 }
 
-[role="button"],
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
+[role='button'],
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
 button {
     -webkit-appearance: none;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-		user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 *::selection {
@@ -138,9 +190,9 @@ button {
 }
 
 table {
-	border-spacing: 0;
+    border-spacing: 0;
 }
 
 :focus-visible {
-	outline: 0;
+    outline: 0;
 }
