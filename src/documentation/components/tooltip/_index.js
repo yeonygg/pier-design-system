@@ -4,6 +4,7 @@ import bottom from './bottom';
 import right from './right';
 import left from './left';
 import size from './size';
+import dark from './dark';
 
 export default {
     title: 'Tooltip',
@@ -34,6 +35,12 @@ export default {
             description: '',
             markup: ReactDOMServer.renderToStaticMarkup(right),
             dark: false,
+        },
+        {
+            name: 'Dark',
+            description: '',
+            markup: ReactDOMServer.renderToStaticMarkup(dark),
+            dark: true,
         },
         {
             name: 'Size',
