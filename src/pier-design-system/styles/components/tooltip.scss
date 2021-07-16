@@ -3,8 +3,35 @@
     display: inline-block;
     font-family: $font-family;
 
-    &::before,
+    &::before {
+        content: '';
+        position: absolute;
+        background: transparent;
+        border: 6px solid transparent;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1000000;
+        pointer-events: none;
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        transition: 0.3s ease;
+        -webkit-transition-delay: 0ms;
+        -moz-transition-delay: 0ms;
+        transition-delay: 0ms;
+    }
+
     &::after {
+        content: attr(data-tooltip);
+        background: map-get($colorsGrays, dark-3);
+        color: white;
+        padding: 8px 10px;
+        font-size: 12px;
+        line-height: 12px;
+        white-space: nowrap;
+        border-radius: 8px;
         position: absolute;
         -webkit-transform: translate3d(0, 0, 0);
         -moz-transform: translate3d(0, 0, 0);
@@ -19,35 +46,21 @@
         -webkit-transition-delay: 0ms;
         -moz-transition-delay: 0ms;
         transition-delay: 0ms;
-
-        &:hover {
-            visibility: visible;
-            opacity: 1;
-
-            -webkit-transition-delay: 100ms;
-            -moz-transition-delay: 100ms;
-            transition-delay: 100ms;
-        }
+        text-shadow: 0 -1px 0 black;
     }
 }
 
-[data-tooltip]:before {
-    content: '';
-    position: absolute;
-    background: transparent;
-    border: 6px solid transparent;
-    z-index: 1000001;
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+    visibility: visible;
+    opacity: 1;
 }
 
-[data-tooltip]:after {
-    content: attr(data-tooltip);
-    background: map-get($colorsGrays, dark-2);
-    color: white;
-    padding: 8px 10px;
-    font-size: 12px;
-    line-height: 12px;
-    white-space: nowrap;
-    border-radius: 8px;
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    transition-delay: 100ms;
 }
 
 [data-tooltip='']:before,
@@ -56,31 +69,90 @@
 }
 
 // Tooltip positioning
-.pier-tooltip--top-left,
-.pier-tooltip--top-right,
+
 .pier-tooltip--top {
-    &::before {
-        border-top-color: map-get($colorsGrays, dark-2);
+    &:before {
+        border-top-color: map-get($colorsGrays, dark-3);
+        margin-bottom: -11px;
+        bottom: 100%;
+        left: 50%;
+        left: calc(50% - 6px);
+        -webkit-transform: translateY(-8px);
+        -moz-transform: translateY(-8px);
+        transform: translateY(-8px);
+    }
+
+    &:after {
+        bottom: 100%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(-8px);
+        -moz-transform: translateX(-50%) translateY(-8px);
+        transform: translateX(-50%) translateY(-8px);
     }
 }
 
-.pier-tooltip--bottom-left,
-.pier-tooltip--bottom-right,
 .pier-tooltip--bottom {
-    &::before {
-        border-bottom-color: map-get($colorsGrays, dark-2);
+    &:before {
+        border-bottom-color: map-get($colorsGrays, dark-3);
+        margin-top: -11px;
+        top: 100%;
+        left: 50%;
+        left: calc(50% - 6px);
+        -webkit-transform: translateY(8px);
+        -moz-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    &:after {
+        top: 100%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(8px);
+        -moz-transform: translateX(-50%) translateY(8px);
+        transform: translateX(-50%) translateY(8px);
     }
 }
 
 .pier-tooltip--left {
     &::before {
-        border-left-color: map-get($colorsGrays, dark-2);
+        border-left-color: map-get($colorsGrays, dark-3);
+        margin-right: -11px;
+        margin-bottom: -6px;
+        right: 100%;
+        bottom: 50%;
+        -webkit-transform: translateX(-8px);
+        -moz-transform: translateX(-8px);
+        transform: translateX(-8px);
+    }
+
+    &:after {
+        margin-bottom: -14px;
+        right: 100%;
+        bottom: 50%;
+        -webkit-transform: translateX(-8px);
+        -moz-transform: translateX(-8px);
+        transform: translateX(-8px);
     }
 }
 
 .pier-tooltip--right {
-    &::before {
-        border-right-color: map-get($colorsGrays, dark-2);
+    &:before {
+        border-right-color: map-get($colorsGrays, dark-3);
+        margin-left: -11px;
+        margin-bottom: -6px;
+        left: 100%;
+        bottom: 50%;
+        -webkit-transform: translateX(8px);
+        -moz-transform: translateX(8px);
+        transform: translateX(8px);
+    }
+
+    &:after {
+        margin-bottom: -14px;
+        left: 100%;
+        bottom: 50%;
+        -webkit-transform: translateX(8px);
+        -moz-transform: translateX(8px);
+        transform: translateX(8px);
     }
 }
 
@@ -90,344 +162,50 @@
     width: 100%;
 }
 
-// Top tooltip
-.pier-tooltip--top:before {
-    margin-bottom: -11px;
-}
-
-.pier-tooltip--top:before,
-.pier-tooltip--top:after {
-    bottom: 100%;
-    left: 50%;
-}
-
-.pier-tooltip--top:before {
-    left: calc(50% - 6px);
-}
-
-.pier-tooltip--top:after {
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
-
-.pier-tooltip--top:hover:before,
-.pier-tooltip--top:focus:before {
-    -webkit-transform: translateY(-8px);
-    -moz-transform: translateY(-8px);
-    transform: translateY(-8px);
-}
-
-.pier-tooltip--top:hover:after,
-.pier-tooltip--top:focus:after {
-    -webkit-transform: translateX(-50%) translateY(-8px);
-    -moz-transform: translateX(-50%) translateY(-8px);
-    transform: translateX(-50%) translateY(-8px);
-}
-
-// Bottom tooltip
-.pier-tooltip--bottom:before {
-    margin-top: -11px;
-}
-
-.pier-tooltip--bottom:before,
-.pier-tooltip--bottom:after {
-    top: 100%;
-    left: 50%;
-}
-
-.pier-tooltip--bottom:before {
-    left: calc(50% - 6px);
-}
-
-.pier-tooltip--bottom:after {
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
-
-.pier-tooltip--bottom:hover:before,
-.pier-tooltip--bottom:focus:before {
-    -webkit-transform: translateY(8px);
-    -moz-transform: translateY(8px);
-    transform: translateY(8px);
-}
-
-.pier-tooltip--bottom:hover:after,
-.pier-tooltip--bottom:focus:after {
-    -webkit-transform: translateX(-50%) translateY(8px);
-    -moz-transform: translateX(-50%) translateY(8px);
-    transform: translateX(-50%) translateY(8px);
-}
-
-// Right tooltip
-.pier-tooltip--right:before {
-    margin-left: -11px;
-    margin-bottom: -6px;
-}
-
-.pier-tooltip--right:after {
-    margin-bottom: -14px;
-}
-
-.pier-tooltip--right:before,
-.pier-tooltip--right:after {
-    left: 100%;
-    bottom: 50%;
-}
-
-.pier-tooltip--right:hover:before,
-.pier-tooltip--right:focus:before {
-    -webkit-transform: translateX(8px);
-    -moz-transform: translateX(8px);
-    transform: translateX(8px);
-}
-
-.pier-tooltip--right:hover:after,
-.pier-tooltip--right:focus:after {
-    -webkit-transform: translateX(8px);
-    -moz-transform: translateX(8px);
-    transform: translateX(8px);
-}
-
-// Left tooltip
-.pier-tooltip--left:before {
-    margin-right: -11px;
-    margin-bottom: -6px;
-}
-
-.pier-tooltip--left:after {
-    margin-bottom: -14px;
-}
-
-.pier-tooltip--left:before,
-.pier-tooltip--left:after {
-    right: 100%;
-    bottom: 50%;
-}
-
-.pier-tooltip--left:hover:before,
-.pier-tooltip--left:focus:before {
-    -webkit-transform: translateX(-8px);
-    -moz-transform: translateX(-8px);
-    transform: translateX(-8px);
-}
-
-.pier-tooltip--left:hover:after,
-.pier-tooltip--left:focus:after {
-    -webkit-transform: translateX(-8px);
-    -moz-transform: translateX(-8px);
-    transform: translateX(-8px);
-}
-
-// Top-left tooltip
-.pier-tooltip--top-left:before {
-    margin-bottom: -11px;
-}
-
-.pier-tooltip--top-left:before,
-.pier-tooltip--top-left:after {
-    bottom: 100%;
-    left: 50%;
-}
-
-.pier-tooltip--top-left:before {
-    left: calc(50% - 6px);
-}
-
-.pier-tooltip--top-left:after {
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    transform: translateX(-100%);
-}
-
-.pier-tooltip--top-left:after {
-    margin-left: 12px;
-}
-
-.pier-tooltip--top-left:hover:before,
-.pier-tooltip--top-left:focus:before {
-    -webkit-transform: translateY(-8px);
-    -moz-transform: translateY(-8px);
-    transform: translateY(-8px);
-}
-
-.pier-tooltip--top-left:hover:after,
-.pier-tooltip--top-left:focus:after {
-    -webkit-transform: translateX(-100%) translateY(-8px);
-    -moz-transform: translateX(-100%) translateY(-8px);
-    transform: translateX(-100%) translateY(-8px);
-}
-
-// Top-right tooltip
-.pier-tooltip--top-right:before {
-    margin-bottom: -11px;
-}
-
-.pier-tooltip--top-right:before,
-.pier-tooltip--top-right:after {
-    bottom: 100%;
-    left: 50%;
-}
-
-.pier-tooltip--top-right:before {
-    left: calc(50% - 6px);
-}
-
-.pier-tooltip--top-right:after {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    transform: translateX(0);
-}
-
-.pier-tooltip--top-right:after {
-    margin-left: -12px;
-}
-
-.pier-tooltip--top-right:hover:before,
-.pier-tooltip--top-right:focus:before {
-    -webkit-transform: translateY(-8px);
-    -moz-transform: translateY(-8px);
-    transform: translateY(-8px);
-}
-
-.pier-tooltip--top-right:hover:after,
-.pier-tooltip--top-right:focus:after {
-    -webkit-transform: translateY(-8px);
-    -moz-transform: translateY(-8px);
-    transform: translateY(-8px);
-}
-
-// Bottom-left tooltip
-.pier-tooltip--bottom-left:before {
-    margin-top: -11px;
-}
-
-.pier-tooltip--bottom-left:before,
-.pier-tooltip--bottom-left:after {
-    top: 100%;
-    left: 50%;
-}
-
-.pier-tooltip--bottom-left:before {
-    left: calc(50% - 6px);
-}
-
-.pier-tooltip--bottom-left:after {
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    transform: translateX(-100%);
-}
-
-.pier-tooltip--bottom-left:after {
-    margin-left: 12px;
-}
-
-.pier-tooltip--bottom-left:hover:before,
-.pier-tooltip--bottom-left:focus:before {
-    -webkit-transform: translateY(8px);
-    -moz-transform: translateY(8px);
-    transform: translateY(8px);
-}
-
-.pier-tooltip--bottom-left:hover:after,
-.pier-tooltip--bottom-left:focus:after {
-    -webkit-transform: translateX(-100%) translateY(8px);
-    -moz-transform: translateX(-100%) translateY(8px);
-    transform: translateX(-100%) translateY(8px);
-}
-
-// Bottom-right tooltip
-.pier-tooltip--bottom-right:before {
-    margin-top: -11px;
-}
-
-.pier-tooltip--bottom-right:before,
-.pier-tooltip--bottom-right:after {
-    top: 100%;
-    left: 50%;
-}
-
-.pier-tooltip--bottom-right:before {
-    left: calc(50% - 6px);
-}
-
-.pier-tooltip--bottom-right:after {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    transform: translateX(0);
-}
-
-.pier-tooltip--bottom-right:after {
-    margin-left: -12px;
-}
-
-.pier-tooltip--bottom-right:hover:before,
-.pier-tooltip--bottom-right:focus:before {
-    -webkit-transform: translateY(8px);
-    -moz-transform: translateY(8px);
-    transform: translateY(8px);
-}
-
-.pier-tooltip--bottom-right:hover:after,
-.pier-tooltip--bottom-right:focus:after {
-    -webkit-transform: translateY(8px);
-    -moz-transform: translateY(8px);
-    transform: translateY(8px);
-}
-
 // Large size
-.pier-tooltip--lg:after {
-    white-space: normal;
-    line-height: 1.4em;
-    font-size: 15px;
-    width: auto;
-    white-space: nowrap;
-    padding-left: 5px;
-    padding-right: 5px;
+.pier-tooltip--lg {
+    &:after {
+        white-space: normal;
+        line-height: 1.4em;
+        font-size: 15px;
+        width: auto;
+        white-space: nowrap;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
 }
 
 // Hint themes
 
-[data-tooltip]:after {
-    text-shadow: 0 -1px 0 black;
+.pier-tooltip--dark {
+    &:after {
+        background-color: map-get($colorsGrays, dark-2);
+        text-shadow: 0 -1px 0 map-get($colorsGrays, dark-3);
+    }
 }
 
-.pier-tooltip--dark:after {
-    background-color: map-get($colorsGrays, gray);
-    text-shadow: 0 -1px 0 map-get($colorsGrays, dark-2);
+.pier-tooltip--dark.pier-tooltip--top {
+    &:before {
+        border-top-color: map-get($colorsGrays, dark-2);
+    }
 }
 
-.pier-tooltip--dark.pier-tooltip--top-left:before {
-    border-top-color: map-get($colorsGrays, gray);
+.pier-tooltip--dark.pier-tooltip--bottom {
+    &:before {
+        border-bottom-color: map-get($colorsGrays, dark-2);
+    }
 }
 
-.pier-tooltip--dark.pier-tooltip--top-right:before {
-    border-top-color: map-get($colorsGrays, gray);
+.pier-tooltip--dark.pier-tooltip--left {
+    &:before {
+        border-left-color: map-get($colorsGrays, dark-2);
+    }
 }
 
-.pier-tooltip--dark.pier-tooltip--top:before {
-    border-top-color: map-get($colorsGrays, gray);
-}
-
-.pier-tooltip--dark.pier-tooltip--bottom-left:before {
-    border-bottom-color: map-get($colorsGrays, gray);
-}
-
-.pier-tooltip--dark.pier-tooltip--bottom-right:before {
-    border-bottom-color: map-get($colorsGrays, gray);
-}
-
-.pier-tooltip--dark.pier-tooltip--bottom:before {
-    border-bottom-color: map-get($colorsGrays, gray);
-}
-
-.pier-tooltip--dark.pier-tooltip--left:before {
-    border-left-color: map-get($colorsGrays, gray);
-}
-
-.pier-tooltip--dark.pier-tooltip--right:before {
-    border-right-color: map-get($colorsGrays, gray);
+.pier-tooltip--dark.pier-tooltip--right {
+    &:before {
+        border-right-color: map-get($colorsGrays, dark-2);
+    }
 }
 .pier-tooltip--disabled {
     &:hover {
@@ -450,8 +228,6 @@
         opacity: 1;
     }
 }
-
-//left
 
 .pier-tooltip--left.pier-tooltip--open {
     &::before,
