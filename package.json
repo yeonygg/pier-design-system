@@ -1,91 +1,91 @@
 {
-	"name": "pier-design-system",
-	"version": "0.6.1",
-	"description": "A presentational design system and react component library",
-	"keywords": [
-		"pier design system",
-		"pier",
-		"design system",
-		"react component library",
-		"gumgum",
-		"react",
-		"scss"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/gg-jarrod/pier-design-system.git"
-	},
-	"bugs": {
-		"url": "https://github.com/gg-jarrod/pier-design-system.git/issues"
-	},
-	"homepage": "https://pier-design-system-develop.netlify.app/abstracts/grid",
-	"main": "dist/index.js",
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"dev": "next dev",
-		"next:build": "next build",
-		"rollup:build": "rollup -c",
-		"sass:build": "sass --no-source-map src/pier-design-system/styles/main.scss dist/styles.css",
-		"postsass:build": "uglifycss dist/styles.css --output dist/styles.css",
-		"prenpm-pkg-build": "rimraf dist",
-		"npm-pkg-build": "yarn sass:build && yarn rollup:build",
-		"build": "yarn next:build && yarn npm-pkg-build",
-		"start": "next start",
-		"format": "prettier-eslint --write \"src/**/*.{js,jsx}\"",
-		"prepublish": "yarn npm-pkg-build"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "yarn format && yarn build"
-		}
-	},
-	"dependencies": {
-		"prop-types": "^15.7.2",
-		"react": "^17.0.1",
-		"react-copy-to-clipboard": "^5.0.3",
-		"react-dom": "^17.0.1"
-	},
-	"peerDependencies": {},
-	"devDependencies": {
-		"@babel/core": "^7.13.16",
-		"@babel/plugin-transform-runtime": "^7.13.15",
-		"@babel/preset-env": "^7.13.15",
-		"@babel/preset-react": "^7.13.13",
-		"@babel/runtime": "^7.13.17",
-		"@rollup/plugin-babel": "^5.3.0",
-		"@rollup/plugin-commonjs": "^18.0.0",
-		"@rollup/plugin-node-resolve": "^11.2.1",
-		"angular-html-parser": "^1.7.1",
-		"babel-eslint": "^10.1.0",
-		"babel-loader": "^8.2.2",
-		"copy-webpack-plugin": "^8.1.1",
-		"eslint": "^7.21.0",
-		"eslint-config-airbnb": "^18.2.1",
-		"eslint-config-prettier": "^8.1.0",
-		"eslint-plugin-babel": "^5.3.1",
-		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-jsx-a11y": "^6.4.1",
-		"eslint-plugin-react": "^7.22.0",
-		"eslint-plugin-react-hooks": "^4.2.0",
-		"html": "^1.0.0",
-		"html-react-parser": "^1.2.4",
-		"husky": "^6.0.0",
-		"next": "10.0.7",
-		"prettier": "^2.2.1",
-		"prettier-eslint": "^12.0.0",
-		"prettier-eslint-cli": "^5.0.1",
-		"rimraf": "^3.0.2",
-		"rollup": "^2.45.2",
-		"rollup-plugin-copy": "^3.4.0",
-		"rollup-plugin-eslint": "^7.0.0",
-		"rollup-plugin-peer-deps-external": "^2.2.4",
-		"rollup-plugin-uglify": "^6.0.4",
-		"sass": "^1.32.8",
-		"stylelint": "^13.12.0",
-		"stylelint-scss": "^3.19.0",
-		"uglify-js": "^3.13.4",
-		"uglifycss": "^0.0.29"
-	}
+    "name": "pier-design-system",
+    "version": "0.6.2",
+    "description": "A presentational design system and react component library",
+    "keywords": [
+        "pier design system",
+        "pier",
+        "design system",
+        "react component library",
+        "gumgum",
+        "react",
+        "scss"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gg-jarrod/pier-design-system.git"
+    },
+    "bugs": {
+        "url": "https://github.com/gg-jarrod/pier-design-system.git/issues"
+    },
+    "homepage": "https://pier-design-system-develop.netlify.app/abstracts/grid",
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "dev": "next dev",
+        "next:build": "next build",
+        "rollup:build": "rollup -c",
+        "sass:build": "sass --no-source-map src/pier-design-system/styles/main.scss dist/styles.css",
+        "postsass:build": "uglifycss dist/styles.css --output dist/styles.css",
+        "prenpm-pkg-build": "rimraf dist",
+        "npm-pkg-build": "yarn sass:build && yarn rollup:build",
+        "build": "yarn next:build && yarn npm-pkg-build",
+        "start": "next start",
+        "format": "prettier-eslint --write \"src/**/*.{js,jsx}\"",
+        "prepublish": "yarn npm-pkg-build"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn format && yarn build"
+        }
+    },
+    "dependencies": {
+        "prop-types": "^15.7.2",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1"
+    },
+    "peerDependencies": {},
+    "devDependencies": {
+        "@babel/core": "^7.13.16",
+        "@babel/plugin-transform-runtime": "^7.13.15",
+        "@babel/preset-env": "^7.13.15",
+        "@babel/preset-react": "^7.13.13",
+        "@babel/runtime": "^7.13.17",
+        "@rollup/plugin-babel": "^5.3.0",
+        "@rollup/plugin-commonjs": "^18.0.0",
+        "@rollup/plugin-node-resolve": "^11.2.1",
+        "angular-html-parser": "^1.7.1",
+        "babel-eslint": "^10.1.0",
+        "babel-loader": "^8.2.2",
+        "copy-webpack-plugin": "^8.1.1",
+        "eslint": "^7.21.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-prettier": "^8.1.0",
+        "eslint-plugin-babel": "^5.3.1",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-react": "^7.22.0",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "html": "^1.0.0",
+        "html-react-parser": "^1.2.4",
+        "husky": "^6.0.0",
+        "next": "10.0.7",
+        "prettier": "^2.2.1",
+        "prettier-eslint": "^12.0.0",
+        "prettier-eslint-cli": "^5.0.1",
+        "react-copy-to-clipboard": "^5.0.3",
+        "rimraf": "^3.0.2",
+        "rollup": "^2.45.2",
+        "rollup-plugin-copy": "^3.4.0",
+        "rollup-plugin-eslint": "^7.0.0",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "rollup-plugin-uglify": "^6.0.4",
+        "sass": "^1.32.8",
+        "stylelint": "^13.12.0",
+        "stylelint-scss": "^3.19.0",
+        "uglify-js": "^3.13.4",
+        "uglifycss": "^0.0.29"
+    }
 }
