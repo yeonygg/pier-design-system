@@ -71,7 +71,7 @@ function ColorCardGradient({ title, color, hex }) {
             }}
         >
             <div className={classes}>
-                <div className="-d-flex -justify-content-between -align-items-center -p-a-10" style={{ height: 100, width: 139 }}>
+                <div className="-d-flex -justify-content-between -align-items-center -p-t-12 -p-l-12" style={{ height: 100, width: 139 }}>
                     <Tooltip text="Copied to Clipboard!" position="bottom" open={clicked}></Tooltip>
                 </div>
             </div>
@@ -185,24 +185,23 @@ export default function LayoutPage({ appData }) {
 
                     <Section>
                         <Heading size="sm">Grays</Heading>
-                        <Card className="-m-b-0">
-                            <Section className="-d-flex -flex-row -flex-wrap">
-                                <ColorCard title="White" color="-bgc-white" hex="#FFFFFF"></ColorCard>
-                                <ColorCard title="Light-4" color="-bgc-light-4" hex="#F7F8F8"></ColorCard>
-                                <ColorCard title="Light-3" color="-bgc-light-3" hex="#F1F3F3"></ColorCard>
-                                <ColorCard title="Light-2" color="-bgc-light-2" hex="#EBEEEF"></ColorCard>
-                                <ColorCard title="Light-1" color="-bgc-light-1" hex="#E3E7E8"></ColorCard>
-                                <ColorCard title="Gray-4" color="-bgc-gray-4" hex="#D0D6D8"></ColorCard>
-                                <ColorCard title="Gray-3" color="-bgc-gray-3" hex="#BCC5CA"></ColorCard>
-                                <ColorCard title="Gray-2" color="-bgc-gray-2" hex="#A5B2B8"></ColorCard>
-                                <ColorCard title="Default Gray" color="-bgc-gray" hex="#8A9BA3"></ColorCard>
-                                <ColorCard title="Dark-1" color="-bgc-dark-1" hex="#6D808B"></ColorCard>
-                                <ColorCard title="Dark-2" color="-bgc-dark-2" hex="#53626D"></ColorCard>
-                                <ColorCard title="Dark-3" color="-bgc-dark-3" hex="#2D3A43"></ColorCard>
-                                <ColorCard title="Dark-4" color="-bgc-dark-4" hex="#0E1E2A"></ColorCard>
-                                <ColorCard title="Black" color="-bgc-black" hex="#000000"></ColorCard>
-                            </Section>
-                        </Card>
+
+                        <Section className="-d-flex -flex-row -flex-wrap">
+                            <ColorCard title="White" color="-bgc-white" hex="#FFFFFF"></ColorCard>
+                            <ColorCard title="Light-4" color="-bgc-light-4" hex="#F7F8F8"></ColorCard>
+                            <ColorCard title="Light-3" color="-bgc-light-3" hex="#F1F3F3"></ColorCard>
+                            <ColorCard title="Light-2" color="-bgc-light-2" hex="#EBEEEF"></ColorCard>
+                            <ColorCard title="Light-1" color="-bgc-light-1" hex="#E3E7E8"></ColorCard>
+                            <ColorCard title="Gray-4" color="-bgc-gray-4" hex="#D0D6D8"></ColorCard>
+                            <ColorCard title="Gray-3" color="-bgc-gray-3" hex="#BCC5CA"></ColorCard>
+                            <ColorCard title="Gray-2" color="-bgc-gray-2" hex="#A5B2B8"></ColorCard>
+                            <ColorCard title="Default Gray" color="-bgc-gray" hex="#8A9BA3"></ColorCard>
+                            <ColorCard title="Dark-1" color="-bgc-dark-1" hex="#6D808B"></ColorCard>
+                            <ColorCard title="Dark-2" color="-bgc-dark-2" hex="#53626D"></ColorCard>
+                            <ColorCard title="Dark-3" color="-bgc-dark-3" hex="#2D3A43"></ColorCard>
+                            <ColorCard title="Dark-4" color="-bgc-dark-4" hex="#0E1E2A"></ColorCard>
+                            <ColorCard title="Black" color="-bgc-black" hex="#000000"></ColorCard>
+                        </Section>
                     </Section>
 
                     <Section>
