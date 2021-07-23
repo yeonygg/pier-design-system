@@ -29,6 +29,12 @@ function ColorCard({ title, color, hex }) {
             setClicked(false);
         }, 1000);
     }
+
+    const borderRadiusTop = {
+        borderTopLeftRadius: '8px',
+        borderTopRightRadius: '8px',
+    };
+
     return (
         <CopyToClipboard
             text={hex}
@@ -37,7 +43,7 @@ function ColorCard({ title, color, hex }) {
             }}
         >
             <div className={classes}>
-                <div className="-d-flex -justify-content-between -align-items-center -p-a-4">
+                <div className="-d-flex -justify-content-between -align-items-center -p-a-4" style={borderRadiusTop}>
                     <Tag theme="white" isStatic size="xs">
                         {title}
                     </Tag>
