@@ -21,6 +21,7 @@ import React, { useState } from 'react';
 
 function ColorCard({ title, color, hex }) {
     const classes = `pier-item ${color}`;
+
     const [clicked, setClicked] = useState(false);
 
     function clickColor() {
@@ -30,11 +31,6 @@ function ColorCard({ title, color, hex }) {
         }, 1000);
     }
 
-    const style = {
-        borderTopLeftRadius: '8rem',
-        borderTopRightRadius: '8rem',
-    };
-
     return (
         <CopyToClipboard
             text={hex}
@@ -43,7 +39,7 @@ function ColorCard({ title, color, hex }) {
             }}
         >
             <div className={classes}>
-                <div className="-d-flex -justify-content-between -align-items-center -p-a-4" style={style}>
+                <div className="-d-flex -justify-content-between -align-items-center -p-a-4">
                     <Tag theme="white" isStatic size="xs">
                         {title}
                     </Tag>
@@ -60,7 +56,7 @@ function ColorCard({ title, color, hex }) {
 }
 
 function ColorCardGradient({ title, color, hex }) {
-    const classes = `pier-item ${color}`;
+    const classesGradient = `pier-item--gradient ${color}`;
     const [clicked, setClicked] = useState(false);
 
     function clickColor() {
@@ -76,8 +72,8 @@ function ColorCardGradient({ title, color, hex }) {
                 clickColor();
             }}
         >
-            <div className={classes}>
-                <div className="-d-flex -justify-content-between -align-items-center -p-t-12 -p-l-12" style={{ height: 100, width: 139 }}>
+            <div className={classesGradient}>
+                <div className="-d-flex -justify-content-between -align-items-center -p-t-12 -p-l-12">
                     <Tooltip text="Copied to Clipboard!" position="bottom" open={clicked}></Tooltip>
                 </div>
             </div>
