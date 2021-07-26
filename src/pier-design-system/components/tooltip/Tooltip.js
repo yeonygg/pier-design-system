@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function Tooltip({ children, position, dark, className, text, onClick, style, disabled, open }) {
+function Tooltip({ children, position, dark, className, text, onClick, style, disabled, open, onMouseLeave, onMouseEnter }) {
     let prefix = `pier-tooltip`,
         classes = prefix;
 
@@ -25,7 +25,7 @@ function Tooltip({ children, position, dark, className, text, onClick, style, di
     open && (classes += ` ${prefix}--open`);
 
     return (
-        <span className={classes} data-tooltip={text} style={style}>
+        <span className={classes} data-tooltip={text} style={style} onMouseLeave={onMouseLeave} onClick={onClick} onMouseEnter={onMouseEnter}>
             {children}
         </span>
     );
@@ -45,6 +45,8 @@ Tooltip.propTypes = {
     onClick: PropTypes.func,
     style: PropTypes.object,
     disabled: PropTypes.bool,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
 };
 
 export default Tooltip;
