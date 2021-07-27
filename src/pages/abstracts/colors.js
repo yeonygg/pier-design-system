@@ -165,8 +165,8 @@ export default function LayoutPage({ appData }) {
                     <Section>
                         <Heading size="sm">Gradients</Heading>
                         <Card className="-m-b-0">
-                            <Section className="-d-flex -flex-wrap">
-                                <div className="-flex-column -m-r-5">
+                            <div className="-d-flex -flex-wrap">
+                                <div className="-m-r-5">
                                     <ColorCardGradient
                                         color="-bgc-primaryBoulevard"
                                         hex="linear-gradient(90deg, #08D18B -7%, #25B9EF 107%);"
@@ -184,7 +184,7 @@ export default function LayoutPage({ appData }) {
                                     </div>
                                 </div>
 
-                                <div className="-flex-column -m-r-5">
+                                <div className=" -m-r-5">
                                     <ColorCardGradient color="-bgc-deepOcean" hex="linear-gradient(90deg, #25B9EF -7%, #6FF7CE 107%);"></ColorCardGradient>
                                     <div className="-m-t-8">
                                         <Heading size="xs">Deep Ocean</Heading>
@@ -233,7 +233,7 @@ export default function LayoutPage({ appData }) {
                                         </BodyText>
                                     </div>
                                 </div>
-                            </Section>
+                            </div>
                         </Card>
                     </Section>
 
