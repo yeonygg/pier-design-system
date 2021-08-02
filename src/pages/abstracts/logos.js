@@ -46,14 +46,14 @@ export default function LayoutPage({ appData }) {
 
                     <Section>
                         <Heading size="sm">Main Logo</Heading>
-                        <div className="-d-flex">
-                            <Card className="-m-t-7 -m-r-7" style={{ width: '100%', height: 200 }}>
+                        <div className="pier-colorbox pier-colorbox--card">
+                            <Card className="-m-t-1" style={{ width: '100%', height: 200 }}>
                                 <Section className="-d-flex -align-items-center -justify-content-center -p-l-9 -p-v-10">
                                     <img src="/gumgum_logo_color.svg" style={{ width: 250 }} />
                                 </Section>
                             </Card>
 
-                            <Card className="-m-t-7 -bgc-dark-4" style={{ width: '100%', height: 200 }}>
+                            <Card className="-m-t-1 -bgc-dark-4" style={{ width: '100%', height: 200 }}>
                                 <Section className="-d-flex -align-items-center -justify-content-center -p-l-9 -p-v-10">
                                     <img src="/gumgum_logo_dark.svg" style={{ width: 250 }} />
                                 </Section>
@@ -74,21 +74,21 @@ export default function LayoutPage({ appData }) {
 
                     <Section>
                         <Heading size="sm">Gumgum Logo Mark</Heading>
-                        <div className="-d-flex">
-                            <Card className="-m-t-7 -m-r-7" style={{ width: '100%' }}>
-                                <Section className="-align-items-center -p-v-11 -p-h-11">
+                        <div className="pier-colorbox pier-colorbox--card">
+                            <Card className="-m-t-2 " style={{ width: '100%' }}>
+                                <Section className="-d-flex -justify-content-center -p-v-11">
                                     <img src="/gg_logo.svg" style={{ width: 125 }} />
                                 </Section>
                             </Card>
 
-                            <Card className="-m-t-7 -m-r-7 -bgc-dark-4" style={{ width: '100%' }}>
-                                <Section className="-align-items-center -p-v-11 -p-h-11">
+                            <Card className="-m-t-2  -bgc-dark-4" style={{ width: '100%' }}>
+                                <Section className="-d-flex -justify-content-center -p-v-11">
                                     <img src="/gg_logo.svg" style={{ width: 125 }} />
                                 </Section>
                             </Card>
 
-                            <Card className="-m-t-7 gradient_bg" style={{ width: '100%' }}>
-                                <Section className="-align-items-center -p-v-11 -p-h-11">
+                            <Card className="-m-t-2 gradient_bg" style={{ width: '100%' }}>
+                                <Section className="-d-flex -justify-content-center -p-v-11">
                                     <img src="/gg_logo_white.svg" style={{ width: 125 }} />
                                 </Section>
                             </Card>

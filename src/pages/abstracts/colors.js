@@ -165,16 +165,16 @@ export default function LayoutPage({ appData }) {
                     <Section>
                         <Heading size="sm">Gradients</Heading>
                         <Card className="-m-b-0">
-                            <div className="-d-flex -flex-wrap">
-                                <div className="-m-r-5">
-                                    <ColorCardGradient
-                                        color="-bgc-primaryBoulevard"
-                                        hex="linear-gradient(90deg, #08D18B -7%, #25B9EF 107%);"
-                                    ></ColorCardGradient>
+                            <div className="pier-colorbox">
+                                <div className="pier-item--column">
+                                    <div className="pier-item--gradient">
+                                        <ColorCardGradient
+                                            color="-bgc-primaryBoulevard"
+                                            hex="linear-gradient(90deg, #08D18B -7%, #25B9EF 107%);"
+                                        ></ColorCardGradient>
+                                    </div>
                                     <div className="-m-t-8">
-                                        <Heading size="xs">
-                                            Primary <br></br> Boulevard
-                                        </Heading>
+                                        <Heading size="xs">Primary Boulevard</Heading>
                                         <BodyText size="xs">
                                             Cyan<br></br> #25B9EF
                                         </BodyText>
@@ -184,21 +184,25 @@ export default function LayoutPage({ appData }) {
                                     </div>
                                 </div>
 
-                                <div className=" -m-r-5">
-                                    <ColorCardGradient color="-bgc-deepOcean" hex="linear-gradient(90deg, #25B9EF -7%, #6FF7CE 107%);"></ColorCardGradient>
+                                <div className="pier-item--column">
+                                    <div className="pier-item--gradient">
+                                        <ColorCardGradient color="-bgc-deepOcean" hex="linear-gradient(90deg, #176FB3 -7%, #25B9EF 107%);"></ColorCardGradient>
+                                    </div>
                                     <div className="-m-t-8">
                                         <Heading size="xs">Deep Ocean</Heading>
                                         <BodyText size="xs">
-                                            Cyan<br></br> #25B9EF
+                                            Blue<br></br> #176FB3
                                         </BodyText>
                                         <BodyText size="xs">
-                                            Teal<br></br> #6FF7CE
+                                            Cyan<br></br> #25B9EF
                                         </BodyText>
                                     </div>
                                 </div>
 
-                                <div className="-flex-column -m-r-5">
-                                    <ColorCardGradient color="-bgc-neonSky" hex="linear-gradient(90deg, #25B9EF -7%, #6FF7CE 107%);"></ColorCardGradient>
+                                <div className="pier-item--column">
+                                    <div className="pier-item--gradient">
+                                        <ColorCardGradient color="-bgc-neonSky" hex="linear-gradient(90deg, #25B9EF -7%, #6FF7CE 107%);"></ColorCardGradient>
+                                    </div>
                                     <div className="-m-t-8">
                                         <Heading size="xs">Neon Sky</Heading>
                                         <BodyText size="xs">
@@ -209,8 +213,11 @@ export default function LayoutPage({ appData }) {
                                         </BodyText>
                                     </div>
                                 </div>
-                                <div className="-flex-column -m-r-5">
-                                    <ColorCardGradient color="-bgc-earlySunset" hex="linear-gradient(0deg, #E24550 -7%, #FCA522 107%);"></ColorCardGradient>
+
+                                <div className="pier-item--column">
+                                    <div className="pier-item--gradient">
+                                        <ColorCardGradient color="-bgc-earlySunset" hex="linear-gradient(0deg, #E24550 -7%, #FCA522 107%);"></ColorCardGradient>
+                                    </div>
                                     <div className="-m-t-8">
                                         <Heading size="xs">Early Sunset</Heading>
                                         <BodyText size="xs">
@@ -221,8 +228,14 @@ export default function LayoutPage({ appData }) {
                                         </BodyText>
                                     </div>
                                 </div>
-                                <div className="-flex-column">
-                                    <ColorCardGradient color="-bgc-firesideGlow" hex="linear-gradient(90deg, #FCA522 -7%, #FCD93D 107%);"></ColorCardGradient>
+
+                                <div className="pier-item--column">
+                                    <div className="pier-item--gradient">
+                                        <ColorCardGradient
+                                            color="-bgc-firesideGlow"
+                                            hex="linear-gradient(90deg, #FCA522 -7%, #FCD93D 107%);"
+                                        ></ColorCardGradient>
+                                    </div>
                                     <div className="-m-t-8">
                                         <Heading size="xs">Fireside Glow</Heading>
                                         <BodyText size="xs">
