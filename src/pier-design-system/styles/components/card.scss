@@ -7,45 +7,44 @@ $card-radii: (
 );
 
 $card-themes: (
-	primary: (
-		light: map-get($colorsCyan , light-4),
-		dark: map-get($colorsCyan , dark-4)
-	),
-	error: (
-		light: map-get($colorsRed , light-4),
-		dark: map-get($colorsRed , dark-4)
-	),
-	green: (
-		light: map-get($colorsGreen , light-4),
-		dark: map-get($colorsGreen , dark-4)
-	),
-	blue: (
-		light: map-get($colorsBlue , light-4),
-		dark: map-get($colorsBlue , dark-4)
-	)
+    primary: (
+        light: map-get($colorsCyan, light-4),
+        dark: map-get($colorsCyan, dark-4),
+    ),
+    error: (
+        light: map-get($colorsRed, light-4),
+        dark: map-get($colorsRed, dark-4),
+    ),
+    green: (
+        light: map-get($colorsGreen, light-4),
+        dark: map-get($colorsGreen, dark-4),
+    ),
+    blue: (
+        light: map-get($colorsBlue, light-4),
+        dark: map-get($colorsBlue, dark-4),
+    ),
 );
 
 $card-borders: (
-	primary: (
-		light: map-get($colorsCyan , light-3),
-		dark: map-get($colorsCyan , dark-2)
-		),
-	error: (
-		light: map-get($colorsRed , light-3),
-		dark: map-get($colorsRed , dark-2)
-		),
-	green: (
-		light: map-get($colorsGreen , light-3),
-		dark: map-get($colorsGreen , dark-2)
-	),
-	blue: (
-		light: map-get($colorsBlue , light-3),
-		dark: map-get($colorsBlue , dark-2)
-	)
+    primary: (
+        light: map-get($colorsCyan, light-3),
+        dark: map-get($colorsCyan, dark-2),
+    ),
+    error: (
+        light: map-get($colorsRed, light-3),
+        dark: map-get($colorsRed, dark-2),
+    ),
+    green: (
+        light: map-get($colorsGreen, light-3),
+        dark: map-get($colorsGreen, dark-2),
+    ),
+    blue: (
+        light: map-get($colorsBlue, light-3),
+        dark: map-get($colorsBlue, dark-2),
+    ),
 );
 
 .pier-card {
-    overflow: hidden;
     border: 0.0625rem solid map-get($colorsGrays, light);
     background: map-get($colorsGrays, white);
     border-radius: map-get($card-radii, lg);
@@ -56,7 +55,7 @@ $card-borders: (
 .pier-card--dark {
     background-color: map-get($colorsGrays, darker);
     border: 0.0625rem solid map-get($colorsGrays, dark-3);
-	box-shadow: 0 0 0.625rem rgba(map-get($colorsGrays, light-gray), 0.15);
+    box-shadow: 0 0 0.625rem rgba(map-get($colorsGrays, light-gray), 0.15);
 }
 
 @each $prefix, $radius in $card-radii {
@@ -66,65 +65,59 @@ $card-borders: (
 }
 
 .pier-card--link {
-	background: map-get($colorsGrays, white);
-	cursor: pointer;
+    background: map-get($colorsGrays, white);
+    cursor: pointer;
 
-	&::before {
-		content: "";
-		background: map-get($colorsGrays, white);
-		position: absolute;
-		top: 1px;
-		right: 1px;
-		bottom: 1px;
-		left: 1px;
-		opacity: 0;
-		border-radius: map-fetch($button-inner-radii, $default-size) * 2;
-	  }
-	&:hover {
-		background: build-gradient(90deg, primaryBoulevard);
-		-webkit-border-image: build-gradient(90deg, primaryBoulevard);
+    &::before {
+        content: '';
+        background: map-get($colorsGrays, white);
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        bottom: 1px;
+        left: 1px;
+        opacity: 0;
+        border-radius: map-fetch($button-inner-radii, $default-size) * 2;
+    }
+    &:hover {
+        background: build-gradient(90deg, primaryBoulevard);
+        -webkit-border-image: build-gradient(90deg, primaryBoulevard);
 
-		&::before {
-			opacity: 1;
-		}
-	}
+        &::before {
+            opacity: 1;
+        }
+    }
 
-	&:focus {
-		background: build-gradient(90deg, primaryBoulevard);
-		-webkit-border-image: build-gradient(90deg, primaryBoulevard);
-		box-shadow: 0 0 0.625rem rgba(map-fetch($colorsCyan, light-1), 0.5);
+    &:focus {
+        background: build-gradient(90deg, primaryBoulevard);
+        -webkit-border-image: build-gradient(90deg, primaryBoulevard);
+        box-shadow: 0 0 0.625rem rgba(map-fetch($colorsCyan, light-1), 0.5);
 
-		&::before {
-			opacity: 1;
-		}
-	}
-
+        &::before {
+            opacity: 1;
+        }
+    }
 }
 
 .pier-card--center {
-	justify-content: center;
-	text-align: center;
+    justify-content: center;
+    text-align: center;
 }
 
 @each $prefix, $theme in $card-themes {
-	.pier-card--#{$prefix} {
-		background: map-fetch($theme, light);
-		border: 0.0625rem solid map-fetch($card-borders, ($prefix, light));
-		box-shadow: 0 0 0.625rem rgba(map-fetch($theme, light), 0.5);
-	}
+    .pier-card--#{$prefix} {
+        background: map-fetch($theme, light);
+        border: 0.0625rem solid map-fetch($card-borders, ($prefix, light));
+        box-shadow: 0 0 0.625rem rgba(map-fetch($theme, light), 0.5);
+    }
 
-	.pier-card--dark.pier-card--#{$prefix} {
-		background: map-fetch($theme, dark);
-		border: 0.0625rem solid map-fetch($card-borders, ($prefix, dark));
-		box-shadow: 0 0 0.625rem rgba(map-fetch($theme, light), 0.25);
-	}
-  }
+    .pier-card--dark.pier-card--#{$prefix} {
+        background: map-fetch($theme, dark);
+        border: 0.0625rem solid map-fetch($card-borders, ($prefix, dark));
+        box-shadow: 0 0 0.625rem rgba(map-fetch($theme, light), 0.25);
+    }
+}
 
-  .gradient_bg {
-	  background: build-gradient(90deg, primaryBoulevard);
-  }
-
-
-
-
-
+.gradient_bg {
+    background: build-gradient(90deg, primaryBoulevard);
+}

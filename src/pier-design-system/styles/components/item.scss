@@ -1,9 +1,32 @@
+@mixin build-media-query($breakpoint) {
+    @if $breakpoint == mobile {
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    } @else if $breakpoint == tablet {
+        @media screen and (max-width: 1004px) {
+            @content;
+        }
+    }
+}
+
 .pier-item {
     height: auto;
     width: 100%;
     cursor: pointer;
     display: block;
     transition: all 0.2s ease-in-out;
+
+    &:first-child {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border: 1px solid map-get($colorsGrays, light-3);
+    }
+
+    &:last-child {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
 
     &:hover {
         transform: scaleX(1.03);
@@ -15,4 +38,45 @@
 
 .pier-item--border {
     border: 1px solid map-get($colorsGrays, light-2);
+}
+
+.pier-colorbox {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    align-items: stretch;
+    margin: 1rem -0.5rem;
+    flex-basis: 20ch;
+
+    > * {
+        flex-grow: 1;
+        flex-basis: calc((35rem - 100%) * 999);
+        margin: 0.5rem;
+
+        &.flex--auto {
+            flex: 1 1 auto;
+        }
+    }
+}
+
+.pier-colorbox--card {
+    padding: 0rem;
+}
+
+.pier-item--gradient {
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: scaleX(1.03);
+        border-radius: 8px;
+        box-shadow: 0px 5px 10px 0px rgba(map-fetch($colorsGrays, black), 0.25);
+        z-index: 3;
+    }
+
+    > * {
+        flex: 1 1 auto;
+    }
 }

@@ -52,6 +52,15 @@ export default function LayoutPage({ appData }) {
                                 <p className="pier-fonts">Mulish - Regular</p>
                                 <p className="pier-fonts pier-fonts--bold">Mulish - Bold</p>
                                 <p className="pier-fonts pier-fonts--extrabold">Mulish - Extra Bold</p>
+                            </Section>
+                        </Card>
+                    </Section>
+
+                    <Section>
+                        <Heading size="sm">CodeBlock Font</Heading>
+
+                        <Card className="-m-t-7">
+                            <Section>
                                 <p className="pier-fonts--roboto">Roboto Mono - Regular</p>
                                 <p className="pier-fonts--roboto pier-fonts--bold">Roboto Mono - Bold</p>
                             </Section>
