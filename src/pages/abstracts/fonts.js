@@ -19,7 +19,7 @@ export default function LayoutPage({ appData }) {
     const breadcrumbs = [
         { label: 'Home', link: '/', disabled: false },
         { label: 'Abstracts', link: '', disabled: false },
-        { label: 'Colors', link: '', disabled: true },
+        { label: 'Fonts', link: '', disabled: true },
     ];
 
     function prettierHTMLFormat(html) {
@@ -33,38 +33,44 @@ export default function LayoutPage({ appData }) {
     return (
         <Fragment>
             <Head>
-                <title>Typography | Pier Design System</title>
+                <title>Fonts | Pier Design System</title>
             </Head>
             <Layout appData={appData}>
                 <BodyContent>
                     <PageHeading
                         breadcrumbs={breadcrumbs}
-                        title="Typography"
+                        title="Fonts"
                         lastUpdated="6/21/21"
-                        description="This is  description for Pier's Typography"
+                        description="This is  description for Pier's Fonts"
                     ></PageHeading>
 
                     <Section>
                         <Heading size="sm">Primary Font</Heading>
 
-                        <Card className="-m-t-7">
+                        <Well className="-m-v-7">
                             <Section>
                                 <p className="pier-fonts">Mulish - Regular</p>
                                 <p className="pier-fonts pier-fonts--bold">Mulish - Bold</p>
                                 <p className="pier-fonts pier-fonts--extrabold">Mulish - Extra Bold</p>
                             </Section>
-                        </Card>
+                        </Well>
+                        <a className="pier-link" href="https://fonts.google.com/specimen/Mulish?query=muli" target="_blank">
+                            Download from Google Fonts
+                        </a>
                     </Section>
 
                     <Section>
                         <Heading size="sm">CodeBlock Font</Heading>
 
-                        <Card className="-m-t-7">
+                        <Well className="-m-v-7">
                             <Section>
                                 <p className="pier-fonts--roboto">Roboto Mono - Regular</p>
                                 <p className="pier-fonts--roboto pier-fonts--bold">Roboto Mono - Bold</p>
                             </Section>
-                        </Card>
+                        </Well>
+                        <a className="pier-link" href="https://fonts.google.com/specimen/Roboto+Mono?query=robot" target="_blank">
+                            Download from Google Fonts
+                        </a>
                     </Section>
 
                     <Section>
@@ -73,7 +79,7 @@ export default function LayoutPage({ appData }) {
                             Font-family: Mulish<br></br>
                             Weight: 400
                         </CodeBlock>
-                        <Card className="-m-t-7">
+                        <Well className="-m-t-7">
                             <Section>
                                 <BodyText size="md" className="pier-fonts">
                                     ABCDEFGHIJKLM<br></br>NOPQRSTUVWXYZ
@@ -85,7 +91,7 @@ export default function LayoutPage({ appData }) {
                                     01234567890
                                 </BodyText>
                             </Section>
-                        </Card>
+                        </Well>
                     </Section>
                 </BodyContent>
             </Layout>

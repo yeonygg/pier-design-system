@@ -5,6 +5,10 @@ import { Fragment } from 'react';
 import Layout from 'src/pages-components/Layout';
 import BodyContent from 'src/pages-components/BodyContent';
 import PageHeading from 'src/pages-components/PageHeading';
+import Section from 'src/pier-design-system/components/containers/Section';
+import Card from 'src/pier-design-system/components/containers/Card';
+import BodyText from 'src/pier-design-system/components/text/BodyText';
+import Heading from 'src/pier-design-system/components/text/Heading';
 
 export default function Home({ appData }) {
     const breadcrumbs = [
@@ -23,10 +27,18 @@ export default function Home({ appData }) {
                         breadcrumbs={breadcrumbs}
                         title="Abstracts"
                         lastUpdated="7/16/2021"
-                        description="This is the abstracts page for Pier Design System."
+                        description="This is a list of utilities for Pier Design System."
                     ></PageHeading>
-
-                    
+                    <Section>
+                        <Card isLink className="-m-b-0">
+                            <Section className="-p-h-8 -p-v-8">
+                                <img src="/grid_img.png" alt="Girl in a jacket" style={{ width: '100%' }} />
+                                <Heading className="-p-t-6" size="sm">
+                                    Grid
+                                </Heading>
+                            </Section>
+                        </Card>
+                    </Section>
                 </BodyContent>
             </Layout>
         </Fragment>
