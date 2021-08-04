@@ -94,6 +94,10 @@ export default function LayoutPage({ appData }) {
                             </Card>
                         </div>
                     </Section>
+
+                    <Section>
+                        <Heading size="sm">Pier Design System Logo</Heading>
+                    </Section>
                 </BodyContent>
             </Layout>
         </Fragment>

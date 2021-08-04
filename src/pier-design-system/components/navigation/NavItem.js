@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function NavItem({ children, icon, className, style }) {
+function NavItem({ children, icon, className, style, }) {
     var prefix = 'pier-nav__item',
         classes = prefix;
 
@@ -21,6 +21,7 @@ NavItem.propTypes = {
     icon: PropTypes.string,
     className: PropTypes.string,
     style: PropTypes.object,
+
 };
 
 export default NavItem;
