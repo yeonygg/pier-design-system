@@ -39,7 +39,7 @@ export default function LayoutPage({ appData }) {
                 <BodyContent>
                     <PageHeading
                         breadcrumbs={breadcrumbs}
-                        title="Fonts"
+                        title="Fonts/Icons"
                         lastUpdated="6/21/21"
                         description="This is  description for Pier's Fonts"
                     ></PageHeading>
@@ -74,24 +74,37 @@ export default function LayoutPage({ appData }) {
                     </Section>
 
                     <Section>
-                        <Heading size="sm">Body Copy</Heading>
-                        <CodeBlock size="sm">
-                            Font-family: Mulish<br></br>
-                            Weight: 400
-                        </CodeBlock>
-                        <Well className="-m-t-7">
+                        <Heading size="sm">Font Awesome</Heading>
+
+                        <Well className="-m-v-7">
                             <Section>
-                                <BodyText size="md" className="pier-fonts">
-                                    ABCDEFGHIJKLM<br></br>NOPQRSTUVWXYZ
-                                </BodyText>
-                                <BodyText size="md" className="pier-fonts">
-                                    abcdefghijklm<br></br>nopqrstuvwxyz
-                                </BodyText>
-                                <BodyText size="md" className="pier-fonts">
-                                    01234567890
-                                </BodyText>
+                                <p className="pier-fonts--roboto">
+                                    <i class="fas fa-atom -p-r-6"></i>
+                                    <i class="fas fa-chevron-up -p-r-6"></i>
+                                    <i class="fas fa-chevron-down -p-r-6"></i>
+                                    <i class="fas fa-chevron-right -p-r-6"></i>
+                                    <i class="fas fa-chevron-left -p-r-6"></i>
+                                    <i class="fas fa-tools -p-r-6"></i>
+                                    <i class="fas fa-check -p-r-6"></i>
+                                    <i class="fas fa-info-circle -p-r-6"></i>
+                                    <i class="far fa-code -p-r-6"></i>
+                                    <i class="fas fa-exclamation-circle  -p-r-6"></i>
+                                    <i class="fas fa-pen -p-r-6"></i>
+                                    <i class="fas fa-copy -p-r-6"></i>
+                                    <i class="far fa-times -p-r-6"></i>
+                                    <i class="fas fa-bread-slice -p-r-6"></i>
+                                    <i class="fas fa-bell -p-r-6"></i>
+                                    <i class="fas fa-question-circle -p-r-6"></i>
+                                    <i class="fas fa-lock -p-r-6"></i>
+                                    <i class="far fa-file-download -p-r-6"></i>
+                                    <i class="fas fa-play -p-r-6"></i>
+                                    <i class="fas fa-undo-alt"></i>
+                                </p>
                             </Section>
                         </Well>
+                        <a className="pier-link" href="https://fontawesome.com/" target="_blank">
+                            Download from Font Awesome
+                        </a>
                     </Section>
                 </BodyContent>
             </Layout>

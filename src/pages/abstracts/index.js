@@ -77,7 +77,7 @@ export default function Home({ appData }) {
                                     <Section className="-p-h-10 -p-v-10">
                                         <img src="/fonts_img.png" alt="" style={{ width: '100%' }} />
                                         <Heading className="-p-t-8" size="sm">
-                                            Fonts
+                                            Fonts/Icons
                                         </Heading>
                                         <BodyText size="md" className="pier-fonts">
                                             Find all pier design system fonts codes and downloads here.

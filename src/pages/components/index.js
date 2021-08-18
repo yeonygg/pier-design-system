@@ -40,14 +40,19 @@ export default function ComponentsIndex({ appData }) {
                                 <NextLink href={`/components/${item.slug}`}>
                                     <a>
                                         <Card isLink>
-                                            <Section>
-                                                <Heading size="sm" className="-m-b-2">
-                                                    <Link>{item.title}</Link>
-                                                </Heading>
-                                                <BodyText size="xs" color="light-gray">
-                                                    {item['last-updated']}
-                                                </BodyText>
-                                                <BodyText className="-m-b-0">{item.description}</BodyText>
+                                            <Section className="-d-flex - -d-inline-block">
+                                                <div>
+                                                    <img src="/icon-button-icon-01.png" width="150px"></img>
+                                                </div>
+                                                <div className="-p-t-7 -p-l-6">
+                                                    <Heading size="sm" className="-m-b-2">
+                                                        <Link>{item.title}</Link>
+                                                    </Heading>
+                                                    <BodyText size="xs" color="light-gray">
+                                                        {item['last-updated']}
+                                                    </BodyText>
+                                                    <BodyText className="-m-b-0">{item.description}</BodyText>
+                                                </div>
                                             </Section>
                                         </Card>
                                     </a>
