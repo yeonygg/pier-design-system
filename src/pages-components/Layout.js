@@ -99,7 +99,7 @@ export default function Layout({ children, appData }) {
                             <NavItem>
                                 <NextLink href="/attributions">
                                     <a>
-                                        <NavItem icon="fas fa-thumbs-up">Attributes</NavItem>
+                                        <NavItem icon="fas fa-thumbs-up">Attributions</NavItem>
                                     </a>
                                 </NextLink>
                             </NavItem>

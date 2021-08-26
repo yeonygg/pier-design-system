@@ -21,7 +21,7 @@ export default function Home({ appData }) {
         <Fragment>
             <Head>
                 <title>Abstracts | Pier Design System</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.svg" />
             </Head>
             <Layout appData={appData}>
                 <BodyContent>
