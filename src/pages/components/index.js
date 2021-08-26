@@ -42,7 +42,7 @@ export default function ComponentsIndex({ appData }) {
                                         <Card isLink>
                                             <Section className="-d-flex - -d-inline-block">
                                                 <div>
-                                                    <img src="/icon-button-icon-01.png" width="150px"></img>
+                                                    <img src="/components/01.png" width="150px"></img>
                                                 </div>
                                                 <div className="-p-t-7 -p-l-6">
                                                     <Heading size="sm" className="-m-b-2">
