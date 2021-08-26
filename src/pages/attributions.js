@@ -15,17 +15,17 @@ export default function Home({ appData }) {
     const abstracts = appData.abstracts;
     const breadcrumbs = [
         { label: 'Home', link: '/', disabled: false },
-        { label: 'Attributes', link: '', disabled: true },
+        { label: 'Attributions', link: '', disabled: true },
     ];
     return (
         <Fragment>
             <Head>
-                <title>Attributes | Pier Design System</title>
+                <title>Attributions | Pier Design System</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Layout appData={appData}>
                 <BodyContent>
-                    <PageHeading breadcrumbs={breadcrumbs} title="Attributes" lastUpdated="7/16/2021" description="The Pier Design System team"></PageHeading>
+                    <PageHeading breadcrumbs={breadcrumbs} title="Attributions" lastUpdated="7/16/2021" description="The Pier Design System team"></PageHeading>
 
                     <a>
                         {' '}
@@ -111,7 +111,7 @@ export default function Home({ appData }) {
                         </Section>
                         <Section className="-p-h-8 -p-v-8">
                             <BodyText size="md" className="pier-fonts">
-                                Pier Design System is creative property of Gumgum, Inc. All rights reserved, etc
+                                Pier Design System is creative property of Gumgum, Inc. All rights reserved 2021, etc.
                             </BodyText>
                         </Section>
                     </a>
