@@ -96,13 +96,12 @@ export default function Layout({ children, appData }) {
                                     })}
                                 </NavItemDropdown>
                             </NavItemContainer>
-                            <NavItem>
-                                <NextLink href="/attributions">
-                                    <a>
-                                        <NavItem icon="fas fa-thumbs-up">Attributions</NavItem>
-                                    </a>
-                                </NextLink>
-                            </NavItem>
+
+                            <NextLink href="/attributions">
+                                <a>
+                                    <NavItem icon="fas fa-thumbs-up">Attributions</NavItem>
+                                </a>
+                            </NextLink>
                         </NavItemGroup>
                     </Nav>
                     <div style={{ width: '100%', flex: 1, overflow: 'scroll' }}>{children}</div>
