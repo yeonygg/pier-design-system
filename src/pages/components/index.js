@@ -34,17 +34,17 @@ export default function ComponentsIndex({ appData }) {
                         lastUpdated="5/25/2021"
                         description="This is a list of components for Pier Design System."
                     ></PageHeading>
-                    <Section>
+                    <Section className="-d-flex -d-inline-block">
                         {components.map((item, index) => {
                             return (
                                 <NextLink href={`/components/${item.slug}`}>
                                     <a>
-                                        <Card isLink>
-                                            <Section className="-d-flex">
-                                                <div>
-                                                    <img src="/components/${item.slug}" width="150px"></img>
+                                        <Card isLink style={{ width: '100%' }}>
+                                            <Section>
+                                                <div className="-d-flex -justify-content-center">
+                                                    <img src="/components/01.png" width="150px"></img>
                                                 </div>
-                                                <div className="-p-t-7 -p-l-6">
+                                                <div className="-p-t-4 -p-l-4">
                                                     <Heading size="sm" className="-m-b-2">
                                                         <Link>{item.title}</Link>
                                                     </Heading>
