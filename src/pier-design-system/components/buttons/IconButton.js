@@ -1,6 +1,27 @@
 import PropTypes from 'prop-types';
 
-function IconButton({ children, size, type, value, icon, disabled, pill, error, secondary, dark, onClick, className, style, iconStyle }) {
+function IconButton({
+    children,
+    size,
+    type,
+    value,
+    icon,
+    disabled,
+    pill,
+    error,
+    secondary,
+    dark,
+    onClick,
+    className,
+    style,
+    iconStyle,
+    onChange,
+    onMouseEnter,
+    onMouseLeave,
+    onFocus,
+    onHover,
+    onBlur,
+}) {
     let prefix = `pier-button-icon`,
         classes = prefix;
 
@@ -55,6 +76,12 @@ IconButton.propTypes = {
     className: PropTypes.string,
     style: PropTypes.object,
     iconStyle: PropTypes.object,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
+    onBlur: PropTypes.func,
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func,
+    onHover: PropTypes.func,
 };
 
 export default IconButton;

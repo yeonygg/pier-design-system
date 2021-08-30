@@ -1,6 +1,28 @@
 import PropTypes from 'prop-types';
 
-function InputText({ type, name, placeholder, value, onChange, onFocus, onBlur, size, disabled, cap, pill, error, dark, className, style }) {
+function InputText({
+    type,
+    name,
+    placeholder,
+    value,
+    onChange,
+    onFocus,
+    onBlur,
+    size,
+    disabled,
+    cap,
+    pill,
+    error,
+    dark,
+    className,
+    style,
+    onChange,
+    onMouseEnter,
+    onMouseLeave,
+    onFocus,
+    onHover,
+    onBlur,
+}) {
     let prefix = `pier-input-text`,
         classes = prefix;
 
@@ -77,6 +99,12 @@ InputText.propTypes = {
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
+    onBlur: PropTypes.func,
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func,
+    onHover: PropTypes.func,
 };
 
 export default InputText;

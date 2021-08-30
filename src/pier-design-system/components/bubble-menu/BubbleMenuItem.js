@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function BubbleMenuItem({ children, divider, onClick, className, style }) {
+function BubbleMenuItem({ children, divider, onClick, className, style, onChange, onMouseEnter, onMouseLeave, onFocus, onHover, onBlur }) {
     var prefix = 'pier-bubble-menu__item',
         classes = prefix;
 
@@ -22,6 +22,12 @@ BubbleMenuItem.propTypes = {
     onClick: PropTypes.func,
     className: PropTypes.string,
     style: PropTypes.object,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
+    onBlur: PropTypes.func,
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func,
+    onHover: PropTypes.func,
 };
 
 export default BubbleMenuItem;

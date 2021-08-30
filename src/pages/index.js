@@ -13,7 +13,7 @@ import BodyContent from 'src/pages-components/BodyContent';
 
 export default function Home({ appData }) {
     const heroVideo = {
-        height: '100%',
+        height: '90%',
         width: '100%',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -23,26 +23,11 @@ export default function Home({ appData }) {
         left: '0',
     };
 
-    const heroElement = {
-        backgroundImage: "url('/header_shape.svg')",
-        width: '100%',
-        height: '40%',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        position: 'absolute',
-        zIndex: '0',
-        top: '700px',
-        bottom: '0',
-        left: '0',
-        right: '0',
-    };
-
     return (
         <Fragment>
             <Head>
                 <title>Pier Design System</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.svg" />
             </Head>
 
             <Layout appData={appData}>
@@ -52,8 +37,6 @@ export default function Home({ appData }) {
                             <source src="/hero_video.mp4" type="video/mp4" />
                         </video>
                     </div>
-
-                    <div style={heroElement}></div>
 
                     <BodyContent>
                         <Section className="-d-flex -justify-content-center -p-t-10">

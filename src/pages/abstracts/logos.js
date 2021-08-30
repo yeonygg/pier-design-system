@@ -94,6 +94,23 @@ export default function LayoutPage({ appData }) {
                             </Card>
                         </div>
                     </Section>
+
+                    <Section>
+                        <Heading size="sm">Pier Logo</Heading>
+                        <div className="pier-colorbox pier-colorbox--card">
+                            <Card className="-m-t-1" style={{ width: '100%', height: 200 }}>
+                                <Section className="-d-flex -align-items-center -justify-content-center -p-t-12">
+                                    <img src="/pier_logo.svg" style={{ width: 250 }} />
+                                </Section>
+                            </Card>
+
+                            <Card className="-m-t-1 -bgc-dark-4" style={{ width: '100%', height: 200 }}>
+                                <Section className="-d-flex -align-items-center -justify-content-center -p-t-12">
+                                    <img src="/pier_logo_dark.svg" style={{ width: 250 }} />
+                                </Section>
+                            </Card>
+                        </div>
+                    </Section>
                 </BodyContent>
             </Layout>
         </Fragment>

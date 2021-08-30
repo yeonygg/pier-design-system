@@ -24,7 +24,7 @@ export default function ComponentsIndex({ appData }) {
         <Fragment>
             <Head>
                 <title>Components | Pier Design System</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.svg" />
             </Head>
             <Layout appData={appData}>
                 <BodyContent>
@@ -40,14 +40,16 @@ export default function ComponentsIndex({ appData }) {
                                 <NextLink href={`/components/${item.slug}`}>
                                     <a>
                                         <Card isLink>
-                                            <Section>
-                                                <Heading size="sm" className="-m-b-2">
-                                                    <Link>{item.title}</Link>
-                                                </Heading>
-                                                <BodyText size="xs" color="light-gray">
-                                                    {item['last-updated']}
-                                                </BodyText>
-                                                <BodyText className="-m-b-0">{item.description}</BodyText>
+                                            <Section className="-d-flex">
+                                                <div>
+                                                    <img src="/components/${item.slug}" width="150px"></img>
+                                                </div>
+                                                <div className="-p-t-7 -p-l-6">
+                                                    <Heading size="sm" className="-m-b-2">
+                                                        <Link>{item.title}</Link>
+                                                    </Heading>
+                                                    <BodyText className="-m-b-0">{item.description}</BodyText>
+                                                </div>
                                             </Section>
                                         </Card>
                                     </a>

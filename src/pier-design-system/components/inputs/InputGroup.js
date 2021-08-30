@@ -2,7 +2,23 @@ import PropTypes from 'prop-types';
 import BodyText from '../text/BodyText';
 import Label from '../text/Label';
 
-function InputGroup({ children, htmlFor, label, size, error, errorMessage, dark, className, style }) {
+function InputGroup({
+    children,
+    htmlFor,
+    label,
+    size,
+    error,
+    errorMessage,
+    dark,
+    className,
+    style,
+    onChange,
+    onMouseEnter,
+    onMouseLeave,
+    onFocus,
+    onHover,
+    onBlur,
+}) {
     let prefix = `pier-input-group`,
         classes = prefix;
 
@@ -31,6 +47,12 @@ InputGroup.propTypes = {
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
+    onBlur: PropTypes.func,
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func,
+    onHover: PropTypes.func,
 };
 
 export default InputGroup;

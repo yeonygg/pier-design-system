@@ -1,6 +1,28 @@
 import PropTypes from 'prop-types';
 
-function InputTextArea({ name, placeholder, value, onChange, onFocus, onBlur, size, disabled, cap, pill, error, dark, resize, className, style }) {
+function InputTextArea({
+    name,
+    placeholder,
+    value,
+    onChange,
+    onFocus,
+    onBlur,
+    size,
+    disabled,
+    cap,
+    pill,
+    error,
+    dark,
+    resize,
+    className,
+    style,
+    onChange,
+    onMouseEnter,
+    onMouseLeave,
+    onFocus,
+    onHover,
+    onBlur,
+}) {
     let prefix = `pier-input-textarea`,
         classes = prefix;
 
@@ -89,6 +111,12 @@ InputTextArea.propTypes = {
     resize: PropTypes.oneOf(['auto', 'horizontal', 'vertical']),
     className: PropTypes.string,
     style: PropTypes.object,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
+    onBlur: PropTypes.func,
+    onChange: PropTypes.func,
+    onFocus: PropTypes.func,
+    onHover: PropTypes.func,
 };
 
 export default InputTextArea;

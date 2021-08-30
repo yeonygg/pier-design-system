@@ -25,9 +25,7 @@ export default function Layout({ children, appData }) {
                     <Nav isCollapsible width={240}>
                         <NextLink href="/">
                             <a>
-                                <Heading size="sm" className="-m-b-0 -p-a-7">
-                                    Pier Design System
-                                </Heading>
+                                <img src="/pier_logo.svg" className="-p-v-8 -p-l-6" style={{ width: '70%' }}></img>
                             </a>
                         </NextLink>
                         <NavItemGroup>
@@ -44,20 +42,20 @@ export default function Layout({ children, appData }) {
                                         </a>
                                     </NextLink>
                                     <NextLink href="/abstracts/colors">
-                                    <a>
-                                        <NavSubItem>Colors</NavSubItem>
-                                    </a>
-                                </NextLink>
-                                <NextLink href="/abstracts/fonts">
-                                <a>
-                                    <NavSubItem>Typography</NavSubItem>
-                                </a>
-                            </NextLink>
-                            <NextLink href="/abstracts/logos">
-                            <a>
-                                <NavSubItem>Logos</NavSubItem>
-                            </a>
-                        </NextLink>
+                                        <a>
+                                            <NavSubItem>Colors</NavSubItem>
+                                        </a>
+                                    </NextLink>
+                                    <NextLink href="/abstracts/fonts">
+                                        <a>
+                                            <NavSubItem>Fonts</NavSubItem>
+                                        </a>
+                                    </NextLink>
+                                    <NextLink href="/abstracts/logos">
+                                        <a>
+                                            <NavSubItem>Logos</NavSubItem>
+                                        </a>
+                                    </NextLink>
                                 </NavItemDropdown>
                             </NavItemContainer>
                             <NavItemContainer>
@@ -96,6 +94,12 @@ export default function Layout({ children, appData }) {
                                     })}
                                 </NavItemDropdown>
                             </NavItemContainer>
+
+                            <NextLink href="/attributions">
+                                <a>
+                                    <NavItem icon="fas fa-thumbs-up">Attributions</NavItem>
+                                </a>
+                            </NextLink>
                         </NavItemGroup>
                     </Nav>
                     <div style={{ width: '100%', flex: 1, overflow: 'scroll' }}>{children}</div>
