@@ -25,9 +25,7 @@ export default function Layout({ children, appData }) {
                     <Nav isCollapsible width={240}>
                         <NextLink href="/">
                             <a>
-                                <Heading size="sm" className="-m-b-0 -p-a-7">
-                                    Pier Design System
-                                </Heading>
+                                <img src="/pier_logo.svg" className="-p-v-8 -p-l-6" style={{ width: '70%' }}></img>
                             </a>
                         </NextLink>
                         <NavItemGroup>
