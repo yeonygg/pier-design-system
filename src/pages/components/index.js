@@ -34,28 +34,34 @@ export default function ComponentsIndex({ appData }) {
                         lastUpdated="5/25/2021"
                         description="This is a list of components for Pier Design System."
                     ></PageHeading>
-                    <Section className="-d-flex -d-inline-block">
-                        {components.map((item, index) => {
-                            return (
-                                <NextLink href={`/components/${item.slug}`}>
-                                    <a>
-                                        <Card isLink style={{ width: '100%' }}>
-                                            <Section>
-                                                <div className="-d-flex -justify-content-center">
-                                                    <img src="/components/01.png" width="150px"></img>
-                                                </div>
-                                                <div className="-p-t-4 -p-l-4">
-                                                    <Heading size="sm" className="-m-b-2">
-                                                        <Link>{item.title}</Link>
-                                                    </Heading>
-                                                    <BodyText className="-m-b-0">{item.description}</BodyText>
-                                                </div>
-                                            </Section>
-                                        </Card>
-                                    </a>
-                                </NextLink>
-                            );
-                        })}
+                    <Section>
+                        <div className="pier-container">
+                            <div className="pier-row">
+                                {components.map((item, index) => {
+                                    return (
+                                        <NextLink href={`/components/${item.slug}`}>
+                                            <a className="-m-r-4 -m-b-4">
+                                                <Card isLink style={{ width: '100%' }}>
+                                                    <Section>
+                                                        <div className="-d-flex -justify-content-center">
+                                                            <img src="/components/accordian.png" width="180px"></img>
+                                                        </div>
+                                                        <div className="-p-t-4 -p-l-4">
+                                                            <Heading size="sm" className="-m-b-5">
+                                                                <Link>{item.title}</Link>
+                                                            </Heading>
+                                                            <BodyText size="sm" className="-m-b-4">
+                                                                {item.description}
+                                                            </BodyText>
+                                                        </div>
+                                                    </Section>
+                                                </Card>
+                                            </a>
+                                        </NextLink>
+                                    );
+                                })}
+                            </div>
+                        </div>
                     </Section>
                 </BodyContent>
             </Layout>
