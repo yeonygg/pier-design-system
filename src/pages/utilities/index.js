@@ -40,7 +40,7 @@ export default function UtilitiesIndex({ appData }) {
                             return (
                                 <NextLink href={`/utilities/${item.slug}`}>
                                     <a>
-                                        <Card isLink>
+                                        <Card isLink className="-m-b-5">
                                             <Section>
                                                 <Heading size="sm" className="-m-b-2">
                                                     <Link>{item.title}</Link>

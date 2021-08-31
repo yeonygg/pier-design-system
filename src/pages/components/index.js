@@ -34,37 +34,34 @@ export default function ComponentsIndex({ appData }) {
                         lastUpdated="5/25/2021"
                         description="This is a list of components for Pier Design System."
                     ></PageHeading>
-                    <Section className="">
-                        <div className="pier-container">
-                            <div className="pier-row -flex-row">
-                                <div className="pier-column--sm-4">
-                                    {components.map((item, index) => {
-                                        return (
-                                            <NextLink href={`/components/${item.slug}`}>
-                                                <a className="-m-r-4 -m-b-4">
-                                                    <Card isLink style={{ width: '100%' }}>
-                                                        <Section>
-                                                            <div className="-d-flex -justify-content-center">
-                                                                <img src="/components/accordian.png" width="180px"></img>
-                                                            </div>
-                                                            <div className="-p-t-4 -p-l-4">
-                                                                <Heading size="sm" className="-m-b-5">
-                                                                    <Link>{item.title}</Link>
-                                                                </Heading>
-                                                                <BodyText size="sm" className="-m-b-4">
-                                                                    {item.description}
-                                                                </BodyText>
-                                                            </div>
-                                                        </Section>
-                                                    </Card>
-                                                </a>
-                                            </NextLink>
-                                        );
-                                    })}
-                                </div>
-                            </div>
+
+                    <div className="pier-container">
+                        <div className="component-grid -p-v-8">
+                            {components.map((item, index) => {
+                                return (
+                                    <NextLink href={`/components/${item.slug}`}>
+                                        <a>
+                                            <Card isLink>
+                                                <Section>
+                                                    <div>
+                                                        <img src="/components/accordian.png" width="220px"></img>
+                                                    </div>
+                                                    <div className="-p-t-4 -p-l-2">
+                                                        <Heading size="sm" className="-m-b-5">
+                                                            <Link>{item.title}</Link>
+                                                        </Heading>
+                                                        <BodyText size="sm" className="-m-b-4">
+                                                            {item.description}
+                                                        </BodyText>
+                                                    </div>
+                                                </Section>
+                                            </Card>
+                                        </a>
+                                    </NextLink>
+                                );
+                            })}
                         </div>
-                    </Section>
+                    </div>
                 </BodyContent>
             </Layout>
         </Fragment>
