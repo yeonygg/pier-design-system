@@ -11,8 +11,11 @@ import Heading from 'src/pier-design-system/components/text/Heading';
 import BodyText from 'src/pier-design-system/components/text/BodyText';
 import Link from 'src/pier-design-system/components/text/Link';
 import BodyContent from 'src/pages-components/BodyContent';
+import React, { useState } from 'react';
+import ComponentIcons from 'public/component_icons';
 
 export default function ComponentsIndex({ appData }) {
+    const [isShown, setIsShown] = useState(false);
     const components = appData.components;
     //components is an array of objects
     const breadcrumbs = [
@@ -43,9 +46,18 @@ export default function ComponentsIndex({ appData }) {
                                         <a>
                                             <Card isLink>
                                                 <Section>
-                                                    <div>
-                                                        <img src="/components/accordian.png" width="220px"></img>
+                                                    <div onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>
+                                                        {isShown && (
+                                                            <img
+                                                                className="-pos-absolute -pos-absolute-tl -z-10"
+                                                                src="/component_icons/accordian_ro.svg"
+                                                                width="220px"
+                                                                style={{ transition: 'opacity ease 0.4' }}
+                                                            />
+                                                        )}
+                                                        <img src="/component_icons/accordian.svg" width="220px"></img>
                                                     </div>
+
                                                     <div className="-p-t-4 -p-l-2">
                                                         <Heading size="sm" className="-m-b-5">
                                                             <Link>{item.title}</Link>
