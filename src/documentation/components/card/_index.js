@@ -9,6 +9,8 @@ export default {
     slug: 'card',
     description: 'This is a description for cards.',
     'last-updated': '3/24/21',
+    image: '/component_icons/card.svg',
+    imageColor: '/component_icons/card_ro.svg',
     variations: [
         {
             name: 'Base',

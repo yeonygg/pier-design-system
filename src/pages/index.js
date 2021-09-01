@@ -27,7 +27,7 @@ export default function Home({ appData }) {
         <Fragment>
             <Head>
                 <title>Pier Design System</title>
-                <link rel="icon" href="/favicon.svg" />
+                <link rel="shortcut icon" href="/favicon.ico" />
             </Head>
 
             <Layout appData={appData}>
@@ -113,7 +113,7 @@ export default function Home({ appData }) {
                         <h1 className="pier-heading pier-heading--sm">Links to Resources</h1>
                         <NextLink href={`https://github.com/gg-jarrod/pier-design-system`}>
                             <a target="_blank">
-                                <Card className="pier-card">
+                                <Card className="pier-card -m-b-5">
                                     <div className="pier-section">
                                         <h1 className="pier-heading pier-heading--sm">
                                             <Link>Github</Link>

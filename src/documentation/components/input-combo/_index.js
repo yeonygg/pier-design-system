@@ -8,6 +8,8 @@ export default {
     slug: 'input-combo',
     description: 'This is a description for input-combo.',
     'last-updated': '4/6/21',
+    image: '/component_icons/input-combo.svg',
+    imageColor: '/component_icons/input-combo_ro.svg',
     variations: [
         {
             name: 'Input Combo Group',
@@ -20,6 +22,6 @@ export default {
             description: '',
             markup: ReactDOMServer.renderToStaticMarkup(inputSelectComboGroup),
             dark: false,
-        }
+        },
     ],
 };

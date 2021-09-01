@@ -49,7 +49,6 @@ $card-borders: (
     background: map-get($colorsGrays, white);
     border-radius: map-get($card-radii, lg);
     box-shadow: 0 0 0.625rem rgba(map-get($colorsGrays, gray), 0.15);
-    margin-bottom: 1rem;
 }
 
 .pier-card--dark {

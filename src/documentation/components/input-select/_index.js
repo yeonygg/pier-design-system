@@ -14,6 +14,8 @@ export default {
     slug: 'input-select',
     description: 'This is a description for input-select.',
     'last-updated': '4/6/21',
+    image: '/component_icons/input-select.svg',
+    imageColor: '/component_icons/input-select_ro.svg',
     variations: [
         {
             name: 'Base',

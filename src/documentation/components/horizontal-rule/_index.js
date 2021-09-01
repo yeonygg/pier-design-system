@@ -8,6 +8,8 @@ export default {
     slug: 'horizontal-rule',
     description: 'This is a description for horizontal rule.',
     'last-updated': '3/25/21',
+    image: '/component_icons/horizontal-rule.svg',
+    imageColor: '/component_icons/horizontal-rule_ro.svg',
     variations: [
         {
             name: 'Styles',
