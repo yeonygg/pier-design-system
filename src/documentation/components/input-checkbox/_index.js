@@ -13,6 +13,8 @@ export default {
     slug: 'input-checkbox',
     description: 'This is a description for input-checkbox.',
     'last-updated': '4/6/21',
+    image: '/component_icons/input-checkbox.svg',
+    imageColor: '/component_icons/input-checkbox_ro.svg',
     variations: [
         {
             name: 'Base',

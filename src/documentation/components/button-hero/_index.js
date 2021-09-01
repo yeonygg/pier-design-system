@@ -12,6 +12,8 @@ export default {
     slug: 'button-hero',
     description: 'This is a description for buttons.',
     'last-updated': '3/30/21',
+    image: '/component_icons/button-hero.svg',
+    imageColor: '/component_icons/button-hero_ro.svg',
     variations: [
         {
             name: 'Base',

@@ -11,6 +11,8 @@ export default {
     slug: 'input-radio',
     description: 'This is a description for input-radio.',
     'last-updated': '4/6/21',
+    image: '/component_icons/input-radio.svg',
+    imageColor: '/component_icons/input-radio_ro.svg',
     variations: [
         {
             name: 'Base',

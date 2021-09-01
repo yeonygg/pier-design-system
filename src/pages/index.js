@@ -27,7 +27,7 @@ export default function Home({ appData }) {
         <Fragment>
             <Head>
                 <title>Pier Design System</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="shortcut icon" href="/favicon.ico" />
             </Head>
 
             <Layout appData={appData}>

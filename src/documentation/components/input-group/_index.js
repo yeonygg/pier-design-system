@@ -8,6 +8,8 @@ export default {
     slug: 'input-group',
     description: 'This is a description for input-group.',
     'last-updated': '4/6/21',
+    image: '/component_icons/input-group.svg',
+    imageColor: '/component_icons/input-group_ro.svg',
     variations: [
         {
             name: 'Base',

@@ -8,6 +8,8 @@ export default {
     slug: 'breadcrumbs',
     description: 'This is a description for breadcrumbs.',
     'last-updated': '3/24/21',
+    image: '/component_icons/breadcrumbs.svg',
+    imageColor: '/component_icons/breadcrumbs_ro.svg',
     variations: [
         {
             name: 'Base',

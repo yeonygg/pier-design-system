@@ -14,6 +14,8 @@ export default {
     slug: 'input-text',
     description: 'This is a description for input-text.',
     'last-updated': '4/6/21',
+    image: '/component_icons/input-text.svg',
+    imageColor: '/component_icons/input-text_ro.svg',
     variations: [
         {
             name: 'Base',

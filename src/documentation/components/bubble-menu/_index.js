@@ -9,6 +9,8 @@ export default {
     slug: 'bubble-menu',
     description: 'This is a description for bubble menu.',
     'last-updated': '3/30/21',
+    image: '/component_icons/bubble-menu.svg',
+    imageColor: '/component_icons/bubble-menu_ro.svg',
     variations: [
         {
             name: 'Base',
