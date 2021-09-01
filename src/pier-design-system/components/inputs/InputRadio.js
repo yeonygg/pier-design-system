@@ -1,24 +1,6 @@
 import PropTypes from 'prop-types';
 
-function InputRadio({
-    children,
-    name,
-    checked,
-    value,
-    onChange,
-    size,
-    disabled,
-    error,
-    dark,
-    className,
-    style,
-    onChange,
-    onMouseEnter,
-    onMouseLeave,
-    onFocus,
-    onHover,
-    onBlur,
-}) {
+function InputRadio({ children, name, checked, value, onChange, onMouseEnter, onMouseLeave, onFocus, onBlur, size, disabled, error, dark, className, style }) {
     let prefix = `pier-input-radio`,
         classes = prefix;
 
@@ -45,7 +27,18 @@ function InputRadio({
 
     return (
         <label className={classes} style={style}>
-            <input type="radio" className={prefix + '__input'} name={name} value={value} checked={checked} onChange={onChange} />
+            <input
+                type="radio"
+                className={prefix + '__input'}
+                name={name}
+                value={value}
+                checked={checked}
+                onChange={onChange}
+                onFocus={onFocus}
+                onBlur={onBlur}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+            />
             <div className={prefix + '__indicator'}></div>
             <span className={prefix + '__label'}>{children}</span>
         </label>
@@ -62,18 +55,16 @@ InputRadio.propTypes = {
     checked: PropTypes.bool,
     value: PropTypes.string,
     onChange: PropTypes.func,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
+    onBlur: PropTypes.func,
+    onFocus: PropTypes.func,
     size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     disabled: PropTypes.bool,
     error: PropTypes.bool,
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
-    onMouseEnter: PropTypes.func,
-    onMouseLeave: PropTypes.func,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    onHover: PropTypes.func,
 };
 
 export default InputRadio;
