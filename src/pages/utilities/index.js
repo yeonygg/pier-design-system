@@ -25,7 +25,7 @@ export default function UtilitiesIndex({ appData }) {
         <Fragment>
             <Head>
                 <title>Utilities | Pier Design System</title>
-                <link rel="icon" href="/favicon.svg" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
             <Layout appData={appData}>
                 <BodyContent>

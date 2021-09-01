@@ -11,6 +11,8 @@ export default {
     slug: 'accordion',
     description: 'This is a description for accordion.',
     'last-updated': '5/17/21',
+    image: '/component_icons/accordian.svg',
+    imageColor: '/component_icons/accordian_ro.svg',
     variations: [
         {
             name: 'Base',

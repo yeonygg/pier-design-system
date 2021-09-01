@@ -12,10 +12,8 @@ import BodyText from 'src/pier-design-system/components/text/BodyText';
 import Link from 'src/pier-design-system/components/text/Link';
 import BodyContent from 'src/pages-components/BodyContent';
 import React, { useState } from 'react';
-import ComponentIcons from 'public/component_icons';
 
 export default function ComponentsIndex({ appData }) {
-    const [isShown, setIsShown] = useState(false);
     const components = appData.components;
     //components is an array of objects
     const breadcrumbs = [
@@ -23,11 +21,41 @@ export default function ComponentsIndex({ appData }) {
         { label: 'Components', link: '', disabled: true },
     ];
 
+    function ComponentCard({ title, description, image, imageColor }) {
+        const [isShown, setIsShown] = useState(false);
+        return (
+            <Card isLink>
+                <Section>
+                    <div onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>
+                        {
+                            <img
+                                className={isShown ? '-pos-absolute -pos-absolute-tl -z-10' : '-pos-absolute -pos-absolute-tl -z-10 -hide'}
+                                src={imageColor}
+                                width="220px"
+                                style={{ transition: 'opacity 0.4s ease' }}
+                            />
+                        }
+                        <img src={image} width="220px"></img>
+                    </div>
+
+                    <div className="-p-t-4 -p-l-2">
+                        <Heading size="sm" className="-m-b-5">
+                            <Link>{title}</Link>
+                        </Heading>
+                        <BodyText size="sm" className="-m-b-4">
+                            {description}
+                        </BodyText>
+                    </div>
+                </Section>
+            </Card>
+        );
+    }
+
     return (
         <Fragment>
             <Head>
                 <title>Components | Pier Design System</title>
-                <link rel="icon" href="/favicon.svg" />
+                <link rel="icon" href="/favicon.ico" />
             </Head>
             <Layout appData={appData}>
                 <BodyContent>
@@ -44,30 +72,12 @@ export default function ComponentsIndex({ appData }) {
                                 return (
                                     <NextLink href={`/components/${item.slug}`}>
                                         <a>
-                                            <Card isLink>
-                                                <Section>
-                                                    <div onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>
-                                                        {isShown && (
-                                                            <img
-                                                                className="-pos-absolute -pos-absolute-tl -z-10"
-                                                                src="/component_icons/accordian_ro.svg"
-                                                                width="220px"
-                                                                style={{ transition: 'opacity ease 0.4' }}
-                                                            />
-                                                        )}
-                                                        <img src="/component_icons/accordian.svg" width="220px"></img>
-                                                    </div>
-
-                                                    <div className="-p-t-4 -p-l-2">
-                                                        <Heading size="sm" className="-m-b-5">
-                                                            <Link>{item.title}</Link>
-                                                        </Heading>
-                                                        <BodyText size="sm" className="-m-b-4">
-                                                            {item.description}
-                                                        </BodyText>
-                                                    </div>
-                                                </Section>
-                                            </Card>
+                                            <ComponentCard
+                                                title={item.title}
+                                                image={item.image}
+                                                imageColor={item.imageColor}
+                                                description={item.description}
+                                            ></ComponentCard>
                                         </a>
                                     </NextLink>
                                 );
