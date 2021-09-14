@@ -38,7 +38,7 @@ export default function Home({ appData }) {
                         </video>
                     </div>
 
-                    <BodyContent>
+                    <div>
                         <Section className="-d-flex -justify-content-center -p-t-10">
                             <img style={{ width: '17%' }} src="/gumgum_logo.svg" />
                         </Section>
@@ -65,7 +65,7 @@ export default function Home({ appData }) {
                             <Section className="-m-v-12"></Section>
                             <Section className="-m-v-12"></Section>
                         </Section>
-                    </BodyContent>
+                    </div>
                 </div>
                 <BodyContent>
                     <Section className="-d-flex -justify-content-center" style={{ marginTop: '-360px' }}>
