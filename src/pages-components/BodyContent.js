@@ -7,8 +7,8 @@ export default function BodyContent({ children }) {
         <div className="-p-b-12" style={{ maxWidth: '860px', margin: '0 auto', width: '100%' }}>
             {children}
 
-            <HR className="-m-v-12" theme="gray" size="sm" />
-            <div className="-d-flex -flex-wrap -justify-content-around">
+            <HR className="-m-t-12 -m-b-11" theme="gray" size="sm" />
+            <div className="-d-flex -flex-wrap -justify-content-around -m-h-12">
                 {' '}
                 <a className="pier-link" href={'/'}>
                     Home
@@ -29,9 +29,6 @@ export default function BodyContent({ children }) {
             <Section className="-p-t-10 -d-flex -justify-content-center">
                 <img src="/gumgum_logo_color.svg" style={{ width: 200 }} />
             </Section>
-            <BodyText size="sm">
-                <span>&copy;</span>2021 Gumgum, Inc.
-            </BodyText>
         </div>
     );
 }

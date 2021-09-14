@@ -35,27 +35,26 @@ export default function UtilitiesIndex({ appData }) {
                         lastUpdated="7/16/2021"
                         description="This is a list of utilities for Pier Design System."
                     ></PageHeading>
-                    <Section>
-                        {utilities.map((item, index) => {
-                            return (
-                                <NextLink href={`/utilities/${item.slug}`}>
-                                    <a>
-                                        <Card isLink className="-m-b-5">
-                                            <Section>
-                                                <Heading size="sm" className="-m-b-2">
-                                                    <Link>{item.title}</Link>
-                                                </Heading>
-                                                <BodyText size="xs" color="light-gray">
-                                                    {item['last-updated']}
-                                                </BodyText>
-                                                <BodyText className="-m-b-0">{item.description}</BodyText>
-                                            </Section>
-                                        </Card>
-                                    </a>
-                                </NextLink>
-                            );
-                        })}
-                    </Section>
+                    <div className="pier-container">
+                        <div className="component-grid -p-v-8">
+                            {utilities.map((item, index) => {
+                                return (
+                                    <NextLink href={`/utilities/${item.slug}`}>
+                                        <a>
+                                            <Card isLink style={{ height: '250px' }} className="-d-flex -align-items-center">
+                                                <Section>
+                                                    <Heading size="sm" className="-m-b-2">
+                                                        <Link>{item.title}</Link>
+                                                    </Heading>
+                                                    <BodyText className="-m-b-0">{item.description}</BodyText>
+                                                </Section>
+                                            </Card>
+                                        </a>
+                                    </NextLink>
+                                );
+                            })}
+                        </div>
+                    </div>
                 </BodyContent>
             </Layout>
         </Fragment>

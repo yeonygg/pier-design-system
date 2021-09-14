@@ -32,7 +32,7 @@ export default function ComponentPage({ appData, utility }) {
                     <Section>
                         {utility.variations.map((item, i) => {
                             return (
-                                <Card key={i}>
+                                <Card key={i} className="-m-b-5">
                                     <Section>
                                         <BodyText className={item.description == '' ? '-m-b-0' : ''}>
                                             <span className="pier-body-text__inline-code">{item.class}</span>
