@@ -10,6 +10,8 @@ export default {
     slug: 'text-body',
     description: 'This is a description for body text.',
     'last-updated': '3/24/21',
+    image: '/component_icons/text-body.svg',
+    imageColor: '/component_icons/text-body_ro.svg',
     variations: [
         {
             name: 'Base',

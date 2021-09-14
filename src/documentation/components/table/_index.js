@@ -9,6 +9,8 @@ export default {
     slug: 'table',
     description: 'This is a description for table.',
     'last-updated': '5/11/21',
+    image: '/component_icons/table.svg',
+    imageColor: '/component_icons/table_ro.svg',
     variations: [
         {
             name: 'Base',

@@ -11,6 +11,8 @@ export default {
     slug: 'input-toggle',
     description: 'This is a description for input-toggle.',
     'last-updated': '4/6/21',
+    image: '/component_icons/input-toggle.svg',
+    imageColor: '/component_icons/input-toggle_ro.svg',
     variations: [
         {
             name: 'Base',

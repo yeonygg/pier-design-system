@@ -24,7 +24,7 @@ export default function ComponentsIndex({ appData }) {
     function ComponentCard({ title, description, image, imageColor }) {
         const [isShown, setIsShown] = useState(false);
         return (
-            <Card isLink>
+            <Card isLink onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>
                 <Section>
                     <div onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>
                         {

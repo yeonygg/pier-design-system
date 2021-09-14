@@ -8,6 +8,8 @@ export default {
     slug: 'text-label',
     description: 'This is a description for text - label.',
     'last-updated': '3/25/21',
+    image: '/component_icons/text-label.svg',
+    imageColor: '/component_icons/text-label_ro.svg',
     variations: [
         {
             name: 'Base',

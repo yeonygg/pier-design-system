@@ -9,6 +9,8 @@ export default {
     slug: 'text-heading',
     description: 'This is a description for Text - Heading.',
     'last-updated': '3/25/21',
+    image: '/component_icons/text-heading.svg',
+    imageColor: '/component_icons/text-heading_ro.svg',
     variations: [
         {
             name: 'Base',

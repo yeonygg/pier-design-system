@@ -11,6 +11,8 @@ export default {
     slug: 'tooltip',
     description: 'This is a description for tooltips.',
     'last-updated': '3/30/21',
+    image: '/component_icons/tooltip.svg',
+    imageColor: '/component_icons/tooltip_ro.svg',
     variations: [
         {
             name: 'Base',

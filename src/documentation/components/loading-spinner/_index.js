@@ -9,6 +9,8 @@ export default {
     slug: 'loading-spinner',
     description: 'This is a description for Text - Heading.',
     'last-updated': '3/25/21',
+    image: '/component_icons/loading-spinner.svg',
+    imageColor: '/component_icons/loading-spinner_ro.svg',
     variations: [
         {
             name: 'Base',

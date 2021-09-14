@@ -9,6 +9,8 @@ export default {
     slug: 'list',
     description: 'This is a description for list.',
     'last-updated': '3/24/21',
+    image: '/component_icons/list.svg',
+    imageColor: '/component_icons/list_ro.svg',
     variations: [
         {
             name: 'Unordered List',

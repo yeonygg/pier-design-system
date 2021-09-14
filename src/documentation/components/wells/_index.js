@@ -8,6 +8,8 @@ export default {
     slug: 'well',
     description: 'This is a description for wells.',
     'last-updated': '3/24/21',
+    image: '/component_icons/well.svg',
+    imageColor: '/component_icons/well_ro.svg',
     variations: [
         {
             name: 'Base',

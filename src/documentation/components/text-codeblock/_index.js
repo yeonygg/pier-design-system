@@ -8,6 +8,8 @@ export default {
     slug: 'text-codeblock',
     description: 'This is a description for text- codeblock.',
     'last-updated': '3/25/21',
+    image: '/component_icons/text-codeblock.svg',
+    imageColor: '/component_icons/text-codeblock_ro.svg',
     variations: [
         {
             name: 'Base',

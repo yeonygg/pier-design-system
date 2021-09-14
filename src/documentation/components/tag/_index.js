@@ -12,6 +12,8 @@ export default {
     slug: 'tag',
     description: 'This is a description for tags.',
     'last-updated': '3/30/21',
+    image: '/component_icons/tag.svg',
+    imageColor: '/component_icons/tag_ro.svg',
     variations: [
         {
             name: 'Base',

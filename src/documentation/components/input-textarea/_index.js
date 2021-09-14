@@ -14,6 +14,8 @@ export default {
     slug: 'input-textarea',
     description: 'This is a description for input-textarea.',
     'last-updated': '4/6/21',
+    image: '/component_icons/input-textarea.svg',
+    imageColor: '/component_icons/input-textarea_ro.svg',
     variations: [
         {
             name: 'Base',

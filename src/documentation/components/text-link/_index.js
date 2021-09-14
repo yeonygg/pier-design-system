@@ -9,6 +9,8 @@ export default {
     slug: 'text-link',
     description: 'This is a description for link.',
     'last-updated': '3/25/21',
+    image: '/component_icons/text-link.svg',
+    imageColor: '/component_icons/text-link_ro.svg',
     variations: [
         {
             name: 'Base',
