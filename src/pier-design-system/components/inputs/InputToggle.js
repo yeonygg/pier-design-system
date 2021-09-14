@@ -7,18 +7,16 @@ function InputToggle({
     indeterminate,
     value,
     onChange,
+    onMouseEnter,
+    onMouseLeave,
+    onFocus,
+    onHover,
     size,
     disabled,
     error,
     dark,
     className,
     style,
-    onChange,
-    onMouseEnter,
-    onMouseLeave,
-    onFocus,
-    onHover,
-    onBlur,
 }) {
     let prefix = `pier-input-toggle`,
         classes = prefix;
@@ -54,6 +52,10 @@ function InputToggle({
                 checked={checked}
                 indeterminate={indeterminate}
                 onChange={onChange}
+                onFocus={onFocus}
+                onBlur={onBlur}
+                onMouseEnter={onMouseEnter}
+                onMouseExit={onMouseExit}
             />
             <div className={prefix + '__indicator'}></div>
             {children && <span className={prefix + '__label'}>{children}</span>}
@@ -72,18 +74,16 @@ InputToggle.propTypes = {
     indeterminate: PropTypes.bool,
     value: PropTypes.string,
     onChange: PropTypes.func,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
+    onBlur: PropTypes.func,
+    onFocus: PropTypes.func,
     size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     disabled: PropTypes.bool,
     error: PropTypes.bool,
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
-    onMouseEnter: PropTypes.func,
-    onMouseLeave: PropTypes.func,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    onHover: PropTypes.func,
 };
 
 export default InputToggle;

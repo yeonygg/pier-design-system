@@ -5,6 +5,10 @@ function InputSelect({
     name,
     value,
     onChange,
+    onMouseEnter,
+    onMouseLeave,
+    onFocus,
+    onBlur,
     size,
     disabled,
     cap,
@@ -13,12 +17,6 @@ function InputSelect({
     dark,
     className,
     style,
-    onChange,
-    onMouseEnter,
-    onMouseLeave,
-    onFocus,
-    onHover,
-    onBlur,
 }) {
     let prefix = `pier-input-select`,
         classes = prefix;
@@ -61,7 +59,17 @@ function InputSelect({
     className && (classes += ` ${className}`);
 
     return (
-        <select name={name} className={classes} style={style} value={value} onChange={onChange}>
+        <select
+            name={name}
+            className={classes}
+            style={style}
+            value={value}
+            onChange={onChange}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+        >
             {children}
         </select>
     );
@@ -77,6 +85,10 @@ InputSelect.propTypes = {
     name: PropTypes.string,
     value: PropTypes.string,
     onChange: PropTypes.func,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
+    onBlur: PropTypes.func,
+    onFocus: PropTypes.func,
     size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     disabled: PropTypes.bool,
     cap: PropTypes.oneOf(['cap', 'none', 'right', 'left']),
@@ -85,12 +97,6 @@ InputSelect.propTypes = {
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
-    onMouseEnter: PropTypes.func,
-    onMouseLeave: PropTypes.func,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    onHover: PropTypes.func,
 };
 
 export default InputSelect;
