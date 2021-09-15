@@ -6,11 +6,12 @@ export default {
     variations: [
         {
             class: '-d-none, -d-[grid-breakpoints]-none',
-            description: "To hide elements simply use the -d-none class. Example: '-d-sm-none' hides the element small breakpoint",
+            description: "Hides elements. Hides elements at certain breakpoints. Example: '-d-sm-none' hides the elements at the small breakpoint",
         },
         {
             class: '-d-inline, -d-[grid-breakpoints]-inline',
-            description: '',
+            description:
+                "Generates one or more inline element boxes that do not make line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space. Example: '-d-md-inline' makes a breal",
         },
         {
             class: '-d-inline-block, -d-[grid-breakpoints]-inline-block',

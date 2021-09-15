@@ -39,11 +39,13 @@ export default function UtilitiesIndex({ appData }) {
                     {utilities.map((item, index) => {
                         return (
                             <div className="-m-t-4 -m-l-7">
-                                <a>
-                                    <Heading size="sm" className="-m-b-1">
-                                        <Link>{item.title}</Link>
-                                    </Heading>
-                                </a>
+                                <NextLink href={`/utilities/${item.slug}`}>
+                                    <a>
+                                        <Heading size="sm" className="-m-b-1">
+                                            <Link>{item.title}</Link>
+                                        </Heading>
+                                    </a>
+                                </NextLink>
                             </div>
                         );
                     })}

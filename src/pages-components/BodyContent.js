@@ -10,9 +10,6 @@ export default function BodyContent({ children }) {
             <HR className="-m-t-12 -m-b-11" theme="gray" size="sm" />
             <div className="-d-flex -flex-wrap -justify-content-around -m-h-12">
                 {' '}
-                <a className="pier-link" href={'/'}>
-                    Home
-                </a>
                 <a className="pier-link" href={'/abstracts'}>
                     Abstracts
                 </a>
@@ -27,8 +24,13 @@ export default function BodyContent({ children }) {
                 </a>
             </div>
             <Section className="-p-t-10 -d-flex -justify-content-center">
-                <img src="/gumgum_logo_color.svg" style={{ width: 200 }} />
+                <a href="./">
+                    <img src="/pier_logo.svg" style={{ width: 200 }} />
+                </a>
             </Section>
+            <BodyText size="sm">
+                <span>&copy;</span> 2021 Gumgum, Inc.
+            </BodyText>
         </div>
     );
 }
