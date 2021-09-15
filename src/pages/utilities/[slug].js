@@ -10,6 +10,7 @@ import PageHeading from 'src/pages-components/PageHeading';
 import BodyContent from 'src/pages-components/BodyContent';
 import utilities from '../api/utilities';
 import { componentFactoryName } from 'angular-html-parser/lib/compiler/src/compile_metadata';
+import utilitiesData from 'src/documentation/utilities/_utilitiesData';
 
 export default function ComponentPage({ appData, utility }) {
     const breadcrumbs = [
@@ -25,19 +26,23 @@ export default function ComponentPage({ appData, utility }) {
             </Head>
             <Layout appData={appData}>
                 <BodyContent>
-                    <PageHeading
-                        breadcrumbs={breadcrumbs}
-                        title={utility.title}
-                        lastUpdated={utility['last-updated']}
-                        description={utility.description}
-                    ></PageHeading>
+                    <PageHeading breadcrumbs={breadcrumbs} title={utility.title} lastUpdated={utility['last-updated']}></PageHeading>
+                    {utility.title === 'Color' && (
+                        <Section>
+                            <Card>
+                                <div className="pier-item--gradient -bgc-primaryBoulevard-90"></div>
+                            </Card>
+                        </Section>
+                    )}
                     <Section>
                         {utility.variations.map((item, i) => {
                             return (
                                 <Card key={i} className="-m-b-5">
                                     <Section>
                                         <BodyText className={item.description == '' ? '-m-b-0' : ''}>
-                                            <span className="pier-body-text__inline-code">{item.class}</span>
+                                            <span className="pier-body-text__inline-code" style={{ userSelect: 'auto' }}>
+                                                {item.class}
+                                            </span>
                                         </BodyText>
                                         <BodyText className="-m-b-0">{item.description}</BodyText>
                                     </Section>
@@ -50,8 +55,6 @@ export default function ComponentPage({ appData, utility }) {
         </Fragment>
     );
 }
-
-utilities.color === 'Color' && <Section></Section>;
 
 ComponentPage.propTypes = {
     appData: PropTypes.object,

@@ -10,7 +10,7 @@ export default {
         },
         {
             class: '-bd-[t, b, l, r, v, h, a]-none, -bd-[t, b, l, r, v, h, a]-0',
-            description: 'Removes border on specified side.',
+            description: "Removes border on specified side. Example: '-bd-t-none' removes the top border; '-bd-r-0' removes the right border",
         },
         {
             class: '-bd-none, -bd-0',

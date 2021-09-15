@@ -35,26 +35,18 @@ export default function UtilitiesIndex({ appData }) {
                         lastUpdated="7/16/2021"
                         description="This is a list of utilities for Pier Design System."
                     ></PageHeading>
-                    <div className="pier-container">
-                        <div className="component-grid -p-v-8">
-                            {utilities.map((item, index) => {
-                                return (
-                                    <NextLink href={`/utilities/${item.slug}`}>
-                                        <a>
-                                            <Card isLink style={{ height: '250px' }} className="-d-flex -align-items-center">
-                                                <Section>
-                                                    <Heading size="sm" className="-m-b-2">
-                                                        <Link>{item.title}</Link>
-                                                    </Heading>
-                                                    <BodyText className="-m-b-0">{item.description}</BodyText>
-                                                </Section>
-                                            </Card>
-                                        </a>
-                                    </NextLink>
-                                );
-                            })}
-                        </div>
-                    </div>
+                    <div className="-m-t-10"></div>
+                    {utilities.map((item, index) => {
+                        return (
+                            <div className="-m-t-4 -m-l-7">
+                                <a>
+                                    <Heading size="sm" className="-m-b-1">
+                                        <Link>{item.title}</Link>
+                                    </Heading>
+                                </a>
+                            </div>
+                        );
+                    })}
                 </BodyContent>
             </Layout>
         </Fragment>

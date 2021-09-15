@@ -6,7 +6,7 @@ export default {
     variations: [
         {
             class: '-d-none, -d-[grid-breakpoints]-none',
-            description: '',
+            description: "To hide elements simply use the -d-none class. Example: '-d-sm-none' hides the element small breakpoint",
         },
         {
             class: '-d-inline, -d-[grid-breakpoints]-inline',
