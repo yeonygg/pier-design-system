@@ -8,6 +8,8 @@ import Section from 'src/pier-design-system/components/containers/Section';
 import Card from 'src/pier-design-system/components/containers/Card';
 import PageHeading from 'src/pages-components/PageHeading';
 import BodyContent from 'src/pages-components/BodyContent';
+import utilities from '../api/utilities';
+import { componentFactoryName } from 'angular-html-parser/lib/compiler/src/compile_metadata';
 
 export default function ComponentPage({ appData, utility }) {
     const breadcrumbs = [
@@ -48,6 +50,8 @@ export default function ComponentPage({ appData, utility }) {
         </Fragment>
     );
 }
+
+utilities.color === 'Color' && <Section></Section>;
 
 ComponentPage.propTypes = {
     appData: PropTypes.object,
