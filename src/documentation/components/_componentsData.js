@@ -24,7 +24,7 @@ import inputRadio from './input-radio/_index';
 import inputToggle from './input-toggle/_index';
 import table from './table/_index';
 import inputForm from './form/_index';
-import accordion from './accordion/_index';
+import accordion from './accordion/data';
 import loadingSpinner from './loading-spinner/_index';
 import toolTip from './tooltip/_index';
 

@@ -16,11 +16,9 @@ function Button({
     onClick,
     className,
     style,
-    onChange,
     onMouseEnter,
     onMouseLeave,
     onFocus,
-    onHover,
     onBlur,
 }) {
     let prefix = `pier-button-standard`,
@@ -86,7 +84,17 @@ function Button({
     function renderButton() {
         if (prefix == 'pier-button-hero') {
             return (
-                <button className={classes} style={style} type={type} value={value} onClick={onClick}>
+                <button
+                    className={classes}
+                    style={style}
+                    type={type}
+                    value={value}
+                    onClick={onClick}
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                >
                     <span className="pier-button-hero__content">
                         {icon && <i className={`pier-button-hero__icon ${icon}`}></i>}
                         {children}
@@ -95,7 +103,17 @@ function Button({
             );
         } else if (prefix == 'pier-button-standard') {
             return (
-                <button className={classes} style={style} type={type} value={value} onClick={onClick}>
+                <button
+                    className={classes}
+                    style={style}
+                    type={type}
+                    value={value}
+                    onClick={onClick}
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                >
                     {icon && <i className={`pier-button-standard__icon ${icon}`}></i>}
                     {children}
                 </button>
@@ -131,9 +149,7 @@ Button.propTypes = {
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
     onBlur: PropTypes.func,
-    onChange: PropTypes.func,
     onFocus: PropTypes.func,
-    onHover: PropTypes.func,
 };
 
 export default Button;

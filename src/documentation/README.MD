@@ -1,65 +1,68 @@
 **Pier Documentation Helper**
 
-### 📁 Abstracts
-
-*WIP*
-
 ### 📁 Components
 
->📁 *[component name]*
+> 📁 _[component name]_
 
 Folder for the component
 
->>📄 *_index.js*
+> > 📄 _\data.js_
 
 Follow the file structure below to add documentation data. Import variations as variables to be used in the `ReactDOMServer.renderToStaticMarkup()` function in the `markup:` property. If you desire a dark background on your variation, pass `true` inside the `dark:` property.
 
 ```js
-import ReactDOMServer from  "react-dom/server";
-import variation1 from  "./variation1";
-import variation2 from  "./variation2";
+import { variation1, variation2 } from './variations';
 
 export default {
-	title: "Component Title",
-	slug: "component-slug",
-	description: "Component description",
-	"last-updated": "1/1/21",
-	variations: [
-		{
-		name: "Variation 1",
-		description: "Variation 1 description",
-		markup: ReactDOMServer.renderToStaticMarkup(variation1),
-		dark: false,
-		},
-		{
-		name: "Variation 2",
-		description: "Variation 2 description",
-		markup: ReactDOMServer.renderToStaticMarkup(variation2),
-		dark: false,
-		}
-	]
+    title: 'Component Title',
+    slug: 'component-slug',
+    description: 'Component description',
+    'last-updated': '1/1/21',
+    image: '/component_icons/img',
+    imageColor: '/component_icons/img',
+    variations: [
+        {
+            name: 'Variation 1',
+            description: 'Variation 1 description',
+            markup: variation1,
+            dark: false,
+        },
+        {
+            name: 'Variation 2',
+            description: 'Variation 2 description',
+            markup: variation2,
+            dark: false,
+        },
+    ],
 };
 ```
 
->>📄 *[variation].js*
+> > 📄 _\variations.js_
 
 Add your variation JSX like so:
+
 ```js
-export default (
-	<div className="example-class">Example Component</div>
-);
+export const variation = ReactDOMServer.renderToStaticMarkup(<div className="example-class">Example Component</div>);
 ```
 
 [Learn more about JSX](https://reactjs.org/docs/introducing-jsx.html)
 
->📄 *_componentsData.js*
+> 📄 _\_componentsData.js_
 
-Import the `_index.js` file from the component folder into `_componentsData.js` and add it to the list of components being pushed to `componentsData` to render it to the webpage.
+Import the `data.js` file from the component folder into `_componentsData.js` and add it to the list of components being pushed to `componentsData` to render it to the webpage.
 
 ### 📁 Utilities
+
+> 📄 _[utility].js_
+
+Page data and examples of the types of utility classes.
+
+> 📄 _\_utilitiesData.js_
+
+Imports the all the utilities.
 
 ### 📄 API.js
 
 Imports all of the documenation data for the apps API.
 
-*WIP*
+_WIP_

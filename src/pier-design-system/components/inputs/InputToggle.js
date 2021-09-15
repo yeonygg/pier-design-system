@@ -10,7 +10,7 @@ function InputToggle({
     onMouseEnter,
     onMouseLeave,
     onFocus,
-    onHover,
+    onBlur,
     size,
     disabled,
     error,
@@ -55,7 +55,7 @@ function InputToggle({
                 onFocus={onFocus}
                 onBlur={onBlur}
                 onMouseEnter={onMouseEnter}
-                onMouseExit={onMouseExit}
+                onMouseLeave={onMouseLeave}
             />
             <div className={prefix + '__indicator'}></div>
             {children && <span className={prefix + '__label'}>{children}</span>}

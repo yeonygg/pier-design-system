@@ -1,5 +1,13 @@
 import { Fragment } from 'react';
 
+import { Accordion } from 'dist/index.js';
+
 export default function TestPage() {
-    return <Fragment></Fragment>;
+    console.log(Accordion.toString());
+
+    return (
+        <Fragment>
+            <Accordion></Accordion>
+        </Fragment>
+    );
 }

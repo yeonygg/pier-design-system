@@ -15,11 +15,9 @@ function IconButton({
     className,
     style,
     iconStyle,
-    onChange,
     onMouseEnter,
     onMouseLeave,
     onFocus,
-    onHover,
     onBlur,
 }) {
     let prefix = `pier-button-icon`,
@@ -49,7 +47,17 @@ function IconButton({
     className && (classes += ` ${className}`);
 
     return (
-        <button className={classes} style={style} type={type} value={value} onClick={onClick}>
+        <button
+            className={classes}
+            style={style}
+            type={type}
+            value={value}
+            onClick={onClick}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            onFocus={onFocus}
+            onBlur={onBlur}
+        >
             <i className={`pier-button-icon__icon ${icon}`} style={iconStyle}>
                 {children}
             </i>
@@ -79,9 +87,7 @@ IconButton.propTypes = {
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
     onBlur: PropTypes.func,
-    onChange: PropTypes.func,
     onFocus: PropTypes.func,
-    onHover: PropTypes.func,
 };
 
 export default IconButton;

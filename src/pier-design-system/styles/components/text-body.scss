@@ -49,7 +49,7 @@ $code-sizes: (
     font-size: map-fetch($code-sizes, ($default-size, desktop));
     padding: 0 map-fetch($code-sizes, ($default-size, desktop)) / 2;
     border-radius: map-fetch($code-sizes, ($default-size, desktop)) / 4;
-    background-color: map-fetch($colorsGrays, lighter);
+    background-color: map-fetch($colorsGrays, light);
     user-select: all;
     word-wrap: break-word;
 
