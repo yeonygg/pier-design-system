@@ -167,7 +167,7 @@ export default function ComponentPage({ appData, utility }) {
                                                 <CodeBlock className="-d-block -p-v-5 -p-l-5 -c-gray-2">-c-gray-2</CodeBlock>
                                             </div>
                                             <div className="-bd-1-gray-2 -bgc-white -m-b-4">
-                                                <CodeBlock className="-d-block -p-v-5 -p-l-5 -c-dark-1">-bdc-gray-2</CodeBlock>
+                                                <CodeBlock className="-d-block -p-v-5 -p-l-5 -c-gray-2">-bdc-gray-2</CodeBlock>
                                             </div>
                                             <div className="-bgc-gray">
                                                 <CodeBlock className="-d-block -p-v-5 -p-l-5 -c-white">-bgc-gray</CodeBlock>
@@ -176,7 +176,7 @@ export default function ComponentPage({ appData, utility }) {
                                                 <CodeBlock className="-d-block -p-v-5 -p-l-5 -c-gray">-c-gray</CodeBlock>
                                             </div>
                                             <div className="-bd-1-gray -bgc-white -m-b-4">
-                                                <CodeBlock className="-d-block -p-v-5 -p-l-5 -c-dark-1">-bdc-gray</CodeBlock>
+                                                <CodeBlock className="-d-block -p-v-5 -p-l-5 -c-gray">-bdc-gray</CodeBlock>
                                             </div>
                                             <div className="-bgc-dark-1">
                                                 <CodeBlock className="-d-block -p-v-5 -p-l-5 -c-white">-bgc-dark-1</CodeBlock>
