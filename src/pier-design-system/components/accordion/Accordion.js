@@ -25,7 +25,7 @@ function Accordion({ children, title, startOpen, inCard, icon, size, disabled, d
     dark && (classes += ` ${prefix}--dark`);
     disabled && (classes += ` ${prefix}--disabled`);
     inCard && (classes += ` ${prefix}--card`);
-    open && (classes += ` ${prefix}--open`);
+    open ? (classes += ` ${prefix}--open`) : (classes += ` ${prefix}--closed`);
 
     className && (classes += ` ${className}`);
 

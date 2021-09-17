@@ -6,23 +6,23 @@ export default {
     variations: [
         {
             class: '-pos-relative',
-            description: '',
+            description: 'Makes position property relative',
         },
         {
             class: '-pos-fixed',
-            description: '',
+            description: 'Makes position property fixed',
         },
         {
             class: '-pos-static',
-            description: '',
+            description: 'Makes position property static',
         },
         {
             class: '-pos-absolute',
-            description: '',
+            description: 'Makes position property absolute',
         },
         {
             class: '-pos-absolute-[t, b, l, r, tl, tr, bl, br, tc, bc, lc, rc, c]',
-            description: 'Specified position for absolute positioning.',
+            description: "Specified position for absolute positioning. Example: '-pos-absolute-tl' makes the top: 0 and left: 0",
         },
     ],
 };

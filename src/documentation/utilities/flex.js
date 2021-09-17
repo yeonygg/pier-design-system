@@ -63,16 +63,17 @@ export default {
         {
             class: '-align-items-start, -align-items-[grid-breakpoints]-start',
             description:
-                "Items are aligned at the vertical start. Example: '-align-items-md-start' aligns items at the vertical start in the medium breakpoint",
+                "Items are placed at the start of the cross axis. Example: '-align-items-md-start' place items at the start of the cross axis in the medium breakpoint",
         },
         {
             class: '-align-items-end, -align-items-[grid-breakpoints]-end',
-            description: "Items are aligned at the vertical end. Example: '-align-items-md-end' aligns items at the vertical end in the medium breakpoint",
+            description:
+                "Items are placed at the end of the cross axis. Example: '-align-items-md-end' place items at the end of the cross axis in the medium breakpoint",
         },
         {
             class: '-align-items-center, -align-items-[grid-breakpoints]-center',
             description:
-                "Items are aligned at the vertical center. Example: '-align-items-md-center' aligns items at the vertical center in the medium breakpoint",
+                "Items are centered at the cross axis. Example: '-align-items-md-center' place items at the center of the cross axis in the medium breakpoint",
         },
         {
             class: '-align-items-baseline, -align-items-[grid-breakpoints]-baseline',
@@ -81,55 +82,66 @@ export default {
         },
         {
             class: '-align-items-stretch, -align-items-[grid-breakpoints]-stretch',
-            description: '',
+            description: "Items stretch to fill the container. Example: '-align-items-md-stretch' stretches items to fill the medium breakpoint",
         },
         {
             class: '-align-content-start, -align-content-[grid-breakpoints]-start',
-            description: '',
+            description:
+                "Items are aligned at the vertical start. Example: '-align-items-md-start' aligns items at the vertical start in the medium breakpoint",
         },
         {
             class: '-align-content-end, -align-content-[grid-breakpoints]-end',
-            description: '',
+            description: "Items are aligned at the vertical end. Example: '-align-items-md-end' aligns items at the vertical end in the medium breakpoint",
         },
         {
             class: '-align-content-center, -align-content-[grid-breakpoints]-center',
-            description: '',
+            description:
+                "Items are aligned at the vertical center. Example: '-align-items-md-center' aligns items at the vertical center in the medium breakpoint",
         },
         {
             class: '-align-content-between, -align-content-[grid-breakpoints]-between',
-            description: '',
+            description:
+                "Items are evenly distributed vertically. Example: '-align-content-md-between' makes items evenly distributed vertically in the medium breakpoint",
         },
         {
             class: '-align-content-around, -align-content-[grid-breakpoints]-around',
-            description: '',
+            description:
+                "Items are evenly distributed vertically with equal space around them. Example: '-align-content-md-around' makes items evenly distributed vertically with equal space around them in the medium breakpoint",
         },
         {
             class: '-align-content-stretch, -align-content-[grid-breakpoints]-stretch',
-            description: '',
+            description:
+                "Lines stretch to take up the remaining space. Example: '-align-content-md-stretch' will stretch lines to take up all the space in medium breakpoint",
         },
         {
             class: '-align-self-auto, -align-self-[grid-breakpoints]-auto',
-            description: '',
+            description:
+                "This property overrides a grid or flex item's align-items value. '-align-self-md-auto' will override a grid or flex item's align-items value at the medium breakpoint",
         },
         {
             class: '-align-self-start, -align-self-[grid-breakpoints]-start',
-            description: '',
+            description:
+                "Aligns the items to be flush with the edge of the alignment container corresponding to the item's start side in the cross axis. Example: '-align-self-md-start' aligns the items to be flush in the start of the medium breakpoint",
         },
         {
             class: '-align-self-end, -align-self-[grid-breakpoints]-end',
-            description: '',
+            description:
+                "Aligns the items to be flush with the edge of the alignment container corresponding to the item's end side in the cross axis. Example: '-align-self-md-end' aligns the items to be flush in the end of the medium breakpoint",
         },
         {
             class: '-align-self-center, -align-self-[grid-breakpoints]-center',
-            description: '',
+            description:
+                "The flex item's margin box is centered within the line on the cross-axis. Example: '-align-self-md-center' The flex item's margin box is centered at the medium breakpoint",
         },
         {
             class: '-align-self-baseline, -align-self-[grid-breakpoints]-baseline',
-            description: '',
+            description:
+                "The flex item's margin box is aligned at the  baseline on the cross-axis. Example: '-align-self-md-baseline' The flex item's margin box is aligned at the baseline of the medium breakpoint",
         },
         {
             class: '-align-self-stretch, -align-self-[grid-breakpoints]-stretch',
-            description: '',
+            description:
+                "The flex item's margin box is stretched on the cross-axis. Example: '-align-self-md-stretch' The flex item's margin box is stretched at the medium breakpoint",
         },
     ],
 };

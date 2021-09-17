@@ -6,11 +6,11 @@ export default {
     variations: [
         {
             class: '-box-shadow-[1-5]',
-            description: '',
+            description: "Adds a shadow around element's frame. Example: '-box-shadow-3' creates a shadow with darkness of 3 out of 5 options",
         },
         {
             class: '-text-shadow-[1-3]',
-            description: '',
+            description: "Adds a shadow around text. Example: '-text-shadow-3' creates a shadow with darkness of 3 out of 5 options",
         },
     ],
 };

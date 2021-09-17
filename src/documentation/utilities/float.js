@@ -1,3 +1,5 @@
+import left from '../components/tooltip/left';
+
 export default {
     title: 'Float',
     slug: 'float',
@@ -6,15 +8,15 @@ export default {
     variations: [
         {
             class: '-float-left, -float-[grid-breakpoints]-left',
-            description: '',
+            description: "Makes elements float to the left. Example: '-float-md-left' will make elements in the medium breakpoint float to the left",
         },
         {
             class: '-float-right, -float-[grid-breakpoints]-right',
-            description: '',
+            description: "Makes elements float to the right. Example: '-float-md-right' will make elements in the medium breakpoint float to the right",
         },
         {
             class: '-float-none, -float-[grid-breakpoints]-none',
-            description: '',
+            description: "Makes elements not float. Example: '-float-md-none' will make elements in the medium breakpoint not float",
         },
     ],
 };
