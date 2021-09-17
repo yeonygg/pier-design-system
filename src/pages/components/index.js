@@ -24,30 +24,30 @@ export default function ComponentsIndex({ appData }) {
     function ComponentCard({ title, description, image, imageColor }) {
         const [isShown, setIsShown] = useState(false);
         return (
-            <Card isLink onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>
-                <Section>
-                    <div onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>
+            <div onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>
+                <Card isLink onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} style={{ height: '340px' }}>
+                    <Section>
                         {
                             <img
-                                className={isShown ? '-pos-absolute -pos-absolute-tl -z-10' : '-pos-absolute -pos-absolute-tl -z-10 -hide'}
+                                className={isShown ? '-pos-absolute -z-10' : '-pos-absolute -z-10 -hide'}
                                 src={imageColor}
                                 width="220px"
                                 style={{ transition: 'opacity 0.4s ease' }}
                             />
                         }
                         <img src={image} width="220px"></img>
-                    </div>
 
-                    <div className="-p-t-4 -p-l-2">
-                        <Heading size="sm" className="-m-b-5">
-                            <Link>{title}</Link>
-                        </Heading>
-                        <BodyText size="sm" className="-m-b-4">
-                            {description}
-                        </BodyText>
-                    </div>
-                </Section>
-            </Card>
+                        <div className="-p-t-4 -p-l-2">
+                            <Heading size="sm" className="-m-b-5">
+                                <Link>{title}</Link>
+                            </Heading>
+                            <BodyText size="sm" className="-m-b-4">
+                                {description}
+                            </BodyText>
+                        </div>
+                    </Section>
+                </Card>
+            </div>
         );
     }
 

@@ -10,7 +10,8 @@ export default {
         },
         {
             class: '-br-[tl, tr, bl, br, t, r, b, l]-0, -br-[tl, tr, bl, br, t, r, b, l]-none',
-            description: 'Sets specific corner or side border radius to 0.',
+            description:
+                "Sets specific corner or side border radius to 0. Example: '-br-tl-0' sets the top-left border radius to 0.  '-br-t-none' sets the top border radius to 0.",
         },
         {
             class: '-br-pill',

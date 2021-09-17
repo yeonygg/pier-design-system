@@ -35,27 +35,20 @@ export default function UtilitiesIndex({ appData }) {
                         lastUpdated="7/16/2021"
                         description="This is a list of utilities for Pier Design System."
                     ></PageHeading>
-                    <Section>
-                        {utilities.map((item, index) => {
-                            return (
+                    <div className="-m-t-10"></div>
+                    {utilities.map((item, index) => {
+                        return (
+                            <div className="-m-t-4 -m-l-7">
                                 <NextLink href={`/utilities/${item.slug}`}>
                                     <a>
-                                        <Card isLink className="-m-b-5">
-                                            <Section>
-                                                <Heading size="sm" className="-m-b-2">
-                                                    <Link>{item.title}</Link>
-                                                </Heading>
-                                                <BodyText size="xs" color="light-gray">
-                                                    {item['last-updated']}
-                                                </BodyText>
-                                                <BodyText className="-m-b-0">{item.description}</BodyText>
-                                            </Section>
-                                        </Card>
+                                        <Heading size="sm" className="-m-b-1">
+                                            <Link>{item.title}</Link>
+                                        </Heading>
                                     </a>
                                 </NextLink>
-                            );
-                        })}
-                    </Section>
+                            </div>
+                        );
+                    })}
                 </BodyContent>
             </Layout>
         </Fragment>

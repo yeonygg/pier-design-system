@@ -6,7 +6,7 @@ export default {
     variations: [
         {
             class: '-ellipsis, -ellipsis-[grid-breakpoints]',
-            description: 'Text overflow with ellipsis.',
+            description: "Text overflow with ellipsis. Example: '-ellipsis-sm' makes any text overflow in the small breakpoint end with ellipsis",
         },
     ],
 };

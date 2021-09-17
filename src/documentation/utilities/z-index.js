@@ -6,11 +6,11 @@ export default {
     variations: [
         {
             class: '-z-[0-10]',
-            description: 'Positive z-indexes.',
+            description: "Sets positive z-indexes. Example: '-z-5' sets a positive z-index of 5",
         },
         {
             class: '-z-neg-[1-5]',
-            description: 'Negative z-indexes.',
+            description: "Sets negative z-indexes. Example: '-z-neg-5' sets a negative z-index of 5",
         },
     ],
 };
