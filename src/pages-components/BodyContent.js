@@ -24,11 +24,11 @@ export default function BodyContent({ children }) {
                 </a>
             </div>
             <Section className="-p-t-10 -d-flex -justify-content-center">
-                <a href="./">
+                <a href="/">
                     <img src="/pier_logo.svg" style={{ width: 200 }} />
                 </a>
             </Section>
-            <BodyText size="sm">
+            <BodyText size="sm" className="-d-flex -justify-content-center">
                 <span>&copy;</span> 2021 Gumgum, Inc.
             </BodyText>
         </div>
