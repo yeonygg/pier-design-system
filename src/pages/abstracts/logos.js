@@ -18,7 +18,7 @@ import BodyText from 'src/pier-design-system/components/text/BodyText';
 export default function LayoutPage({ appData }) {
     const breadcrumbs = [
         { label: 'Home', link: '/', disabled: false },
-        { label: 'Abstracts', link: '', disabled: false },
+        { label: 'Abstracts', link: '/abstracts', disabled: false },
         { label: 'Colors', link: '', disabled: true },
     ];
 
@@ -37,12 +37,7 @@ export default function LayoutPage({ appData }) {
             </Head>
             <Layout appData={appData}>
                 <BodyContent>
-                    <PageHeading
-                        breadcrumbs={breadcrumbs}
-                        title="Logos"
-                        lastUpdated="6/21/21"
-                        description="This is  description for Pier's Logos"
-                    ></PageHeading>
+                    <PageHeading breadcrumbs={breadcrumbs} title="Logos"></PageHeading>
 
                     <Section>
                         <Heading size="sm">Main Logo</Heading>

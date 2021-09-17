@@ -1,0 +1,261 @@
+import { structure } from './variations';
+import { reactDemo } from './reactDemo';
+
+export default {
+    title: 'Navigation',
+    slug: 'navigation',
+    description: 'The Navigation component is used as a persistant list of links to various pages on a website.',
+    'last-updated': '7/17/21',
+    image: '/component_icons/navigation.svg',
+    imageColor: '/component_icons/navigation_ro.svg',
+    variations: [
+        {
+            name: 'Structure',
+            description: `Use the base class <code class="pier-body-text__inline-code">pier-nav</code> to wrap the elements inside of the Navigation. Use <code class="pier-body-text__inline-code">pier-nav__item-group</code> to group links inside of the Navigation. Use <code class="pier-body-text__inline-code">pier-nav__item</code> for first level links or wrap it in a parent element with the class <code class="pier-body-text__inline-code">pier-nav__item-container</code> with a sibling element <code class="pier-body-text__inline-code">pier-nav__item-dropdown</code> if the item has nested sub-items. Use either <code class="pier-body-text__inline-code">pier-nav__sub-item</code> or <code class="pier-body-text__inline-code">pier-nav__sub-label</code> inside the nested item dropdown. Follow the example closely below for proper navigation structure.`,
+            markup: structure,
+            dark: false,
+        },
+    ],
+    'react-import': `import { Nav, NavItem, NavItemContainer, NavItemDropdown, NavItemGroup, NavSubItem, NavSubLabel } from "pier-design-system"`,
+    'react-components': [
+        {
+            name: '<Nav>',
+            props: [
+                {
+                    name: 'children',
+                    type: 'node',
+                    isRequired: true,
+                    default: '',
+                    description: 'The content to be displayed inside of the Navigation.',
+                },
+                {
+                    name: 'width',
+                    type: 'number',
+                    isRequired: false,
+                    default: '260',
+                    description: 'The width of the Navigation in px.',
+                },
+                {
+                    name: 'mobile',
+                    type: 'bool',
+                    isRequired: false,
+                    default: 'false',
+                    description: 'Set the Navigation state to a mobile view.',
+                },
+                {
+                    name: 'isCollapsible',
+                    type: 'bool',
+                    isRequired: false,
+                    default: 'false',
+                    description: 'Enables controls to collapse the Navigation.',
+                },
+                {
+                    name: 'className',
+                    type: 'string',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add classes onto the Navigation wrapper.',
+                },
+                {
+                    name: 'style',
+                    type: 'object',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add extra styling onto the Navigation wrapper.',
+                },
+            ],
+        },
+        {
+            name: '<NavItem>',
+            props: [
+                {
+                    name: 'children',
+                    type: 'node',
+                    isRequired: true,
+                    default: '',
+                    description: 'The text to be displayed inside Navigation item.',
+                },
+                {
+                    name: 'onClick',
+                    type: 'function',
+                    isRequired: false,
+                    default: '',
+                    description: 'Execute the defined function on Navigation item click.',
+                },
+                {
+                    name: 'icon',
+                    type: 'string',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add an icon to the begining of the Navigation item. The string should be FontAwesome classes.',
+                },
+                {
+                    name: 'className',
+                    type: 'string',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add classes onto the Navigation item.',
+                },
+                {
+                    name: 'style',
+                    type: 'object',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add extra styling onto the Navigation item.',
+                },
+            ],
+        },
+        {
+            name: '<NavItemContainer>',
+            props: [
+                {
+                    name: 'children',
+                    type: 'node',
+                    isRequired: true,
+                    default: '',
+                    description: 'The content to be displayed inside of the Navigation item container. Only use <NavItem> and <NavItemDropdown> components.',
+                },
+                {
+                    name: 'startToggled',
+                    type: 'bool',
+                    isRequired: false,
+                    default: 'false',
+                    description: `Starts the Navigation item container in it's open state.`,
+                },
+                {
+                    name: 'onClick',
+                    type: 'function',
+                    isRequired: false,
+                    default: '',
+                    description: 'Execute the defined function on Navigation item container click.',
+                },
+                {
+                    name: 'className',
+                    type: 'string',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add classes onto the Navigation item container.',
+                },
+                {
+                    name: 'style',
+                    type: 'object',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add extra styling onto the Navigation item container.',
+                },
+            ],
+        },
+        {
+            name: '<NavItemDropdown>',
+            props: [
+                {
+                    name: 'children',
+                    type: 'node',
+                    isRequired: true,
+                    default: '',
+                    description: 'The content to be displayed inside of the open Navigation item dropdown.',
+                },
+                {
+                    name: 'className',
+                    type: 'string',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add classes onto the Navigation item dropdown.',
+                },
+                {
+                    name: 'style',
+                    type: 'object',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add extra styling onto the Navigation item dropdown.',
+                },
+            ],
+        },
+        {
+            name: '<NavItemGroup>',
+            props: [
+                {
+                    name: 'children',
+                    type: 'node',
+                    isRequired: true,
+                    default: '',
+                    description: 'The content to be displayed inside of the open Navigation item group. Only use <NavItem> and <NavItemContainer> components.',
+                },
+                {
+                    name: 'className',
+                    type: 'string',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add classes onto the Navigation item group.',
+                },
+                {
+                    name: 'style',
+                    type: 'object',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add extra styling onto the Navigation item group.',
+                },
+            ],
+        },
+        {
+            name: '<NavSubItem>',
+            props: [
+                {
+                    name: 'children',
+                    type: 'node',
+                    isRequired: true,
+                    default: '',
+                    description: 'The text on the Navigation sub-item.',
+                },
+                {
+                    name: 'onClick',
+                    type: 'function',
+                    isRequired: false,
+                    default: '',
+                    description: 'Execute the defined function on Navigation sub-item click.',
+                },
+                {
+                    name: 'className',
+                    type: 'string',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add classes onto the Navigation sub-item.',
+                },
+                {
+                    name: 'style',
+                    type: 'object',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add extra styling onto the Navigation sub-item.',
+                },
+            ],
+        },
+        {
+            name: '<NavSubLabel>',
+            props: [
+                {
+                    name: 'children',
+                    type: 'node',
+                    isRequired: true,
+                    default: '',
+                    description: 'The text on the Navigation sub-label.',
+                },
+                {
+                    name: 'className',
+                    type: 'string',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add classes onto the Navigation sub-label.',
+                },
+                {
+                    name: 'style',
+                    type: 'object',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add extra styling onto the Navigation sub-label.',
+                },
+            ],
+        },
+    ],
+    'react-demo': reactDemo,
+};

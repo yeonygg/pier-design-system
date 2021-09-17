@@ -12,15 +12,13 @@ $default-size: md;
         height: map-fetch($input-heights, ($default-size, mobile));
         font-size: map-fetch($input-label-sizes, ($default-size, mobile));
     }
-
-
 }
 
 .pier-input-toggle__indicator {
     cursor: pointer;
-    width: 2.5rem;
-    height: 1.25rem;
-    margin-right: 0.41667rem;
+    width: map-fetch($input-toggle-heights, ($default-size, desktop)) * 2;
+    height: map-fetch($input-toggle-heights, ($default-size, desktop));
+    margin-right: map-fetch($input-toggle-heights, ($default-size, desktop)) * 0.3;
     opacity: 1;
     border-width: 1px;
     border-style: solid;
@@ -33,6 +31,12 @@ $default-size: md;
     transition-property: all;
     transition-duration: 0ms;
     transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+    @include build-media-query(mobile) {
+        width: map-fetch($input-toggle-heights, ($default-size, mobile)) * 2;
+        height: map-fetch($input-toggle-heights, ($default-size, mobile));
+        margin-right: map-fetch($input-toggle-heights, ($default-size, mobile)) * 0.3;
+    }
 
     &::after {
         content: '';
@@ -47,16 +51,15 @@ $default-size: md;
         transition-property: all;
         transition-duration: 150ms;
         transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-
     }
 
     &:hover {
         border: 1px solid map-get($colorsGrays, dark-1);
 
-            &::after {
-                background-color: none;
-                background-image: build-gradient(90deg, primaryBoulevard);
-            }
+        &::after {
+            background-color: none;
+            background-image: build-gradient(90deg, primaryBoulevard);
+        }
     }
 
     &:active {
@@ -64,7 +67,7 @@ $default-size: md;
         background-image: build-gradient(90deg, primaryBoulevard);
 
         &:after {
-            transform: scale(0.90);
+            transform: scale(0.9);
             background-color: map-get($colorsGrays, white);
             background-image: none;
         }
@@ -86,20 +89,6 @@ $default-size: md;
     color: map-fetch($colorsGrays, gray);
 }
 
-.pier-input-toggle__indicator--lg {
-    width: 3.125rem;
-    height: 1.563rem;
-    margin-right: 0.41667rem;
-    border-radius: 100rem;
-}
-
-.pier-input-toggle__indicator--sm {
-    width: 2rem;
-    height: 1rem;
-    margin-right: 0.41667rem;
-    border-radius: 100rem;
-}
-
 .pier-input-toggle__input:checked ~ .pier-input-toggle__indicator {
     border: transparent;
     background-position: center center;
@@ -112,10 +101,9 @@ $default-size: md;
 
     &:active {
         &::after {
-            transform: scale(0.90);
+            transform: scale(0.9);
         }
     }
-
 }
 
 .pier-input-toggle__input:checked ~ .pier-input-toggle__indicator:after {
@@ -137,9 +125,7 @@ $default-size: md;
     pointer-events: none;
 }
 
-
 .pier-input-toggle--error {
-
     .pier-input-toggle__indicator {
         border-color: map-get($colorsRed, default);
 
@@ -153,10 +139,9 @@ $default-size: md;
         border-color: map-get($colorsRed, default);
 
         .pier-input-toggle__indicator {
-
             background-image: none;
             border-color: map-get($colorsRed, dark-1);
-            
+
             &:after {
                 background-image: none;
                 background-color: map-get($colorsRed, dark-1);
@@ -201,9 +186,9 @@ $default-size: md;
         }
     }
 
-    .pier-input-toggle__input:checked ~ .pier-input-toggle__indicator{
+    .pier-input-toggle__input:checked ~ .pier-input-toggle__indicator {
         border-color: transparent;
-      }
+    }
 
     .pier-input-toggle__input:checked ~ .pier-input-toggle__label {
         color: map-fetch($colorsGrays, white);
@@ -216,30 +201,28 @@ $default-size: md;
 
 .pier-input-toggle--dark.pier-input-toggle--error {
     .pier-input-toggle__indicator {
-    border-color: map-get($colorsRed, dark-1);
-
-    &:after {
-        background-color: map-get($colorsRed, dark-1);
-    }
-
-    &:hover {
-        border-color: map-get($colorsRed, default);
+        border-color: map-get($colorsRed, dark-1);
 
         &:after {
-            background-color: map-get($colorsRed, default);
+            background-color: map-get($colorsRed, dark-1);
         }
-    }
 
-    &:active {
-       
+        &:hover {
+            border-color: map-get($colorsRed, default);
+
+            &:after {
+                background-color: map-get($colorsRed, default);
+            }
+        }
+
+        &:active {
             background-image: none;
             background-color: map-get($colorsRed, default);
-            
+
             &:after {
                 background-color: map-get($colorsGrays, white);
             }
-        
-    }
+        }
     }
 
     .pier-input-toggle__input:checked ~ .pier-input-toggle__indicator:after {
@@ -255,6 +238,18 @@ $default-size: md;
         @include build-media-query(mobile) {
             height: map-fetch($input-heights, ($prefix, mobile));
             font-size: map-fetch($input-label-sizes, ($prefix, mobile));
+        }
+
+        .pier-input-toggle__indicator {
+            width: map-fetch($input-toggle-heights, ($prefix, desktop)) * 2;
+            height: map-fetch($input-toggle-heights, ($prefix, desktop));
+            margin-right: map-fetch($input-toggle-heights, ($prefix, desktop)) * 0.3;
+
+            @include build-media-query(mobile) {
+                width: map-fetch($input-toggle-heights, ($prefix, mobile)) * 2;
+                height: map-fetch($input-toggle-heights, ($prefix, mobile));
+                margin-right: map-fetch($input-toggle-heights, ($prefix, mobile)) * 0.3;
+            }
         }
     }
 }

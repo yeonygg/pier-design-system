@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function Tooltip({ children, position, dark, className, text, onClick, style, disabled, open, onMouseLeave, onMouseEnter }) {
+function Tooltip({ children, size, position, dark, className, text, onClick, style, disabled, open, onMouseLeave, onMouseEnter }) {
     let prefix = `pier-tooltip`,
         classes = prefix;
 
@@ -19,6 +19,15 @@ function Tooltip({ children, position, dark, className, text, onClick, style, di
             break;
     }
 
+    switch (size) {
+        case 'md':
+            classes += ``;
+            break;
+        case 'lg':
+            classes += ` ${prefix}--lg`;
+            break;
+    }
+
     dark && (classes += ` ${prefix}--dark`);
     disabled && (classes += ` ${prefix}--disabled`);
     className && (classes += ` ${className}`);
@@ -33,20 +42,22 @@ function Tooltip({ children, position, dark, className, text, onClick, style, di
 
 Tooltip.defaultProps = {
     position: 'top',
+    size: 'md',
 };
 
 Tooltip.propTypes = {
     children: PropTypes.node.isRequired,
+    text: PropTypes.string.isRequired,
     open: PropTypes.bool,
+    size: PropTypes.oneOf(['md', 'lg']),
     position: PropTypes.oneOf(['top', 'right', 'left', 'bottom']),
     dark: PropTypes.bool,
-    className: PropTypes.string,
-    text: PropTypes.string.isRequired,
     onClick: PropTypes.func,
-    style: PropTypes.object,
     disabled: PropTypes.bool,
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
+    className: PropTypes.string,
+    style: PropTypes.object,
 };
 
 export default Tooltip;

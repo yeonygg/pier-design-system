@@ -1,13 +1,17 @@
 import { Fragment } from 'react';
 
-import { Accordion } from 'dist/index.js';
+import Breadcrumbs from 'src/pier-design-system/components/breadcrumbs/Breadcrumbs';
+import BreadcrumbsLink from 'src/pier-design-system/components/breadcrumbs/BreadcrumbsLink';
 
 export default function TestPage() {
-    console.log(Accordion.toString());
-
     return (
         <Fragment>
-            <Accordion></Accordion>
+            <Breadcrumbs maxCrumbs={3} dark={false}>
+                <BreadcrumbsLink>Home</BreadcrumbsLink>
+                <BreadcrumbsLink>Hidden Link</BreadcrumbsLink>
+                <BreadcrumbsLink>Link 1</BreadcrumbsLink>
+                <BreadcrumbsLink disabled={true}>Link 2</BreadcrumbsLink>
+            </Breadcrumbs>
         </Fragment>
     );
 }

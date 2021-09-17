@@ -1,19 +1,8 @@
 import jsxToString from 'jsx-to-string';
 import { Accordion, Section, BodyText } from 'dist';
 
-export const react = jsxToString(
-    <Accordion
-        title="Accordion"
-        startOpen={false}
-        inCard={false}
-        icon="fas fa-atom"
-        size="md"
-        disabled={false}
-        dark={false}
-        onClick={{}}
-        className=""
-        style={{}}
-    >
+export const reactDemo = jsxToString(
+    <Accordion title="Accordion" startOpen={false} inCard={false} icon="fas fa-atom" size="md" disabled={false} dark={false}>
         <Section>
             <BodyText>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

@@ -1,5 +1,5 @@
 import { base, open, incard, sizes, disabled, dark } from './variations';
-import { react } from './react';
+import { reactDemo } from './reactDemo';
 
 export default {
     title: 'Accordion',
@@ -52,8 +52,6 @@ export default {
             dark: true,
         },
     ],
-    'react-description':
-        'Use the interactive <code class="pier-body-text__inline-code">< Accordion ></code> component by giving it a <code class="pier-body-text__inline-code">title</code> prop and using the <code class="pier-body-text__inline-code">children</code> prop for the content to be displayed.',
     'react-import': `import { Accordion } from "pier-design-system"`,
     'react-components': [
         {
@@ -139,5 +137,5 @@ export default {
             ],
         },
     ],
-    'react-demo': react,
+    'react-demo': reactDemo,
 };

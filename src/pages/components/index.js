@@ -59,12 +59,7 @@ export default function ComponentsIndex({ appData }) {
             </Head>
             <Layout appData={appData}>
                 <BodyContent>
-                    <PageHeading
-                        breadcrumbs={breadcrumbs}
-                        title="Components"
-                        lastUpdated="5/25/2021"
-                        description="This is a list of components for Pier Design System."
-                    ></PageHeading>
+                    <PageHeading breadcrumbs={breadcrumbs} title="Components"></PageHeading>
 
                     <div className="pier-container">
                         <div className="component-grid -p-v-8">

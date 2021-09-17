@@ -136,7 +136,7 @@ function ColorCardGradient({ title, color, hex }) {
 export default function LayoutPage({ appData }) {
     const breadcrumbs = [
         { label: 'Home', link: '/', disabled: false },
-        { label: 'Abstracts', link: '', disabled: false },
+        { label: 'Abstracts', link: '/abstracts', disabled: false },
         { label: 'Colors', link: '', disabled: true },
     ];
 

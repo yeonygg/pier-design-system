@@ -114,11 +114,12 @@ export default function ComponentPage({ appData, component }) {
         });
         initValue = initValue.replace(/(;\n)/, '');
         const [state, setstate] = useState(initValue);
+        const [dark, setDark] = useState(false);
 
         return (
             <Fragment>
-                <Card className="-m-b-0 -br-b-0">
-                    <Section>
+                <Card className="-m-b-0 -br-b-0" dark={dark}>
+                    <Section className="-p-b-9">
                         <JsxParser
                             components={{
                                 Accordion,
@@ -164,6 +165,18 @@ export default function ComponentPage({ appData, component }) {
                             jsx={state}
                         ></JsxParser>
                     </Section>
+                    <div style={{ position: 'absolute', right: '0', bottom: '0', display: 'flex', alignItems: 'center' }} className="-m-r-2">
+                        <Label size="sm" className="-d-inline -m-r-3 -m-b-0">
+                            Dark UI
+                        </Label>
+                        <InputToggle
+                            size="sm"
+                            value={dark}
+                            onChange={() => {
+                                setDark(!dark);
+                            }}
+                        ></InputToggle>
+                    </div>
                 </Card>
                 <Well className="-m-b-0 -br-t-0" style={{ marginTop: '-1px' }}>
                     <Accordion title="JSX" icon="far fa-code" inCard startOpen size="xs" className="-m-b-0">
@@ -253,13 +266,13 @@ export default function ComponentPage({ appData, component }) {
                                 <JSXCodeEditor code={component['react-demo']}></JSXCodeEditor>
                             </Section>
                             {component['react-components'].map((item) => (
-                                <Section>
-                                    <Card>
+                                <Section key={item.name}>
+                                    <Card className="-p-b-4">
                                         <Section className="-p-b-0">
                                             <Heading size="sm">{item.name}</Heading>
                                         </Section>
                                         {item.props.map((prop) => (
-                                            <Section className="-p-b-4 -p-t-4">
+                                            <Section className="-p-b-4 -p-t-4" key={prop.name}>
                                                 <div className="-d-flex -align-items-center -m-b-0">
                                                     <Label style={{ width: '120px' }} className="-m-b-0">
                                                         Prop Name

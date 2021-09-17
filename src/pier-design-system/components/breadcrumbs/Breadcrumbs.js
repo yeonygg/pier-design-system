@@ -18,17 +18,19 @@ function Breadcrumbs({ children, maxCrumbs, dark, className, style }) {
                 lastCrumbs.push(children[x]);
             }
         }
-        return lastCrumbs.map((item) => item);
+        return lastCrumbs;
     };
 
     return (
         <div className={classes} style={style}>
             {isNaN(maxCrumbs) || maxCrumbs < 2 || maxCrumbs > children.length ? (
-                children
+                <Fragment>{children}</Fragment>
             ) : (
                 <Fragment>
                     {children[0]}
-                    <span className="pier-breadcrumbs__ellipsis" />
+                    <div className="pier-breadcrumbs__crumb">
+                        <span className="pier-breadcrumbs__ellipsis" />
+                    </div>
                     {getLastCrumbs()}
                 </Fragment>
             )}

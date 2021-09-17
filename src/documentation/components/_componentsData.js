@@ -5,12 +5,12 @@ import textCodeblock from './text-codeblock/_index';
 import link from './text-link/_index';
 import horizontalRule from './horizontal-rule/_index';
 import list from './list/_index';
-import breadcrumbs from './breadcrumbs/_index';
-import navigation from './navigation/_index';
+import breadcrumbs from './breadcrumbs/data';
+import navigation from './navigation/data';
 import tags from './tag/_index';
 import cards from './card/_index';
-import wells from './wells/_index';
-import bubbleMenu from './bubble-menu/_index';
+import wells from './well/_index';
+import bubbleMenu from './bubble-menu/data';
 import buttonHero from './button-hero/_index';
 import buttonStandard from './button-standard/_index';
 import buttonIcon from './button-icon/_index';
@@ -26,7 +26,9 @@ import table from './table/_index';
 import inputForm from './form/_index';
 import accordion from './accordion/data';
 import loadingSpinner from './loading-spinner/_index';
-import toolTip from './tooltip/_index';
+import toolTip from './tooltip/data';
+import section from './section/data';
+import screen from './screen/data';
 
 let componentsData = [];
 componentsData.push(
@@ -58,7 +60,9 @@ componentsData.push(
     inputCombo,
     accordion,
     loadingSpinner,
-    toolTip
+    toolTip,
+    section,
+    screen
 );
 
 componentsData.sort(function (a, b) {

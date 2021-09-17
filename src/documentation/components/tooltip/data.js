@@ -1,0 +1,130 @@
+import { base, sizes, position, dark } from './variations';
+import { reactDemo } from './reactDemo';
+
+export default {
+    title: 'Tooltip',
+    slug: 'tooltip',
+    description: 'Tooltips are used to display useful information on hover of a page element.',
+    'last-updated': '9/17/21',
+    image: '/component_icons/tooltip.svg',
+    imageColor: '/component_icons/tooltip_ro.svg',
+    variations: [
+        {
+            name: 'Base',
+            description: '',
+            markup: base,
+            dark: false,
+        },
+        {
+            name: 'Sizes',
+            description: '',
+            markup: sizes,
+            dark: false,
+        },
+        {
+            name: 'Position',
+            description: '',
+            markup: position,
+            dark: false,
+        },
+        {
+            name: 'Dark',
+            description: '',
+            markup: dark,
+            dark: true,
+        },
+    ],
+    'react-import': `import { Tooltip } from "pier-design-system"`,
+    'react-components': [
+        {
+            name: '<Tooltip>',
+            props: [
+                {
+                    name: 'children',
+                    type: 'node',
+                    isRequired: true,
+                    default: '',
+                    description: 'The element you want the Tooltip to be displayed on.',
+                },
+                {
+                    name: 'text',
+                    type: 'string',
+                    isRequired: true,
+                    default: '',
+                    description: 'The text displayed inside the Tooltip.',
+                },
+                {
+                    name: 'open',
+                    type: 'bool',
+                    isRequired: false,
+                    default: false,
+                    description: 'Sets the Tooltip state to open.',
+                },
+                {
+                    name: 'size',
+                    type: `string; one of: "md", "lg"`,
+                    isRequired: false,
+                    default: 'md',
+                    description: 'Set the size of the Tooltip.',
+                },
+                {
+                    name: 'position',
+                    type: `string; one of 'top', 'right', 'left', 'bottom'`,
+                    isRequired: false,
+                    default: 'top',
+                    description: 'Sets the position of the Tooltip.',
+                },
+                {
+                    name: 'disabled',
+                    type: 'bool',
+                    isRequired: false,
+                    default: false,
+                    description: 'Sets the position of the Tooltip.',
+                },
+                {
+                    name: 'dark',
+                    type: 'bool',
+                    isRequired: false,
+                    default: false,
+                    description: "Set the Tooltip to it's dark theme.",
+                },
+                {
+                    name: 'onClick',
+                    type: 'function',
+                    isRequired: false,
+                    default: '',
+                    description: 'Execute the defined function on Tooltip click.',
+                },
+                {
+                    name: 'onMouseEnter',
+                    type: 'function',
+                    isRequired: false,
+                    default: '',
+                    description: 'Execute the defined function on Tooltip mouse enter.',
+                },
+                {
+                    name: 'onMouseLeave',
+                    type: 'function',
+                    isRequired: false,
+                    default: '',
+                    description: 'Execute the defined function on Tooltip mouse leave.',
+                },
+                {
+                    name: 'className',
+                    type: 'string',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add classes onto the Tooltip.',
+                },
+                {
+                    name: 'style',
+                    type: 'object',
+                    isRequired: false,
+                    default: '',
+                    description: 'Add extra styling onto the Tooltip.',
+                },
+            ],
+        },
+    ],
+    'react-demo': reactDemo,
+};

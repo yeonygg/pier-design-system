@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
 
-function BreadcrumbsLink({ children, className, style }) {
+function BreadcrumbsLink({ children, disabled, onClick, className, style }) {
     let prefix = 'pier-breadcrumbs__crumb',
-        classes = prefix;
+        classes = prefix,
+        linkClasses;
 
+    disabled ? (linkClasses = 'pier-link--disabled') : (linkClasses = 'pier-link');
     className && (classes += ` ${className}`);
 
     return (
-        <div className={classes} style={style}>
-            {children}
+        <div onClick={onClick} className={classes} style={style}>
+            <span className={linkClasses}>{children}</span>
         </div>
     );
 }

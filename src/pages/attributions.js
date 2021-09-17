@@ -25,7 +25,7 @@ export default function Home({ appData }) {
             </Head>
             <Layout appData={appData}>
                 <BodyContent>
-                    <PageHeading breadcrumbs={breadcrumbs} title="Attributions" lastUpdated="7/16/2021" description="The Pier Design System team"></PageHeading>
+                    <PageHeading breadcrumbs={breadcrumbs} title="Attributions"></PageHeading>
 
                     <a>
                         {' '}

@@ -7,21 +7,20 @@ import Breadcrumbs from 'src/pier-design-system/components/breadcrumbs/Breadcrum
 import BreadcrumbsLink from 'src/pier-design-system/components/breadcrumbs/BreadcrumbsLink';
 import Link from 'src/pier-design-system/components/text/Link';
 import HR from 'src/pier-design-system/components/horizonal-rule/HR';
+import { Fragment } from 'react';
 
 export default function PageHeading({ breadcrumbs, title, lastUpdated, description }) {
     return (
         <Section className="-p-b-0">
             <Breadcrumbs style={{ marginBottom: '16px' }}>
                 {breadcrumbs.map((item, i) => (
-                    <BreadcrumbsLink key={i}>
+                    <BreadcrumbsLink key={i} disabled={item.disabled}>
                         {!item.disabled ? (
                             <NextLink href={item.link}>
-                                <a>
-                                    <Link>{item.label}</Link>
-                                </a>
+                                <a>{item.label}</a>
                             </NextLink>
                         ) : (
-                            <Link disabled>{item.label}</Link>
+                            <Fragment>{item.label}</Fragment>
                         )}
                     </BreadcrumbsLink>
                 ))}
@@ -30,12 +29,14 @@ export default function PageHeading({ breadcrumbs, title, lastUpdated, descripti
                 <Heading style={{ paddingRight: '4px' }} className="-m-b-1">
                     {title}
                 </Heading>
-                <HR theme="hero" size="lg"/>
+                <HR theme="hero" size="lg" />
             </div>
-            <BodyText size="xs" color="light">
-                Last updated: {lastUpdated}
-            </BodyText>
-            <BodyText>{description}</BodyText>
+            {lastUpdated && (
+                <BodyText size="xs" color="light">
+                    Last updated: {lastUpdated}
+                </BodyText>
+            )}
+            {description && <BodyText>{description}</BodyText>}
         </Section>
     );
 }

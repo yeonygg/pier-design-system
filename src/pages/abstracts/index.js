@@ -25,12 +25,7 @@ export default function Home({ appData }) {
             </Head>
             <Layout appData={appData}>
                 <BodyContent>
-                    <PageHeading
-                        breadcrumbs={breadcrumbs}
-                        title="Abstracts"
-                        lastUpdated="7/16/2021"
-                        description="This is a list of Abstracts pages for Pier Design System."
-                    ></PageHeading>
+                    <PageHeading breadcrumbs={breadcrumbs} title="Abstracts"></PageHeading>
                     <NextLink href={'/abstracts/grid'}>
                         <a>
                             {' '}
