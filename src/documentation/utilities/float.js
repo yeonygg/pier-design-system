@@ -1,5 +1,3 @@
-import left from '../components/tooltip/left';
-
 export default {
     title: 'Float',
     slug: 'float',
