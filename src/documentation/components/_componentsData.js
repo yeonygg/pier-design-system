@@ -20,7 +20,7 @@ import inputCombo from './input-combo/_index';
 import inputTextarea from './input-textarea/_index';
 import inputSelect from './input-select/_index';
 import inputCheckbox from './input-checkbox/data';
-import inputRadio from './input-radio/_index';
+import inputRadio from './input-radio/data';
 import inputToggle from './input-toggle/_index';
 import table from './table/_index';
 import inputForm from './form/data';
