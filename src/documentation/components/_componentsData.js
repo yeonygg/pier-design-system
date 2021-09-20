@@ -13,7 +13,7 @@ import wells from './well/_index';
 import bubbleMenu from './bubble-menu/data';
 import buttonHero from './button-hero/data';
 import buttonStandard from './button-standard/data';
-import buttonIcon from './button-icon/_index';
+import buttonIcon from './button-icon/data';
 import inputText from './input-text/_index';
 import inputGroup from './input-group/_index';
 import inputCombo from './input-combo/_index';
