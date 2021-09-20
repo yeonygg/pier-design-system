@@ -28,8 +28,15 @@ export const reactDemo = jsxToString(
         </div>
         <InputGroup label="radio Input label">
             <Label>radio Input label</Label>
-            <InputRadio className="-m-r-10">Test 1</InputRadio> <InputRadio className="-m-r-10">Test 2</InputRadio>
-            <InputRadio className="-m-r-10">Test 3</InputRadio>
+            <InputRadio className="-m-r-10" name="example-1">
+                Test 1
+            </InputRadio>{' '}
+            <InputRadio className="-m-r-10" name="example-1">
+                Test 2
+            </InputRadio>
+            <InputRadio className="-m-r-10" name="example-1">
+                Test 3
+            </InputRadio>
             <BodyText size="xs" className="-c-gray-3">
                 *required
             </BodyText>
