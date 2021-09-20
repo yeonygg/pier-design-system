@@ -26,6 +26,7 @@ InputGroup.defaultProps = {};
 InputGroup.propTypes = {
     children: PropTypes.node.isRequired,
     htmlFor: PropTypes.string,
+    label: PropTypes.string,
     size: PropTypes.oneOf(['sm', 'md', 'lg']),
     error: PropTypes.bool,
     dark: PropTypes.bool,

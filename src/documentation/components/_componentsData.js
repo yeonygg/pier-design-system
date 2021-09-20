@@ -23,7 +23,7 @@ import inputCheckbox from './input-checkbox/_index';
 import inputRadio from './input-radio/_index';
 import inputToggle from './input-toggle/_index';
 import table from './table/_index';
-import inputForm from './form/_index';
+import inputForm from './form/data';
 import accordion from './accordion/data';
 import loadingSpinner from './loading-spinner/_index';
 import toolTip from './tooltip/data';
