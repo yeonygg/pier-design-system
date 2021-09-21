@@ -15,7 +15,7 @@ import buttonHero from './button-hero/data';
 import buttonStandard from './button-standard/data';
 import buttonIcon from './button-icon/data';
 import inputText from './input-text/_index';
-import inputGroup from './input-group/_index';
+import inputGroup from './input-group/data';
 import inputCombo from './input-combo/data';
 import inputTextarea from './input-textarea/_index';
 import inputSelect from './input-select/_index';
