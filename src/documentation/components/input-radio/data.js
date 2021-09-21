@@ -18,7 +18,7 @@ export default {
         {
             name: 'Sizes',
             description:
-                'Use the modifier classes <code class="pier-body-text__inline-code">pier-input-radio--xs</code>, <code class="pier-body-text__inline-code">pier-input-radio--sm</code>, <code class="pier-body-text__inline-code">pier-input-radio--md</code>, or <code class="pier-body-text__inline-code">pier-input-radio--lg</code> to change the size of the input-radio.',
+                'Use the modifier classes <code class="pier-body-text__inline-code">pier-input-radio--sm</code>, <code class="pier-body-text__inline-code">pier-input-radio--md</code>, or <code class="pier-body-text__inline-code">pier-input-radio--lg</code> to change the size of the input-radio.',
             markup: sizes,
             dark: false,
         },

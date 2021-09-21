@@ -17,7 +17,7 @@ import buttonIcon from './button-icon/data';
 import inputText from './input-text/data';
 import inputGroup from './input-group/data';
 import inputCombo from './input-combo/data';
-import inputTextarea from './input-textarea/_index';
+import inputTextarea from './input-textarea/data';
 import inputSelect from './input-select/data';
 import inputCheckbox from './input-checkbox/data';
 import inputRadio from './input-radio/data';

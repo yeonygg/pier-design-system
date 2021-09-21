@@ -18,7 +18,7 @@ export default {
         {
             name: 'Sizes',
             description:
-                'Use the modifier classes <code class="pier-body-text__inline-code">pier-input-group--xs</code>, <code class="pier-body-text__inline-code">pier-input-group--sm</code>, <code class="pier-body-text__inline-code">pier-input-group--md</code>, or <code class="pier-body-text__inline-code">pier-input-group--lg</code> to change the size of the input-group.',
+                'Use the modifier classes <code class="pier-body-text__inline-code">pier-input-group--sm</code>, <code class="pier-body-text__inline-code">pier-input-group--md</code>, or <code class="pier-body-text__inline-code">pier-input-group--lg</code> to change the size of the input-group.',
             markup: sizes,
             dark: false,
         },

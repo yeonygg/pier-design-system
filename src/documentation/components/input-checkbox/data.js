@@ -25,7 +25,7 @@ export default {
         {
             name: 'Sizes',
             description:
-                'Use the modifier classes <code class="pier-body-text__inline-code">pier-input-checkbox--xs</code>, <code class="pier-body-text__inline-code">pier-input-checkbox--sm</code>, <code class="pier-body-text__inline-code">pier-input-checkbox--md</code>, or <code class="pier-body-text__inline-code">pier-input-checkbox--lg</code> to change the size of the input-checkbox.',
+                'Use the modifier classes <code class="pier-body-text__inline-code">pier-input-checkbox--sm</code>, <code class="pier-body-text__inline-code">pier-input-checkbox--md</code>, or <code class="pier-body-text__inline-code">pier-input-checkbox--lg</code> to change the size of the input-checkbox.',
             markup: sizes,
             dark: false,
         },
