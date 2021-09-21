@@ -1,6 +1,18 @@
 import { Fragment } from 'react';
+import ReactDOMServer from 'react-dom/server';
 
-export default (
+export const inputComboGroup = ReactDOMServer.renderToStaticMarkup(
+    <Fragment>
+        <div className="pier-input-combo">
+            <input className="pier-input-text pier-input-text--cap-left" type="text" placeholder="Enter Text" />
+            <button className="pier-button-hero pier-button-hero--cap-right">
+                <span className="pier-button-hero__content">Submit</span>
+            </button>
+        </div>
+    </Fragment>
+);
+
+export const inputSelectComboGroup = ReactDOMServer.renderToStaticMarkup(
     <Fragment>
         <div className="pier-input-combo">
             <select className="pier-input-select pier-input-select--cap-right" required>
