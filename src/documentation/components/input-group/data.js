@@ -4,7 +4,7 @@ import { reactDemo } from './reactDemo';
 export default {
     title: 'Input - Group',
     slug: 'input - group',
-    description: 'Input groups are used for commbining input elements with labels and validations',
+    description: 'Input groups are used for combining input elements with labels and validations',
     'last-updated': '9/20/21',
     image: '/component_icons/input-group.svg',
     imageColor: '/component_icons/input-group_ro.svg',
@@ -32,7 +32,7 @@ export default {
         {
             name: 'Dark',
             description:
-                'Use the modifier class <code class="pier-body-text__inline-code">pier-input-group--dark</code> to change the state of the input group to dark theme.',
+                'Use the modifier class <code class="pier-body-text__inline-code">pier-input-group--dark</code> to change the state of the input group to dark.',
             markup: dark,
             dark: true,
         },
