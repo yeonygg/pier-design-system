@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import BodyText from '../text/BodyText';
 import Label from '../text/Label';
 
 function InputGroup({ children, htmlFor, label, size, error, dark, className, style }) {
@@ -14,9 +13,7 @@ function InputGroup({ children, htmlFor, label, size, error, dark, className, st
                 {label}
             </Label>
             {children}
-            <BodyText size={size} dark={dark}>
-                {error}
-            </BodyText>
+            <p className="pier-input-group__validation">{error}</p>
         </div>
     );
 }
@@ -26,8 +23,9 @@ InputGroup.defaultProps = {};
 InputGroup.propTypes = {
     children: PropTypes.node.isRequired,
     htmlFor: PropTypes.string,
+    label: PropTypes.string,
     size: PropTypes.oneOf(['sm', 'md', 'lg']),
-    error: PropTypes.bool,
+    error: PropTypes.string,
     dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
