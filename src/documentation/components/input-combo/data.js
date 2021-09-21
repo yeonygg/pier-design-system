@@ -25,7 +25,7 @@ export default {
     'react-import': `import { InputCombo } from "pier-design-system"`,
     'react-components': [
         {
-            name: '<input combo>',
+            name: '<InputCombo>',
             props: [
                 {
                     name: 'children',

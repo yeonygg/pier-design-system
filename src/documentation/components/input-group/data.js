@@ -40,7 +40,7 @@ export default {
     'react-import': `import { InputGroup } from "pier-design-system"`,
     'react-components': [
         {
-            name: '<input group>',
+            name: '<InputGroup>',
             props: [
                 {
                     name: 'children',
@@ -78,18 +78,18 @@ export default {
                     description: 'Add extra styling onto the input group.',
                 },
                 {
-                    name: 'Sizes',
-                    description:
-                        'Use the modifier classes <code class="pier-body-text__inline-code">pier-input-group--xs</code>, <code class="pier-body-text__inline-code">pier-input-group--sm</code>, <code class="pier-body-text__inline-code">pier-input-group--md</code>, or <code class="pier-body-text__inline-code">pier-input-group--lg</code> to change the size of the input-group.',
-                    markup: sizes,
-                    dark: false,
+                    name: 'error',
+                    type: 'string',
+                    isRequired: false,
+                    default: 'false',
+                    description: 'Add validation text to the input group.',
                 },
                 {
-                    name: 'Error',
-                    description:
-                        'Use the modifier class <code class="pier-body-text__inline-code">pier-input-group--error</code> to change the state of the input group to error.',
-                    markup: error,
-                    dark: false,
+                    name: 'dark',
+                    type: 'bool',
+                    isRequired: false,
+                    default: false,
+                    description: "Set the input group to it's dark theme.",
                 },
             ],
         },

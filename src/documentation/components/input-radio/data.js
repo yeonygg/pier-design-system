@@ -54,7 +54,7 @@ export default {
     'react-import': `import { InputRadio } from "pier-design-system"`,
     'react-components': [
         {
-            name: '<input radio>',
+            name: '<InputRadio>',
             props: [
                 {
                     name: 'children',

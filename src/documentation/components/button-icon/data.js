@@ -54,7 +54,7 @@ export default {
     'react-import': `import { Button } from "pier-design-system"`,
     'react-components': [
         {
-            name: '<Button>',
+            name: '<ButtonIcon>',
             props: [
                 {
                     name: 'children',

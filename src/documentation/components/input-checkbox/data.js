@@ -68,7 +68,7 @@ export default {
     'react-import': `import { InputCheckbox } from "pier-design-system"`,
     'react-components': [
         {
-            name: '<input checkbox>',
+            name: '<InputCheckbox>',
             props: [
                 {
                     name: 'children',

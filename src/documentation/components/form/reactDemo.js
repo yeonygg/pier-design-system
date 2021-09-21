@@ -6,7 +6,7 @@ export const reactDemo = jsxToString(
         <InputGroup label="name">
             <InputText placeholder="Enter text"></InputText>
         </InputGroup>
-        <InputGroup label="select">
+        <InputGroup label="select" error="*required">
             <InputSelect>
                 {' '}
                 <option value="">Select your option</option>
@@ -17,14 +17,16 @@ export const reactDemo = jsxToString(
                 <option value="5">Option 5</option>
             </InputSelect>
         </InputGroup>
-        <Label>text input label</Label>
-        <InputTextArea className="-m-b-6" placeholder="Enter Text"></InputTextArea>
+        <InputGroup label="enter input text">
+            {' '}
+            <InputTextArea className="-m-b-6" placeholder="Enter Text"></InputTextArea>
+        </InputGroup>
+
         <div>
             {' '}
             <InputCheckbox className="-m-b-6 -m-r-10">Test 1</InputCheckbox> <InputCheckbox>Test 2</InputCheckbox>
         </div>
-        <InputGroup label="radio Input label">
-            <Label>radio Input label</Label>
+        <InputGroup label="radio Input label" error="*required">
             <InputRadio className="-m-r-10" name="example-1">
                 Test 1
             </InputRadio>{' '}
@@ -34,11 +36,10 @@ export const reactDemo = jsxToString(
             <InputRadio className="-m-r-10" name="example-1">
                 Test 3
             </InputRadio>
-            <BodyText size="xs" className="-c-gray-3">
-                *required
-            </BodyText>
         </InputGroup>
-        <InputToggle className="-m-b-6">Test Toggle</InputToggle>
+        <div>
+            <InputToggle className="-m-b-6">Test Toggle</InputToggle>
+        </div>
         <div>
             <Button>Submit</Button>
         </div>
