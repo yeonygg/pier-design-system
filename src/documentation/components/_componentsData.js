@@ -21,7 +21,7 @@ import inputTextarea from './input-textarea/data';
 import inputSelect from './input-select/data';
 import inputCheckbox from './input-checkbox/data';
 import inputRadio from './input-radio/data';
-import inputToggle from './input-toggle/_index';
+import inputToggle from './input-toggle/data';
 import table from './table/_index';
 import inputForm from './form/data';
 import accordion from './accordion/data';
