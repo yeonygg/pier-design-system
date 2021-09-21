@@ -3,10 +3,10 @@ import { Form, Section, BodyText, Label, InputText, InputGroup, InputSelect, Inp
 
 export const reactDemo = jsxToString(
     <Form>
-        <Label>NAME</Label>
-        <InputText className="-m-b-6" placeholder="Enter Text"></InputText>
-        <InputGroup>
-            <Label>select</Label>
+        <InputGroup label="name">
+            <InputText placeholder="Enter text"></InputText>
+        </InputGroup>
+        <InputGroup label="select">
             <InputSelect>
                 {' '}
                 <option value="">Select your option</option>
@@ -16,9 +16,6 @@ export const reactDemo = jsxToString(
                 <option value="4">Option 4</option>
                 <option value="5">Option 5</option>
             </InputSelect>
-            <BodyText size="xs" className="-c-gray-3">
-                *required
-            </BodyText>
         </InputGroup>
         <Label>text input label</Label>
         <InputTextArea className="-m-b-6" placeholder="Enter Text"></InputTextArea>

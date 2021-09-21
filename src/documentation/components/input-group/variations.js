@@ -43,8 +43,8 @@ export const error = ReactDOMServer.renderToStaticMarkup(
 
 export const dark = ReactDOMServer.renderToStaticMarkup(
     <Fragment>
-        <div className="pier-input-group">
-            <h4 className="pier-label pier-label--dark-icon">Text Input Label</h4>
+        <div className="pier-input-group pier-input-group--dark">
+            <h4 className="pier-label pier-label--dark">Text Input Label</h4>
             <input className="pier-input-text pier-input-text--dark" type="text" placeholder="Enter Text" />
             <p className="pier-input-group__validation">*required</p>
         </div>
