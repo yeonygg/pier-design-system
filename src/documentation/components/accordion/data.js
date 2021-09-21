@@ -11,8 +11,7 @@ export default {
     variations: [
         {
             name: 'Base',
-            description:
-                'Use the base class <code class="pier-body-text__inline-code">pier-accordion</code> that wraps two elements <code class="pier-body-text__inline-code">pier-accordion__title</code> and <code class="pier-body-text__inline-code">pier-accordion__content</code>. <code class="pier-body-text__inline-code">pier-accordion__title</code> should wrap the persistant header Accordion content and <code class="pier-body-text__inline-code">pier-accordion__content</code> should wrap the content that will be revealed on click.',
+            description: `Use the base class <code class="pier-body-text__inline-code">pier-accordion</code> that wraps two elements <code class="pier-body-text__inline-code">pier-accordion__title</code> and <code class="pier-body-text__inline-code">pier-accordion__content</code>. <code class="pier-body-text__inline-code">pier-accordion__title</code> should wrap the persistant header Accordion content and <code class="pier-body-text__inline-code">pier-accordion__content</code> should wrap the content that will be revealed on click.`,
             markup: base,
             dark: false,
         },

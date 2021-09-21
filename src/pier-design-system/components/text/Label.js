@@ -33,7 +33,7 @@ Label.defaultProps = {
 
 Label.propTypes = {
     children: PropTypes.node.isRequired,
-    forInput: PropTypes.string,
+    htmlFor: PropTypes.string,
     size: PropTypes.oneOf(['sm', 'md', 'lg']),
     dark: PropTypes.bool,
     className: PropTypes.string,

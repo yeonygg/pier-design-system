@@ -1,24 +1,7 @@
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-function Tag({
-    children,
-    size,
-    theme,
-    dark,
-    disabled,
-    pill,
-    isStatic,
-    onClick,
-    className,
-    style,
-    onChange,
-    onMouseEnter,
-    onMouseLeave,
-    onFocus,
-    onHover,
-    onBlur,
-}) {
+function Tag({ children, size, theme, dark, disabled, pill, isStatic, onClick, onMouseEnter, onMouseLeave, onFocus, onBlur, className, style }) {
     let prefix = 'pier-tag',
         classes = prefix;
 
@@ -63,7 +46,16 @@ function Tag({
                     {children}
                 </span>
             ) : (
-                <span className={classes} style={style} onClick={onClick} tabIndex="0">
+                <span
+                    className={classes}
+                    style={style}
+                    onClick={onClick}
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                    onBlur={onBlur}
+                    onFocus={onFocus}
+                    tabIndex="0"
+                >
                     {children}
                 </span>
             )}
@@ -80,6 +72,7 @@ Tag.propTypes = {
     children: PropTypes.node.isRequired,
     size: PropTypes.oneOf(['sm', 'md', 'lg']),
     theme: PropTypes.oneOf(['default', 'hero', 'primary']),
+    isStatic: PropTypes.bool,
     dark: PropTypes.bool,
     disabled: PropTypes.bool,
     onClick: PropTypes.func,
@@ -88,9 +81,7 @@ Tag.propTypes = {
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
     onBlur: PropTypes.func,
-    onChange: PropTypes.func,
     onFocus: PropTypes.func,
-    onHover: PropTypes.func,
 };
 
 export default Tag;

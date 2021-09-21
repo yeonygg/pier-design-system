@@ -63,6 +63,8 @@ import {
 
 //We must import all the Pier react components on this page in order for the interactive jsx editor to work.
 
+//JSX Parser is having an issue rendering some of the components. A workaround is going to be needed in the future.
+
 export default function ComponentPage({ appData, component }) {
     const breadcrumbs = [
         { label: 'Home', link: '/', disabled: false },
@@ -120,6 +122,9 @@ export default function ComponentPage({ appData, component }) {
             <Fragment>
                 <Card className="-m-b-0 -br-b-0" dark={dark}>
                     <Section className="-p-b-9">
+                        <Label size="sm" className="-m-b-4">
+                            *JSX Parser may not render the correct way.
+                        </Label>
                         <JsxParser
                             components={{
                                 Accordion,
