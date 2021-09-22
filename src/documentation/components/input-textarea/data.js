@@ -4,7 +4,7 @@ import { reactDemo } from './reactDemo';
 export default {
     title: 'Input - Textarea',
     slug: 'input - textarea',
-    description: 'Input textareas are used for choosing an option from a dropdown',
+    description: 'Input textareas are used for typing information requiring 1 sentence or more into a user text field.',
     'last-updated': '9/21/21',
     image: '/component_icons/input-textarea.svg',
     imageColor: '/component_icons/input-textarea_ro.svg',

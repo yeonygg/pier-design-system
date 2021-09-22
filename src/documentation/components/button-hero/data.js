@@ -4,7 +4,7 @@ import { reactDemo } from './reactDemo';
 export default {
     title: 'Button - Hero',
     slug: 'button - hero',
-    description: 'Buttons are used for directing user to another action',
+    description: 'Buttons - hero is the primary button of pier design system defined the primaryBoulevard gradient',
     'last-updated': '9/20/21',
     image: '/component_icons/button-hero.svg',
     imageColor: '/component_icons/button-hero_ro.svg',

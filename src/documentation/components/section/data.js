@@ -6,8 +6,8 @@ export default {
     slug: 'section',
     description: 'The Section component is used to group content on the webpage with padding.',
     'last-updated': '9/17/21',
-    image: '',
-    imageColor: '',
+    image: '/component_icons/section.svg',
+    imageColor: '/component_icons/section_ro.svg',
     variations: [
         {
             name: 'Structure',

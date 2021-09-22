@@ -6,8 +6,8 @@ export default {
     slug: 'screen',
     description: 'The Screen component is used as a fixed container to the browser viewport.',
     'last-updated': '9/17/21',
-    image: '',
-    imageColor: '',
+    image: '/component_icons/screen.svg',
+    imageColor: '/component_icons/screen_ro.svg',
     variations: [
         {
             name: 'Structure',

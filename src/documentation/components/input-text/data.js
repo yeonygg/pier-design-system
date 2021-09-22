@@ -4,7 +4,7 @@ import { reactDemo } from './reactDemo';
 export default {
     title: 'Input - Text',
     slug: 'input - text',
-    description: 'Input texts are used for choosing an option from a dropdown',
+    description: 'Input texts are used for typing information into a user text field.',
     'last-updated': '9/21/21',
     image: '/component_icons/input-text.svg',
     imageColor: '/component_icons/input-text_ro.svg',

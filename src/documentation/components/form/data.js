@@ -4,7 +4,7 @@ import { reactDemo } from './reactDemo';
 export default {
     title: 'Form',
     slug: 'form',
-    description: 'forms are used for directing user to another action',
+    description: 'Forms are a user interface (UI) element that allows the user to send information to a server.',
     'last-updated': '9/20/21',
     image: '/component_icons/form.svg',
     imageColor: '/component_icons/form_ro.svg',

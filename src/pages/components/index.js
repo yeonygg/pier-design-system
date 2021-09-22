@@ -25,7 +25,7 @@ export default function ComponentsIndex({ appData }) {
         const [isShown, setIsShown] = useState(false);
         return (
             <div onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>
-                <Card isLink onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} style={{ height: '340px' }}>
+                <Card isLink onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} style={{ height: '400px' }}>
                     <Section>
                         {
                             <img

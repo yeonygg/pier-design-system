@@ -4,7 +4,7 @@ import { reactDemo } from './reactDemo';
 export default {
     title: 'Input - Combo',
     slug: 'input - combo',
-    description: 'Combo inputs are used for commbining input elements with button elements',
+    description: 'Combo inputs are used for combining input elements with button elements',
     'last-updated': '9/20/21',
     image: '/component_icons/input-combo.svg',
     imageColor: '/component_icons/input-combo_ro.svg',
