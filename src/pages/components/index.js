@@ -72,6 +72,7 @@ export default function ComponentsIndex({ appData }) {
                                                 image={item.image}
                                                 imageColor={item.imageColor}
                                                 description={item.description}
+                                                style={{ width: '33%' }}
                                             ></ComponentCard>
                                         </a>
                                     </NextLink>
