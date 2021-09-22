@@ -4,7 +4,7 @@ import { reactDemo } from './reactDemo';
 export default {
     title: 'Button - Standard',
     slug: 'button - standard',
-    description: 'Button - Standard is the secondary button of pier design system defined the primary cyan color',
+    description: 'Button - Standard is the secondary button defined by the primary cyan color',
     'last-updated': '9/20/21',
     image: '/component_icons/button-hero.svg',
     imageColor: '/component_icons/button-standard_ro.svg',

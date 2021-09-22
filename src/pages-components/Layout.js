@@ -95,9 +95,9 @@ export default function Layout({ children, appData }) {
                                 </NavItemDropdown>
                             </NavItemContainer>
 
-                            <NextLink href="/attributions">
+                            <NextLink href="/credits">
                                 <a>
-                                    <NavItem icon="fas fa-thumbs-up">Attributions</NavItem>
+                                    <NavItem icon="fas fa-thumbs-up">Credits</NavItem>
                                 </a>
                             </NextLink>
                         </NavItemGroup>

@@ -4,7 +4,7 @@ import { reactDemo } from './reactDemo';
 export default {
     title: 'Button - Icon',
     slug: 'button - icon',
-    description: 'Button - Icon is a button using only icons',
+    description: 'Button - Icon is a button that contains an icon and no accompanying text.',
     'last-updated': '9/20/21',
     image: '/component_icons/button-icon.svg',
     imageColor: '/component_icons/button-icon_ro.svg',
