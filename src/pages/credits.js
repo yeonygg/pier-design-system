@@ -34,12 +34,15 @@ export default function Home({ appData }) {
                             </BodyText>
                         </Section>
                         <Section>
-                            <Heading size="sm">Contributers to Pier Design System</Heading>
-                            <div className="-d-flex -flex-wrap">
-                                <Card style={{ width: '50%' }}>
-                                    <div className="-d-flex -p-l-6">
+                            <Heading size="sm" className="-m-b-10">
+                                Contributers to Pier Design System
+                            </Heading>
+
+                            <div className="pier-colorbox pier-colorbox--card">
+                                <Card style={{ height: '175px' }} className="-m-r-5 -d-flex  -align-items-center">
+                                    <div className=" -d-flex -p-h-8">
                                         {' '}
-                                        <img src="/avatar.svg" alt="" style={{ width: '10%' }} />
+                                        <img src="/avatar.svg" alt="" style={{ width: '18%' }} />
                                         <Heading size="xs" className="pier-fonts -p-t-6 -p-l-10">
                                             Jarrod Dowalter
                                             <BodyText size="md" className="pier-fonts">
@@ -48,10 +51,10 @@ export default function Home({ appData }) {
                                         </Heading>
                                     </div>
                                 </Card>
-                                <Card style={{ width: '50%' }}>
-                                    <div className="-d-flex -p-l-6">
+                                <Card style={{ height: '175px' }} className=" -d-flex  -align-items-center">
+                                    <div className="-d-flex -p-h-8">
                                         {' '}
-                                        <img src="/avatar.svg" alt="" style={{ width: '10%' }} />
+                                        <img src="/avatar.svg" alt="" style={{ width: '18%' }} />
                                         <Heading size="xs" className="pier-fonts -p-t-6 -p-l-10">
                                             Yeony Choi
                                             <BodyText size="md" className="pier-fonts">
@@ -60,10 +63,12 @@ export default function Home({ appData }) {
                                         </Heading>
                                     </div>
                                 </Card>
+                            </div>
 
-                                <Card style={{ width: '50%' }}>
-                                    <div className="-d-flex -p-l-6">
-                                        <img src="/avatar.svg" alt="" style={{ width: '10%' }} />
+                            <div className="pier-colorbox pier-colorbox--card">
+                                <Card style={{ height: '175px' }} className="-m-r-5 -d-flex  -align-items-center">
+                                    <div className="-d-flex -p-h-8">
+                                        <img src="/avatar.svg" alt="" style={{ width: '18%' }} />
                                         <Heading size="xs" className="pier-fonts -p-t-6 -p-l-10">
                                             Dan McKenna
                                             <BodyText size="md" className="pier-fonts">
@@ -72,10 +77,10 @@ export default function Home({ appData }) {
                                         </Heading>
                                     </div>
                                 </Card>
-                                <Card style={{ width: '50%' }}>
-                                    <div className="-d-flex -p-l-6">
+                                <Card style={{ height: '175px' }} className="-d-flex  -align-items-center">
+                                    <div className="-d-flex -p-h-8">
                                         {' '}
-                                        <img src="/avatar.svg" alt="" style={{ width: '10%' }} />
+                                        <img src="/avatar.svg" alt="" style={{ width: '18%' }} />
                                         <Heading size="xs" className="pier-fonts -p-t-6 -p-l-10">
                                             Liam King
                                             <BodyText size="md" className="pier-fonts">
