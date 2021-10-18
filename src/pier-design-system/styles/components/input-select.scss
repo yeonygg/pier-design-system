@@ -71,7 +71,7 @@ $default-size: md;
 
     &:hover {
         border: 1px solid map-get($colorsRed, dark-1);
-        background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23BCC5CA' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23#{strip-hash(map-get($colorsRed, dark-1))}' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
     }
 
     &:focus {
@@ -89,7 +89,6 @@ $default-size: md;
 }
 
 .pier-input-select--cap-right {
-
     border-right: none;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
@@ -100,7 +99,6 @@ $default-size: md;
 }
 
 .pier-input-select--cap {
-
     border-right: none;
     border-radius: 0;
 
@@ -110,7 +108,6 @@ $default-size: md;
 }
 
 .pier-input-select--cap-left {
-
     border-left: none;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
@@ -155,7 +152,9 @@ $default-size: md;
     }
 
     &:hover {
-        border: 1px solid map-get($colorsRed, dark-2);
+        color: map-get($colorsRed, dark-1);
+        border: 1px solid map-get($colorsRed, dark-1);
+        background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='far' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23#{strip-hash(map-get($colorsRed, default))}' d='M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z'%3E%3C/path%3E%3C/svg%3E");
     }
 
     &:focus {

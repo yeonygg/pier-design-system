@@ -41,18 +41,18 @@ export const disabled = ReactDOMServer.renderToStaticMarkup(
 
 export const error = ReactDOMServer.renderToStaticMarkup(
     <Fragment>
-        <input className="pier-input-textarea pier-input-textarea--error" type="text" placeholder="Error" />
+        <textarea className="pier-input-textarea pier-input-textarea--error" type="text" placeholder="Error" />
     </Fragment>
 );
 
 export const dark = ReactDOMServer.renderToStaticMarkup(
     <Fragment>
-        <input className="pier-input-textarea pier-input-textarea--dark" type="text" placeholder="Enter Text" />
+        <textarea className="pier-input-textarea pier-input-textarea--dark" type="text" placeholder="Enter Text" />
     </Fragment>
 );
 
 export const errorDark = ReactDOMServer.renderToStaticMarkup(
     <Fragment>
-        <input className="pier-input-textarea pier-input-textarea--dark pier-input-textarea--error" type="text" placeholder="Enter Text" />
+        <textarea className="pier-input-textarea pier-input-textarea--dark pier-input-textarea--error" type="text" placeholder="Enter Text" />
     </Fragment>
 );

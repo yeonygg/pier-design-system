@@ -1,189 +1,179 @@
 $default-size: md;
 
 .pier-button-standard {
-  display: inline-flex;
-  font-family: $font-family;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: none;
-  background: map-fetch($colorsCyan, default);
-  color: map-fetch($colorsGrays, white);
-  cursor: pointer;
-  height: map-fetch($input-heights, ($default-size, desktop));
-  border-radius: map-fetch($input-border-radii, $default-size);
-  padding: 0 map-fetch($button-padding, ($default-size, desktop));
-  font-size: map-fetch($input-text-sizes, ($default-size, desktop));
+    display: inline-flex;
+    font-family: $font-family;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    background: map-fetch($colorsCyan, default);
+    color: map-fetch($colorsGrays, white);
+    cursor: pointer;
+    height: map-fetch($input-heights, ($default-size, desktop));
+    border-radius: map-fetch($input-border-radii, $default-size);
+    padding: 0 map-fetch($button-padding, ($default-size, desktop));
+    font-size: map-fetch($input-text-sizes, ($default-size, desktop));
 
-  @include build-media-query(mobile) {
-    height: map-fetch($input-heights, ($default-size, mobile));
-    padding: 0 map-fetch($button-padding, ($default-size, mobile));
-    font-size: map-fetch($input-text-sizes, ($default-size, mobile));
-  }
+    @include build-media-query(mobile) {
+        height: map-fetch($input-heights, ($default-size, mobile));
+        padding: 0 map-fetch($button-padding, ($default-size, mobile));
+        font-size: map-fetch($input-text-sizes, ($default-size, mobile));
+    }
 
-  &:hover {
-    background: map-fetch($colorsCyan, light-1);
-    -webkit-transition-duration: 0.2s, 0.2s;
-    -webkit-transition-timing-function: linear, ease-in;
-  }
+    &:hover {
+        background: map-fetch($colorsCyan, light-1);
+        -webkit-transition-duration: 0.2s, 0.2s;
+        -webkit-transition-timing-function: linear, ease-in;
+    }
 
-  &:active {
-    transform: scale(0.99);
-    background: map-fetch($colorsCyan, dark-1);
-  }
+    &:active {
+        transform: scale(0.99);
+        background: map-fetch($colorsCyan, dark-1);
+    }
 
-  &:focus {
-    box-shadow: 1px 1px 5px rgba(0, 191, 232, 0.4);
-    -webkit-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-3);
-    -moz-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-3);
-    box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-3);
-    -webkit-transition-duration: 0.2s, 0.2s;
-    -webkit-transition-timing-function: linear, ease-in;
-  }
+    &:focus {
+        box-shadow: 1px 1px 5px rgba(0, 191, 232, 0.4);
+        -webkit-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-3);
+        -moz-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-3);
+        box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-3);
+        -webkit-transition-duration: 0.2s, 0.2s;
+        -webkit-transition-timing-function: linear, ease-in;
+    }
 }
 
 .pier-button-standard__icon {
-  margin-right: calc(#{map-fetch($input-text-sizes, ($default-size, desktop))} / 2);
+    margin-right: calc(#{map-fetch($input-text-sizes, ($default-size, desktop))} / 2);
 }
 
 @each $prefix, $size in $input-heights {
-  .pier-button-standard--#{$prefix} {
-    height: map-fetch($input-heights, ($prefix, desktop));
-    border-radius: map-fetch($input-border-radii, $prefix);
-    padding: 0 map-fetch($button-padding, ($prefix, desktop));
-    font-size: map-fetch($input-text-sizes, ($prefix, desktop));
+    .pier-button-standard--#{$prefix} {
+        height: map-fetch($input-heights, ($prefix, desktop));
+        border-radius: map-fetch($input-border-radii, $prefix);
+        padding: 0 map-fetch($button-padding, ($prefix, desktop));
+        font-size: map-fetch($input-text-sizes, ($prefix, desktop));
 
-    @include build-media-query(mobile) {
-      height: map-fetch($input-heights, ($prefix, mobile));
-      padding: 0 map-fetch($button-padding, ($prefix, mobile));
-      font-size: map-fetch($input-text-sizes, ($prefix, mobile));
+        @include build-media-query(mobile) {
+            height: map-fetch($input-heights, ($prefix, mobile));
+            padding: 0 map-fetch($button-padding, ($prefix, mobile));
+            font-size: map-fetch($input-text-sizes, ($prefix, mobile));
+        }
     }
-  }
 }
 
 .pier-button-standard--disabled {
-  opacity: 0.4;
-  pointer-events: none;
+    opacity: 0.4;
+    pointer-events: none;
 }
 
 .pier-button-standard--pill {
-  border-radius: 100px;
+    border-radius: 100px;
 }
 
 .pier-button-standard--groupright {
-  border-bottom-left-radius: 0px;
-  border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
 }
 
 .pier-button-standard--secondary {
-  background: map-get($colorsGrays, white);
-  border: 1px solid map-fetch($colorsCyan, default);
-  color: map-fetch($colorsCyan, default);
-
-  &:hover {
-    background: map-fetch($colorsCyan, light-4);
+    background: map-get($colorsGrays, white);
     border: 1px solid map-fetch($colorsCyan, default);
-  }
+    color: map-fetch($colorsCyan, default);
 
-  &:focus {
-    border: 1px solid map-fetch($colorsCyan, light-2);
-  }
+    &:hover {
+        background: map-fetch($colorsCyan, light-4);
+        border: 1px solid map-fetch($colorsCyan, default);
+    }
 
-  &:active {
-    background: map-fetch($colorsCyan, light-3);
-  }
+    &:focus {
+        border: 1px solid map-fetch($colorsCyan, light-2);
+    }
+
+    &:active {
+        background: map-fetch($colorsCyan, light-3);
+    }
 }
 
 .pier-button-standard--secondary-dark {
-  background: transparent;
-
-  &:hover {
-    background: rgba(map-fetch($colorsCyan, default), 0.15);
-    border: 1px solid map-fetch($colorsCyan, default);
-  }
-
-  &:focus {
-    border: 1px solid map-fetch($colorsCyan, light-2);
-  }
-
-  &:active {
     background: transparent;
-  }
 
+    &:hover {
+        background: rgba(map-fetch($colorsCyan, default), 0.15);
+        border: 1px solid map-fetch($colorsCyan, default);
+    }
+
+    &:focus {
+        border: 1px solid map-fetch($colorsCyan, light-2);
+    }
+
+    &:active {
+        background: transparent;
+    }
 }
 
 .pier-button-standard--secondary.pier-button-standard--dark {
+    background: transparent;
 
-  background: transparent;
-
-  &:focus {
-
-    -webkit-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-2);
-    -moz-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-2);
-    box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-2);
-    -webkit-transition-duration: 0.2s, 0.2s;
-    -webkit-transition-timing-function: linear, ease-in;
-  }
+    &:focus {
+        -webkit-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-2);
+        -moz-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-2);
+        box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-2);
+        -webkit-transition-duration: 0.2s, 0.2s;
+        -webkit-transition-timing-function: linear, ease-in;
+    }
 }
 
 .pier-button-standard--dark {
-  
-  &:hover {
-    background: map-fetch($colorsCyan, dark-4);
-    border: 1px solid map-fetch($colorsCyan, default);
-    color: map-fetch($colorsCyan, default);
-  }
+    &:hover {
+        background: map-fetch($colorsCyan, dark-4);
+        border: 1px solid map-fetch($colorsCyan, default);
+        color: map-fetch($colorsCyan, default);
+    }
 
-  &:focus {
-    -webkit-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-2);
-    -moz-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-2);
-    box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-2);
-    -webkit-transition-duration: 0.2s, 0.2s;
-    -webkit-transition-timing-function: linear, ease-in;
-
-
-  }
+    &:focus {
+        -webkit-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-2);
+        -moz-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-2);
+        box-shadow: inset 0px 0px 0px 2px map-fetch($colorsCyan, light-2);
+        -webkit-transition-duration: 0.2s, 0.2s;
+        -webkit-transition-timing-function: linear, ease-in;
+    }
 }
 
-
 .pier-button-standard--error {
-  background: map-fetch($colorsRed, default);
+    background: map-fetch($colorsRed, default);
 
-  &:hover {
-    background: map-fetch($colorsRed, light-1);
-  }
+    &:hover {
+        background: map-fetch($colorsRed, light-1);
+    }
 
-  &:focus {
-    -webkit-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsRed, light-3);
-    -moz-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsRed, light-3);
-    box-shadow: inset 0px 0px 0px 2px map-fetch($colorsRed, light-3);
-    -webkit-transition-duration: 0.2s, 0.2s;
-    -webkit-transition-timing-function: linear, ease-in;
-  }
+    &:focus {
+        -webkit-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsRed, light-3);
+        -moz-box-shadow: inset 0px 0px 0px 2px map-fetch($colorsRed, light-3);
+        box-shadow: inset 0px 0px 0px 2px map-fetch($colorsRed, light-3);
+        -webkit-transition-duration: 0.2s, 0.2s;
+        -webkit-transition-timing-function: linear, ease-in;
+    }
 
-  &:active {
-    background: map-fetch($colorsRed, dark-1);
-  }
+    &:active {
+        background: map-fetch($colorsRed, dark-1);
+    }
 }
 
 .pier-button-standard--cap-right {
-  border-bottom-right-radius: 0px;
-  border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
 .pier-button-standard--cap {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 
 .pier-button-standard--cap-left {
-  border-bottom-left-radius: 0px;
-  border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
 }
 
 .pier-button-standard--block {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
-
-
-

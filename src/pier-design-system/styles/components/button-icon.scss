@@ -1,112 +1,114 @@
 $default-size: sm;
 
 .pier-button-icon {
-  display: inline-flex;
-  background: transparent;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: none;
-  color: map-get($colorsGrays, light-gray);
-  background: transparent;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-  height: map-fetch($input-heights, ($default-size, desktop));
-  width: map-fetch($input-heights, ($default-size, desktop));
-  border-radius: map-get($input-border-radii, $default-size);
-  font-size: map-fetch($input-icon-sizes, ($default-size, desktop));
+    display: inline-flex;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    color: map-get($colorsGrays, light-gray);
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    height: map-fetch($input-heights, ($default-size, desktop));
+    width: map-fetch($input-heights, ($default-size, desktop));
+    border-radius: map-get($input-border-radii, $default-size);
+    font-size: map-fetch($input-icon-sizes, ($default-size, desktop));
 
-  @include build-media-query(mobile) {
-    height: map-fetch($input-heights, ($default-size, mobile));
-	width: map-fetch($input-heights, ($default-size, mobile));
-    font-size: map-fetch($input-icon-sizes, ($default-size, mobile));
-  }
-
-  &:hover {
-    background: map-get($colorsGrays, light);
-    transform: scale(1.05);
-
-    .pier-button-icon__icon {
-      background: build-gradient(90deg, primaryBoulevard);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-	  filter: drop-shadow(0 1px 4px rgba(map-get($colorsGrays, white), 1)) drop-shadow(0 1px 16px rgba(map-get($colorsGrays, white), 1))
+    @include build-media-query(mobile) {
+        height: map-fetch($input-heights, ($default-size, mobile));
+        width: map-fetch($input-heights, ($default-size, mobile));
+        font-size: map-fetch($input-icon-sizes, ($default-size, mobile));
     }
-  }
 
-  &:focus {
-    box-shadow: 2px 0px 8px rgba(map-get($colorsCyan, default), .5), -2px 0px 8px rgba(map-get($colorsGreen, default), .5);
-  }
+    &:hover {
+        background: map-get($colorsGrays, light-3);
+        transform: scale(1.05);
 
-  &:active {
-    transform: scale(0.99);
-    background: map-get($colorsGrays, gray-4);
-  }
+        .pier-button-icon__icon {
+            background: build-gradient(90deg, primaryBoulevard);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 1px 4px rgba(map-get($colorsGrays, white), 1)) drop-shadow(0 1px 16px rgba(map-get($colorsGrays, white), 1));
+        }
+    }
+
+    &:focus {
+        box-shadow: 0px 0px 10px rgba(map-get($colorsCyan, default), 0.5);
+    }
+
+    &:active {
+        transform: scale(0.99);
+        background: map-get($colorsGrays, gray-4);
+    }
 }
 
 .pier-button-icon__icon {
-	transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 @each $prefix, $size in $input-heights {
-  .pier-button-icon--#{$prefix} {
-    height: map-fetch($input-heights, ($prefix, desktop));
-	width: map-fetch($input-heights, ($prefix, desktop));
-    border-radius: map-get($input-border-radii, $prefix);
-    font-size: map-fetch($input-icon-sizes, ($prefix, desktop));
+    .pier-button-icon--#{$prefix} {
+        height: map-fetch($input-heights, ($prefix, desktop));
+        width: map-fetch($input-heights, ($prefix, desktop));
+        border-radius: map-get($input-border-radii, $prefix);
+        font-size: map-fetch($input-icon-sizes, ($prefix, desktop));
 
-    @include build-media-query(mobile) {
-      height: map-fetch($input-heights, ($prefix, mobile));
-	  width: map-fetch($input-heights, ($prefix, mobile));
-      font-size: map-fetch($input-icon-sizes, ($prefix, mobile));
-
+        @include build-media-query(mobile) {
+            height: map-fetch($input-heights, ($prefix, mobile));
+            width: map-fetch($input-heights, ($prefix, mobile));
+            font-size: map-fetch($input-icon-sizes, ($prefix, mobile));
+        }
     }
-
-  }
 }
 
 .pier-button-icon--pill {
-  border-radius: 100px;
+    border-radius: 100px;
 }
 
 .pier-button-icon--disabled {
-  opacity: 0.4;
-  pointer-events: none;
+    opacity: 0.4;
+    pointer-events: none;
 }
 
 .pier-button-icon--dark {
-  color: map-get($colorsGrays, dark-1);
+    color: map-get($colorsGrays, dark-1);
 
-  &:hover {
-    background: map-get($colorsGrays, dark);
-	
-	.pier-button-icon__icon {
-		background: build-gradient(90deg, primaryBoulevard);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		filter: drop-shadow(0 1px 4px rgba(map-get($colorsGrays, black), .35)) drop-shadow(0 1px 16px rgba(map-get($colorsGrays, black), .35))
-	  }
-  }
+    &:hover {
+        background: map-get($colorsGrays, dark);
 
-  &:active {
-    background: map-get($colorsGrays, dark-3);
-  }
+        .pier-button-icon__icon {
+            background: build-gradient(90deg, primaryBoulevard);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 1px 4px rgba(map-get($colorsGrays, black), 0.35)) drop-shadow(0 1px 16px rgba(map-get($colorsGrays, black), 0.35));
+        }
+    }
+
+    &:active {
+        background: map-get($colorsGrays, dark-3);
+    }
 }
 
 .pier-button-icon--secondary {
-	background: map-fetch($colorsGrays, white);
-	border: 1px solid map-fetch($colorsGrays, light);
+    background: map-fetch($colorsGrays, white);
+    border: 1px solid map-fetch($colorsGrays, light);
 
-	&:active {
-		border: 1px solid map-fetch($colorsGrays, gray-4);
-	  }
+    &:active {
+        border: 1px solid map-fetch($colorsGrays, gray-4);
+    }
 }
 
 .pier-button-icon--secondary.pier-button-icon--dark {
-	background: map-fetch($colorsGrays, darker);
-	border: 1px solid map-fetch($colorsGrays, dark);
+    background: map-fetch($colorsGrays, darker);
+    border: 1px solid map-fetch($colorsGrays, dark);
 
-	&:hover {
-		background: map-get($colorsGrays, dark);
-	}
+    &:hover {
+        background: map-get($colorsGrays, dark);
+    }
+
+    &:active {
+        background: map-get($colorsGrays, dark-3);
+    }
 }

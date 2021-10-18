@@ -41,7 +41,7 @@ export const sizes = ReactDOMServer.renderToStaticMarkup(
     <Fragment>
         <div className="pier-well pier-well--sm">
             <div className="pier-section pier-section--sm">
-                <p className="pier-body-text">This is a small well</p>
+                <p className="pier-body-text pier-body-text--sm">This is a small well</p>
             </div>
         </div>
 
