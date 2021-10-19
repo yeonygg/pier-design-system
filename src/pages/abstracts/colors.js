@@ -267,7 +267,7 @@ export default function LayoutPage({ appData }) {
                             <ColorCard title="Dark-2" color="-bgc-dark-2" hex="#53626D"></ColorCard>
                             <ColorCard title="Dark-3" color="-bgc-dark-3" hex="#2D3A43"></ColorCard>
                             <ColorCard title="Dark-4" color="-bgc-dark-4" hex="#0E1E2A"></ColorCard>
-                            <ColorCard title="Black" color="-bgc-black" hex="#000000"></ColorCard>
+                            <ColorCard title="Black" color="-bgc-black" hex="#050D14"></ColorCard>
                         </div>
                     </Section>
 
