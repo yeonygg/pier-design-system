@@ -37,7 +37,21 @@ export default {
             dark: false,
         },
         {
+            name: 'Hero',
+            description:
+                'Use the modifier class <code class="pier-body-text__inline-code">pier-button-icon--secondary</code> to change the state of the icon button to secondary.',
+            markup: secondary,
+            dark: false,
+        },
+        {
             name: 'Secondary',
+            description:
+                'Use the modifier class <code class="pier-body-text__inline-code">pier-button-icon--secondary</code> to change the state of the icon button to secondary.',
+            markup: secondary,
+            dark: false,
+        },
+        {
+            name: 'Danger',
             description:
                 'Use the modifier class <code class="pier-body-text__inline-code">pier-button-icon--secondary</code> to change the state of the icon button to secondary.',
             markup: secondary,

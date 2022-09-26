@@ -50,6 +50,22 @@ export const secondary = ReactDOMServer.renderToStaticMarkup(
     </Fragment>
 );
 
+export const hero = ReactDOMServer.renderToStaticMarkup(
+    <Fragment>
+        <button className="pier-button-icon pier-button-icon--hero">
+            <i className="fas fa-pen pier-button-icon__icon"></i>
+        </button>
+    </Fragment>
+);
+
+export const danger = ReactDOMServer.renderToStaticMarkup(
+    <Fragment>
+        <button className="pier-button-icon pier-button-icon--danger">
+            <i className="fas fa-pen pier-button-icon__icon"></i>
+        </button>
+    </Fragment>
+);
+
 export const dark = ReactDOMServer.renderToStaticMarkup(
     <Fragment>
         <button className="pier-button-icon pier-button-icon--dark -m-h-2">
@@ -60,4 +76,3 @@ export const dark = ReactDOMServer.renderToStaticMarkup(
         </button>
     </Fragment>
 );
-
