@@ -100,6 +100,44 @@ $default-size: sm;
     }
 }
 
+.pier-button-icon.pier-button-icon--hero {
+    background: build-gradient(90deg, primaryBoulevard);
+    color: map-get($colorsGrays, white);
+
+    &::before {
+        content: '';
+        background: map-get($colorsGrays, white);
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        bottom: 1px;
+        left: 1px;
+        opacity: 0;
+        transition: all 0.1s ease-in-out;
+        border-radius: map-fetch($button-inner-radii, $default-size);
+    }
+
+    &:hover {
+        transform: scale(1.05);
+
+        &::before {
+            opacity: 1;
+        }
+        .pier-button-icon__icon {
+            background: build-gradient(90deg, primaryBoulevard);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 1px 4px rgba(map-get($colorsGrays, white), 1)) drop-shadow(0 1px 16px rgba(map-get($colorsGrays, white), 1));
+        }
+    }
+
+    &:active {
+        &::before {
+            opacity: 0.75;
+        }
+    }
+}
+
 .pier-button-icon--danger {
     background: map-fetch($colorsGrays, white);
     color: map-get($colorsRed, default);
