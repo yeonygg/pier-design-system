@@ -1,4 +1,4 @@
-import { base, pill, sizes, disabled, dark, secondary } from './variations';
+import { base, pill, sizes, disabled, dark, secondary, hero, danger } from './variations';
 import { reactDemo } from './reactDemo';
 
 export default {
@@ -37,10 +37,24 @@ export default {
             dark: false,
         },
         {
+            name: 'Hero',
+            description:
+                'Use the modifier class <code class="pier-body-text__inline-code">pier-button-icon--hero</code> to change the state of the icon button to hero.',
+            markup: hero,
+            dark: false,
+        },
+        {
             name: 'Secondary',
             description:
                 'Use the modifier class <code class="pier-body-text__inline-code">pier-button-icon--secondary</code> to change the state of the icon button to secondary.',
             markup: secondary,
+            dark: false,
+        },
+        {
+            name: 'Danger',
+            description:
+                'Use the modifier class <code class="pier-body-text__inline-code">pier-button-icon--danger</code> to change the state of the icon button to danger.',
+            markup: danger,
             dark: false,
         },
         {
