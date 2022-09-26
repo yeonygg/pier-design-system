@@ -8,7 +8,8 @@ function IconButton({
     icon,
     disabled,
     pill,
-    error,
+    hero,
+    danger,
     secondary,
     danger,
     hero,
@@ -41,7 +42,8 @@ function IconButton({
     }
 
     pill && (classes += ` ${prefix}--pill`);
-    error && (classes += ` ${prefix}--error`);
+    danger && (classes += ` ${prefix}--danger`);
+    hero && (classes += ` ${prefix}--hero`);
     secondary && (classes += ` ${prefix}--secondary`);
     hero && (classes += ` ${prefix}--hero`);
     danger && (classes += ` ${prefix}--danger`);
@@ -81,7 +83,8 @@ IconButton.propTypes = {
     icon: PropTypes.string,
     disabled: PropTypes.bool,
     pill: PropTypes.bool,
-    error: PropTypes.bool,
+    danger: PropTypes.bool,
+    hero: PropTypes.bool,
     secondary: PropTypes.bool,
     danger: PropTypes.bool,
     hero: PropTypes.bool,
