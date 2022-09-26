@@ -114,11 +114,11 @@ export default {
                     description: 'Makes the button pill',
                 },
                 {
-                    name: 'error',
+                    name: 'danger',
                     type: 'bool',
                     isRequired: false,
                     default: 'false',
-                    description: 'Makes the button error',
+                    description: 'Makes the button danger',
                 },
                 {
                     name: 'secondary',
@@ -126,6 +126,13 @@ export default {
                     isRequired: false,
                     default: 'false',
                     description: 'Makes a secondary button',
+                },
+                {
+                    name: 'hero',
+                    type: 'bool',
+                    isRequired: false,
+                    default: 'false',
+                    description: 'Makes a hero button',
                 },
                 {
                     name: 'onClick',
