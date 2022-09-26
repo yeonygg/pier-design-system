@@ -8,8 +8,6 @@ function IconButton({
     icon,
     disabled,
     pill,
-    hero,
-    danger,
     secondary,
     danger,
     hero,
