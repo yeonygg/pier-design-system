@@ -1,4 +1,4 @@
-import { base, sizes, error, dark } from './variations';
+import { base, sizes, error, dark, validation } from './variations';
 import { reactDemo } from './reactDemo';
 
 export default {
@@ -27,6 +27,13 @@ export default {
             description:
                 'Use the modifier class <code class="pier-body-text__inline-code">pier-input-group--error</code> to change the state of the input group to error.',
             markup: error,
+            dark: false,
+        },
+        {
+            name: 'Validation',
+            description:
+                'Use the modifier class <code class="pier-body-text__inline-code">pier-input-group--validation</code> to change the state of the input group to with validation.',
+            markup: validation,
             dark: false,
         },
         {
@@ -82,7 +89,14 @@ export default {
                     type: 'string',
                     isRequired: false,
                     default: 'false',
-                    description: 'Add validation text to the input group.',
+                    description: 'Make this input group error',
+                },
+                {
+                    name: 'validation',
+                    type: 'string',
+                    isRequired: false,
+                    default: 'false',
+                    description: 'Add validation text to the input group—i.e. (*required)',
                 },
                 {
                     name: 'dark',

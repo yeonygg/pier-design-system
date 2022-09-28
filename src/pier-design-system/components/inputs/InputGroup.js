@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Label from '../text/Label';
 
-function InputGroup({ children, htmlFor, label, size, error, dark, className, style }) {
+function InputGroup({ children, htmlFor, label, size, error, dark, className, style, validation }) {
     let prefix = `pier-input-group`,
         classes = prefix;
 
@@ -27,6 +27,8 @@ InputGroup.propTypes = {
     size: PropTypes.oneOf(['sm', 'md', 'lg']),
     error: PropTypes.string,
     dark: PropTypes.bool,
+    validation: PropTypes.bool,
+
     className: PropTypes.string,
     style: PropTypes.object,
 };
