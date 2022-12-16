@@ -11,6 +11,7 @@ function Button({
     disabled,
     pill,
     error,
+    secondary,
     dark,
     block,
     onClick,
@@ -75,6 +76,7 @@ function Button({
 
     pill && (classes += ` ${prefix}--pill`);
     error && (classes += ` ${prefix}--error`);
+    secondary && (classes += ` ${prefix}--secondary`);
     dark && (classes += ` ${prefix}--dark`);
     disabled && (classes += ` ${prefix}--disabled`);
     block && (classes += ` ${prefix}--block`);
@@ -141,6 +143,7 @@ Button.propTypes = {
     disabled: PropTypes.bool,
     pill: PropTypes.bool,
     error: PropTypes.bool,
+    secondary: PropTypes.bool,
     dark: PropTypes.bool,
     block: PropTypes.bool,
     onClick: PropTypes.func,

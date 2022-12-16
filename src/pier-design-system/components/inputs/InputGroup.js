@@ -28,7 +28,6 @@ InputGroup.propTypes = {
     error: PropTypes.string,
     dark: PropTypes.bool,
     validation: PropTypes.bool,
-
     className: PropTypes.string,
     style: PropTypes.object,
 };
