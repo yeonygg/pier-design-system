@@ -1,193 +1,364 @@
 .pier-nav {
-	background-color: map-get($colorsGrays, "light-4");
-	height: 100%;
-	width: 100%;
-	border-right: 1px solid map-get($colorsGrays, "light");
-	box-shadow: 0 0 2rem rgba(map-get($colorsGrays, gray), 0.15);
-	overflow: scroll;
-	pointer-events: auto;
+    background-color: map-get($colorsGrays, 'light-4');
+    height: 100%;
+    width: 100%;
+    border-right: 1px solid map-get($colorsGrays, 'light');
+    box-shadow: 0 0 2rem rgba(map-get($colorsGrays, gray), 0.15);
+    overflow: scroll;
+    pointer-events: auto;
+}
+
+.pier-nav--dark {
+    background-color: map-get($colorsGrays, 'dark-4');
+
+    border-right: 1px solid map-get($colorsGrays, 'dark-2');
+    box-shadow: 0 0 2rem rgba(map-get($colorsGrays, 'dark-4'), 0.15);
 }
 
 .pier-nav--mobile {
-	height: 72px;
-	width: 100%;
-	border-right: none;
-	border-bottom: 1px solid map-get($colorsGrays, "light");
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	overflow: visible;
+    height: 72px;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid map-get($colorsGrays, 'light');
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
 }
 
 .pier-nav__item-group {
-	display: block;
+    display: block;
 }
 
 .pier-nav__item-container {
-	display: block;
+    display: block;
 }
 
 .pier-nav__item {
-	display: flex;
-	align-items: center;
-	padding-left: 24px;
-	padding-right: 12px;
-	width: 100%;
-	height: 48px;
-	color: map-get($colorsGrays, "dark-1");
-	font-weight: $font-weight-regular;
-	font-size: 16px;
-	cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 12px;
+    width: 100%;
+    height: 48px;
+    color: map-get($colorsGrays, 'dark-1');
+    font-weight: $font-weight-regular;
+    font-size: 16px;
+    cursor: pointer;
 
-	&:hover {
-		background-color: map-get($colorsGrays, white);
-		color: map-get($colorsGrays, "darker");
+    &:hover {
+        background-color: map-get($colorsGrays, white);
+        color: map-get($colorsGrays, 'darker');
 
-		.pier-nav__item-icon {
-			&:before {
-				color: transparent;
-				background: build-gradient(90deg, primaryBoulevard);
-				background-clip: text;
-			}
-		}
-	}
+        .pier-nav__item-icon {
+            &:before {
+                color: transparent;
+                background: build-gradient(90deg, primaryBoulevard);
+                background-clip: text;
+            }
+        }
+    }
 
-	&:active {
-		color: map-get($colorsGrays, "dark-1");
+    &:active {
+        color: map-get($colorsGrays, 'dark-1');
 
-		.pier-nav__item-icon {
-			&:before {
-				opacity: .8;
-			}
-		}
-	}
+        .pier-nav__item-icon {
+            &:before {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &:focus {
+        .pier-nav__item-icon {
+            &:before {
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+.pier-nav__item--dark {
+    color: map-get($colorsGrays, 'light-3');
+
+    &:hover {
+        background-color: map-get($colorsGrays, 'dark-3');
+        color: map-get($colorsGrays, white);
+
+        .pier-nav__item-icon {
+            &:before {
+                color: transparent;
+                background: build-gradient(90deg, primaryBoulevard);
+                background-clip: text;
+            }
+        }
+    }
+
+    &:active {
+        color: map-get($colorsGrays, white);
+
+        .pier-nav__item-icon {
+            &:before {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &:focus {
+        .pier-nav__item-icon {
+            &:before {
+                opacity: 0.9;
+            }
+        }
+    }
 }
 
 .pier-nav__item-icon {
-	margin-right: 16px;
+    margin-right: 16px;
 
-	&:before {
-		background: map-get($colorsGrays, "gray-3");
-		background-clip: text;
-	}
+    &:before {
+        background: map-get($colorsGrays, 'gray-3');
+        background-clip: text;
+    }
 }
 
 .pier-nav__item-dropdown-toggle {
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	right: 16px;
-	top: 12px;
-	color: map-get($colorsGrays, "gray-4");
-	font-size: 16px;
-	width: 24px;
-	height: 24px;
-	line-height: 1;
-	cursor: pointer;
-	z-index: 99;
-	border-radius: 4px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 16px;
+    top: 12px;
+    color: map-get($colorsGrays, 'gray-4');
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 99;
+    border-radius: 4px;
 
-	&:before {
-		content: fa-content($fa-var-chevron-right);
-		font-family: $font-family-icons;
-		font-weight: $font-weight-regular;
-		transition: transform .2s ease-in-out;
-	}
+    &:before {
+        content: fa-content($fa-var-chevron-right);
+        font-family: $font-family-icons;
+        font-weight: $font-weight-regular;
+        transition: transform 0.2s ease-in-out;
+    }
 
-	&:hover {
-		color: map-get($colorsGrays, "darker");
-	}
+    &:hover {
+        color: map-get($colorsGrays, 'darker');
+    }
 
-	&:hover~.pier-nav__item {
-		background-color: map-get($colorsGrays, white);
-		color: map-get($colorsGrays, "darker");
+    &:hover ~ .pier-nav__item {
+        background-color: map-get($colorsGrays, white);
+        color: map-get($colorsGrays, 'darker');
 
-		.pier-nav__item-icon {
-			&:before {
-				color: transparent;
-				background: build-gradient(90deg, primaryBoulevard);
-				background-clip: text;
-			}
-		}
-	}
+        .pier-nav__item-icon {
+            &:before {
+                color: transparent;
+                background: build-gradient(90deg, primaryBoulevard);
+                background-clip: text;
+            }
+        }
+    }
 
-	&:active {
-		color: map-get($colorsGrays, "dark-1");
-	}
+    &:active {
+        color: map-get($colorsGrays, 'dark-1');
+    }
+}
+
+.pier-nav__item-dropdown-toggle--dark {
+    color: map-get($colorsGrays, 'light-3');
+
+    &:before {
+        content: fa-content($fa-var-chevron-right);
+        font-family: $font-family-icons;
+        font-weight: $font-weight-regular;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    &:hover {
+        color: map-get($colorsGrays, white);
+    }
+
+    &:hover ~ .pier-nav__item {
+        background-color: map-get($colorsGrays, 'dark-3');
+        color: map-get($colorsGrays, white);
+
+        .pier-nav__item-icon {
+            &:before {
+                color: transparent;
+                background: build-gradient(90deg, primaryBoulevard);
+                background-clip: text;
+            }
+        }
+    }
+
+    &:active {
+        color: map-get($colorsGrays, white);
+    }
+}
+
+.pier-nav__item-dropup-toggle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 16px;
+    top: 12px;
+    color: map-get($colorsGrays, 'gray-4');
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 99;
+    border-radius: 4px;
+
+    &:before {
+        content: fa-content($fa-var-chevron-right);
+        font-family: $font-family-icons;
+        font-weight: $font-weight-regular;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    &:hover {
+        color: map-get($colorsGrays, 'darker');
+    }
+
+    &:hover ~ .pier-nav__item {
+        background-color: map-get($colorsGrays, white);
+        color: map-get($colorsGrays, 'darker');
+
+        .pier-nav__item-icon {
+            &:before {
+                color: transparent;
+                background: build-gradient(90deg, primaryBoulevard);
+                background-clip: text;
+            }
+        }
+    }
+
+    &:active {
+        color: map-get($colorsGrays, 'dark-1');
+    }
 }
 
 .pier-nav__item-dropdown-toggle--toggled {
-	&:before {
-		transform: rotate(90deg);
-	}
+    &:before {
+        transform: rotate(90deg);
+    }
+}
+
+.pier-nav__item-dropup-toggle--toggled {
+    &:before {
+        transform: rotate(-90deg);
+    }
 }
 
 .pier-nav__item-dropdown {
-	width: 100%;
-	max-height: 0;
-	transform: scaleY(0);
-	transform-origin: center top;
-	overflow: hidden;
-	transition: all .2s ease-in-out;
+    width: 100%;
+    max-height: 0;
+    transform: scaleY(0);
+    transform-origin: center top;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
 }
 
-.pier-nav__item-dropdown-toggle--toggled~.pier-nav__item-dropdown {
-	transform: scaleY(1);
-	max-height: 2000px;
+.pier-nav__item-dropup {
+    width: 100%;
+    max-height: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.pier-nav__item-dropup-toggle--toggled ~ .pier-nav__item-dropup {
+    transform: scaleY(1);
+    max-height: 2000px;
+}
+
+.pier-nav__item-dropdown-toggle--toggled ~ .pier-nav__item-dropdown {
+    transform: scaleY(1);
+    max-height: 2000px;
 }
 
 .pier-nav__sub-label {
-	display: flex;
-	align-items: center;
-	color: map-get($colorsGrays, "gray-4");
-	font-size: 12px;
-	padding-left: 24px;
-	height: 36px;
-	text-transform: uppercase;
-	font-weight: $font-weight-extrabold;
+    display: flex;
+    align-items: center;
+    color: map-get($colorsGrays, 'gray-4');
+    font-size: 12px;
+    padding-left: 24px;
+    height: 36px;
+    text-transform: uppercase;
+    font-weight: $font-weight-extrabold;
 }
 
 .pier-nav__sub-item {
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	font-weight: $font-weight-regular;
-	font-size: 14px;
-	height: 36px;
-	padding-left: 31px;
-	color: map-get($colorsGrays, "dark-1");
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: $font-weight-regular;
+    font-size: 14px;
+    height: 36px;
+    padding-left: 31px;
+    color: map-get($colorsGrays, 'dark-1');
 
-	&:before {
-		content: "";
-		height: 100%;
-		width: 2px;
-		margin-right: 16px;
-		background: map-get($colorsGrays, "gray-4");
-	}
+    &:before {
+        content: '';
+        height: 100%;
+        width: 2px;
+        margin-right: 16px;
+        background: map-get($colorsGrays, 'gray-4');
+    }
 
-	&:hover {
-		background-color: map-get($colorsGrays, white);
-		color: map-get($colorsGrays, "darker");
+    &:hover {
+        background-color: map-get($colorsGrays, white);
+        color: map-get($colorsGrays, 'darker');
 
-		&:before {
-			background: build-gradient(0deg, primaryBoulevard);
-		}
-	}
+        &:before {
+            background: build-gradient(0deg, primaryBoulevard);
+        }
+    }
 
-	&:active {
-		color: map-get($colorsGrays, "dark-1");
+    &:active {
+        color: map-get($colorsGrays, 'dark-1');
 
-		&:before {
-			background: build-gradient(0deg, primaryBoulevard);
-			opacity: .8;
-		}
-	}
+        &:before {
+            background: build-gradient(0deg, primaryBoulevard);
+            opacity: 0.8;
+        }
+    }
+}
 
+.pier-nav__sub-item--dark {
+    color: map-get($colorsGrays, 'light-3');
+
+    &:before {
+        background: map-get($colorsGrays, 'dark-1');
+    }
+
+    &:hover {
+        background-color: map-get($colorsGrays, 'dark-3');
+        color: map-get($colorsGrays, white);
+
+        &:before {
+            background: build-gradient(0deg, primaryBoulevard);
+        }
+    }
+
+    &:active {
+        color: map-get($colorsGrays, white);
+
+        &:before {
+            background: build-gradient(0deg, primaryBoulevard);
+            opacity: 0.8;
+        }
+    }
 }
 
 .pier-nav-container {
-	display: block;
-	position: relative;
-
+    display: block;
+    position: relative;
 }

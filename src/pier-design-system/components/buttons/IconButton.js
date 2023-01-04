@@ -8,9 +8,12 @@ function IconButton({
     icon,
     disabled,
     pill,
+<<<<<<< HEAD
+=======
+    hero,
+>>>>>>> develop
     secondary,
     danger,
-    hero,
     dark,
     onClick,
     className,
