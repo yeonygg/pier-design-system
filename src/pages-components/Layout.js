@@ -22,58 +22,54 @@ export default function Layout({ children, appData }) {
         <Fragment>
             {isMobileScreen ? (
                 <div className="-d-flex" style={{ width: '100vw', height: '100vh', position: 'fixed' }}>
-                    <Nav isCollapsible width={240} dark={true}>
+                    <Nav isCollapsible width={240}>
                         <NextLink href="/">
                             <a>
                                 <img src="/pier_logo.svg" className="-p-v-8 -p-l-6" style={{ width: '70%' }}></img>
                             </a>
                         </NextLink>
                         <NavItemGroup>
-                            <NavItemContainer dark={true}>
+                            <NavItemContainer>
                                 <NextLink href="/abstracts">
                                     <a>
-                                        <NavItem dark={true} icon="fas fa-atom">
-                                            Abstracts
-                                        </NavItem>
+                                        <NavItem icon="fas fa-atom">Abstracts</NavItem>
                                     </a>
                                 </NextLink>
-                                <NavItemDropdown dark={true}>
+                                <NavItemDropdown>
                                     <NextLink href="/abstracts/grid">
                                         <a>
-                                            <NavSubItem dark={true}>Grid</NavSubItem>
+                                            <NavSubItem>Grid</NavSubItem>
                                         </a>
                                     </NextLink>
                                     <NextLink href="/abstracts/colors">
                                         <a>
-                                            <NavSubItem dark={true}>Colors</NavSubItem>
+                                            <NavSubItem>Colors</NavSubItem>
                                         </a>
                                     </NextLink>
                                     <NextLink href="/abstracts/fonts">
                                         <a>
-                                            <NavSubItem dark={true}>Fonts</NavSubItem>
+                                            <NavSubItem>Fonts</NavSubItem>
                                         </a>
                                     </NextLink>
                                     <NextLink href="/abstracts/logos">
                                         <a>
-                                            <NavSubItem dark={true}>Logos</NavSubItem>
+                                            <NavSubItem>Logos</NavSubItem>
                                         </a>
                                     </NextLink>
                                 </NavItemDropdown>
                             </NavItemContainer>
-                            <NavItemContainer dark={true}>
+                            <NavItemContainer>
                                 <NextLink href="/components">
                                     <a>
-                                        <NavItem dark={true} icon="fas fa-cubes">
-                                            Components
-                                        </NavItem>
+                                        <NavItem icon="fas fa-cubes">Components</NavItem>
                                     </a>
                                 </NextLink>
-                                <NavItemDropdown dark={true}>
+                                <NavItemDropdown>
                                     {appData.components.map((component) => {
                                         return (
                                             <NextLink key={component.slug} href={'/components/' + component.slug}>
                                                 <a>
-                                                    <NavSubItem dark={true}>{component.title}</NavSubItem>
+                                                    <NavSubItem>{component.title}</NavSubItem>
                                                 </a>
                                             </NextLink>
                                         );
@@ -83,9 +79,7 @@ export default function Layout({ children, appData }) {
                             <NavItemContainer>
                                 <NextLink href="/utilities">
                                     <a>
-                                        <NavItem dark={true} icon="fas fa-tools">
-                                            Utilities
-                                        </NavItem>
+                                        <NavItem icon="fas fa-tools">Utilities</NavItem>
                                     </a>
                                 </NextLink>
                                 <NavItemDropdown>
@@ -93,7 +87,7 @@ export default function Layout({ children, appData }) {
                                         return (
                                             <NextLink key={utility.slug} href={'/utilities/' + utility.slug}>
                                                 <a>
-                                                    <NavSubItem dark={true}>{utility.title}</NavSubItem>
+                                                    <NavSubItem>{utility.title}</NavSubItem>
                                                 </a>
                                             </NextLink>
                                         );
