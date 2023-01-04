@@ -1,4 +1,4 @@
-import { structure } from './variations';
+import { structure, dark } from './variations';
 import { reactDemo } from './reactDemo';
 
 export default {
@@ -15,6 +15,12 @@ export default {
             markup: structure,
             dark: false,
         },
+        {
+            name: 'Dark',
+            description: `Use the base class <code class="pier-body-text__inline-code">pier-nav</code> to wrap the elements inside of the Navigation. Use <code class="pier-body-text__inline-code">pier-nav__item-group</code> to group links inside of the Navigation. Use <code class="pier-body-text__inline-code">pier-nav__item</code> for first level links or wrap it in a parent element with the class <code class="pier-body-text__inline-code">pier-nav__item-container</code> with a sibling element <code class="pier-body-text__inline-code">pier-nav__item-dropdown</code> if the item has nested sub-items. Use either <code class="pier-body-text__inline-code">pier-nav__sub-item</code> or <code class="pier-body-text__inline-code">pier-nav__sub-label</code> inside the nested item dropdown. Follow the example closely below for proper navigation structure.`,
+            markup: dark,
+            dark: true,
+        },
     ],
     'react-import': `import { Nav, NavItem, NavItemContainer, NavItemDropdown, NavItemGroup, NavSubItem, NavSubLabel } from "pier-design-system"`,
     'react-components': [
@@ -27,6 +33,13 @@ export default {
                     isRequired: true,
                     default: '',
                     description: 'The content to be displayed inside of the Navigation.',
+                },
+                {
+                    name: 'dark',
+                    type: 'boolean',
+                    isRequired: false,
+                    default: '',
+                    description: 'Switches Navigation from dark to light.',
                 },
                 {
                     name: 'width',
