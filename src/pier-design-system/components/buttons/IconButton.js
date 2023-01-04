@@ -7,11 +7,8 @@ function IconButton({
     value,
     icon,
     disabled,
-    pill,
-<<<<<<< HEAD
-=======
     hero,
->>>>>>> develop
+    pill,
     secondary,
     danger,
     dark,
