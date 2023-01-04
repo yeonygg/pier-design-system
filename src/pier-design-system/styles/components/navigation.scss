@@ -10,12 +10,9 @@
 
 .pier-nav--dark {
     background-color: map-get($colorsGrays, 'dark-4');
-    height: 100%;
-    width: 100%;
-    border-right: 1px solid map-get($colorsGrays, 'light-3');
+
+    border-right: 1px solid map-get($colorsGrays, 'dark-2');
     box-shadow: 0 0 2rem rgba(map-get($colorsGrays, 'dark-4'), 0.15);
-    overflow: scroll;
-    pointer-events: auto;
 }
 
 .pier-nav--mobile {
@@ -64,6 +61,41 @@
 
     &:active {
         color: map-get($colorsGrays, 'dark-1');
+
+        .pier-nav__item-icon {
+            &:before {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &:focus {
+        .pier-nav__item-icon {
+            &:before {
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+.pier-nav__item--dark {
+    color: map-get($colorsGrays, 'light-3');
+
+    &:hover {
+        background-color: map-get($colorsGrays, 'dark-3');
+        color: map-get($colorsGrays, white);
+
+        .pier-nav__item-icon {
+            &:before {
+                color: transparent;
+                background: build-gradient(90deg, primaryBoulevard);
+                background-clip: text;
+            }
+        }
+    }
+
+    &:active {
+        color: map-get($colorsGrays, white);
 
         .pier-nav__item-icon {
             &:before {
@@ -132,6 +164,38 @@
 
     &:active {
         color: map-get($colorsGrays, 'dark-1');
+    }
+}
+
+.pier-nav__item-dropdown-toggle--dark {
+    color: map-get($colorsGrays, 'light-3');
+
+    &:before {
+        content: fa-content($fa-var-chevron-right);
+        font-family: $font-family-icons;
+        font-weight: $font-weight-regular;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    &:hover {
+        color: map-get($colorsGrays, white);
+    }
+
+    &:hover ~ .pier-nav__item {
+        background-color: map-get($colorsGrays, 'dark-3');
+        color: map-get($colorsGrays, white);
+
+        .pier-nav__item-icon {
+            &:before {
+                color: transparent;
+                background: build-gradient(90deg, primaryBoulevard);
+                background-clip: text;
+            }
+        }
+    }
+
+    &:active {
+        color: map-get($colorsGrays, white);
     }
 }
 
@@ -260,6 +324,32 @@
 
     &:active {
         color: map-get($colorsGrays, 'dark-1');
+
+        &:before {
+            background: build-gradient(0deg, primaryBoulevard);
+            opacity: 0.8;
+        }
+    }
+}
+
+.pier-nav__sub-item--dark {
+    color: map-get($colorsGrays, 'light-3');
+
+    &:before {
+        background: map-get($colorsGrays, 'dark-1');
+    }
+
+    &:hover {
+        background-color: map-get($colorsGrays, 'dark-3');
+        color: map-get($colorsGrays, white);
+
+        &:before {
+            background: build-gradient(0deg, primaryBoulevard);
+        }
+    }
+
+    &:active {
+        color: map-get($colorsGrays, white);
 
         &:before {
             background: build-gradient(0deg, primaryBoulevard);

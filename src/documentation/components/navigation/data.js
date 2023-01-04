@@ -35,6 +35,13 @@ export default {
                     description: 'The content to be displayed inside of the Navigation.',
                 },
                 {
+                    name: 'dark',
+                    type: 'boolean',
+                    isRequired: false,
+                    default: '',
+                    description: 'Switches Navigation from dark to light.',
+                },
+                {
                     name: 'width',
                     type: 'number',
                     isRequired: false,

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Fragment, useState } from 'react';
 import IconButton from '../buttons/IconButton';
 
-function Nav({ children, width, mobile, isCollapsible, className, style }) {
+function Nav({ children, width, mobile, dark, isCollapsible, className, style }) {
     const [minNav, setMinNav] = useState(false);
     const [navWidth, setNavWidth] = useState(`${width}px`);
 
@@ -31,11 +31,11 @@ function Nav({ children, width, mobile, isCollapsible, className, style }) {
         }
     }
 
-    var prefix = 'pier-nav',
+    let prefix = 'pier-nav',
         classes = prefix;
 
     mobile && (classes += ` ${prefix}--mobile`);
-
+    dark && (classes += ` ${prefix}--dark`);
     className && (classes += ` ${className}`);
 
     return (
@@ -46,6 +46,7 @@ function Nav({ children, width, mobile, isCollapsible, className, style }) {
                 </div>
             ) : (
                 <div
+                    className={classes}
                     style={desktopNav}
                     onMouseOver={() => {
                         if (minNav) mouseEnter();
@@ -90,6 +91,7 @@ Nav.propTypes = {
     width: PropTypes.number,
     mobile: PropTypes.bool,
     isCollapsible: PropTypes.bool,
+    dark: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
 };
