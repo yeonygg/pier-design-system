@@ -332,6 +332,32 @@
     }
 }
 
+.pier-nav__sub-item--dark {
+    color: map-get($colorsGrays, 'light-3');
+
+    &:before {
+        background: map-get($colorsGrays, 'dark-1');
+    }
+
+    &:hover {
+        background-color: map-get($colorsGrays, 'dark-3');
+        color: map-get($colorsGrays, white);
+
+        &:before {
+            background: build-gradient(0deg, primaryBoulevard);
+        }
+    }
+
+    &:active {
+        color: map-get($colorsGrays, white);
+
+        &:before {
+            background: build-gradient(0deg, primaryBoulevard);
+            opacity: 0.8;
+        }
+    }
+}
+
 .pier-nav-container {
     display: block;
     position: relative;
