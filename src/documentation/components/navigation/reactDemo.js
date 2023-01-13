@@ -2,7 +2,7 @@ import jsxToString from 'jsx-to-string';
 import { Nav, NavItem, NavItemContainer, NavItemDropdown, NavItemGroup, NavSubItem, NavSubLabel, Heading } from 'dist';
 
 export const reactDemo = jsxToString(
-    <Nav isCollapsible dark={true}>
+    <Nav isCollapsible dark={false}>
         <NavItemGroup></NavItemGroup>
         <Heading size="sm" className="-m-l-6">
             Navigation

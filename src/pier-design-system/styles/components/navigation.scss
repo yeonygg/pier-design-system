@@ -4,7 +4,6 @@
     width: 100%;
     border-right: 1px solid map-get($colorsGrays, 'light');
     box-shadow: 0 0 2rem rgba(map-get($colorsGrays, gray), 0.15);
-    overflow: scroll;
     pointer-events: auto;
 }
 
@@ -24,6 +23,25 @@
     align-items: center;
     justify-content: space-between;
     overflow: visible;
+}
+
+.pier-nav__inner {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.pier-nav__inner--collapsed {
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.pier-nav__tab {
+    position: absolute;
+    left: 100%;
+    top: 1rem;
+    z-index: 9999;
 }
 
 .pier-nav__item-group {

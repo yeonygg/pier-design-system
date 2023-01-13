@@ -54,7 +54,7 @@ function Nav({ children, width, mobile, dark, isCollapsible, className, style })
                     onMouseLeave={mouseLeave}
                 >
                     {isCollapsible && (
-                        <div style={{ position: 'absolute', right: '-12px', top: '12px', zIndex: 999 }} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+                        <div className="pier-nav__tab" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
                             <IconButton
                                 size="xs"
                                 secondary
@@ -71,11 +71,7 @@ function Nav({ children, width, mobile, dark, isCollapsible, className, style })
                             ></IconButton>
                         </div>
                     )}
-                    <div className={classes} style={style}>
-                        <div style={minNav ? { width: `${width}px`, height: '100%', pointerEvents: 'none' } : { width: `${width}px`, height: '100%' }}>
-                            {children}
-                        </div>
-                    </div>
+                    <div className={minNav ? `pier-nav__inner pier-nav__inner--collapsed` : `pier-nav__inner`}>{children}</div>
                 </div>
             )}
         </Fragment>
@@ -88,7 +84,7 @@ Nav.defaultProps = {
 
 Nav.propTypes = {
     children: PropTypes.node.isRequired,
-    width: PropTypes.number,
+    width: PropTypes.number.isRequired,
     mobile: PropTypes.bool,
     isCollapsible: PropTypes.bool,
     dark: PropTypes.bool,
