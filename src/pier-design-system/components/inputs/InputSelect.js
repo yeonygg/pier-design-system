@@ -4,6 +4,7 @@ function InputSelect({
     children,
     name,
     value,
+    defaultValue,
     onChange,
     onMouseEnter,
     onMouseLeave,
@@ -64,6 +65,7 @@ function InputSelect({
             className={classes}
             style={style}
             value={value}
+            defaultValue=""
             onChange={onChange}
             onFocus={onFocus}
             onBlur={onBlur}
@@ -84,6 +86,7 @@ InputSelect.propTypes = {
     children: PropTypes.node.isRequired,
     name: PropTypes.string,
     value: PropTypes.string,
+    defaultValue: PropTypes.string,
     onChange: PropTypes.func,
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
