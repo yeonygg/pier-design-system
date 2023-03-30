@@ -65,7 +65,7 @@ function InputSelect({
             className={classes}
             style={style}
             value={value}
-            defaultValue=""
+            defaultValue={defaultValue}
             onChange={onChange}
             onFocus={onFocus}
             onBlur={onBlur}
